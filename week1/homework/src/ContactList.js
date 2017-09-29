@@ -22,7 +22,7 @@ export default class ContactList {
         "Please use the correct contact type. Only contacts created with the Contact class are accepted."
       );
     }
-    return this._contacts; // JK added an underscore
+    return this._contacts;
   }
 
   removeContact(index) {

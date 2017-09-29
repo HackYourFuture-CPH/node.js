@@ -56,10 +56,23 @@ let Yolanda = {
     phone: "76543210"
 };
 
+// creating a new instance of ContactList
 let myContactList = new ContactList();
+console.log(myContactList);
 
+// trying to add a contact which is not an instance of Contact
 myContactList.addContact(Yolanda);
 console.log(myContactList.contacts);
 
+// adding a contact to the contact list which is an instance of Contact and has a valid phone number
 myContactList.addContact(Jekyll);
 console.log(myContactList.contacts);
+
+// adding a contact to the contact list which is an instance of Contact and has a valid phone number
+let Michael = new Contact('Michael', '29500843');
+myContactList.addContact(Michael);
+console.log(myContactList);
+
+let Buster = new Contact('Buster', '29508403');
+myContactList.addContact(Buster);
+console.log(myContactList);
