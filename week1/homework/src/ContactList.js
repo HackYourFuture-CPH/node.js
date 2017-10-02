@@ -10,13 +10,13 @@ export default class ContactList {
   }
 
   get length() {
-    return this.contacts.length;
+    return this._contacts.length;
   }
 
   addContact(contact) {
     // adding a validator so that only instances of class Contact can be used to add contacts to the contact list
     if (contact instanceof Contact) {
-      this.contacts.push(contact);
+      this._contacts.push(contact);
     } else {
       console.log(
         "Please use the correct contact type. Only contacts created with the Contact class are accepted."
@@ -26,20 +26,20 @@ export default class ContactList {
   }
 
   removeContact(index) {
-    if (!this.contacts[index]) return;
-    this.contacts.splice(index, 1);
-    return this.contacts;
+    if (!this._contacts[index]) return;
+    this._contacts.splice(index, 1);
+    return this._contacts;
   }
 
   editContact(index, new_contact) {
-    if (!this.contacts[index]) return;
-    this.contacts[index] = new_contact;
-    return this.contacts;
+    if (!this._contacts[index]) return;
+    this._contacts[index] = new_contact;
+    return this._contacts;
   }
 
   _search(search_value, search_key) {
     let results = [];
-    this.contacts.forEach(contact => {
+    this._contacts.forEach(contact => {
       if (contact[search_key].toLowerCase().indexOf(search_value) !== -1) {
         results.push(contact);
       }
