@@ -9,20 +9,22 @@ export default class Contact {
   }
 
   set phone(phone) {
-    if (
-      // any non-string and non-number inputs are immediately rejected
-      (typeof phone !== 'string' && typeof phone !== 'number') ||
-      // any string input whose length is not equal to 8 is also rejected. any string input which cannot be converted into a number or becomes a non-positive number (such as strings with empty spaces or negative numbers) is rejected
-      (typeof phone === 'string' &&
-        (phone.length !== 8 || phone[0] === '0' || Number(phone) === NaN || Number(phone) <= 0)) ||
-      // any number input which has a length not equal to 8 or is non-positive is rejected
-      (typeof phone === 'number' && (String(phone).length !== 8 || phone <= 0))
-    ) {
-      console.log("Please input a valid telephone number");
-    } else if (typeof phone === 'string') {
-      return (this._phone = Number(phone));
+    // changes the type of input to Number (first tried to apply type conversion without any conditions but then it was failing a test where a number within an array, e.g. [32143211] was being input as a phone number)
+    if (typeof phone === "string" || typeof phone === "number") {
+      const phoneNumber = Number(phone);
+
+      // checks that the input after conversion is a valid positive integer
+      const isValidNumber = typeof phoneNumber === "number" && Number.isInteger(phoneNumber) && phoneNumber > 0;
+      
+      // checks that the number has 8 digits
+      const hasRightLength = String(phoneNumber).length === 8;
+      
+      if (isValidNumber && hasRightLength) {
+        this._phone = phoneNumber;
+        return this._phone;
+      }
     } else {
-      return (this._phone = phone);
+      console.log("Please input a valid phone number.");
     }
   }
 
