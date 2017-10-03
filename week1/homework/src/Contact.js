@@ -13,10 +13,10 @@ export default class Contact {
     if (typeof phone === "string" || typeof phone === "number") {
       const phoneNumber = Number(phone);
 
-      // checks that the input after conversion is a valid positive integer
+      // to check that the input after conversion is a valid positive integer
       const isValidNumber = typeof phoneNumber === "number" && Number.isInteger(phoneNumber) && phoneNumber > 0;
       
-      // checks that the number has 8 digits
+      // to check that the number has 8 digits
       const hasRightLength = String(phoneNumber).length === 8;
       
       if (isValidNumber && hasRightLength) {
