@@ -13,7 +13,8 @@ export default class Contact {
     // only accepts inputs with type of string or number
     if (typeof phone !== "string" || typeof phone !== "number") {
       console.log(invalidPhoneMessage);
-    } else {
+      return;
+    } 
       // changes the type of input to Number
       const phoneNumber = Number(phone);
 
@@ -34,7 +35,6 @@ export default class Contact {
         console.log(invalidPhoneMessage);
       }
     }
-  }
 
   call() {
     if (this.phone) {
