@@ -9,22 +9,30 @@ export default class Contact {
   }
 
   set phone(phone) {
-    // changes the type of input to Number (first tried to apply type conversion without any conditions but then it was failing a test where a number within an array, e.g. [32143211] was being input as a phone number)
-    if (typeof phone === "string" || typeof phone === "number") {
+    const invalidPhoneMessage = "Please input a valid phone number.";
+    // only accepts inputs with type of string or number
+    if (typeof phone !== "string" || typeof phone !== "number") {
+      console.log(invalidPhoneMessage);
+    } else {
+      // changes the type of input to Number
       const phoneNumber = Number(phone);
 
       // to check that the input after conversion is a valid positive integer
-      const isValidNumber = typeof phoneNumber === "number" && Number.isInteger(phoneNumber) && phoneNumber > 0;
-      
+      const isValidNumber =
+        typeof phoneNumber === "number" &&
+        Number.isInteger(phoneNumber) &&
+        phoneNumber > 0;
+
       // to check that the number has 8 digits
       const hasRightLength = String(phoneNumber).length === 8;
-      
+
+      // saves the phone number if it fulfills all the criteria
       if (isValidNumber && hasRightLength) {
         this._phone = phoneNumber;
         return this._phone;
+      } else {
+        console.log(invalidPhoneMessage);
       }
-    } else {
-      console.log("Please input a valid phone number.");
     }
   }
 
