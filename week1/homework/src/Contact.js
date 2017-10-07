@@ -14,27 +14,26 @@ export default class Contact {
     if (typeof phone !== "string" || typeof phone !== "number") {
       console.log(invalidPhoneMessage);
       return;
-    } 
-      // changes the type of input to Number
-      const phoneNumber = Number(phone);
-
-      // to check that the input after conversion is a valid positive integer
-      const isValidNumber =
-        typeof phoneNumber === "number" &&
-        Number.isInteger(phoneNumber) &&
-        phoneNumber > 0;
-
-      // to check that the number has 8 digits
-      const hasRightLength = String(phoneNumber).length === 8;
-
-      // saves the phone number if it fulfills all the criteria
-      if (isValidNumber && hasRightLength) {
-        this._phone = phoneNumber;
-        return this._phone;
-      } else {
-        console.log(invalidPhoneMessage);
-      }
     }
+    // changes the type of input to Number
+    const phoneNumber = Number(phone);
+
+    // to check that the input after conversion is a valid positive integer
+    const isValidNumber =
+      typeof phoneNumber === "number" &&
+      Number.isInteger(phoneNumber) &&
+      phoneNumber > 0;
+
+    // to check that the number has 8 digits
+    const hasRightLength = String(phoneNumber).length === 8;
+
+    // saves the phone number if it fulfills all the criteria
+    if (isValidNumber && hasRightLength) {
+      this._phone = phoneNumber;
+      return this._phone;
+    }
+    console.log(invalidPhoneMessage);
+  }
 
   call() {
     if (this.phone) {
