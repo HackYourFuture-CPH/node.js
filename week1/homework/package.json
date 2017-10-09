@@ -1,0 +1,22 @@
+{
+  "name": "homework_week_1",
+  "version": "1.0.0",
+  "description": "homework Node module week 1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "babel ./src -d ./out"
+  },
+  "keywords": [
+    "npm",
+    "babel"
+  ],
+  "author": "Jawad Khawaja",
+  "license": "ISC",
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-node8": "^1.2.0"
+  }
+}
