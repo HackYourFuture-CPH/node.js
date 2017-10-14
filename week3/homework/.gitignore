@@ -35,3 +35,9 @@ jspm_packages
 
 # Optional REPL history
 .node_repl_history
+
+# My notes for the homework
+notes.txt
+
+# dist folder
+dist
