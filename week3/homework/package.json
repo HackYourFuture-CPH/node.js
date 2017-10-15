@@ -12,6 +12,8 @@
   "author": "Pachito Marco Calabrese <pm.calabrese@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "body-parser": "^1.18.2",
+    "ejs": "^2.5.7",
     "nodemon": "^1.12.1"
   },
   "devDependencies": {
