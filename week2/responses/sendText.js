@@ -1,4 +1,4 @@
-export default function sendText(response, text) {
-	response.setHeader('Content-Type', 'text/plain')
-	response.write(text)
+export default function sendText(res, text) {
+	res.setHeader('Content-Type', 'text/plain')
+	res.write(text)
 }

@@ -2,16 +2,19 @@ const Person = require("./Person.js");
 
 // remember to write a constructor function
 let jimmy = new Person("Jimmy", 28);
+console.log(jimmy);
 
-jimmy.addPhone("55551234");
+// jimmy.addPhone("55551234");
+ console.log(jimmy.addPhone("55551234"));
 
-jimmy.call();
-// should say "Calling Jimmy at 55551234..."
+// jimmy.call();
+ console.log(jimmy.call());
 
-jimmy.birthday();
-// should say "Wishing Jimmy a happy 29th birthday!"
+// jimmy.birthday();
+ console.log(jimmy.birthday());
 
-let jill = new Person("Jill");
+ let jill = new Person("Jill");
+console.log(jill);
 
-jill.call();
-// should say "Jill has no phone number saved."
+// jill.call();
+ console.log(jill.call());
