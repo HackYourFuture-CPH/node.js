@@ -59,3 +59,10 @@ Read parts:
 
 ## As you finish that up, don’t forget to watch next week’s video playlist to prepare for Express.
 >You’ll find it here: [Lynda :information_desk_person:](https://www.lynda.com/SharedPlaylist/e8a2fec772bb462da38429629a34f3b7)  
+
+
+## Code in the class
+
+### express-app
+
+In this folder you can see the full app working, I build the frontend in Preact, but you are free to build it with framework. It's important to see how the frontend communicate with the REST API provided by Express, and how the UI updates accrodingly. Videos how the app has been built will be released very soon.
