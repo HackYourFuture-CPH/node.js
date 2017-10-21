@@ -1,0 +1,39 @@
+.jumbotron {
+    text-align: center;
+    background: rgb(20, 7, 44);
+    color: #fff;
+}
+
+#car-form {
+    margin: 20px;
+    padding: 20px;
+}
+
+#car-form-button {
+    background: rgb(20, 7, 44);
+    color: #fff;
+}
+
+#car-list-header {
+    background: rgb(20, 7, 44);
+    color: #fff;
+    text-transform: uppercase;
+    height: 50px;
+}
+
+.single-car-list-item {
+    background: rgb(93, 186, 240);
+    border: 1px solid rgb(221, 223, 233);
+    height: 50px;
+    text-transform: uppercase;
+}
+
+#single-car-data li {
+	color: #fff;
+	text-transform: uppercase;
+}
+
+.remove-car-button-div button {
+    background: rgb(20, 7, 44);
+    color: #fff;
+}
