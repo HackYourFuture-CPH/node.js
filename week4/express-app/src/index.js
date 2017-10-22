@@ -1,13 +1,15 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import fs from 'fs';
-import axios from 'axios';
+import path from 'path';
 const app = express()
 
 // STATIC SERVER PUBLIC FOLDER
 app.use(express.static('./public')) // STATIC
 
-const car_file = fs.readFileSync('./cars.json', 'utf8') || '[]';
+const CARS_PATH = path.join(__dirname, '../cars.json');
+
+const car_file = fs.readFileSync(CARS_PATH, 'utf8') || '[]';
 
 let cars = JSON.parse(car_file);
 
@@ -36,7 +38,7 @@ app.post('/car', function (req, res) {
     console.log(req.body);
     cars.push(req.body);
     // TODO: promisify this
-    fs.writeFile('./cars.json', JSON.stringify(cars), (err) => {
+    fs.writeFile(CARS_PATH, JSON.stringify(cars), (err) => {
         if (err) {
             res.status(500).send('Server Error', err);
         } else {
@@ -49,7 +51,7 @@ app.post('/car', function (req, res) {
 app.delete('/car/:index', function (req, res) {
     if (cars[req.params.index]) {
         cars.splice(req.params.index, 1);
-        fs.writeFile('./cars.json', JSON.stringify(cars), (err) => {
+        fs.writeFile(CARS_PATH, JSON.stringify(cars), (err) => {
             if (err) {
                 res.status(500).send('Server Error', err);
             } else {
@@ -64,7 +66,7 @@ app.delete('/car/:index', function (req, res) {
 app.put('/car/:index', function (req, res) {
     if (cars[req.params.index]) {
         cars[req.params.index] = req.body;
-        fs.writeFile('./cars.json', JSON.stringify(cars), (err) => {
+        fs.writeFile(CARS_PATH, JSON.stringify(cars), (err) => {
             if (err) {
                 res.status(500).send('Server Error', err);
             } else {
@@ -77,5 +79,5 @@ app.put('/car/:index', function (req, res) {
 })
 
 const listener = app.listen(process.env.PORT || 3000, function () {
- console.log(`Example app listening on port ${listener.address().port}!`)
+    console.log(`Example app listening on port ${listener.address().port}!`)
 });

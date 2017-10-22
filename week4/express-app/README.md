@@ -26,4 +26,4 @@ or if you want to start development run
 
 _Remember to work in the src folder_
 
-_Remember that you need 3 terminals one for run the compiler of the server, one for run the server itself and one for run the compiler of the frontend_
+_Remember that you need 3 terminals: one for run the compiler of the server, one for run the server itself and one for run the compiler of the frontend_
