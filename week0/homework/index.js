@@ -1,4 +1,6 @@
-const Person = require("./Person.js");
+class Person {
+	// your code here
+};
 
 // remember to write a constructor function
 let jimmy = new Person("Jimmy", 28);
