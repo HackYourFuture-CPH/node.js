@@ -1,29 +1,28 @@
-const ContactList = require('./contact_list_class.js');
+const Contact = require("./Contact.js");
+const ContactList = require("./ContactList.js");
 
-const my_contact_list = new ContactList(24);
+// remember to write a constructor function
+let jimmy = new Contact("Jimmy", 28);
 
-const jaw_contact_list = new ContactList();
+jimmy.addPhone("55551234");
 
-my_contact_list.addContact({
-    name: "Marco",
-    phone: 42838188
-});
+// jimmy.call();
+// should say "Calling Jimmy at 55551234..."
 
-my_contact_list.addContact({
-    name: "Jaw",
-    phone: 12312312
-});
+// jimmy.birthday();
+// should say "Wishing Jimmy a happy 29th birthday!"
 
-jaw_contact_list.addContact({
-    name: "Micky Mouse",
-    phone: 01010101
-})
+// console.log(JSON.stringify(jimmy));
+// console.log(jimmy instanceof Contact);
 
-my_contact_list.contacts = "whatever";
+let contacts = new ContactList("contacts1.json");
 
-console.log(my_contact_list.contacts);
+contacts.addContact(jimmy);
+contacts.addContact({name: "Jane"});
+contacts.addContact(new Contact("Jane"));
 
-my_contact_list.length = "marco";
-console.log(my_contact_list.length);
+console.log(contacts);
 
-console.log(jaw_contact_list.contacts);
+contacts.save()
+.then(() => { console.log("Contacts written") })
+.catch(console.log);
