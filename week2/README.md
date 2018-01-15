@@ -18,11 +18,9 @@ Although most of this was already covered by the JavaScript class, let's refresh
 
 ## Code in class
 
-### promises (not there yet)
+### npm_example
 
-This folder contains two examples. the file `index.js` is the same exercise we did in the class in the week0 but with Promises. It's interesting to see that we did not use any external libraries. Try to rewrite the same exercise using [Bluebird Promise library](http://bluebirdjs.com/docs/getting-started.html), remember to `npm install` the library.
-
-(NOT THERE YET)The file `wait.js` shows how to write a callback style function, and transforming it in a promise. It' s easy in this example to see that the functions are running simultaneously.
+This is the babel boilerplate that we build using npm. It's important you have this running because from now on we will use ES6. Cover everything about npm is not easy, if you still are a bit confused about the commands we used today have a look at the [npm docs](https://docs.npmjs.com/).
 
 ### http_server
 
