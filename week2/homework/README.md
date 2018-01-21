@@ -46,12 +46,15 @@
 
 2. Continuing on last week's homework:
 
+	* Start from the [classwork folder](../classwork) folder.
 	* Convert into a node project with `npm init`.
-	* Add babel into the setup. (You can check if the setup is good if you can `import` instead of `require`, for example.)
-	* Also show if you can use array methods like `contacts.push()` and `
-	contacts.splice()`.
-	* Add a setter for `phone` in `Contact` which converts string input to number (stores `_phone` as number) and validates that the number is 8 digits long (non-negative, doesn't start with 0).
-	* Read the `_search` interface provided in the `ContactList` class and show examples of it working.
+	* Add babel into the setup. (You can check if the setup is good if you can `import` instead of `require`, for example.) Reference: https://babeljs.io or [Marco's node-babel template](https://github.com/pmcalabrese/node-babel).
+	* Make sure you have created `.babelrc` and `.gitignore` files, and added the scripts in `package.json` files.
+	* Make a commit and push to Github at this stage.
+	* Add more fields in the [form to add Contact](../classwork/public/index.html).
+	* Handle the additional fields while constructing a `new Contact()`.
+	* Add a method `/all-contacts` in your server to list all the contacts in the [JSON file](../classwork/src/contacts.json).
+	* Create a new `contacts.html` file which uses the method above to render all contacts in a list. You could use `XMLHTTPRequest` or `fetch` that you have used previously to load data and `template strings` to render it.
 
 ## Reading
 

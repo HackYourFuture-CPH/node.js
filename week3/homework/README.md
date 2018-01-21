@@ -9,6 +9,9 @@ Based on the [code demonstrated in the class](../express-test), create a server 
  * The folder is setup based on [Marco's node-babel template](https://github.com/pmcalabrese/node-babel). Get it setup using `npm install` and use the convenience scripts in [package.json](./package.json).
  * Add express into the setup and create a server.
  * Create a RESTFul resource for the [ContactList](./src/ContactList.js) class. Make sure you leverage the class methods as much as possible, as a way to validate resources.
+ * Also show if you can use array methods like `contacts.push()` and `contacts.splice()`.
+ * Add a setter for `phone` in `Contact` which converts string input to number (stores `_phone` as number) and validates that the number is 8 digits long (non-negative, doesn't start with 0).
+ * Read the `_search` interface provided in the `ContactList` class and show examples of it working.
  * Finally, see if you can also use a simple JSON file as a mcok backed for your server.
  * For the FS operations, try and use promises to arrange your code flow.
 
