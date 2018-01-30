@@ -1,49 +1,80 @@
-import Contact from "./Contact";
+const fs = require("fs");
+const util = require("util");
 
-export default class ContactList {
-  constructor() {
-    this._contacts = [];
+const writeFile = util.promisify(fs.writeFile);
+const readFile = util.promisify(fs.readFile);
+
+class Contact {
+	constructor(obj) {
+		if(!obj || !obj.name)
+			throw "Name is needed to create a new person.";
+
+		this.name = obj.name;
+		this.age = obj.age;
+		this._phone = obj.phone;
+	};
+  // addPhone(number) {
+
+  //     return this.phone = number;
+  // }
+
+  get phone(){
+  	return this._phone;
   }
 
-  get contacts() {
-    return this._contacts;
+  set phone(number){
+  	this._phone = number;
   }
 
-  get length() {
-    return this.contacts.length;
-  }
+  call() {
+  	if (this.phone)
+  		console.log("Calling " + this.name + " at " + this.phone);
+  	else
+  		console.log(this.name + " has no phone number saved.");
 
-  addContact(contact) {
-    // adding a validator so that only instances of class Contact can be used to add contacts to the contact list
-    if (contact instanceof Contact) {
-      this.contacts.push(contact);
-    } else {
-      console.log(
-        "Please use the correct contact type. Only contacts created with the Contact class are accepted."
-      );
-    }
-    return this._contacts;
   }
+  birthday() {
+  	console.log("Wishing " + this.name + " a happy " + (this.age+1) + "th birthday!");
+  }
+};
 
-  removeContact(index) {
-    if (!this.contacts[index]) return;
-    this.contacts.splice(index, 1);
-    return this.contacts;
-  }
+class ContactList {
+	constructor(filename){
+		this.list = [];
+		this.filename = filename;
+	}
 
-  editContact(index, new_contact) {
-    if (!this.contacts[index]) return;
-    this.contacts[index] = new_contact;
-    return this.contacts;
-  }
+	addContact(contact){
+		if(contact instanceof Contact){
+			this.list.push(contact);
+		}
+	}
 
-  _search(search_value, search_key) {
-    let results = [];
-    this.contacts.forEach(contact => {
-      if (contact[search_key].toLowerCase().indexOf(search_value) !== -1) {
-        results.push(contact);
-      }
-    });
-    return results;
-  }
-}
+	save(){
+		return writeFile(this.filename, JSON.stringify(this.list), "utf8");
+	}
+
+	load(){
+		const readFilePromise = readFile(this.filename, "utf8");
+
+		return readFilePromise
+		.then(fileString => {
+			this.list = JSON.parse(fileString)
+			.map(contactObj => new Contact(contactObj));
+
+			return Promise.resolve(null);
+		});
+		// return new Promise((resolve, reject) => {
+		// 	readFilePromise
+		// 	.then(fileString => {
+		// 		this.list = JSON.parse(fileString)
+		// 		.map(contactObj => new Contact(contactObj));
+
+		// 		resolve(null);
+		// 	});
+		// });
+	}
+};
+
+exports.Contact = Contact;
+exports.ContactList = ContactList;
