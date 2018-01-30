@@ -4,7 +4,7 @@
 
 ## Assignment for this week
 
-Based on the [code demonstrated in the class](../express-test), create a server using `express.js` which extends similar functionality for a Contact List scenario, based on the [contact list example used in previous weeks](../../week1/homework/ContactList.js):
+Based on the [code demonstrated in the class](../classwork), create a server using `express.js` which extends similar functionality for a Contact List scenario, based on the [contact list example used in previous weeks](../../week1/homework/ContactList.js):
 
  * The folder is setup based on [Marco's node-babel template](https://github.com/pmcalabrese/node-babel). Get it setup using `npm install` and use the convenience scripts in [package.json](./package.json).
  * Add express into the setup and create a server.
