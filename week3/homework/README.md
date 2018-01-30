@@ -4,15 +4,28 @@
 
 ## Assignment for this week
 
-Based on the [code demonstrated in the class](../classwork), create a server using `express.js` which extends similar functionality for a Contact List scenario, based on the [contact list example used in previous weeks](../../week1/homework/ContactList.js):
+1. Reading before homework:
 
- * The folder is setup based on [Marco's node-babel template](https://github.com/pmcalabrese/node-babel). Get it setup using `npm install` and use the convenience scripts in [package.json](./package.json).
- * Add express into the setup and create a server.
- * Create a RESTFul resource for the [ContactList](./src/ContactList.js) class. Make sure you leverage the class methods as much as possible, as a way to validate resources.
- * Finally, see if you can also use a simple JSON file as a mcok backed for your server.
- * For the FS operations, try and use promises to arrange your code flow.
+	* Getter:
+	https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get
+	* Setter: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/set
+	* Import: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import
+
+1. Based on the [code demonstrated in the class](../classwork), extend as follows:
+
+	* The folder is setup based on [Marco's node-babel template](https://github.com/pmcalabrese/node-babel). Get it setup using `npm install` and use the convenience scripts in [package.json](./package.json).
+	* Port the commented out `/all-contact` endpoint using express (you can see how the other methods have been ported in class for example).
+	* The [contact.html file in public folder](../classwork/public/contacts.html) shows you how to make a request to load JSON data from `/all-contacts` request. extend this example to render the contacts into a list.
+	* Notice the use of `Getters` and `Setters` for `name` and `phone` property of `Contact` class.
+		1. We create a shadow property, like `_phone` and `_name` which are used to store real values, and the `get()` and `set()` function act as interface to this value.
+		1. Getter and Setter use the name of the function as property which would be bound to the class instance. They are also used automatically while assigning and reading values, and not invoked as functions directly.
+		1. Pay particular attention to how the validation for `name` has been moved out of the constructor into the setter since the setter is also used during assignment in constructur.
+	* Add validation logic in the `name` and `phone` setters to ensure the following:
+		1. `name` is a string and atleast 4 characters long.
+		1. `phone` can accept both numbers and strings, but not any other data type and should be saved as a 8 digit long string. 
+
 
 ## Related Reading
 
- * Explanation of REST API: https://stackoverflow.com/a/671132/1494833 (the anser with 2500+ upvotes)
- * Really useful reference for REST and HTTP concepts: http://www.restapitutorial.com/
+* https://javascriptplayground.com/es5-getters-setters/
+* https://docs.npmjs.com/cli/run-script
