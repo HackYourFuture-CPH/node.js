@@ -1,23 +1,18 @@
 > Please help us improve and share your feedback! If you find better tutorials or links, please share them by opening a Pull Request.
 
-# HackYourFuture Node.js - Homework week 4
+# HackYourFuture Node.js - Homework week 3
 
 ## Assignment for this week
-These are the specs for this week's assignment:
-- The user can run a NodeJs to-do app
-- The user can be able to run the file using node index.js
-- There should be a "help" section that lists all the commands for how to use the app
 
-The following commands should be present:
-- No command: show help section (`node index.js`)
-- help: show help section (`node index.js help`)
-- list: show current todo's, or show an appropriate text if there are no todos (`node index.js list`)
-- add: add a todo item. all the words behind "add" are entered as 1 todo item to the list (`node index.js add "Buy groceries"`)
-- remove: remove a todo item by its 1-base index. (`node index.js remove 2`)
-- reset: remove all todo items from the list (`node index.js reset`)
+Based on the [code demonstrated in the class](../classwork), create a server using `express.js` which extends similar functionality for a Contact List scenario, based on the [contact list example used in previous weeks](../../week1/homework/ContactList.js):
 
-- *BONUS:* update: update a todo item with new text (`node index.js update 3 "Wash teeth"`)
+ * The folder is setup based on [Marco's node-babel template](https://github.com/pmcalabrese/node-babel). Get it setup using `npm install` and use the convenience scripts in [package.json](./package.json).
+ * Add express into the setup and create a server.
+ * Create a RESTFul resource for the [ContactList](./src/ContactList.js) class. Make sure you leverage the class methods as much as possible, as a way to validate resources.
+ * Finally, see if you can also use a simple JSON file as a mcok backed for your server.
+ * For the FS operations, try and use promises to arrange your code flow.
 
-### Consider this:
-- What representation you use in your file (CSV, TSV, JSON, ...)
-- Handle edge cases, i.e. control what happens if user enters unexpected input
+## Related Reading
+
+ * Explanation of REST API: https://stackoverflow.com/a/671132/1494833 (the anser with 2500+ upvotes)
+ * Really useful reference for REST and HTTP concepts: http://www.restapitutorial.com/

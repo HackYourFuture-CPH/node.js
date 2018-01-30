@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>All Contacts</title>
+</head>
+<body>
+	<script type="text/javascript">
+		fetch("/all-contacts")
+		.then(res => res.json())
+		.then(console.log);
+	</script>
+	<a href="/all-contacts">All Contacts</a>
+</body>
+</html>
