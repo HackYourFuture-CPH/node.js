@@ -95,8 +95,8 @@ class ContactList {
 
 		return readFilePromise
 		.then(fileString => {
-			this.list = JSON.parse(fileString)
-			.map(contactObj => new Contact(contactObj));
+			JSON.parse(fileString)
+			.forEach(contactObj => this.addContact(new Contact(contactObj)));
 
 			return Promise.resolve(null);
 		});
