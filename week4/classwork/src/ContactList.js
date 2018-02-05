@@ -92,6 +92,8 @@ class ContactList {
 
 	load(){
 		const readFilePromise = readFile(this.filename, "utf8");
+		// clean the list, since we'll add all contacts again
+		this.list = [];
 
 		return readFilePromise
 		.then(fileString => {

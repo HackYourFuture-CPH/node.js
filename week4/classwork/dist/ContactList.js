@@ -102,6 +102,8 @@ var ContactList = function () {
 			var _this = this;
 
 			var readFilePromise = readFile(this.filename, "utf8");
+			// clean the list, since we'll add all contacts again
+			this.list = [];
 
 			return readFilePromise.then(function (fileString) {
 				JSON.parse(fileString).forEach(function (contactObj) {
