@@ -1,6 +1,6 @@
 > Please help us improve and share your feedback! If you find better tutorials or links, please share them by opening a Pull Request.
 
-# HackYourFuture Node.js - Reading material week 1
+# HackYourFuture Node.js - Reading material week 2
 
 ## Code in class
 
