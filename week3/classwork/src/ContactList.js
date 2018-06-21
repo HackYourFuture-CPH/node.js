@@ -5,37 +5,27 @@ const writeFile = util.promisify(fs.writeFile);
 const readFile = util.promisify(fs.readFile);
 
 class Contact {
-	constructor(obj) {
-		if(!obj || !obj.name)
-			throw "Name is needed to create a new person.";
+    constructor(obj) {
+        this.name = obj.name;
+        this.age = obj.age;
+    };
+    addPhone(number) {
 
-		this.name = obj.name;
-		this.age = obj.age;
-		this._phone = obj.phone;
-	};
-  // addPhone(number) {
+        return this.phoneNumber = number;
+    }
+     call() {
 
-  //     return this.phone = number;
-  // }
+         if (this.phoneNumber)
+             console.log("Calling " + this.name + " at " + this.phoneNumber);
+         else
+             console.log(this.name + " has no phone number saved.");
 
-  get phone(){
-  	return this._phone;
-  }
+     }
+     birthday() {
 
-  set phone(number){
-  	this._phone = number;
-  }
+         console.log("Wishing " + this.name + " a happy " + (this.age+1) + "th birthday!");
 
-  call() {
-  	if (this.phone)
-  		console.log("Calling " + this.name + " at " + this.phone);
-  	else
-  		console.log(this.name + " has no phone number saved.");
-
-  }
-  birthday() {
-  	console.log("Wishing " + this.name + " a happy " + (this.age+1) + "th birthday!");
-  }
+     }
 };
 
 class ContactList {
@@ -69,7 +59,7 @@ class ContactList {
 		// 	.then(fileString => {
 		// 		this.list = JSON.parse(fileString)
 		// 		.map(contactObj => new Contact(contactObj));
-
+				
 		// 		resolve(null);
 		// 	});
 		// });

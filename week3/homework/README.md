@@ -2,29 +2,69 @@
 
 # HackYourFuture Node.js - Homework week 3
 
-## Assignment for this week
+## Assignment:
+1. Simple HTTP Server:
+	Create an http server that can add and subtract from a number, which we will call the "state". Please see in `index.js` in this folder as starting material. Pay extra attention to line 21, which contains some hints for this week `console.log('New http request received', request.url);`
 
-1. Reading before homework:
+	**Rule 1**: DO NOT USE EXPRESS.JS
 
-	* Getter:
-	https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get
-	* Setter: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/set
-	* Import: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import
+	**Rule 2**: you can use other packages, but you HAVE to also make a version WITHOUT any NPM packages (http, of course, is not NPM but a node native package)
 
-1. Based on the [code demonstrated in the class](../classwork), extend as follows:
+	```js
+	// The state
+	var state = 10; 
+	```
 
-	* The folder is setup based on [Marco's node-babel template](https://github.com/pmcalabrese/node-babel). Get it setup using `npm install` and use the convenience scripts in [package.json](./package.json).
-	* Port the commented out `/all-contact` endpoint using express (you can see how the other methods have been ported in class for example).
-	* The [contact.html file in public folder](../classwork/public/contacts.html) shows you how to make a request to load JSON data from `/all-contacts` request. extend this example to render the contacts into a list.
-	* Notice the use of `Getters` and `Setters` for `name` and `phone` property of `Contact` class.
-		1. We create a shadow property, like `_phone` and `_name` which are used to store real values, and the `get()` and `set()` function act as interface to this value.
-		1. Getter and Setter use the name of the function as property which would be bound to the class instance. They are also used automatically while assigning and reading values, and not invoked as functions directly.
-		1. Pay particular attention to how the validation for `name` has been moved out of the constructor into the setter since the setter is also used during assignment in constructur.
-	* Add validation logic in the `name` and `phone` setters to ensure the following:
-		1. `name` is a string and atleast 4 characters long.
-		1. `phone` can accept both numbers and strings, but not any other data type and should be saved as a 8 digit long string. 
+	Endpoints criteria
+	```js
+	// /state 
+	// response: the current state in a html format 
+	// when the server starts, this should return "10"
+	http://localhost:8080/state 
 
-## Related Reading
+	// /add
+	// Response: "ok" in html format
+	// This should add 1 to the current state
+	http://localhost:8080/add
 
-* https://javascriptplayground.com/es5-getters-setters/
-* https://docs.npmjs.com/cli/run-script
+	// /remove
+	// Response: "ok" in html format
+	// This should subtract 1 ƒrom the current state
+	http://localhost:8080/remove
+
+	// /reset
+	// Response: "ok" in html format
+	// This should set the state back to 10
+
+	http://localhost:8080/reset
+
+	// Any other URL
+	// Response: return error code 404: Not found with a friendly message
+	// and do not change the state variable
+	http://localhost:8080/subtract
+	```
+
+2. Continuing on last week's homework:
+
+	* Start from the [classwork folder](../classwork) folder.
+	* Convert into a node project with `npm init`.
+	* Add babel into the setup. (You can check if the setup is good if you can `import` instead of `require`, for example.) Reference: https://babeljs.io or [Marco's node-babel template](https://github.com/pmcalabrese/node-babel).
+	* Make sure you have created `.babelrc` and `.gitignore` files, and added the scripts in `package.json` files.
+	* Make a commit and push to Github at this stage.
+	* Add more fields in the [form to add Contact](../classwork/public/index.html).
+	* Handle the additional fields while constructing a `new Contact()`.
+	* Add a method `/all-contacts` in your server to list all the contacts in the [JSON file](../classwork/src/contacts.json).
+	* Create a new `contacts.html` file which uses the method above to render all contacts in a list. You could use `XMLHTTPRequest` or `fetch` that you have used previously to load data and `template strings` to render it.
+
+## Reading
+
+### Babel:
+More about babel at https://babeljs.io/ and see the setup @pmcalabrese demonstrated in class at https://github.com/pmcalabrese/node-babel
+
+### http, http listen
+- Video basic: https://www.youtube.com/watch?v=pYOltVz7kL0
+- Video routing: https://www.youtube.com/watch?v=_D2w0voFlEk (please focus on request.url, not request.method)
+- Read: [Node JS documentation about http](https://nodejs.org/en/docs/guides/anatomy-of-an-http-transaction/)
+- Read Advanced: 
+
+While not strictly homework, we’ve created another playlist if you’d like to learn more or review (and as JavaScript developers, you should). https://www.lynda.com/SharedPlaylist/78e6513f51bb4102b03349460491b4e3

@@ -43,7 +43,6 @@ app.use(function (req, res, next) {
 
 app.use("/public", _express2.default.static('public'));
 app.use(_bodyParser2.default.urlencoded({ extended: true }));
-app.use(_bodyParser2.default.json());
 
 // app.use((req, res, next) => {
 // 	console.log("Second middleware");
@@ -57,8 +56,7 @@ app.get("/", function (req, res) {
 	res.send("This is the webserver index.");
 });
 
-// Show all the contacts
-app.post("/contacts", function (req, res) {
+app.post("/add-contact", function (req, res) {
 	// console.log("post 2");
 	var obj = req.body;
 	console.log("Incoming user: " + JSON.stringify(obj));
@@ -74,48 +72,11 @@ app.post("/contacts", function (req, res) {
 		contacts.addContact(contact);
 		contacts.save();
 	}).then(function () {
-		res.status(201).json(contact);
+		res.write("Successfully saved contact: " + contact.name);
+		res.end();
 	}).catch(function (err) {
 		res.status(500).send(err);
 	});
-});
-
-// show all the contacts
-app.get('/contacts', function (req, res) {
-	return contacts.load().then(function () {
-		console.log(contacts);
-		// console.log(contacts["list"]);
-
-		res.json(contacts.list);
-	}).catch(function (err) {
-		console.log(err);
-		res.statusCode = 500;
-		res.send("Internal server error");
-	});
-});
-
-app.get('/contacts/:id', function (req, res) {
-	var id = req.params.id;
-	return contacts.load().then(function () {
-		res.json(contacts.list[id - 1]);
-	}).catch(res.err);
-});
-
-app.put('/contacts/:id', function (req, res) {
-	var id = req.params.id;
-	var body = req.body;
-
-	// if(typeof id !== "number")
-	// 	throw "Contact.id needs to be a number";
-
-	if (id < 1 || id > contacts.list.length) res.status(404).send("Contact with this id not found.");
-
-	return contacts.load().then(function () {
-		contacts.list[id - 1] = body;
-		return contacts.save();
-	}).then(function () {
-		res.json(contacts.list[id - 1]);
-	}).catch(res.err);
 });
 
 // http

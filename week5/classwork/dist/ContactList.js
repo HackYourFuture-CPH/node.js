@@ -14,36 +14,60 @@ var Contact = function () {
 	function Contact(obj) {
 		_classCallCheck(this, Contact);
 
-		if (!obj || !obj.name) throw "Name is needed to create a new person.";
+		if (!obj) throw "Need an object to instantiate Contact properties.";
+
+		// console.log("obj:", obj);
 
 		this.name = obj.name;
 		this.age = obj.age;
-		this._phone = obj.phone;
+		this.phone = obj.phone;
 	}
 
 	_createClass(Contact, [{
+		key: "toJSON",
+
+
+		// this helps JSON.stringify convert getter properties correctly
+		// https://stackoverflow.com/questions/42107492/json-stringify-es6-class-property-with-getter-setter
+		value: function toJSON() {
+			return {
+				name: this.name,
+				age: this.age,
+				phone: this.phone
+			};
+		}
+	}, {
 		key: "call",
 		value: function call() {
-			if (this.phone) console.log("Calling " + this.name + " at " + this.phone);else console.log(this.name + " has no phone number saved.");
+			if (this.phone) return "Calling " + this.name + " at this.phone";else return this.name + " has no phone number saved";
 		}
 	}, {
 		key: "birthday",
 		value: function birthday() {
-			console.log("Wishing " + this.name + " a happy " + (this.age + 1) + "th birthday!");
+			return "Wishing " + this.name + " a happy " + ++this.age + "th birthday!";
+		}
+	}, {
+		key: "name",
+		set: function set(name) {
+			if (!name) throw "Name is needed to create a person";else if (typeof name !== "string") throw "Contact.name needs to be a string.";else if (name.length < 4) throw "Contact.name needs to be at least 4 characters.";
+			this._name = name;
+		},
+		get: function get() {
+			return this._name;
 		}
 	}, {
 		key: "phone",
-
-		// addPhone(number) {
-
-		//     return this.phone = number;
-		// }
-
 		get: function get() {
 			return this._phone;
 		},
-		set: function set(number) {
-			this._phone = number;
+		set: function set(phone) {
+			if (!phone) return this._phone = null;
+
+			if (typeof phone === "string") ;else if (typeof phone === "number") phone = phone.toString();else throw "Contact.phone should be a string or a number.";
+
+			if (phone.length < 8) throw "Contact.phone should be at least 8 digits long.";
+
+			this._phone = phone;
 		}
 	}]);
 
@@ -78,23 +102,16 @@ var ContactList = function () {
 			var _this = this;
 
 			var readFilePromise = readFile(this.filename, "utf8");
+			// clean the list, since we'll add all contacts again
+			this.list = [];
 
 			return readFilePromise.then(function (fileString) {
-				_this.list = JSON.parse(fileString).map(function (contactObj) {
-					return new Contact(contactObj);
+				JSON.parse(fileString).forEach(function (contactObj) {
+					return _this.addContact(new Contact(contactObj));
 				});
 
 				return Promise.resolve(null);
 			});
-			// return new Promise((resolve, reject) => {
-			// 	readFilePromise
-			// 	.then(fileString => {
-			// 		this.list = JSON.parse(fileString)
-			// 		.map(contactObj => new Contact(contactObj));
-
-			// 		resolve(null);
-			// 	});
-			// });
 		}
 	}]);
 
