@@ -7,11 +7,11 @@ This 3 week HYF Module is about Node.JS. We can think of Node.JS as "Javascript 
 ## Planning
 | Week | Topic | Read | Homework |
 | ---- | ----- | ---- | -------- |
-| 0. | Node.js, NPM | [Week 0 Reading](week0/README.md) | [Week 0 Homework](week0/homework/README.md) |
-| 1. | class | [Week 1 Reading](week1/README.md) | [Week 1 Homework](week1/homework/README.md) |
-| 2. | Babel, http | [Week 2 Reading](week2/README.md) | [Week 2 Homework](week2/homework/README.md) |
-| 3. | express, REST | [Week 3 Reading](week3/README.md) | [Week 3 Homework](week3/homework/README.md) |
-| 4. | fs, process | [Week 4 Reading](week4/README.md) | [Week 4 Homework](week4/MAKEME.md) |
+| 1. | Node.js, NPM | [Week 1 Reading](week1/README.md) | [Week 1 Homework](week1/homework/README.md) |
+| 2. | class | [Week 2 Reading](week2/README.md) | [Week 2 Homework](week2/homework/README.md) |
+| 3. | Babel, http | [Week 3 Reading](week3/README.md) | [Week 3 Homework](week3/homework/README.md) |
+| 4. | express, REST | [Week 4 Reading](week4/README.md) | [Week 4 Homework](week4/homework/README.md) |
+| 5. | fs, process | [Week 5 Reading](week5/README.md) | [Week 5 Homework](week5/MAKEME.md) |
 
 
 ## Pre-requisites
