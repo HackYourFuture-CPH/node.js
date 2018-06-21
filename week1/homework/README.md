@@ -1,6 +1,6 @@
 > Please help us improve and share your feedback! If you find better tutorials or links, please share them by opening a Pull Request.
 
-# HackYourFuture Node.js - Homework week 0
+# HackYourFuture Node.js - Homework week 1
 
 ## Assignment for this week
 

@@ -1,6 +1,6 @@
 > Please help us improve and share your feedback! If you find better tutorials or links, please share them by opening a Pull Request.
 
-# HackYourFuture Node.js - Homework week 2
+# HackYourFuture Node.js - Homework week 3
 
 ## Assignment:
 1. Simple HTTP Server:
