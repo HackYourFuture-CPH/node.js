@@ -1,13 +1,16 @@
-> Please help us improve and share your feedback! If you find better tutorials or links, please share them by opening a Pull Request.
+## To watch before you have you first Node session:
 
-# HackYourFuture Node.js - Reading material week 1
+- Go through the [README.md](https://github.com/HackYourFuture/Node.js) of this repo
+- Watch Jason's playlist on [Lynda.com](https://www.lynda.com/SharedPlaylist/a850f6b7bddf437f8b98679f5f9d9cc3) (45 min)
 
-## Code in class
+Try to formulate and answer to the question:
+- What is Node.js?
 
-### node_starter
+## Handing in homework
+Take a look at [this video](https://www.youtube.com/watch?v=-o0yomUVVpU&index=2&list=PLVYDhqbgYpYUGxRdtQdYVE5Q8h3bt6SIA) made by Daan, he explains how your homework needs to be handed in from now on.
 
-Basic node project setup showing how to start a Node project, import files and use `fs` module and `util.promisify`.
+Also review the Git [workflow material](https://github.com/HackYourFuture/Git/blob/master/Lecture-3.md) from the JavaScript3 module, use this as a reference.
 
-### class_contact_list
+## Reading material
 
-This is the classs based example covered in class, based on `Person` class used in Javascript 3 module.
+https://developer.ibm.com/node/2016/08/24/promises-in-node-js-an-alternative-to-callbacks/ 

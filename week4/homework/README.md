@@ -5,24 +5,26 @@
 ## Assignment for this week
 
 1. Reading before homework:
-	* https://technologyconversations.com/2014/08/12/rest-api-with-json/
-	* http://www.restapitutorial.com/
-	* https://jsonplaceholder.typicode.com/ which you have used before is a great example of a JSON REST API.
-	* https://scotch.io/tutorials/learn-to-use-the-new-router-in-expressjs-4
+
+	* Getter:
+	https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get
+	* Setter: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/set
+	* Import: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import
 
 1. Based on the [code demonstrated in the class](../classwork), extend as follows:
 
- * The folder is setup based on [Marco's node-babel template](https://github.com/pmcalabrese/node-babel). Get it setup using `npm install` and use the convenience scripts in [package.json](./package.json).
- * Remember to test the APi thoroughly by using Postman app before you begin and as you go along implementing each feature!
- * Add a method to delete a `Contact` which follows REST principles.
- * Create a new module (like [ContactList.js](../classwork/src/ContactList.js)) for a resource called `Car` with properties such as `color`, `manufacturer`, `model`.
- * Also implement validations using getters and setters and create RESTful API for this resource as well.
- * You could organise the express code in the same `index.js` file, or you could organise it in another file and import it as a module (like the way we import ContactList.js). Additionally you could also separate `Contact` and `Car` resources using an express router (see reading above.)
- * Add a setter for `age` property of the `Contact` class.
- * Add a method `GET /contact/<id>/birthday` which works with the `birthday()` method of `Contact` object. Since this method increments the `age` property, you need to save the contacts to JSON file afterwards. Can you handle any errors which might happen?
- * Add a property `cars` in `Contact` class which helps you track which cars are owned by a contact. (Hint: this could be a list which contains the id's of the related cars)
- * Implementd a method `GET /contact/<id>/cars` which shows you the cars owned by the particular user. Could you fetch the cars with the related id's stored in the `cars` property and display them?
+	* The folder is setup based on [Marco's node-babel template](https://github.com/pmcalabrese/node-babel). Get it setup using `npm install` and use the convenience scripts in [package.json](./package.json).
+	* Port the commented out `/all-contact` endpoint using express (you can see how the other methods have been ported in class for example).
+	* The [contact.html file in public folder](../classwork/public/contacts.html) shows you how to make a request to load JSON data from `/all-contacts` request. extend this example to render the contacts into a list.
+	* Notice the use of `Getters` and `Setters` for `name` and `phone` property of `Contact` class.
+		1. We create a shadow property, like `_phone` and `_name` which are used to store real values, and the `get()` and `set()` function act as interface to this value.
+		1. Getter and Setter use the name of the function as property which would be bound to the class instance. They are also used automatically while assigning and reading values, and not invoked as functions directly.
+		1. Pay particular attention to how the validation for `name` has been moved out of the constructor into the setter since the setter is also used during assignment in constructur.
+	* Add validation logic in the `name` and `phone` setters to ensure the following:
+		1. `name` is a string and atleast 4 characters long.
+		1. `phone` can accept both numbers and strings, but not any other data type and should be saved as a 8 digit long string. 
 
 ## Related Reading
 
- * Explanation of REST API: https://stackoverflow.com/a/671132/1494833 (the anser with 2500+ upvotes)
+* https://javascriptplayground.com/es5-getters-setters/
+* https://docs.npmjs.com/cli/run-script

@@ -1,65 +1,34 @@
 > Please help us improve and share your feedback! If you find better tutorials or links, please share them by opening a Pull Request.
 
-# HackYourFuture Node.js - Reading material week 3
+# HackYourFuture Node.js - Reading material week 2
 
-## Today's Meal
+### HTTP Module
+This should give you a real quick overview of what we'll be doing in the bnext class.
+> Read:https://www.w3schools.com/nodejs/nodejs_http.asp
 
-1. Recap last Week
-2. Homework
-3. Q&A
-4. Other topics
-5. Typescript vs ES6, transpiling javascript
-7. Testing with Postman
-8. MVC model
-9. Express vs native http library
-6. Building a REST web API for Todos
+This should mostly make sense to you as well, except the body parsing part. So have a read and ignore the things you think you've never seen before.
+> Read: https://nodejs.org/en/docs/guides/anatomy-of-an-http-transaction/
 
-## Check out the database repository [here](https://github.com/HackYourFuture/database)
-And find out how you can prepare for the first database lecture, Jason and Rob have provided a nice Lynda playlist so we can have a flying kick off.
+### Asynchronous callbacks
+Although most of this was already covered by the JavaScript class, let's refresh our memories on Callbacks.
+> Watch: https://www.youtube.com/watch?v=pTbSfCT42_M
 
-# TODO API
+-> Read: [Understanding Asynchronous JavaScript Callbacks Through Household Chores
+ -](https://medium.freecodecamp.com/understanding-asynchronous-javascript-callbacks-through-household-chores-e3de9a1dbd04#.8ilr4a7aj) _estimated time: ~1 hour_
 
-This is an Express application using `bodyParser` middleware to convert the request body to JSON.
+## Code in class
 
-There are currently four actions:
+### npm_example
 
-- `list` (`GET /todos`): Lists all todos
-- `create` (`POST /todos`): Creates a new todo
-- `update` (`PUT /todos/:id`): Updates the description of a todo
-- `remove` (`DELETE /todos/:id`): Deletes a todo
+This is the babel boilerplate that we build using npm. It's important you have this running because from now on we will use ES6. Cover everything about npm is not easy, if you still are a bit confused about the commands we used today have a look at the [npm docs](https://docs.npmjs.com/).
 
-## Directory structure
+### http_server
 
-- `actions`: Contains the actions as listed above, each as a express handler (function accepting request and response)
-- `data`: Contains the data file `todos.json`
-- `models`: Contains the Todo model class
-- `util`: Utility functions
-- `index.js` The application file
+The HTTP server is a slightly improved version that we did in the class includes:
+ - Code split in modules
+ - Promises
+ - `http` `fs` and `util` code modules
+ - it serves the public folder
+ - *this is very far from a complete implementation of an HTTP server* therefore take it as exercise to understand and use the code modules of node
 
-## Request body format
-
-When calling the `create` or `update` actions, the request body should look like this:
-
-```json
-{
-  "todo": {
-    "description": "(todo description)"
-  }
-}
-```
-
-Note that for these actions, the client should add the following header:
-
-- `Content-Type`: `application/json`
-
-In Postman, make sure to add this header, and set the Body type to "Raw".
-
-## UUIDs
-
-For IDs, this application uses "UUIDs" (Universally Unique IDs). They can be generated using the `uuid` package, and are guaranteed never to be the same.
-
-## Code in the class
-
-# express-test
-
-Here you can find the express server we wrote in the class. Remember to complete it by adding the missing endpoints, DELETE and PATCH.
+ Try to run the server and make some request with your browser

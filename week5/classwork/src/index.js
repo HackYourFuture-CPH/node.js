@@ -23,6 +23,7 @@ app.use((req, res, next) => {
 
 app.use("/public", express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 // app.use((req, res, next) => {
 // 	console.log("Second middleware");
@@ -36,7 +37,8 @@ app.get("/", (req, res) => {
 	res.send("This is the webserver index.");
 });
 
-app.post("/add-contact", (req, res) => {
+// Show all the contacts
+app.post("/contacts", (req, res) => {
 	// console.log("post 2");
 	const obj = req.body;
 	console.log(`Incoming user: ${ JSON.stringify(obj) }`);
@@ -55,13 +57,60 @@ app.post("/add-contact", (req, res) => {
 		contacts.save();
 	})
 	.then(() => {
-		res.write(`Successfully saved contact: ${ contact.name }`);
-		res.end();
+		res
+		.status(201)
+		.json(contact);
 	})
 	.catch((err) => {
 		res.status(500).send(err);
 	})
 });
+
+// show all the contacts
+app.get('/contacts', (req, res) => {
+	return contacts.load()
+	.then(()=> {
+		console.log(contacts);
+		// console.log(contacts["list"]);
+
+		res.json(contacts.list);
+	})
+	.catch(err => {
+		console.log(err);
+		res.statusCode = 500;
+		res.send("Internal server error");
+	});
+});
+
+app.get('/contacts/:id', (req, res) => {
+	const id = req.params.id;
+	return contacts.load()
+	.then(() =>{
+		res.json(contacts.list[id - 1]);
+	})
+	.catch(res.err);
+});
+
+app.put('/contacts/:id', (req, res) => {
+	const id = req.params.id;
+	const body = req.body;
+
+	// if(typeof id !== "number")
+	// 	throw "Contact.id needs to be a number";
+
+	if(id < 1 || id > contacts.list.length)
+		res.status(404).send("Contact with this id not found.");
+
+	return contacts.load()
+	.then(() =>{
+		contacts.list[id - 1] = body;
+		return contacts.save();
+	})
+	.then(() => {
+		res.json(contacts.list[id - 1]);
+	})
+	.catch(res.err)
+})
 
 // http
 // .createServer((req, res) => {
