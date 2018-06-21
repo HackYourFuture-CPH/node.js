@@ -11,7 +11,7 @@ This 3 week HYF Module is about Node.JS. We can think of Node.JS as "Javascript 
 | 2. | class | [Week 2 Reading](week2/README.md) | [Week 2 Homework](week2/homework/README.md) |
 | 3. | Babel, http | [Week 3 Reading](week3/README.md) | [Week 3 Homework](week3/homework/README.md) |
 | 4. | express, REST | [Week 4 Reading](week4/README.md) | [Week 4 Homework](week4/homework/README.md) |
-| 5. | fs, process | [Week 5 Reading](week5/README.md) | [Week 5 Homework](week5/MAKEME.md) |
+| 5. | fs, process | [Week 5 Reading](week5/README.md) | [Week 5 Homework](week5/homework/README.md) |
 
 
 ## Pre-requisites
