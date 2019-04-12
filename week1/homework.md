@@ -1,3 +1,5 @@
+# Homework
+
 > Please help us improve and share your feedback! If you find better tutorials or links, please share them by opening a Pull Request.
 
 # HackYourFuture Node.js - Homework week 1
@@ -17,12 +19,13 @@
 	1. https://www.freecodecamp.org/challenges/make-instances-of-objects-with-a-constructor-function
 	1. https://www.freecodecamp.org/challenges/make-unique-objects-by-passing-parameters-to-our-constructor
 
-1. There's a file [`index.js`](./index.js
+1. There's a file [`index.js`](./homework/index.js
 ) in this folder. To make it run successfully, you need to improve the class `Person` which should provide the methods required below. Use the following link as a reference for the `class` syntax: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
 
-1. If you have completed all of the above, then attempt to convert last homework from JS3 module into ES6 class: https://github.com/HackYourFuture-CPH/JavaScript/blob/master/Week10/MAKEME.md#building-on-the-classwork.
-
-
 ### Related reading
-
 * You can attempt the first 5 chapters of this course: https://www.codecademy.com/courses/learn-javascript-classes/lessons/classes/exercises/introduction (you'd need to create a free account first).
+
+## Handing in homework
+Take a look at [this video](https://www.youtube.com/watch?v=-o0yomUVVpU&index=2&list=PLVYDhqbgYpYUGxRdtQdYVE5Q8h3bt6SIA) made by Daan, he explains how your homework needs to be handed in from now on.
+
+Also review the Git [workflow material](https://github.com/HackYourFuture/Git/blob/master/Lecture-3.md) from the JavaScript3 module, use this as a reference.
