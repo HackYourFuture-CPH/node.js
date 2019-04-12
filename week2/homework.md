@@ -1,6 +1,6 @@
-> Please help us improve and share your feedback! If you find better tutorials or links, please share them by opening a Pull Request.
+# Homework
 
-# HackYourFuture Node.js - Homework week 2
+> Please help us improve and share your feedback! If you find better tutorials or links, please share them by opening a Pull Request.
 
 ## Assignment for this week
 
@@ -8,8 +8,6 @@
 
 	* https://try.github.io to revise your Git CLI skills.
 	* https://codepen.io/k3no/post/es6-sampler-5-promises-were-made Practical examples for async and promise code.
-	
-
 
 1. Beginning from the [code demonstrated in the class](../class_contact_list), add the following functionality:
 
