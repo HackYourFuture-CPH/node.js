@@ -1,0 +1,62 @@
+{
+  "name": "meal-sharing",
+  "version": "1.0.0",
+  "description": "Website for sharing meals",
+  "engines": {
+    "node": "8.11.1"
+  },
+  "scripts": {
+    "start": "npm run build && node ./src/server/index",
+    "build": "webpack --mode production",
+    "client": "webpack-dev-server --mode development --devtool inline-source-map --hot",
+    "server": "nodemon ./src/server/index.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "author": "Benjamin Hughes",
+  "license": "MIT",
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.17",
+    "@fortawesome/free-solid-svg-icons": "^5.8.1",
+    "@fortawesome/react-fontawesome": "^0.1.4",
+    "@kodnificent/sparouter": "^1.1.0",
+    "@types/xml": "^1.0.3",
+    "app-root-path": "^2.1.0",
+    "babel-polyfill": "^6.26.0",
+    "body-parser": "^1.18.3",
+    "cookie-parser": "~1.4.3",
+    "cors": "^2.8.4",
+    "debug": "~2.6.0",
+    "disqus-react": "^1.0.5",
+    "dotenv": "^4.0.0",
+    "express": "^4.16.4",
+    "express-brute": "^1.0.1",
+    "express-form-data": "^2.0.1",
+    "multer": "^1.3.0",
+    "mysql": "^2.17.1",
+    "path": "^0.12.7",
+    "react": "^16.8.2",
+    "react-bootstrap": "^1.0.0-beta.8",
+    "react-chips": "^0.8.0",
+    "react-disqus-comments": "^1.4.0",
+    "react-dom": "^16.8.2",
+    "react-highcharts": "^16.0.2",
+    "react-i18next": "^10.8.1",
+    "react-jinke-music-player": "^4.2.1",
+    "react-paginate": "^6.3.0",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "^3.0.1",
+    "react-share": "^2.4.0",
+    "react-text-truncate": "^0.14.1",
+    "reactstrap": "^7.1.0",
+    "serve-favicon": "2.4.5",
+    "swagger-ui-express": "^4.0.2"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "^2.0.1",
+    "concurrently": "^4.1.0",
+    "nodemon": "^1.12.1",
+    "sequelize-cli": "^5.4.0",
+    "webpack": "^4.35.2",
+    "webpack-cli": "^3.3.0"
+  }
+}

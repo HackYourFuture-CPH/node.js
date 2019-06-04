@@ -1,65 +1,60 @@
-> Please help us improve and share your feedback! If you find better tutorials or links, please share them by opening a Pull Request.
+# Learning goals
+- [ ] Create fullstack web application
+  - [ ] Connecting the frontend to the webserver api creates in last week
+- [ ] Deploy to now.sh
 
-# HackYourFuture Node.js - Reading material week 4
+# Relevant links
+* [Preparation](preparation.md)
+* [Homework](homework.md)
+* [Lesson plan](lesson-plan.md)
 
-## Today's Meal
 
-1. Recap last Week
-2. Homework
-3. Q&A
-4. Other topics
-5. Typescript vs ES6, transpiling javascript
-7. Testing with Postman
-8. MVC model
-9. Express vs native http library
-6. Building a REST web API for Todos
+## Deploying to Heroku
+Create a heroku user. 
 
-## Check out the database repository [here](https://github.com/HackYourFuture/database)
-And find out how you can prepare for the first database lecture, Jason and Rob have provided a nice Lynda playlist so we can have a flying kick off.
+### First create a new app
+- Now create a new app
 
-# TODO API
+![step 1](assets/deploy-step-1.PNG)
 
-This is an Express application using `bodyParser` middleware to convert the request body to JSON.
+- Give the app a good name and choose Europe as the region
 
-There are currently four actions:
+![step 2](assets/deploy-step-2.PNG)
 
-- `list` (`GET /todos`): Lists all todos
-- `create` (`POST /todos`): Creates a new todo
-- `update` (`PUT /todos/:id`): Updates the description of a todo
-- `remove` (`DELETE /todos/:id`): Deletes a todo
 
-## Directory structure
+### Setup automatic deployment
 
-- `actions`: Contains the actions as listed above, each as a express handler (function accepting request and response)
-- `data`: Contains the data file `todos.json`
-- `models`: Contains the Todo model class
-- `util`: Utility functions
-- `index.js` The application file
+Lets set our new app so that everytime we push code to master, that code is deployed to our website.
 
-## Request body format
+-  Choose Github for deployment method
 
-When calling the `create` or `update` actions, the request body should look like this:
+![step 3](assets/deploy-step-3.PNG)
 
-```json
-{
-  "todo": {
-    "description": "(todo description)"
-  }
-}
-```
+-  Choose the `master` branch and click `Enable Automatic Deploys`
 
-Note that for these actions, the client should add the following header:
+![step 4](assets/deploy-step-4.PNG)
 
-- `Content-Type`: `application/json`
+### Adding a database
 
-In Postman, make sure to add this header, and set the Body type to "Raw".
+The database we have used so far is the local one running in Mysql Workbench. Now we will add a database in the cloud. 
 
-## UUIDs
+- Under `ressources` click `Find more add-ons`
 
-For IDs, this application uses "UUIDs" (Universally Unique IDs). They can be generated using the `uuid` package, and are guaranteed never to be the same.
+![step 5](assets/deploy-step-5.PNG)
 
-## Code in the class
+- Add clear `ClearDB MySQL`. Congratulations we now have a database in the cloud. Now we just need to connect it to our app.
+- Like we have out `.env` file locally that referes to the environment variables in herkou we have to add them manually:
 
-# express-test
+#### Adding environment variables
+- Go to `Settings`. Click `Reveal Config Vars`. It will have the format of: `mysql://{user}:{pass}@{host}/{database}`
+- Exactly like the `.env` file add the same environment variables. The `port` should be 3306.
 
-Here you can find the express server we wrote in the class. Remember to complete it by adding the missing endpoints, DELETE and PATCH.
+![step 6](assets/deploy-step-6.PNG)
+
+Now the database is connected to the app 🎉
+
+BUT the database has no tables! Connect to the ClearDB database using Mysql Workbench and create the tables in workbench just like you have with the local database. 
+
+We should now have connected the database (with the newly inserted tables) to our application. Try and go to the app's webpage and see if it works. 
+
+If there is an error, use this command:  `heroku logs --tail --app app-name` - substitute `app-name` with the actual app name. TO install it go [here](https://devcenter.heroku.com/articles/heroku-cli)

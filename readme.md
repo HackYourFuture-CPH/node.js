@@ -7,11 +7,10 @@ This 3 week HYF Module is about Node.JS. We can think of Node.JS as "Javascript 
 ## Planning
 | Week | Topic | Read | Homework |
 | ---- | ----- | ---- | -------- |
-| 1. | Node.js, NPM | [Week 1 Reading](week1/README.md) | [Week 1 Homework](week1/homework/README.md) |
-| 2. | class | [Week 2 Reading](week2/README.md) | [Week 2 Homework](week2/homework/README.md) |
-| 3. | Babel, http | [Week 3 Reading](week3/README.md) | [Week 3 Homework](week3/homework/README.md) |
-| 4. | express, REST | [Week 4 Reading](week4/README.md) | [Week 4 Homework](week4/homework/README.md) |
-| 5. | fs, process | [Week 5 Reading](week5/README.md) | [Week 5 Homework](week5/homework/README.md) |
+| 1. | HTTP <br> Introduction to node js <br> Simple webserver | [Week 1 Reading](week1/readme.md) | [Week 1 Homework](week1/homework.md) |
+| 2. | Express <br> Database connection | [Week 2 Reading](week2/readme.md) | [Week 2 Homework](week2/homework.md) |
+| 3. | API | [Week 3 Reading](week3/readme.md) | [Week 3 Homework](week3/homework.md) |
+| 4. | Fullstack application <br> Ready for production | [Week 4 Reading](week4/readme.md) | [Week 4 Homework](week4/homework.md) |
 
 
 ## Pre-requisites
@@ -25,8 +24,6 @@ We will build on knowledge from the following HYF (sub)modules. If we feel we ha
 - Using Node Package Manager (NPM)
 - Using `require` to include modules
 - Using `http` to handle http requests and respond
-- Using `fs` to read from and write to files.
-- Using `process` to read arguments from the CLI
 - Using `express` to make a RESTful API
 
 ## Why Node.js?
@@ -38,16 +35,6 @@ There are two reasons why we at HYF choose Node.JS over others:
 1) You already know JavaScript, so it's easier to get started than other languages
 2) Node.js is great for making web APIs because it is asynchronous by nature and thus allows for high input/output. By this we mean that it allows many users to make very light requests at the same time.
 
-## Handing in homework
-A Video to remind you about [how we hand in homework](https://www.youtube.com/watch?v=-o0yomUVVpU&index=2&list=PLVYDhqbgYpYUGxRdtQdYVE5Q8h3bt6SIA).
-
-Also review the Git [workflow material](https://github.com/HackYourFuture/Git/blob/master/Lecture-3.md) from the JavaScript3 module, use this as a reference.
-
-## Rewatch previous lectures
-
-- Lecture 1(Joost): https://www.youtube.com/watch?v=c8OvRVsbIsc
-- Lecture 2(Joost): https://www.youtube.com/watch?v=pY7IDaLX-no
-- Lecture 3(Joost): https://www.youtube.com/watch?v=oeWCqKJsHtU&t=99s
 
 
 
