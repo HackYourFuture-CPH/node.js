@@ -4,13 +4,7 @@
   - [ ] Routing
   - [ ] Middleware
   - [ ] Logging and debugging
-- [ ] Database interaction - No ORM!
-  - [ ] Connecting to mysql
-    - [ ] Using connection
-    - [ ] Environment variables
-  - [ ] Executing queries
-    - [ ] Simple
-    - [ ] Placeholder values
+- [ ] Postman
 
 Reproduce a log hitting errors and understanding flow.
 

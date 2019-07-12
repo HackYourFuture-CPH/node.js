@@ -24,7 +24,36 @@ Hints:
 
 ## Meal sharing website
 
-Using the meal-sharing database lets continue building our meal sharing website. 
+Create two files `meals.js` and `reservation.js` with an array of objects containing meals and an array of objects containing reservations, like this:
+
+`meals.js`
+```js
+const meals = [
+  {
+    id: 1,
+    title: 'Indian food in the summer',
+    maxNumberOfGuests: 5,
+    description: 'A nice night out eating delicious indian food',
+    createdAt: '2019/12/7 14:34',
+    price: 67,
+  },
+  ...
+];
+```
+
+`reservations.js`
+```js 
+const reservations = [
+  {
+    name: 'Benjamin Hughes',
+    email: 'benjamin@hughes.dk',
+    mealId: 1,
+  },
+  ...
+];
+```
+
+`Export` the arrays and `require` them where you need them.
 
 We will start with adding a few routes:
 
@@ -42,17 +71,12 @@ The `/meals` route should support some query parameters:
 | Parameter | Description | Data type | Example | 
 | ---- | ----- | ---- | -------- |
 | `maxPrice` | Get meals that has a price smaller than `maxPrice` | Number | `/meals?maxPrice=90` |
-| `availableReservations` | Get meals that still has available reservations | Boolean | `api/meals?availableReservations=true` |
 | `title` | Get meals that partially match a title. `Rød grød med` will match the meal with the title `Rød grød med fløde` | String | `api/meals?title="Indian platter"` |
 | `createdAfter` | Get meals that has been created after the date | Date | `api/meals?createdAfter=2019-04-05` |
 | `limit` | Only specific number of meals | Date | `api/meals?limit=4` |
 
-Again like before, select all meals using the mysql query that you wrote in the database homework. Remember to take the query parameters into consideration.
-
-When you have the relevant meals in an array (returned from the database) return the json for those meals.
-
 Some extra things to think about: 
-- What if there is no meal with the requested id in the database?
+- What if there is no meal with the requested id in the relevant array?
 - What if the users writes a string as id? fx "/meals/lol"
 - What if the users writes a query parameter that is not supported?
 
@@ -60,3 +84,4 @@ Some extra things to think about:
 Lets create a middleware function that logs out the time, a request was received and the path. The log should look like this:
 
 `2019-11-07 11:41 request received for path: /meals/3`
+

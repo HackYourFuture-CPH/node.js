@@ -1,7 +1,9 @@
 # Learning goals
 - [ ] Create fullstack web application
-  - [ ] Connecting the frontend to the webserver api creates in last week
-- [ ] Deploy to now.sh
+  - [ ] Connecting the frontend to the api
+    - [ ] Using `fetch` to get, post, put and delete data from api
+  - [ ] Webpack on a conceptual level
+- [ ] Deploy to heroku
 
 # Relevant links
 * [Preparation](preparation.md)

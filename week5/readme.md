@@ -1,4 +1,5 @@
 # Learning goals
-- If necessary
-- Recap
-- Finish the mealsharing website from homework.
+
+- Recap of Node class
+- Finish the meal-sharing website from homework
+  - Possibly adding extra features

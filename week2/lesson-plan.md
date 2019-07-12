@@ -36,15 +36,11 @@ If you find anything that could be improved then please create a pull request! W
     - [Exercise](#is-chrome-browser)
   - Logging and debugging
     - Focus on the students understanding **the order** in which things are executed
-- Database interaction - No ORM!
-  - Connecting to mysql
-    - [Using connection](mysql#connection)
-    - [Using pool](../week3/homework/src/server/database.js) no need to explain this! 
-    - Environment variables. Check [this repo](../week3/homework/READMD.md#environment-variables)
-  - Executing queries
-    - Simple
-    - Placeholder values `'SELECT * FROM `books` WHERE `author` = ?', ['David']`
-  - [Exercise](#education-database)
+- Postman
+  - Create collection and save queries
+  - Sending get requests requests
+    - Query parameters
+    - Parameters
   
 
 ## Code inspiration
@@ -76,40 +72,6 @@ app.use((req, res, next) => {
 
 ```
 
-### Mysql connection
-```js
-var mysql = require('mysql');
-var settings = require('./settings.json');
-var db;
-
-function connectDatabase() {
-    if (!db) {
-        db = mysql.createConnection(settings);
-
-        db.connect(function(err){
-            if(!err) {
-                console.log('Database is connected!');
-            } else {
-                console.log('Error connecting database!');
-            }
-        });
-    }
-    return db;
-}
-
-module.exports = connectDatabase();`
-```
-
-```js
-var db = require('./db');
-
-db.query('SELECT ? FROM t_user',query, function(err, results, query) {
-    if (err) throw err;
-    if(!err) {
-        indexPage.receiveResults(results);
-    }
-});
-```
 
 ## Exercises
 
@@ -136,13 +98,3 @@ Implement a middleware function that adds a key on the `req` object that indicat
 
 Use the `User-Agent` header. 
 
-
-### Education database
-
-Create a `educations` table in mysql. It should have these columns: `specialization-title`, `started-date`, `graduated-date`, `university-title`.
-
-| Route | Description |
-| ---- | ----- |
-| `/addNewEducation` | Adds a new education to the `educations` table. Should just be the exact same one each time |
-| `/educations/{id}` | Should return the json for the education with corresponding `id` |
-| `/educations` | Should return the json for all educations |

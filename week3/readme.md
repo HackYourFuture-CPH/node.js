@@ -1,9 +1,16 @@
 # Learning goals
 
+- [ ] Database interaction - No ORM!
+  - [ ] Connecting to mysql
+    - [ ] Using connection
+    - [ ] Environment variables
+  - [ ] Executing queries
+    - [ ] Simple
+    - [ ] Placeholder values
 - [ ] API
   - [ ] REST
   - [ ] CRUD
-    - [ ] Router verb get, post, delete, update
+    - [ ] Router verb `GET`, `POST`, `DELETE`, `PUT`
     - [ ] POST mention express.json middleware
   - [ ] Postman
 
