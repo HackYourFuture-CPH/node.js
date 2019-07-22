@@ -20,20 +20,22 @@ If you find anything that could be improved then please create a pull request! W
 - Database interaction - No ORM!
   - Connecting to mysql
     - [Using connection](#Mysql-connection)
-    - [Using pool](../week3/homework/src/server/database.js) no need to explain this! 
-    - Environment variables. Check [this repo](../week3/homework/READMD.md#environment-variables)
+    - In homework [pools](homework/src/server/database.js) are used, but dont explain this
+    - Environment variables. Check [this repo](homework/README.md#environment-variables)
   - Executing queries
     - Simple
     - Placeholder values `'SELECT * FROM books WHERE author = ?', ['David']`
-  - [Code inspiration](#Phonebook-database)
+  - [Code inspiration](#phonebook-database)
+  - [Exercise](#connecting-the-database)
 - API
   - REST
-  - CRUD (follow the structure found [the homework template](homework/src/server))
+  - CRUD (follow the structure found in [the homework template](./homework/src/server) )
     - Router verb `GET`, `POST`, `DELETE`, `PUT`
       - Especially focus on post with `app.use(express.urlencoded({ extended: true }));` and `app.use(express.json());`
+  - [Code inspiration](#phonebook-api)
 - Postman
   - `POST`, `DELETE`, `PUT` requests
-- [Exercise](#Create-education-CRUD-api)
+- [Exercise finish concerts api](#concerts-api)
 
 ## Code inspiration
 
@@ -106,7 +108,7 @@ db.query('INSERT INTO posts SET ?', contact, function(err, results, query) {
 
 ```
 
-### Phonebook  api
+### Phonebook api
 Create the following api
 
 | Url | Verb | Functionality | Example | 
@@ -119,22 +121,38 @@ Create the following api
 
 ## Exercises
 
-### Phonebook queries
+### Concerts api
 
-Create a `educations` table in mysql. It should have these columns: `specialization-title`, `started-date`, `graduated-date`, `university-title`.
+Lets create an api for concerts
 
-Using node and the mysql lib:
-- Insert three new educations
-- Select all educations
-- Select a specific education
+#### Connecting the database
+Create a `concerts` table in mysql. It should have these columns: `title`, `band`, `venue`, `createdDate`, `performanceDate` and `price`
 
-### Create education CRUD api
-Create a `educations` table in mysql. It should have these columns: `specialization-title`, `started-date`, `graduated-date`, `university-title`.
+Using node and the `mysql` lib:
+- `INSERT` three new concerts
+- `GET` all concerts
+- `DELETE` a specific concert
+
+#### Routing
+
+Create the following routes
 
 | Url | Verb | Functionality | Example | 
 | ---- | ----- | ---- | -------- |
-| `api/educations/` | GET | Returns all educations | `GET api/educations/` |
-| `api/educations/` | POST | Adds a new education | `POST api/educations/` |
-| `api/educations/{id}` | GET | Returns education by `id` | `GET api/educations/2` |
-| `api/educations/{id}` | PUT | Updates the education by `id` | `PUT api/educations/2` |
-| `api/educations/{id}` | DELETE | Deletes the education by `id` | `DELETE educations/2` |
+| `api/concerts/` | GET | Returns all concerts | `GET api/concerts/` |
+| `api/concerts/` | POST | Adds a new concert | `POST api/concerts/` |
+| `api/concerts/{id}` | GET | Returns concert by `id` | `GET api/concerts/2` |
+| `api/concerts/{id}` | PUT | Updates the concert by `id` | `PUT api/concerts/2` |
+| `api/concerts/{id}` | DELETE | Deletes the concert by `id` | `DELETE concerts/2` |
+
+#### Query parameters
+| Parameter | Description | Data type | Example | 
+| ---- | ----- | ---- | -------- |
+| `maxPrice` | Get concerts that has a price smaller than `maxPrice` | Number | `/concerts?maxPrice=160` |
+| `title` | Get concerts that partially match a title. `Metallic` will match the concert with the title `Metallica in Parken` | String | `api/concerts?title=metallic` |
+| `createdAfter` | Get concerts that has been created after the date | Date | `api/concerts?createdAfter=2019-04-05` |
+| `band` | Get concerts with a specific band | Date | `api/concerts?limit=4` |
+
+
+#### Use the api using postman
+Using post man insert some concerts, get some concerts using query parameters, delete some concerts and update some concerts

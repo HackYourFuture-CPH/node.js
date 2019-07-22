@@ -37,6 +37,7 @@ If you find anything that could be improved then please create a pull request! W
       - Web server
       - Much more
 - Simple webserver with node js
+  - Npm init
   - Modules
     - Homemade using `module.exports` and `require`
     - [Code inspiration](#footer-as-module)
@@ -45,10 +46,9 @@ If you find anything that could be improved then please create a pull request! W
       - `npm install http -s`
       - node_modules
       - Package.json
-  - Npm init
   - .gitignore
   - Nodemon
-  - Play around with the http module
+  - Play around with Express - Focus on usage!
     - [Code inspiration](#building-a-simple-http-webserver)
     - [Exercise](#portfolio)
 
@@ -78,49 +78,44 @@ const getFooter = require("./footer");
 ### Building a simple http webserver
 
 ```js
-// explain http comes from node_modules that comes from writing npm install http -s
-const http = require("http");
+// explain express comes from node_modules that comes from writing npm install express -s
+// Take a look inside the folder!
+const express = require("express");
+const app = express();
 
-http
-  .createServer(function(req, res) {
-    // write the headers of the response. First argument is http status code
-    // Change the response header and show it in chrome dev tools
-    res.writeHead(200, { "Content-Type": "text/html", lol: 2 });
-    let response = "Error no page found";
+app.get("/", (request, response) => {
+  response.send(`
+    <body>
+        <h1>Main page</h1>
+        <h2>Shows main content</h2>
+    </body>
+  `);
+});
 
-    if (req.url === "/about") {
-      response = `
-        <body>
-            <h1>About</h1>
-            <p>This is an about page</p>
-        </body>
-      `;
-    } else if (req.url === "/contact") {
-      response = `
-        <body>
-            <h1>Contact</h1>
-            <p>This is a contact page</p>
-            <form>
-                <label>name</label>
-                <input placeholder="Write your name">
-                <button>Contact me</button>
-            </form>
-        </body>
-      `;
-    } else if (req.url === "/") {
-      response = `
-        <body>
-            <h1>Main page</h1>
-            <h2>Shows main content</h2>
-        </body>
-      `;
-    }
+app.get("/about", (request, response) => {
+  response.send(`
+    <body>
+        <h1>About</h1>
+        <p>This is an about page</p>
+    </body>
+  `);
+});
 
-    res.write(response);
-    res.end();
-  })
-  .listen(8080);
+app.get("/contact", (request, response) => {
+  response.send(`
+    <body>
+        <h1>Contact</h1>
+        <p>This is a contact page</p>
+        <form>
+            <label>name</label>
+            <input placeholder="Write your name">
+            <button>Contact me</button>
+        </form>
+    </body>
+  `);
+});
 
+app.listen(3000);
 ```
 
 ## Exercises
@@ -136,7 +131,7 @@ Start building your portfolio with these routes:
 | `/skills` | Add a list of your skills |
 
 #### Changing the title of the page
-Lets add some functionality that shows the relevant title of a page using modules!
+Continuing on the last exercise. Lets add some functionality that shows the relevant title of a page using modules!
 
 - Create a function that takes title as parameter
 - Calling the function returns the html for the `head` tag and the `title` tag with the title tag set as the parameter
@@ -148,7 +143,6 @@ Here are the routes and their corresponding title
 | Route | Page title |
 | ---- | ----- |
 | `/` | Home |
-| `/about` |  About |
 | `/contact` | Contact |
 | `/educations` | Education |
 | `/skills` | Skills |
@@ -159,7 +153,7 @@ Lets add some styling to our page. We will do it with inlining styles for now. W
 
 Change the previous header function to add some inline styling in the head tag.
 
-Try and see if you can create a module with only the css.
+Try and see if you can create a module with only the css as a string.
 
 #### Adding a projects route
 
@@ -167,30 +161,10 @@ Try and see if you can create a module with only the css.
 | ---- | ----- |
 | `/projects` | Renders a list of your projects |
 
-
 | Route | Page title |
 | ---- | ----- |
 | `/projects` | projects |
 
-Create a js class called `ProjectsRenderer`.
+A project should have: `title`, `codeUrl`, `previewUrl` and `img`. 
 
-It has a property called `projects` which is an array of objects. A `project` object has 3 keys: `title`, `codeUrl`, `previewUrl` and `img`. 
-
-`ProjectsRenderer` also has a method called `getRenderedProjects`. Calling this funciton should return the html for rendering the `projects`.
-
-```js
-const projectsRenderer = new ProjectsRenderer([{
-        'Spirit animal generator',
-        'https://github.com/benna100/spiritAnimalGenerator',
-        'https://benna100.github.io/spiritAnimalGenerator/',
-        'https://benna100.github.io/spiritAnimalGenerator/preview.png',
-    },
-    ...
-    ]
-);
-
-const renderedProjectsHtml = projectsRenderer.getRenderedProjects();
-console.log(renderedProjectsHtml); // <ul><li><h1>Spirit animal generator</h1>...</li></ul>;
-```
-
-Now when the the `projects` route is hit, respond with the `renderedProjects` html!
+Now when the the `projects` route is hit, respond with some rendered html of your projects!

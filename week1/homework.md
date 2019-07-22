@@ -21,10 +21,16 @@ The `Circle` class should have a couple of methods:
 
 Instantiate a couple of circles and log out their diameter, circumference and area.
 
+Here is an example
+
+```js
+const circle = new Circle(10);
+circle.getDiameter(); // 20
+```
 
 ## Meal sharing website
 
-In this homework we will be continuing the meal sharing project started in the database class. 
+In this homework we will be continuing the meal sharing project started in the database class. In this homework we will be working with `meals` and `reservations` for the meals. 
 
 ## Lets setup the project
 With node [installed](readme.md#installing-node) initiate a new project by running `npm init`. This will create a `package.json` file. 
@@ -40,9 +46,15 @@ Now add a `.gitignore` file with these two lines:
 
 We are going to be using `nodemon` to run our application. `nodemon` will watch for file changes, and when a file is changed it will rerun our app. To install `nodemon` run 
 
-`npm install --save-dev nodemon` 
+`npm install --save-dev nodemon`
 
-The `--save-dev` will save the `nodemon` as a developer dependency. 
+The `--save-dev` will save the `nodemon` as a developer dependency
+
+Also install `express` with the following command
+
+`npm install -s express`
+
+`-s` will save `express` as a dependency
 
 ### package.json
 Inside the `package.json` file we can define scripts that can be run. There should already be a `test` script, in the same fashion add two more scripts:
@@ -57,142 +69,107 @@ Create a folder called `src`. That will contain the source files for our applica
 ```
 -> src
 ---> server
+-----> data
+-------> meals.js
+-------> reservations.js
 -----> index.js
 ```
 
+### Setting up the data
 
-### Setup classes
-We are going to be using a lot of classes in this homework so refamiliarize yourself with them: https://github.com/HackYourFuture-CPH/JavaScript/blob/master/JavaScript3/Week9/lesson-plan.md
+Create two files inside a `data` folder under `src` called `meals.json` and `reservation.json`. 
 
-Create the classes `Meal` and `Meals` as seperate files (inside the `server` folder) with the properties and methods described below. Require them all in the `index.js` file. Dont start the implementation of the methods, just set everything up :)
-
-```
-- Meals
-  - Properties
-    - meals
-  - Methods
-  	- addMeal(meal)
-  	- getJSON
-
-- Review
-  - Properties
-    - title
-    - stars
-  - Methods
-    - getJSON
-
-- Meal
-  - Properties
-    - title
-    - maxNumberOfGuests
-    - description
-    - createdAt
-    - reviews
-    - price
-  - Methods
-    - addReview(review)
-    - removeReview(review)
-    - getJSON
-
+`meals.json`
+```json
+[
+  {
+    "id":1,
+    "title":"Indian food in the summer",
+    "maxNumberOfGuests":5,
+    "description":"A nice night out eating delicious indian food",
+    "createdAt":"2019/12/7 14:34","price":67
+    }
+]
 ```
 
-### Instantiate some classes
-Create some `Meal` instances and one `Meals` instance.
+`reservations.json`
+```json
+[
+  {
+    "name": "Benjamin Hughes",
+    "email": "benjamin@hughes.dk",
+    "mealId": 1
+  }
+];
+```
 
-### Lets start creating some functionality
+Add some more meals and reservations.
 
-### Meals
+### Setting up the routes
 
-#### meals.addMeal(meal)
-Should push an instance of the `Meal` class to the `meals` property. ONLY if the meal is not already in the `meals` property! How can we check this? 
+Inside the `index.js` file create the following routes using `express`
 
-If the meal is already in the `meals` property throw [an error](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error).
+| Route | Description |
+| ---- | ----- |
+| `/meals` | Respond with the json for all the `meals` |
+| `/cheap-meals` | Respond with the json for all the `meals` that are cheap (you define what a cheap meal is) |
+| `/large-meals` | Respond with the json for all the `meals` that can fit lots of people |
+| `/meal` | Respond with the json for a random meal. If the meal has a reservation that matches its id, then add the email of that reservation to the json |
+| `/reservations` | Respond with the json for all `reservations` |
+| `/reservation` | Respond with the json for a random reservation |
+
+*remember to `require` the meals and reservations json*
+
+#### Modular routes
+Instead of writing the functionality for the routes inside `index.js`. Create a routes folder that contains `meals.js`, `meal.js`, etc. So that the routes can be created like this:
 
 ```js
-meals.addMeal(burger);
-console.log(meals.meals); //[Meal{title: 'burger', ...}]
-meals.addMeal(fries);
-console.log(meals.meals); //[Meal{title: 'burger', ...}, Meal{title: 'fries', ...}]
-meals.addMeal(burger); // throws an error!
+const mealsRouter = require('./routes/meals.js');
+app.get("/meals", mealsRouter);
+
 ```
 
-#### meals.getJSON()
-Should return JSON representing all the meals in the `meals` property. 
+The structure of the project now looks like this:
 
-```js
-console.log(meals.getJSON()); // "[{"title": "Burger", ...}]"
 ```
-
-### Review
-
-#### review.getJSON(review)
-Should return the json representing the review
-
-```js
-const review1Json = review1.getJSON();
-console.log(review1Json); // "{"title": "Great food", "stars": 4}"
+-> src
+---> server
+-----> data
+-------> meals.js
+-------> reservations.js
+-----> routes
+-------> meals.js
+-------> cheap-meals.js
+-------> etc
+-----> index.js
 ```
-
-### Meal
-
-#### meal.addReview(review)
-Should add a `review` to the `reviews` property
-
-```js
-burger.addReview(review1);
-console.log(burger.reviews); //[Review{title: 'Great food', ...}]
-burger.addReview(review2);
-console.log(burger.reviews); //[Review{title: 'Great food', ...}, Review{title: 'A bit expensive', ...}]
-```
-
-#### meal.removeReview(review)
-Should remove the review form the `reviews` property. Throw an error if the review is not in the `reviews` property.
-
-```js
-console.log(burger.reviews); //[Review{title: 'Great food', ...}, Review{title: 'A bit expensive', ...}]
-burger.removeReview(review1);
-console.log(burger.reviews); //[User{title: 'A bit expensive', ...}]
-```
-
-#### meal.getJSON()
-Should return the json representing the meal
-
-```js
-const mealJSON = burger.getJSON();
-console.log(mealJSON); // "{"title": "Delicious burger", ...}"
-```
-
-### Lets create some instances
-Now you have created all the class functionality, so lets use it!
-
-Create a `Meals` instance, some `Meal` instances and create som `Review` instances. Add some meal instances to the meals instance. Try and add some reviews and remove some reviews. Also try to log out the json for a `Meal` and a `Review`
-
-### Lets connect all our functionality with the server
-Create a simple server using the `http` library.
-
-To import it use:
-
-```js
-const http = require("http");
-```
-
-Create a new http server like this:
-```js
-http
-  .createServer(function(req, res) {
-	  console.log(req.url);
-  });
-```
-
-Read this article to figure out what path the user is on: https://www.w3schools.com/nodejs/nodejs_http.asp
-
-### Setting up routes
-Depending on what route the user hits we should respond with different responses:
-- "/meals" - Return the json for all meals
-- "/meal" - Return the json for a specific meal
-- "/review" - Return the json for a specific review
-- If a user hits any other url's the server should respond with "Page not found"
-
-For the response remember to set this header: `response.writeHead(200, { "Content-Type": "text/json" });`
 
 ![Meal sharing](assets/meal-sharing.gif)
+
+## Feedback giving time!
+Find a student to give feedback using this site: https://hyf-peer-review.herokuapp.com/
+The feedback should be given after the homework has been handed in preferably latest two days after. 
+
+To help you get started we have created some ressources about giving feedback. Find them here: https://github.com/HackYourFuture-CPH/curriculum/tree/master/review
+
+## Hand in Homework:
+Go over your homework one last time:
+
+- Does every file run without errors and with the correct results?
+- Have you used `const` and `let` and avoided `var`?
+- Do the variable, function and argument names you created follow the [Naming Conventions](https://github.com/HackYourFuture/fundamentals/blob/master/fundamentals/naming_conventions.md)?
+- Is your code well-formatted (see [Code Formatting](https://github.com/HackYourFuture/fundamentals/blob/master/fundamentals/naming_conventions.md))?
+
+![check](https://media.giphy.com/media/l4EpblDY4msVtKAOk/giphy.gif) 
+
+If you can answer yes to the above questions then you are ready to hand if the homework: 
+
+- Use the `hyf-homework` repo and add your homework files in the `nodejs/week1` folder
+- Make your commits for the homework. Remember to seperate the code into meaningful commits!
+- Push the changes to github
+- To finish the homework post the link for your repo on your classes slack channel
+
+---
+
+🎉
+

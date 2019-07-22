@@ -7,7 +7,30 @@ Working with api's is such a core way for the client to communicate with the ser
 
 ## Warmup
 
-*Create a warmup exercise*
+### Calculator
+
+Lets again create a calculator. This time the calculator will support 4 features:
+
+- Addition
+- Subtraction
+- Multiplication
+- Division
+
+All the numbers that should be inputtet should be gotten from the query parameters: `calculator?firstParam=1&secondParam=2...`
+
+#### Calculator using `:param`
+To specify what calculator method first use the `:params`, like this:
+
+Going to `calculator/multiply?firstParam=1&secondParam=2` Should respond with 2
+Going to `calculator/multiply?firstParam=1&secondParam=2&secondParam=4` Should respond with 8. 
+
+There can be an infinite number of query parameters!
+
+#### Calculator using `req.body`
+
+Going to `calculator?firstParam=1&secondParam=2` with the key `method` in the `req.body` set to multiply should respond with 2
+Going to `calculator?firstParam=1&secondParam=2&secondParam=4` with the key `division` in the `req.body` set to division should respond with 0.125 
+
 
 ## Getting started with the api
 In the [homework folder](homework) there is a template already setup, use that for creating your api! Copy the code for the template from the [homework folder](homework) into the `hyf-homework/node/week3` folder. Make sure `node_modules` is in `.gitignore` for the `hyf-homework` repo. We dont want to commit `node_modules`!
@@ -30,7 +53,6 @@ Create the following rest endpoints:
 | `api/meals/{id}` | GET | Returns meal by `id` | `GET api/meals/2` |
 | `api/meals/{id}` | PUT | Updates the meal by `id` | `PUT api/meals/2` |
 | `api/meals/{id}` | DELETE | Deletes the meal by `id` | `DELETE meals/2` |
-
 
 #### `GET api/meals/` query parameters
 | Parameter | Description | Data type | Example | 
@@ -66,3 +88,24 @@ Create the following rest endpoints:
 Using Postman use the api to create some `meals`, `reservations` and possibly `reviews`. Use `delete`, `put`, `get` and `post`.
 
 Use the query parameters in the `GET api/meals/`. 
+
+## Hand in Homework:
+Go over your homework one last time:
+
+- Does every file run without errors and with the correct results?
+- Have you used `const` and `let` and avoided `var`?
+- Do the variable, function and argument names you created follow the [Naming Conventions](https://github.com/HackYourFuture/fundamentals/blob/master/fundamentals/naming_conventions.md)?
+- Is your code well-formatted (see [Code Formatting](https://github.com/HackYourFuture/fundamentals/blob/master/fundamentals/naming_conventions.md))?
+
+![check](https://media.giphy.com/media/l4EpblDY4msVtKAOk/giphy.gif) 
+
+If you can answer yes to the above questions then you are ready to hand if the homework: 
+
+- Use the `hyf-homework` repo and add your homework files in the `nodejs/week3` folder
+- Make your commits for the homework. Remember to seperate the code into meaningful commits!
+- Push the changes to github
+- To finish the homework post the link for your repo on your classes slack channel
+
+---
+
+🎉

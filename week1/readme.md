@@ -8,12 +8,13 @@
     - [ ] V8 vs the browser that runs js
     - [ ] What can you build with nodejs?
 - [ ] Simple webserver with node js
+  - [ ] Npm init
   - [ ] Modules
     - [ ] Creating and importing using `module.exports` and `require`
     - [ ] Npm modules
-  - [ ] Npm init
-  - [ ] .gitignore
+    - [ ] .gitignore
   - [ ] Nodemon
+  - [ ] Express - Simple `GET` requests, focus on usage
 
 
 # Relevant links

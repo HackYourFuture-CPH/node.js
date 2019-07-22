@@ -1,7 +1,7 @@
 # Homework
 
 ## So why this homework?
-Express is such a core library for NodeJs that can help us with many things when building out a fully fledged webserver. Connecting the webserver to database makes it possible for us to store data for an application. 
+Express is such a core library for NodeJs that can help us with many things when building out a fully fledged webserver. 
 
 > Please help us improve and share your feedback! If you find better tutorials or links, please share them by opening a Pull Request.
 
@@ -10,7 +10,7 @@ Express is such a core library for NodeJs that can help us with many things when
 Lets use express routes to create a small calculator
 
 1. Create new empty folder called warmup. Open it in Visual Studio Code. Open the terminal.
-2. Initialize new Npm project, install `express` library, create `index.js` with code to run new express server on port `3000`.
+2. Initialize a new Npm project using `npm init`, install `express` library, create `index.js` with code to run new express server on port `3000`.
 3. Add 2 routes to your `index.js`:
   - GET `/numbers/add?first=<number here>&second=<number here>`. In response send sum (first + second).
   - GET `/numbers/multiply/<first number here>/<second number here>`. in response send multiplication (first * second).
@@ -24,45 +24,36 @@ Hints:
 
 ## Meal sharing website
 
-Create two files `meals.js` and `reservation.js` with an array of objects containing meals and an array of objects containing reservations, like this:
+Lets continue building on our meal sharing website
 
-`meals.js`
-```js
-const meals = [
-  {
-    id: 1,
-    title: 'Indian food in the summer',
-    maxNumberOfGuests: 5,
-    description: 'A nice night out eating delicious indian food',
-    createdAt: '2019/12/7 14:34',
-    price: 67,
-  },
-  ...
-];
+Using the same structure and data objects as last week:
+
+```
+-> src
+---> server
+-----> data
+-------> meals.js
+-------> reservations.js
+-------> reviews.js
+-----> routes
+-------> meals.js
+-------> reservations.js
+-------> reviews.js
+-----> index.js
 ```
 
-`reservations.js`
-```js 
-const reservations = [
-  {
-    name: 'Benjamin Hughes',
-    email: 'benjamin@hughes.dk',
-    mealId: 1,
-  },
-  ...
-];
-```
-
-`Export` the arrays and `require` them where you need them.
-
-We will start with adding a few routes:
+We will start with only having these routes:
 
 | Route | Description |
 | ---- | ----- |
 | `/meals/{id}` | Respond with the json for the meal with the corresponding `id` |
-| `/meals` | Respond with the json for all the meals found in the database. |
+| `/meals` | Respond with the json for all the meals |
 | `/reservations/{id}` | Respond with the json for the reservation with the corresponding `id` |
 | `/reservations` | Respond with the json for all reservations |
+| `/reviews/{id}` | Respond with the json for the review with the corresponding `id` |
+| `/reviews` | Respond with the json for all reviews |
+
+a `review` constists of `title`, `createdBy`, `start` and `createdAt`.
 
 ### /meals
 
@@ -76,7 +67,7 @@ The `/meals` route should support some query parameters:
 | `limit` | Only specific number of meals | Date | `api/meals?limit=4` |
 
 Some extra things to think about: 
-- What if there is no meal with the requested id in the relevant array?
+- What if there is no meal with the requested id in `meals.json`?
 - What if the users writes a string as id? fx "/meals/lol"
 - What if the users writes a query parameter that is not supported?
 
@@ -85,3 +76,23 @@ Lets create a middleware function that logs out the time, a request was received
 
 `2019-11-07 11:41 request received for path: /meals/3`
 
+## Hand in Homework:
+Go over your homework one last time:
+
+- Does every file run without errors and with the correct results?
+- Have you used `const` and `let` and avoided `var`?
+- Do the variable, function and argument names you created follow the [Naming Conventions](https://github.com/HackYourFuture/fundamentals/blob/master/fundamentals/naming_conventions.md)?
+- Is your code well-formatted (see [Code Formatting](https://github.com/HackYourFuture/fundamentals/blob/master/fundamentals/naming_conventions.md))?
+
+![check](https://media.giphy.com/media/l4EpblDY4msVtKAOk/giphy.gif) 
+
+If you can answer yes to the above questions then you are ready to hand if the homework: 
+
+- Use the `hyf-homework` repo and add your homework files in the `nodejs/week2` folder
+- Make your commits for the homework. Remember to seperate the code into meaningful commits!
+- Push the changes to github
+- To finish the homework post the link for your repo on your classes slack channel
+
+---
+
+🎉

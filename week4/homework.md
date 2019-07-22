@@ -78,22 +78,44 @@ Rendering the html will all be done client side. That means using `innerHTML` fx
 3. Set the `innerHTML` of an element (fx the `body`) to the string with the rendered html
 
 ### /meals/{id}
-The `/meals/{id}` route should have a form for making a reservation for the meal. The form should have `phonenumber`, `name` and `email`. The signup should work asynchronously on the frontend using the [`POST /api/reservations` api](../week3/homework#reservation) we created [here](../week3/homework#reservation)
+The `/meals/{id}` route should have a form for making a reservation for that meal. The form should have `phonenumber`, `name` and `email`. When creating a new meal with a form, use the [`POST /api/reservations` route](../week3/homework.md#reservation)
 
 This form should only be shown if the meal does have available reservations! 
 
 That means that we in js need to:
 - When the "book seat" button is clicked get the `phonenumber`, `name` and `email` from either the form or the individual inputs
-- Now create a [post request using fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch#Supplying_request_options) with the `phonenumber`, `name` and `email`. Posting the request [here](../week3/homework#meal)
+- Now create a [post request using fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch#Supplying_request_options) with the `phonenumber`, `name` and `email`. Posting the request [here](../week3/homework.md#meal)
 - If the request is successful indicate to the user that the request went well. If it was unsuccessful show an error message. This we could do using `alert`
 
+### Styling
+Add some styling to the website so it is not so basic looking!
+
 ### Autocomplete for meals *optional*
-Create an autocomplete for searching for a meal. The autocomplete should be added to the `home` route and the `meals` route. The autocomplete should use the query parameter `title` in the [meals api](../week3/homework#using-the-api) 
+Create an autocomplete for searching for a meal. The autocomplete should be added to the `home` route and the `meals` route. The autocomplete should use the query parameter `title` in the [meals api](../week3/homework.md#get-apimeals-query-parameters) 
 
 ### Reviews *optional*
 Create the possibility for a person to leave a review for a meal. 
 
-
 ### Deploy
+Deploy your application [using Heroku](readme.md#deploying-to-heroku). 
 
-Deploy your application [using Heroku](readme.md/#deploying-to-heroku). 
+## Hand in Homework:
+Go over your homework one last time:
+
+- Does every file run without errors and with the correct results?
+- Have you used `const` and `let` and avoided `var`?
+- Do the variable, function and argument names you created follow the [Naming Conventions](https://github.com/HackYourFuture/fundamentals/blob/master/fundamentals/naming_conventions.md)?
+- Is your code well-formatted (see [Code Formatting](https://github.com/HackYourFuture/fundamentals/blob/master/fundamentals/naming_conventions.md))?
+
+![check](https://media.giphy.com/media/l4EpblDY4msVtKAOk/giphy.gif) 
+
+If you can answer yes to the above questions then you are ready to hand if the homework: 
+
+- Use the `hyf-homework` repo and add your homework files in the `nodejs/week1` folder
+- Make your commits for the homework. Remember to seperate the code into meaningful commits!
+- Push the changes to github
+- To finish the homework post the link for your repo AND the link to your heroku site on your classes slack channel
+
+---
+
+🎉

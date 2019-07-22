@@ -1,6 +1,6 @@
 import "./index.css";
 
-import SPARouter from "@kodnificent/sparouter"; // if you are hosting locally
+import SPARouter from "@kodnificent/sparouter";
 
 import mealRouter from "./pages/meal";
 import homeRouter from "./pages/home";
