@@ -3,6 +3,7 @@ const app = express();
 const mealsRouter = require("./api/meals");
 const router = express.Router();
 
+const port = process.env.PORT || 5000;
 // For week4 no need to look into this!
 /* const path = require("path"); */
 /* // Serve the built client html
@@ -29,4 +30,4 @@ app.get("/*", function(req, res) {
   });
 }); */
 
-app.listen(process.env.PORT || 5000);
+app.listen(port, () => console.log(`Server listening on port ${port}!`));

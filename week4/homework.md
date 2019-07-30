@@ -55,7 +55,7 @@ Here are the steps to do that:
 1. Create a new repository on your github profile. 
 2. Clone that repository down locally. 
 3. Copy the code for the template from the this folder into the newly created repo. 
-4. Now copy last weeks `server` folder into the new repo in the `src` folder. You will now have a `server` folder and a `client` folder in the `src` folder.
+4. Now copy last weeks `server` folder into the new repo in the `src` folder. You will now have a `server` folder and a `frontend` folder in the `src` folder.
 5. Uncomment the lines that is for week4!
 6. Add, commit and push the changes to your github.
 7. In the `hyf-homework/node/week4` just add a text file with the link to the newly created repo.

@@ -1,38 +1,39 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CleanWebpackPlugin = require("clean-webpack-plugin");
 
-const outputDirectory = 'dist';
+const outputDirectory = "dist";
 
 module.exports = {
-  entry: ['babel-polyfill', './src/client/index.js'],
+  entry: ["babel-polyfill", "./src/frontend/index.js"],
   output: {
     path: path.join(__dirname, outputDirectory),
-    filename: 'bundle.js'
+    filename: "bundle.js"
   },
   module: {
-    rules: [{
-      test: /\.(js|jsx)$/,
-      exclude: /node_modules/,
-      use: {
-        loader: 'babel-loader'
+    rules: [
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader"
+        }
+      },
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"]
+      },
+      {
+        test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+        loader: "url-loader?limit=100000"
       }
-    },
-    {
-      test: /\.css$/,
-      use: ['style-loader', 'css-loader']
-    },
-    {
-      test: /\.(png|woff|woff2|eot|ttf|svg)$/,
-      loader: 'url-loader?limit=100000'
-    }
     ]
   },
   resolve: {
-    extensions: ['*', '.js', '.jsx']
+    extensions: ["*", ".js", ".jsx"]
   },
   devServer: {
-    publicPath: '/',
+    publicPath: "/",
     historyApiFallback: true,
     port: 3000,
     open: true,
@@ -41,14 +42,14 @@ module.exports = {
     }
   },
   node: {
-    net: 'empty',
-    tls: 'empty',
-    dns: 'empty'
+    net: "empty",
+    tls: "empty",
+    dns: "empty"
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './public/index.html',
-      favicon: './public/favicon.ico'
+      template: "./public/index.html",
+      favicon: "./public/favicon.ico"
     })
   ]
 };

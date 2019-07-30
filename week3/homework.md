@@ -37,9 +37,9 @@ In the [homework folder](homework) there is a template already setup, use that f
 
 Read the [readme file](homework/README.md) to get started with the project. 
 
-There has already been set one route up for you already, so you can get a sense for the structure. Take a look at `src/server/index.js` and understand what the different parts does! 
+There has already been set one route up for you already, so you can get a sense for the structure. Take a look at `src/backend/index.js` and understand what the different parts does! 
 
-Add a description of what `src/server/index.js` is doing line by line to your homework! 
+Add a description of what `src/backend/index.js` is doing line by line to your homework! 
 
 ## Its api time
 Create the following rest endpoints:

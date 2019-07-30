@@ -48,6 +48,11 @@ Here are the steps to do that:
 7. In the `hyf-homework/node/week4` just add a text file with the link to the newly created repo.
 8. Thats it 🎉
 
+### Access server api
+To access the server api, use `localhost:3000/api`
+
+The traffic is being redirected (proxied) from `localhiost:5000` where the server is running to `localhost:3000/api`. You can see that in the `webpack.config.js` file line 41. 
+
 ### Environment variables
 All sensitive data like fx passwords and usernames, we dont want to add to git! This problem we solve by having environment variables. Environment variables are not committed to git and have a key value structure. 
 

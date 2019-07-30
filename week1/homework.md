@@ -58,17 +58,17 @@ Also install `express` with the following command
 
 ### package.json
 Inside the `package.json` file we can define scripts that can be run. There should already be a `test` script, in the same fashion add two more scripts:
-1. `start` will run the command `node src/server/index.js`. This we use when we want to start up the server.
-2. `dev` will run the command `nodemon src/server/index.js`. This we use when we want to develop our application.  
+1. `start` will run the command `node src/backend/index.js`. This we use when we want to start up the server.
+2. `dev` will run the command `nodemon src/backend/index.js`. This we use when we want to develop our application.  
 
 to run the `dev` script, we run the command `npm run dev`
 
 ## Now we can start building
-Create a folder called `src`. That will contain the source files for our application. Inside the `src` folder create a `server` folder. Inside this folder create an `index.js` file. To run the application run `npm run dev`.
+Create a folder called `src`. That will contain the source files for our application. Inside the `src` folder create a `backend` folder. Inside this folder create an `index.js` file. To run the application run `npm run dev`.
 
 ```
 -> src
----> server
+---> backend
 -----> data
 -------> meals.js
 -------> reservations.js
@@ -133,7 +133,7 @@ The structure of the project now looks like this:
 
 ```
 -> src
----> server
+---> backend
 -----> data
 -------> meals.js
 -------> reservations.js

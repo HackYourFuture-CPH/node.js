@@ -10,7 +10,7 @@ Express is such a core library for NodeJs that can help us with many things when
 Lets use express routes to create a small calculator
 
 1. Create new empty folder called warmup. Open it in Visual Studio Code. Open the terminal.
-2. Initialize a new Npm project using `npm init`, install `express` library, create `index.js` with code to run new express server on port `3000`.
+2. Initialize a new Npm project using `npm init`, install `express` library, create `index.js` to run new express server on port `3000`.
 3. Add 2 routes to your `index.js`:
   - GET `/numbers/add?first=<number here>&second=<number here>`. In response send sum (first + second).
   - GET `/numbers/multiply/<first number here>/<second number here>`. in response send multiplication (first * second).
@@ -30,7 +30,7 @@ Using the same structure and data objects as last week:
 
 ```
 -> src
----> server
+---> backend
 -----> data
 -------> meals.js
 -------> reservations.js
