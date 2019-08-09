@@ -83,6 +83,10 @@ Look into the following resources to increase your understanding:
 
 ## What is Hypertext Transfer Protocol (HTTP)?
 
+How HTTP and HTTPS works: 
+https://twitter.com/b0rk/status/1159478808946335745/photo/1
+https://twitter.com/b0rk/status/1159812119099060224/photo/1
+
 A big part of making applications that follow the REST architecture is by use of HTTP methods.
 
 If you've every typed in a URL you might've seen the letters HTTP at the beginning of it, i.e. `http://www.hackyourfuture.net`. It stands for **Hypertext Transfer Protocol** and it is the basic way of sending requests and receiving responses.
@@ -95,6 +99,8 @@ Like verbal communication, there's the _content_ (WHAT you are saying) and the _
 - **DELETE**. This type of request tells the server to delete a particular set of data or resources.
 
 Why do you need to know all of this? HTTP is the foundation of how client-server interactions work on the web. It's important to have a universal policy that everyone holds on to, in order to have fast and effective online communication.
+
+If you really wanna get into what happens in the network layer, check out this: https://jvns.ca/networking-zine.pdf Its really nicely done!
 
 Look into the following resources to increase your understanding:
 
