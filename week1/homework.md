@@ -117,7 +117,7 @@ Create three files inside a `data` folder under `src/backend` called:
     "mealId": 1,
     "createdAt": 12345
   }
-];
+]
 ```
 
 `reservations.json`
@@ -130,7 +130,7 @@ Create three files inside a `data` folder under `src/backend` called:
     "email": "benjamin@hughes.dk",
     "mealId": 1
   }
-];
+]
 ```
 
 Add some more meals, reviews, and reservations.
