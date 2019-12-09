@@ -20,7 +20,7 @@ going to `localhost:3000/numbers/add?first=3&second=7` should respond with 10
 
 Hints:
 - Find express documentation online.
-- Use req.query and res.params properties on req object.
+- Use req.query and req.params properties on req object.
 
 ## Meal sharing website
 
@@ -32,9 +32,9 @@ Using the same structure and data objects as last week:
 -> src
 ---> backend
 -----> data
--------> meals.js
--------> reservations.js
--------> reviews.js
+-------> meals.json
+-------> reservations.json
+-------> reviews.json
 -----> routes
 -------> meals.js
 -------> reservations.js
