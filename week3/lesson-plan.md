@@ -151,7 +151,7 @@ Create the following routes
 | `maxPrice` | Get concerts that has a price smaller than `maxPrice` | Number | `/concerts?maxPrice=160` |
 | `title` | Get concerts that partially match a title. `Metallic` will match the concert with the title `Metallica in Parken` | String | `api/concerts?title=metallic` |
 | `createdAfter` | Get concerts that has been created after the date | Date | `api/concerts?createdAfter=2019-04-05` |
-| `band` | Get concerts with a specific band | Date | `api/concerts?limit=4` |
+| `band` | Get concerts with a specific band | String | `api/concerts?band=metallica` |
 
 
 #### Use the api using postman
