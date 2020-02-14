@@ -43,7 +43,7 @@ Now create some different emails and check if they are spam or not. How well doe
 
 To visualize what we will be building, take a look at: https://www.mealsharing.com/
 
-Use the template (also called scaffold) found in the [`hyf-homework-template repo`](https://github.com/HackYourFuture-CPH/hyf-homework-template/tree/master/nodejs/week4). To figure out how to install and run the project check out the [readme](homework/README.md)
+Use the template (also called scaffold) found in the [hyf-homework-template repo](https://github.com/HackYourFuture-CPH/hyf-homework-template/tree/master/nodejs/week4). To figure out how to install and run the project check out the [readme]((https://github.com/HackYourFuture-CPH/hyf-homework-template/tree/master/nodejs/week4/readme.md)
 
 In this project we will be doing all the routing and building of the html on the client side. The server side will be responsible for all data interaction through the api we created last week.
 

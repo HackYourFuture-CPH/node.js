@@ -39,11 +39,9 @@ If you are lucky you already have it in your `hyf-homework` repo. Check `nodejs/
 
 If not the template can be found [here](https://github.com/HackYourFuture-CPH/hyf-homework-template/tree/master/nodejs/week3). So clone the `hyf-homework-template`repo and copy the files from `nodejs/week3` into your `hyf-homework/node/week3` folder.
 
-Read the [readme file](homework/README.md) to get started with the project. 
+Read the [readme file](https://github.com/HackYourFuture-CPH/hyf-homework-template/tree/master/nodejs/week3/readme.md) to get started with the project. 
 
 There has already been set one route up for you already, so you can get a sense for the structure. Take a look at `src/backend/index.js` and understand what the different parts does! 
-
-Add a description of what `src/backend/index.js` is doing line by line to your homework! 
 
 ## Its api time
 Create the following rest endpoints:
