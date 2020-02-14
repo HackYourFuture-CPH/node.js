@@ -43,7 +43,7 @@ Now create some different emails and check if they are spam or not. How well doe
 
 To visualize what we will be building, take a look at: https://www.mealsharing.com/
 
-Use the template (also called scaffold) found in the [homework folder](homework). To figure out how to install and run the project check out the [readme](homework/README.md)
+Use the template (also called scaffold) found in the [`hyf-homework-template repo`](https://github.com/HackYourFuture-CPH/hyf-homework-template/tree/master/nodejs/week4). To figure out how to install and run the project check out the [readme](homework/README.md)
 
 In this project we will be doing all the routing and building of the html on the client side. The server side will be responsible for all data interaction through the api we created last week.
 
@@ -54,12 +54,12 @@ Here are the steps to do that:
 
 1. Create a new repository on your github profile. 
 2. Clone that repository down locally. 
-3. Copy the code for the template from the this folder into the newly created repo. 
-4. Now copy last weeks `server` folder into the new repo in the `src` folder. You will now have a `server` folder and a `frontend` folder in the `src` folder.
-5. Uncomment the lines that is for week4!
-6. Add, commit and push the changes to your github.
-7. In the `hyf-homework/node/week4` just add a text file with the link to the newly created repo.
-8. Thats it 🎉
+3. Copy the code for the template from [this folder](https://github.com/HackYourFuture-CPH/hyf-homework-template/tree/master/nodejs/week4) into the newly created repo. 
+4. Now copy last weeks `server` folder into the new repo in the `src` folder. You will now have a `server` folder and a `frontend` folder in the `src` folder! This is very important! IT should look like this ![Folder structure](./asset/../assets/folder-structure.jpg)
+5. Add, commit and push the changes to your github.
+6. In the `hyf-homework/node/week4` just add a text file with the link to the newly created repo.
+7. Thats it 🎉
+
 
 ### Adding frontend routes
 
