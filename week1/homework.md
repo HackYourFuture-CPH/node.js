@@ -192,7 +192,6 @@ To help you get started we have created some resources about giving feedback. Fi
 
 ## Hand in Homework:
 
-
 Watch [this video](https://www.youtube.com/watch?v=feyBVDhFQuk) for a more detailed go-through of how to hand in homework!
 
 - Create a new branch called `node.js/week1` 
