@@ -62,7 +62,7 @@ The `/meals` route should support some query parameters:
 | Parameter | Description | Data type | Example | 
 | ---- | ----- | ---- | -------- |
 | `maxPrice` | Get meals that has a price smaller than `maxPrice` | Number | `/meals?maxPrice=90` |
-| `title` | Get meals that partially match a title. `Rød grød med` will match the meal with the title `Rød grød med fløde` | String | `/meals?title="Indian platter"` |
+| `title` | Get meals that partially match a title. `Rød grød med` will match the meal with the title `Rød grød med fløde` | String | `/meals?title=Indian%20platter` |
 | `createdAfter` | Get meals that has been created after the date | Date | `/meals?createdAfter=2019-04-05` |
 | `limit` | Only specific number of meals | Date | `/meals?limit=4` |
 
