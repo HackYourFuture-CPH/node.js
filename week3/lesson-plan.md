@@ -60,7 +60,7 @@ function connectDatabase() {
     return db;
 }
 
-module.exports = connectDatabase();`
+module.exports = connectDatabase();
 ```
 
 ```js
