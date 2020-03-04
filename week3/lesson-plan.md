@@ -79,10 +79,10 @@ Create a phonebook database with contacts:
 
 ```sql
 CREATE TABLE `phonebook`.`contacts` (
-  `idcontacts` INT NOT NULL AUTO_INCREMENT,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NULL,
   `phonenumber` VARCHAR(45) NULL,
-  PRIMARY KEY (`idcontacts`));
+  PRIMARY KEY (`id`));
 ```
 
 ```js
