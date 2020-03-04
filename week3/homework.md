@@ -61,7 +61,7 @@ Create the following rest endpoints:
 | ---- | ----- | ---- | -------- |
 | `maxPrice` | Get meals that has a price smaller than `maxPrice` | Number | `/meals?maxPrice=90` |
 | `availableReservations` | Get meals that still has available reservations | Boolean | `api/meals?availableReservations=true` |
-| `title` | Get meals that partially match a title. `Rød grød med` will match the meal with the title `Rød grød med fløde` | String | `api/meals?title="Indian platter"` |
+| `title` | Get meals that partially match a title. `Rød grød med` will match the meal with the title `Rød grød med fløde` | String | `api/meals?title=Indian%20platter` (`%20` is a space character) |
 | `createdAfter` | Get meals that has been created after the date | Date | `api/meals?createdAfter=2019-04-05` |
 | `limit` | Only specific number of meals | Number | `api/meals?limit=4` |
 
