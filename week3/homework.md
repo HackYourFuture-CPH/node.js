@@ -63,7 +63,7 @@ Create the following rest endpoints:
 | `availableReservations` | Get meals that still has available reservations | Boolean | `api/meals?availableReservations=true` |
 | `title` | Get meals that partially match a title. `Rød grød med` will match the meal with the title `Rød grød med fløde` | String | `api/meals?title="Indian platter"` |
 | `createdAfter` | Get meals that has been created after the date | Date | `api/meals?createdAfter=2019-04-05` |
-| `limit` | Only specific number of meals | Date | `api/meals?limit=4` |
+| `limit` | Only specific number of meals | Number | `api/meals?limit=4` |
 
 
 ### Reservation
