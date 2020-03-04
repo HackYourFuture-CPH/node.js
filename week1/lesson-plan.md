@@ -43,7 +43,7 @@ If you find anything that could be improved then please create a pull request! W
     - [Code inspiration](#footer-as-module)
     - Npm modules
       - npmjs.org
-      - `npm install http -s`
+      - `npm install -s express`
       - node_modules
       - Package.json
   - .gitignore
