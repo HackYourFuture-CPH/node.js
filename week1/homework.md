@@ -74,13 +74,11 @@ to run the `dev` script, we run the command `npm run dev`
 Create a folder called `src`. That will contain the source files for our application. Inside the `src` folder create a `backend` folder. Inside this folder create an `index.js` file. To run the application run `npm run dev`.
 
 ```
-
 |-- src
 |   |-- backend
 |   |   |-- index.js
 |-- .gitignore
 |-- package.json
-
 ```
 
 ### Setting up the data
