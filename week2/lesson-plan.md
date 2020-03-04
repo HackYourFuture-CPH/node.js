@@ -37,11 +37,11 @@ If you find anything that could be improved then please create a pull request! W
   - Logging and debugging
     - Focus on the students understanding **the order** in which things are executed
 - Postman
+
   - Create collection and save queries
   - Sending get requests requests
     - Query parameters
     - Parameters
-  
 
 ## Code inspiration
 
@@ -49,12 +49,12 @@ If you find anything that could be improved then please create a pull request! W
 
 ```js
 // First match is deciding
-app.get("/data",  (req, res) => {
-  res.send({data:1});
+app.get("/data", (req, res) => {
+  res.send({ data: 1 });
 });
 
-app.get("/data",  (req, res) => {
-  res.send({data:2});
+app.get("/data", (req, res) => {
+  res.send({ data: 2 });
 });
 ```
 
@@ -69,32 +69,31 @@ app.use((req, res, next) => {
 
   next();
 });
-
 ```
-
 
 ## Exercises
 
 ### Portfolio
+
 Start building your portfolio with these routes:
 
-| Route | Description |
-| ---- | ----- |
-| `/` | Add a title and sub title. Write a couple lines about yourself |
-| `/contact` | Add social media links and your email |
-| `/educations` | Add a list of your educations |
-| `/skills` | Add a list of your skills |
+| Route         | Description                                                    |
+| ------------- | -------------------------------------------------------------- |
+| `/`           | Add a title and sub title. Write a couple lines about yourself |
+| `/contact`    | Add social media links and your email                          |
+| `/educations` | Add a list of your educations                                  |
+| `/skills`     | Add a list of your skills                                      |
 
 Respond with html! Add some query parameters and parameters and print them out on the page. Here is an example:
 
 `/educations?is-university=true&attended-before=2015`
 
-or 
+or
 
 `/educations/copenhagen-university`
 
 ### Is chrome browser
-Implement a middleware function that adds a key on the `req` object that indicates if the user is using a chrome browser. 
 
-Use the `User-Agent` header. 
+Implement a middleware function that adds a key on the `req` object that indicates if the user is using a chrome browser.
 
+Use the `User-Agent` header.

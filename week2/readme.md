@@ -1,4 +1,5 @@
 # Learning goals
+
 - [ ] Express
   - [ ] What is express
   - [ ] Routing
@@ -9,10 +10,10 @@
 Reproduce a log hitting errors and understanding flow.
 
 ## Relevant links
-* [Preparation](preparation.md)
-* [Homework](homework.md)
-* [Lesson plan](lesson-plan.md)
 
+- [Preparation](preparation.md)
+- [Homework](homework.md)
+- [Lesson plan](lesson-plan.md)
 
 ## Express.js
 
@@ -29,4 +30,3 @@ For more research, use the following resources:
 
 - [Express JS Crash Course](https://www.youtube.com/watch?v=L72fhGm1tfE)
 - [Going out to eat and understanding the basics of Express.js](https://medium.freecodecamp.org/going-out-to-eat-and-understanding-the-basics-of-express-js-f034a029fb66)
-

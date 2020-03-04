@@ -15,10 +15,10 @@
   - [ ] Postman
 
 # Relevant links
-* [Preparation](preparation.md)
-* [Homework](homework.md)
-* [Lesson plan](lesson-plan.md)
 
+- [Preparation](preparation.md)
+- [Homework](homework.md)
+- [Lesson plan](lesson-plan.md)
 
 ## 1. What is Representational State Transfer (REST)?
 

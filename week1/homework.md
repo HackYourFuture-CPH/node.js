@@ -155,8 +155,8 @@ _remember to `require` the meals and reservations json_
 Instead of writing the functionality for the routes inside `index.js`. Create a routes folder that contains `meals.js`, `meal.js`, etc. So that the routes can be created like this:
 
 ```js
-const mealsRouter = require('./routes/meals.js');
-app.get('/meals', mealsRouter);
+const mealsRouter = require("./routes/meals.js");
+app.get("/meals", mealsRouter);
 ```
 
 The structure of the project now looks like this:
@@ -194,8 +194,8 @@ To help you get started we have created some resources about giving feedback. Fi
 
 Watch [this video](https://www.youtube.com/watch?v=feyBVDhFQuk) for a more detailed go-through of how to hand in homework!
 
-- Create a new branch called `node.js/week1` 
-- Add all your changes to this branch in the `node.js/week1` folder. 
+- Create a new branch called `node.js/week1`
+- Add all your changes to this branch in the `node.js/week1` folder.
 - Go through the [Homework checklist](#homework-checklist)
 - Create a pull request using the `node.js/week1` branch
 - Wait for mentor feedback
@@ -205,6 +205,7 @@ Watch [this video](https://www.youtube.com/watch?v=feyBVDhFQuk) for a more detai
 - Now celebrate 🎉🎉🎉
 
 ## Homework checklist
+
 Go over your homework one last time:
 
 - [ ] Does every file run without errors and with the correct results?
