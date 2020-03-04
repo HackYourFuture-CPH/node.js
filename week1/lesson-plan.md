@@ -37,15 +37,15 @@ If you find anything that could be improved then please create a pull request! W
       - Web server
       - Much more
 - Simple webserver with node js
-  - Npm init
+  - `npm init`
   - Modules
     - Homemade using `module.exports` and `require`
     - [Code inspiration](#footer-as-module)
-    - Npm modules
+    - NPM modules
       - npmjs.org
       - `npm install -s express`
       - node_modules
-      - Package.json
+      - package.json
   - .gitignore
   - Nodemon
   - Play around with Express - Focus on usage!
