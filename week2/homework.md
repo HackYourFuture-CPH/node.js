@@ -53,7 +53,7 @@ We will start with only having these routes:
 | `/reviews/{id}` | Respond with the json for the review with the corresponding `id` |
 | `/reviews` | Respond with the json for all reviews |
 
-A `review` consists of `title`, `createdBy`, `start` and `createdAt`.
+A `review` consists of `content`, `numberOfStars` and `createdAt`.
 
 ### /meals
 
