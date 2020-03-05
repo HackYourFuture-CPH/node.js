@@ -18,7 +18,11 @@ Use [homework scaffold](https://github.com/HackYourFuture-CPH/node-fullstack-bol
 
 ### Concerts frontend
 
-Let the students build the frontend for using the concerts api. If they start from the beginning then use [homework scaffold](https://github.com/HackYourFuture-CPH/node-fullstack-bolierplate) as template.
+Using the api from this exercise: https://github.com/HackYourFuture-CPH/node.js/blob/master/week3/lesson-plan.md#concerts-api, let the students build the frontend for using the concerts api. 
+
+If they start from the beginning then use [homework scaffold](https://github.com/HackYourFuture-CPH/node-fullstack-bolierplate) as template.
+
+Focus on making a simple endpoint in the api and then fetch that data in the frontend. When that flow of backend <-> frontend is working, then start building out the api. But get the frontend connected to the api first!
 
 | Route            | Description                                                                                                                                            |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
