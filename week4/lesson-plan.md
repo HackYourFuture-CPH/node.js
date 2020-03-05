@@ -12,13 +12,13 @@
 
 Using the api from last week create the frontend that uses the api.
 
-Use [homework scaffold](https://github.com/HackYourFuture-CPH/hyf-node-homework-week4) as template.
+Use [homework scaffold](https://github.com/HackYourFuture-CPH/node-fullstack-bolierplate) as template.
 
 ## Exercise
 
 ### Concerts frontend
 
-Let the students build the frontend for using the concerts api. If they start from the beginning then use [homework scaffold](https://github.com/HackYourFuture-CPH/hyf-node-homework-week4) as template.
+Let the students build the frontend for using the concerts api. If they start from the beginning then use [homework scaffold](https://github.com/HackYourFuture-CPH/node-fullstack-bolierplate) as template.
 
 | Route            | Description                                                                                                                                            |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
