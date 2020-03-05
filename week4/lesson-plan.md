@@ -12,13 +12,13 @@
 
 Using the api from last week create the frontend that uses the api.
 
-Use [homework scaffold](homework) as template. Inside the `src` folder there is only `client` copy the `server` folder from the api you created last week or use [this `server` folder](../week3/homework/src)
+Use [homework scaffold](https://github.com/HackYourFuture-CPH/hyf-node-homework-week4) as template.
 
 ## Exercise
 
 ### Concerts frontend
 
-Let the students build the frontend for using the concerts api.
+Let the students build the frontend for using the concerts api. If they start from the beginning then use [homework scaffold](https://github.com/HackYourFuture-CPH/hyf-node-homework-week4) as template.
 
 | Route            | Description                                                                                                                                            |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
