@@ -3,7 +3,6 @@
 - [ ] Create fullstack web application
   - [ ] Connecting the frontend to the api
     - [ ] Using `fetch` to `GET`, `POST`, `PUT` and `DELETE` data from api
-  - [ ] Webpack on a conceptual level
   - [ ] Clientside routing
 - [ ] Deploy to heroku
 
