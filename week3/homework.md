@@ -23,15 +23,15 @@ All the numbers that should be inputtet should be gotten from the query paramete
 
 To specify what calculator method first use the `:params`, like this:
 
-Going to `calculator/multiply?firstParam=1&secondParam=2` Should respond with 2
-Going to `calculator/multiply?firstParam=1&secondParam=2&secondParam=4` Should respond with 8.
+- Going to `calculator/multiply?firstParam=1&secondParam=2` should respond with 2.
+- Going to `calculator/multiply?firstParam=1&secondParam=2&secondParam=4` should respond with 8.
 
 There can be an infinite number of query parameters!
 
 #### Calculator using `req.body`
 
-Going to `calculator?firstParam=1&secondParam=2` with the key `method` in the `req.body` set to multiply should respond with 2
-Going to `calculator?firstParam=1&secondParam=2&secondParam=4` with the key `division` in the `req.body` set to division should respond with 0.125
+- Going to `calculator?firstParam=1&secondParam=2` with the key `method` in the `req.body` set to multiply should respond with 2.
+- Going to `calculator?firstParam=1&secondParam=2&secondParam=4` with the key `division` in the `req.body` set to division should respond with 0.125.
 
 ## Getting started with the api
 
