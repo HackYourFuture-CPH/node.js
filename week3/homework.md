@@ -2,7 +2,7 @@
 
 ## So why this homework?
 
-Working with api's is such a core way for the client to communicate with the server. Creating an api abstracts away lots of complexity and makes it easy to create users, get users, changing users etc.
+Working with APIs is such a core way for the client to communicate with the server. Creating an API abstracts away lots of complexity and makes it easy to create users, get users, changing users etc.
 
 > Please help us improve and share your feedback! If you find better tutorials or links, please share them by opening a Pull Request.
 
@@ -10,14 +10,14 @@ Working with api's is such a core way for the client to communicate with the ser
 
 ### Calculator
 
-Lets again create a calculator. This time the calculator will support 4 features:
+Let's again create a calculator. This time the calculator will support 4 features:
 
 - Addition
 - Subtraction
 - Multiplication
 - Division
 
-All the numbers that should be inputtet should be gotten from the query parameters: `calculator?firstParam=1&secondParam=2...`
+All the numbers that should be inputted should be gotten from the query parameters: `calculator?firstParam=1&secondParam=2...`
 
 #### Calculator using `:param`
 
