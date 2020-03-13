@@ -19,12 +19,13 @@ Let's again create a calculator. This time the calculator will support 4 feature
 
 All the numbers that should be inputted should be gotten from the query parameters: `calculator?firstParam=1&secondParam=2...`
 
-#### Calculator using `:param`
+#### Calculator using `:method` (path) parameter
 
-To specify what calculator method first use the `:params`, like this:
+To specify what calculator method, first use the `:method` (path) parameter, like this:
 
 - Going to `calculator/multiply?firstParam=1&secondParam=2` should respond with 2.
 - Going to `calculator/multiply?firstParam=1&secondParam=2&secondParam=4` should respond with 8.
+- Going to `calculator/add?firstParam=1&secondParam=2&secondParam=4` should respond with 7.
 
 There can be an infinite number of query parameters!
 
