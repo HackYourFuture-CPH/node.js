@@ -30,7 +30,7 @@ Here are some rules for what defines an email as spam.
 3. Subject only contains the string "Hello"
 4. Now you add one rule that you think would make an email spam!
 
-You could make it so these just one of these rules should be true for it to be marked as spam. Or you can make it so that fx rule 1 AND rule 3 should be true. That is up to you!
+You could make it so just one of these rules should be true for it to be marked as spam. Or you can make it so that fx rule 1 AND rule 3 should be true. That is up to you!
 
 This is how the spam detection should work:
 
