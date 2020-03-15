@@ -42,7 +42,7 @@ Lets set our new app so that everytime we push code to master, that code is depl
 
 The database we have used so far is the local one running in Mysql Workbench. Now we will add a database in the cloud.
 
-- Under `ressources` click `Find more add-ons`
+- Under `Resources` click `Find more add-ons`
 
 ![step 5](assets/deploy-step-5.PNG)
 
