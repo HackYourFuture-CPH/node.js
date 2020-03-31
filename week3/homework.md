@@ -34,7 +34,14 @@ There can be an infinite number of query parameters!
 - Going to `calculator?firstParam=1&secondParam=2` with the key `method` in the `req.body` set to `multiply` should respond with 2.
 - Going to `calculator?firstParam=1&secondParam=2&secondParam=4` with the key `method` in the `req.body` set to `division` should respond with 0.125.
 
-## Getting started with the api
+
+## Lets build a real functioning site :)
+
+We will be building a meal sharing website over 2 weeks of homework. First we will be building the backend rest api. Then next week we will connect the frontend to the backend and deploy the website on Heroku.
+
+To visualize what we will be building, take a look at: https://www.mealsharing.com/
+
+### Getting started with the api
 
 To get started a template has been set up, so that you can focus on developing what matters 💪💻
 
@@ -44,11 +51,11 @@ Read the [readme file](homework-template/readme.md) to get started with the proj
 
 There has already been set one route up for you already, so you can get a sense for the structure. Take a look at `src/backend/index.js` and understand what the different parts does!
 
-## Its api time
+### Its api time
 
 Create the following rest endpoints:
 
-### Meal
+#### Meal
 
 | Url              | Verb   | Functionality            | Example           |
 | ---------------- | ------ | ------------------------ | ----------------- |
@@ -58,7 +65,7 @@ Create the following rest endpoints:
 | `api/meals/{id}` | PUT    | Updates the meal by `id` | `PUT api/meals/2` |
 | `api/meals/{id}` | DELETE | Deletes the meal by `id` | `DELETE meals/2`  |
 
-#### `GET api/meals/` query parameters
+##### `GET api/meals/` query parameters
 
 | Parameter               | Description                                                                                                    | Data type | Example                                                         |
 | ----------------------- | -------------------------------------------------------------------------------------------------------------- | --------- | --------------------------------------------------------------- |
@@ -68,7 +75,7 @@ Create the following rest endpoints:
 | `createdAfter`          | Get meals that has been created after the date                                                                 | Date      | `api/meals?createdAfter=2019-04-05`                             |
 | `limit`                 | Only specific number of meals                                                                                  | Number    | `api/meals?limit=4`                                             |
 
-### Reservation
+#### Reservation
 
 | Url                     | Verb   | Functionality                   | Example                     |
 | ----------------------- | ------ | ------------------------------- | --------------------------- |
@@ -78,7 +85,7 @@ Create the following rest endpoints:
 | `api/reservations/{id}` | PUT    | Updates the reservation by `id` | `PUT api/reservations/2`    |
 | `api/reservations/{id}` | DELETE | Deletes the reservation by `id` | `DELETE api/reservations/2` |
 
-### Review _optional_
+#### Review _optional_
 
 | Url                | Verb   | Functionality              | Example                |
 | ------------------ | ------ | -------------------------- | ---------------------- |
@@ -88,7 +95,7 @@ Create the following rest endpoints:
 | `api/reviews/{id}` | PUT    | Updates the review by `id` | `PUT api/reviews/2`    |
 | `api/reviews/{id}` | DELETE | Deletes the review by `id` | `DELETE api/reviews/2` |
 
-### Using the api
+#### Using the api
 
 Using Postman use the api to create some `meals`, `reservations` and possibly `reviews`. Use `delete`, `put`, `get` and `post`.
 
