@@ -35,11 +35,9 @@ Going to `calculator?firstParam=1&secondParam=2&secondParam=4` with the key `div
 ## Getting started with the api
 To get started a template has been set up, so that you can focus on developing what matters 💪💻
 
-If you are lucky you already have it in your `hyf-homework` repo. Check `nodejs/week3`, if the `package.json` is there (among other files), then congrats, you are ready to develop!
+Copy the files from [the template](homework-template) into your `hyf-homework/node/week3` folder. You can do that by cloning the [nodejs repo](https://github.com/HackYourFuture-CPH/node.js.git) down locally and then copy the files into the `hyf-homework/node/week3` folder.
 
-If not the template can be found [here](https://github.com/HackYourFuture-CPH/hyf-homework-template/tree/master/nodejs/week3). So clone the `hyf-homework-template`repo and copy the files from `nodejs/week3` into your `hyf-homework/node/week3` folder.
-
-Read the [readme file](https://github.com/HackYourFuture-CPH/hyf-homework-template/tree/master/nodejs/week3/readme.md) to get started with the project. 
+Read the [readme file](homework-template/readme.md) to get started with the project. 
 
 There has already been set one route up for you already, so you can get a sense for the structure. Take a look at `src/backend/index.js` and understand what the different parts does! 
 

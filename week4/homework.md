@@ -43,22 +43,19 @@ Now create some different emails and check if they are spam or not. How well doe
 
 To visualize what we will be building, take a look at: https://www.mealsharing.com/
 
-Use the template (also called scaffold) found in the [hyf-homework-template repo](https://github.com/HackYourFuture-CPH/hyf-homework-template/tree/master/nodejs/week4). To figure out how to install and run the project check out the [readme]((https://github.com/HackYourFuture-CPH/hyf-homework-template/tree/master/nodejs/week4/readme.md)
+Use the template (also called scaffold) found in the [hyf-homework-template repo](homework-template). To figure out how to install and run the project check out the [readme](homework-template/readme.md)
 
 In this project we will be doing all the routing and building of the html on the client side. The server side will be responsible for all data interaction through the api we created last week.
 
 ### 🏁 Getting Started <a name = "getting_started"></a>
-The homework for week4 should be made in a standalone repo on your github profile, so you can show it friends/new employeers/headhunters etc. 
+Copy the files from [the template](homework-template) into your `hyf-homework/node/week4` folder. You can do that by cloning the [nodejs repo](https://github.com/HackYourFuture-CPH/node.js.git) down locally and then copy the files into the `hyf-homework/node/week4` folder.
 
-Here are the steps to do that:
-
-1. Create a new repository on your github profile. 
-2. Clone that repository down locally. 
-3. Copy the code for the template from [this folder](https://github.com/HackYourFuture-CPH/hyf-homework-template/tree/master/nodejs/week4) into the newly created repo. 
-4. Now copy last weeks `server` folder into the new repo in the `src` folder. You will now have a `server` folder and a `frontend` folder in the `src` folder! This is very important! IT should look like this ![Folder structure](./asset/../assets/folder-structure.jpg)
-5. Add, commit and push the changes to your github.
-6. In the `hyf-homework/node/week4` just add a text file with the link to the newly created repo.
-7. Thats it 🎉
+Here is how you set up week 4 homework:
+ 
+1. Copy the files from [week4 template](homework-template) into your `hyf-homework/node/week4` folder. You can do that by cloning the [nodejs repo](https://github.com/HackYourFuture-CPH/node.js.git) down locally and then copy the files from `nodejs/week4` into the `hyf-homework/node/week4` folder.
+2. Now copy last weeks `server` folder from `hyf-homework/node/week3/src` into the `hyf-homework/node/week4/src`. You will now have a `server` folder and a `frontend` folder in the `src` folder! This is very important! It should look like this ![Folder structure](./asset/../assets/folder-structure.jpg)
+3. Add, commit and push the changes to your github.
+4. Thats it 🎉
 
 
 ### Adding frontend routes
