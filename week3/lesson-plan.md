@@ -17,6 +17,7 @@ To find examples of what teachers have taught before go to the class branches in
 If you find anything that could be improved then please create a pull request! We welcome changes, so please get involved if you have any ideas!!!
 
 ---
+
 - Database interaction - No ORM!
   - Connecting to mysql
     - [Using connection](#Mysql-connection)
@@ -40,84 +41,86 @@ If you find anything that could be improved then please create a pull request! W
 ## Code inspiration
 
 ### Mysql connection
+
 ```js
-var mysql = require('mysql');
-var settings = require('./settings.json');
+var mysql = require("mysql");
+var settings = require("./settings.json");
 var db;
 
 function connectDatabase() {
-    if (!db) {
-        db = mysql.createConnection(settings);
+  if (!db) {
+    db = mysql.createConnection(settings);
 
-        db.connect(function(err){
-            if(!err) {
-                console.log('Database is connected!');
-            } else {
-                console.log('Error connecting database!');
-            }
-        });
-    }
-    return db;
+    db.connect(function(err) {
+      if (!err) {
+        console.log("Database is connected!");
+      } else {
+        console.log("Error connecting database!");
+      }
+    });
+  }
+  return db;
 }
 
-module.exports = connectDatabase();`
+module.exports = connectDatabase();
 ```
 
 ```js
-var db = require('./database');
+var db = require("./database");
 
-db.query('SELECT ? FROM t_user',query, function(err, results, query) {
-    if (err) throw err;
-    if(!err) {
-        indexPage.receiveResults(results);
-    }
+db.query("SELECT ? FROM t_user", query, function(err, results, query) {
+  if (err) throw err;
+  if (!err) {
+    indexPage.receiveResults(results);
+  }
 });
 ```
 
 ### Phonebook database
+
 Create a phonebook database with contacts:
 
 ```sql
 CREATE TABLE `phonebook`.`contacts` (
-  `idcontacts` INT NOT NULL AUTO_INCREMENT,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NULL,
   `phonenumber` VARCHAR(45) NULL,
-  PRIMARY KEY (`idcontacts`));
+  PRIMARY KEY (`id`));
 ```
 
 ```js
-var db = require('./database');
+var db = require("./database");
 
-db.query('SELECT * FROM `contacts` WHERE `id` = ?', [1], function(err, results, query) {
-    if (err) throw err;
-    if(!err) {
-        console.log(results);
-    }
+db.query("SELECT * FROM `contacts` WHERE `id` = ?", [1], function(err, results, query) {
+  if (err) throw err;
+  if (!err) {
+    console.log(results);
+  }
 });
 
 const contact = {
-    name: 'benjamin',
-    phonenumber: '12345678',
-}
-db.query('INSERT INTO posts SET ?', contact, function(err, results, query) {
-    if (err) throw err;
-    if(!err) {
-        console.log(results);
-    }
+  name: "benjamin",
+  phonenumber: "12345678"
+};
+db.query("INSERT INTO posts SET ?", contact, function(err, results, query) {
+  if (err) throw err;
+  if (!err) {
+    console.log(results);
+  }
 });
-
 ```
 
 ### Phonebook api
+
 Create the following api
 
-| Url | Verb | Functionality | Example | 
-| ---- | ----- | ---- | -------- |
-| `api/contacts/` | GET | Returns all contacts | `GET api/contacts/` |
-| `api/contacts/` | POST | Adds a new contact | `POST api/contacts/` |
-| `api/contacts/{id}` | GET | Returns contact by `id` | `GET api/contacts/2` |
-| `api/contacts/{id}` | PUT | Updates the contact by `id` | `PUT api/contacts/2` |
-| `api/contacts/{id}` | DELETE | Deletes the contact by `id` | `DELETE contacts/2` |
+| Url                 | Verb   | Functionality               | Example              |
+| ------------------- | ------ | --------------------------- | -------------------- |
+| `api/contacts/`     | GET    | Returns all contacts        | `GET api/contacts/`  |
+| `api/contacts/`     | POST   | Adds a new contact          | `POST api/contacts/` |
+| `api/contacts/{id}` | GET    | Returns contact by `id`     | `GET api/contacts/2` |
+| `api/contacts/{id}` | PUT    | Updates the contact by `id` | `PUT api/contacts/2` |
+| `api/contacts/{id}` | DELETE | Deletes the contact by `id` | `DELETE contacts/2`  |
 
 ## Exercises
 
@@ -126,9 +129,11 @@ Create the following api
 Lets create an api for concerts
 
 #### Connecting the database
+
 Create a `concerts` table in mysql. It should have these columns: `title`, `band`, `venue`, `createdDate`, `performanceDate` and `price`
 
 Using node and the `mysql` lib:
+
 - `INSERT` three new concerts
 - `GET` all concerts
 - `DELETE` a specific concert
@@ -137,22 +142,23 @@ Using node and the `mysql` lib:
 
 Create the following routes
 
-| Url | Verb | Functionality | Example | 
-| ---- | ----- | ---- | -------- |
-| `api/concerts/` | GET | Returns all concerts | `GET api/concerts/` |
-| `api/concerts/` | POST | Adds a new concert | `POST api/concerts/` |
-| `api/concerts/{id}` | GET | Returns concert by `id` | `GET api/concerts/2` |
-| `api/concerts/{id}` | PUT | Updates the concert by `id` | `PUT api/concerts/2` |
-| `api/concerts/{id}` | DELETE | Deletes the concert by `id` | `DELETE concerts/2` |
+| Url                 | Verb   | Functionality               | Example              |
+| ------------------- | ------ | --------------------------- | -------------------- |
+| `api/concerts/`     | GET    | Returns all concerts        | `GET api/concerts/`  |
+| `api/concerts/`     | POST   | Adds a new concert          | `POST api/concerts/` |
+| `api/concerts/{id}` | GET    | Returns concert by `id`     | `GET api/concerts/2` |
+| `api/concerts/{id}` | PUT    | Updates the concert by `id` | `PUT api/concerts/2` |
+| `api/concerts/{id}` | DELETE | Deletes the concert by `id` | `DELETE concerts/2`  |
 
 #### Query parameters
-| Parameter | Description | Data type | Example | 
-| ---- | ----- | ---- | -------- |
-| `maxPrice` | Get concerts that has a price smaller than `maxPrice` | Number | `/concerts?maxPrice=160` |
-| `title` | Get concerts that partially match a title. `Metallic` will match the concert with the title `Metallica in Parken` | String | `api/concerts?title=metallic` |
-| `createdAfter` | Get concerts that has been created after the date | Date | `api/concerts?createdAfter=2019-04-05` |
-| `band` | Get concerts with a specific band | Date | `api/concerts?limit=4` |
 
+| Parameter      | Description                                                                                                       | Data type | Example                                |
+| -------------- | ----------------------------------------------------------------------------------------------------------------- | --------- | -------------------------------------- |
+| `maxPrice`     | Get concerts that has a price smaller than `maxPrice`                                                             | Number    | `/concerts?maxPrice=160`               |
+| `title`        | Get concerts that partially match a title. `Metallic` will match the concert with the title `Metallica in Parken` | String    | `api/concerts?title=metallic`          |
+| `createdAfter` | Get concerts that has been created after the date                                                                 | Date      | `api/concerts?createdAfter=2019-04-05` |
+| `band`         | Get concerts with a specific band                                                                                 | String    | `api/concerts?band=metallica`          |
 
 #### Use the api using postman
+
 Using post man insert some concerts, get some concerts using query parameters, delete some concerts and update some concerts

@@ -1,4 +1,5 @@
 # Lesson plan
+
 ```
 > Focus on having lots of in class exercises.
 
@@ -16,36 +17,37 @@ To find examples of what teachers have taught before go to the class branches in
 If you find anything that could be improved then please create a pull request! We welcome changes, so please get involved if you have any ideas!!!
 
 ---
+
 - What happens when you open a webpage - draw on a whiteboard
   - Client sends http request to a url
   - The request is directed to the correct ip using DNS
   - The server reads the request and sends a respond
   - Show a simple request and response in Chrome dev tools
 - HTTP - What is the internet
-    - Client
-      - Sends request
-      - Receives response
-    - HTTP server
-      - Listen for requests
-      - Responds with data
-    - https://websniffer.cc/
+  - Client
+    - Sends request
+    - Receives response
+  - HTTP server
+    - Listen for requests
+    - Responds with data
+  - https://websniffer.cc/
 - Introduction to node js
-    - What is node and why node (https://www.youtube.com/watch?v=pU9Q6oiQNd0)
-    - V8 vs the browser that runs js
-    - What can you build with nodejs?
-      - Utilities
-      - Web server
-      - Much more
+  - What is node and why node (https://www.youtube.com/watch?v=pU9Q6oiQNd0)
+  - V8 vs the browser that runs js
+  - What can you build with nodejs?
+    - Utilities
+    - Web server
+    - Much more
 - Simple webserver with node js
-  - Npm init
+  - `npm init`
   - Modules
     - Homemade using `module.exports` and `require`
     - [Code inspiration](#footer-as-module)
-    - Npm modules
+    - NPM modules
       - npmjs.org
-      - `npm install http -s`
+      - `npm install -s express`
       - node_modules
-      - Package.json
+      - package.json
   - .gitignore
   - Nodemon
   - Play around with Express - Focus on usage!
@@ -55,7 +57,9 @@ If you find anything that could be improved then please create a pull request! W
 ## Code inspiration
 
 ### Footer as module
+
 footer.js
+
 ```js
 const getFooter = footerContent => `
     <footer>
@@ -66,14 +70,13 @@ const getFooter = footerContent => `
 `;
 
 module.exports = getFooter;
-
 ```
 
 index.js
+
 ```js
 const getFooter = require("./footer");
 ```
-
 
 ### Building a simple http webserver
 
@@ -121,16 +124,18 @@ app.listen(3000);
 ## Exercises
 
 ### Portfolio
+
 Start building your portfolio with these routes:
 
-| Route | Description |
-| ---- | ----- |
-| `/` | Add a title and sub title. Write a couple lines about yourself |
-| `/contact` | Add social media links and your email |
-| `/educations` | Add a list of your educations |
-| `/skills` | Add a list of your skills |
+| Route         | Description                                                    |
+| ------------- | -------------------------------------------------------------- |
+| `/`           | Add a title and sub title. Write a couple lines about yourself |
+| `/contact`    | Add social media links and your email                          |
+| `/educations` | Add a list of your educations                                  |
+| `/skills`     | Add a list of your skills                                      |
 
 #### Changing the title of the page
+
 Continuing on the last exercise. Lets add some functionality that shows the relevant title of a page using modules!
 
 - Create a function that takes title as parameter
@@ -140,16 +145,16 @@ Continuing on the last exercise. Lets add some functionality that shows the rele
 
 Here are the routes and their corresponding title
 
-| Route | Page title |
-| ---- | ----- |
-| `/` | Home |
-| `/contact` | Contact |
-| `/educations` | Education |
-| `/skills` | Skills |
-
+| Route         | Page title |
+| ------------- | ---------- |
+| `/`           | Home       |
+| `/contact`    | Contact    |
+| `/educations` | Education  |
+| `/skills`     | Skills     |
 
 #### Adding styling
-Lets add some styling to our page. We will do it with inlining styles for now. Which should be avoided normally, but for now it is okay. 
+
+Lets add some styling to our page. We will do it with inlining styles for now. Which should be avoided normally, but for now it is okay.
 
 Change the previous header function to add some inline styling in the head tag.
 
@@ -157,14 +162,14 @@ Try and see if you can create a module with only the css as a string.
 
 #### Adding a projects route
 
-| Route | Description |
-| ---- | ----- |
+| Route       | Description                     |
+| ----------- | ------------------------------- |
 | `/projects` | Renders a list of your projects |
 
-| Route | Page title |
-| ---- | ----- |
-| `/projects` | projects |
+| Route       | Page title |
+| ----------- | ---------- |
+| `/projects` | projects   |
 
-A project should have: `title`, `codeUrl`, `previewUrl` and `img`. 
+A project should have: `title`, `codeUrl`, `previewUrl` and `img`.
 
 Now when the the `projects` route is hit, respond with some rendered html of your projects!

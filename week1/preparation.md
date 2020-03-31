@@ -6,6 +6,7 @@
 - https://www.freecodecamp.org/news/how-the-web-works-part-ii-client-server-model-the-structure-of-a-web-application-735b4b6d76e3/ Until `That’s all folks! (Well, sorta…)` (10 min)
 
 Try to formulate an answer to the question:
+
 - What is the server and what is the client?
 - What is http?
 - What is Node.js?

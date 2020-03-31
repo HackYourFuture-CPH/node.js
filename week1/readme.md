@@ -1,12 +1,13 @@
 # Learning goals
+
 - [ ] What happens when you open a webpage
 - [ ] [HTTP - What is the internet](#What-is-Hypertext-Transfer-Protocol-HTTP)
-    - [ ] Client
-    - [ ] HTTP server
+  - [ ] Client
+  - [ ] HTTP server
 - [ ] [Introduction to node js](#What-is-Nodejs)
-    - [ ] What is node and why node (https://www.youtube.com/watch?v=pU9Q6oiQNd0)
-    - [ ] V8 vs the browser that runs js
-    - [ ] What can you build with nodejs?
+  - [ ] What is node and why node (https://www.youtube.com/watch?v=pU9Q6oiQNd0)
+  - [ ] V8 vs the browser that runs js
+  - [ ] What can you build with nodejs?
 - [ ] Simple webserver with node js
   - [ ] Npm init
   - [ ] Modules
@@ -16,20 +17,20 @@
   - [ ] Nodemon
   - [ ] Express - Simple `GET` requests, focus on usage
 
-
 # Relevant links
-* [Preparation](preparation.md)
-* [Homework](homework.md)
-* [Lesson plan](lesson-plan.md)
 
+- [Preparation](preparation.md)
+- [Homework](homework.md)
+- [Lesson plan](lesson-plan.md)
 
 ## Installing node
+
 1. Setup `node` on your computer (skip to step 2 to check):
-	1. Download from: https://nodejs.org/en/download/
-	2. Check if node is installed in your system by running the sollowing commands in Command Promt/PowerShell/Git Bash:
-		* `node -v`
-		* `npm -v`
-		* In either case you should see the version of `node` or `npm` installed.
+   1. Download from: https://nodejs.org/en/download/
+   2. Check if node is installed in your system by running the sollowing commands in Command Promt/PowerShell/Git Bash:
+      - `node -v`
+      - `npm -v`
+      - In either case you should see the version of `node` or `npm` installed.
 
 ## What is backend?
 
@@ -83,7 +84,7 @@ Look into the following resources to increase your understanding:
 
 ## What is Hypertext Transfer Protocol (HTTP)?
 
-How HTTP and HTTPS works: 
+How HTTP and HTTPS works:
 https://twitter.com/b0rk/status/1159478808946335745/photo/1
 https://twitter.com/b0rk/status/1159812119099060224/photo/1
 
