@@ -28,16 +28,17 @@ If you find anything that could be improved then please create a pull request! W
     - [Exercise](#portfolio)
     - Route order
       - [Code inspiration](#route-order)
+ <!---
   - Middleware
     - `next` method
     - Modifying `request` and `response`
     - https://fullstackopen.com/en/part3/node_js_and_express#express
     - [Code inspiration](#middleware)
     - [Exercise](#is-chrome-browser)
+-->
   - Logging and debugging
     - Focus on the students understanding **the order** in which things are executed
 - Postman
-
   - Create collection and save queries
   - Sending get requests requests
     - Query parameters
