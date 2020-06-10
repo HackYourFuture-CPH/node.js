@@ -75,11 +75,13 @@ Some extra things to think about:
 - What if the users writes a string as id? fx "/meals/lol"
 - What if the users writes a query parameter that is not supported?
 
+<!--
 ### Work with middleware
 
 Lets create a middleware function that logs out the time, a request was received and the path. The log should look like this:
 
 `2019-11-07 11:41 request received for path: /meals/3`
+-->
 
 ## Hand in Homework:
 
