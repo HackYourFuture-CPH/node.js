@@ -58,7 +58,7 @@ app.get("/data", (req, res) => {
   res.send({ data: 2 });
 });
 ```
-
+<!--
 ### Middleware
 
 ```js
@@ -71,7 +71,7 @@ app.use((req, res, next) => {
   next();
 });
 ```
-
+-->
 ## Exercises
 
 ### Portfolio
