@@ -28,6 +28,8 @@ If you find anything that could be improved then please create a pull request! W
     - [Exercise](#portfolio)
     - Route order
       - [Code inspiration](#route-order)
+    - Logging and debugging
+      - Focus on the students understanding **the order** in which things are executed
  <!---
   - Middleware
     - `next` method
@@ -36,8 +38,6 @@ If you find anything that could be improved then please create a pull request! W
     - [Code inspiration](#middleware)
     - [Exercise](#is-chrome-browser)
 -->
-    - Logging and debugging
-      - Focus on the students understanding **the order** in which things are executed
 - Postman
   - Create collection and save queries
   - Sending get requests requests
