@@ -4,7 +4,6 @@
   - [ ] What is express
   - [ ] Routing
   - [ ] Logging and debugging
-- [ ] Logging and debugging
 - [ ] Postman
 
 Reproduce a log hitting errors and understanding flow.
