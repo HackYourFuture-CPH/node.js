@@ -92,9 +92,10 @@ Respond with html! Add some query parameters and parameters and print them out o
 or
 
 `/educations/copenhagen-university`
-
+<!--
 ### Is chrome browser
 
 Implement a middleware function that adds a key on the `req` object that indicates if the user is using a chrome browser.
 
 Use the `User-Agent` header.
+-->
