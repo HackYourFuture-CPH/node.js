@@ -3,7 +3,6 @@
 - [ ] Express
   - [ ] What is express
   - [ ] Routing
-  - [ ] Middleware
   - [ ] Logging and debugging
 - [ ] Postman
 

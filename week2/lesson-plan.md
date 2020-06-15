@@ -28,16 +28,17 @@ If you find anything that could be improved then please create a pull request! W
     - [Exercise](#portfolio)
     - Route order
       - [Code inspiration](#route-order)
+    - Logging and debugging
+      - Focus on the students understanding **the order** in which things are executed
+ <!---
   - Middleware
     - `next` method
     - Modifying `request` and `response`
     - https://fullstackopen.com/en/part3/node_js_and_express#express
     - [Code inspiration](#middleware)
     - [Exercise](#is-chrome-browser)
-  - Logging and debugging
-    - Focus on the students understanding **the order** in which things are executed
+-->
 - Postman
-
   - Create collection and save queries
   - Sending get requests requests
     - Query parameters
@@ -57,7 +58,7 @@ app.get("/data", (req, res) => {
   res.send({ data: 2 });
 });
 ```
-
+<!--
 ### Middleware
 
 ```js
@@ -70,7 +71,7 @@ app.use((req, res, next) => {
   next();
 });
 ```
-
+-->
 ## Exercises
 
 ### Portfolio
@@ -91,9 +92,10 @@ Respond with html! Add some query parameters and parameters and print them out o
 or
 
 `/educations/copenhagen-university`
-
+<!--
 ### Is chrome browser
 
 Implement a middleware function that adds a key on the `req` object that indicates if the user is using a chrome browser.
 
 Use the `User-Agent` header.
+-->
