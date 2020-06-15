@@ -19,15 +19,12 @@ If you find anything that could be improved then please create a pull request! W
 ---
 
 - Database interaction - No ORM!
-  - Connecting to mysql
-    - [Using connection](#Mysql-connection)
-    - In homework [pools](homework/src/server/database.js) are used, but dont explain this
-    - Environment variables. Check [this repo](homework/README.md#environment-variables)
+  - Connecting to mysql using knex
+    - Take a look at [this file](./homework-template/src/backend/database.js), dont go into too much detail. More this is how it is
+    - Environment variables. Check [this repo](homework-template/README.md#environment-variables)
   - Executing queries
-    - Simple
-    - Placeholder values `'SELECT * FROM books WHERE author = ?', ['David']`
+    - [Code inspiration](#executing-queries), especially focus on the promise part
   - [Code inspiration](#phonebook-database)
-  - [Exercise](#connecting-the-database)
 - API
   - REST
   - CRUD (follow the structure found in [the homework template](./homework/src/server) )
@@ -40,38 +37,17 @@ If you find anything that could be improved then please create a pull request! W
 
 ## Code inspiration
 
-### Mysql connection
+### Executing queries
 
 ```js
-var mysql = require("mysql");
-var settings = require("./settings.json");
-var db;
+const knex = require("../database");
 
-function connectDatabase() {
-  if (!db) {
-    db = mysql.createConnection(settings);
-
-    db.connect(function(err) {
-      if (!err) {
-        console.log("Database is connected!");
-      } else {
-        console.log("Error connecting database!");
-      }
-    });
-  }
-  return db;
-}
-
-module.exports = connectDatabase();
-```
-
-```js
-var db = require("./database");
-
-db.query("SELECT ? FROM t_user", query, function(err, results, query) {
-  if (err) throw err;
-  if (!err) {
-    indexPage.receiveResults(results);
+router.get("/", async (request, response) => {
+  try {
+    const titles = await knex("meals").select("title");
+    console.log(titles);
+  } catch (error) {
+    throw error;
   }
 });
 ```
@@ -89,25 +65,25 @@ CREATE TABLE `phonebook`.`contacts` (
 ```
 
 ```js
-var db = require("./database");
+// import knex
+const knex = require("../database");
 
-db.query("SELECT * FROM `contacts` WHERE `id` = ?", [1], function(err, results, query) {
-  if (err) throw err;
-  if (!err) {
-    console.log(results);
-  }
-});
+// Select using knex
+try {
+  const contacts = await knex("contacts").select("*").where({ id: 1 });
+} catch (error) {
+  throw error;
+}
 
+
+// insert using knex
 const contact = {
   name: "benjamin",
   phonenumber: "12345678"
 };
-db.query("INSERT INTO posts SET ?", contact, function(err, results, query) {
-  if (err) throw err;
-  if (!err) {
-    console.log(results);
-  }
-});
+
+await knex("contacts").insert(contact);
+
 ```
 
 ### Phonebook api
@@ -132,7 +108,7 @@ Lets create an api for concerts
 
 Create a `concerts` table in mysql. It should have these columns: `title`, `band`, `venue`, `createdDate`, `performanceDate` and `price`
 
-Using node and the `mysql` lib:
+Using node and the `knex` lib:
 
 - `INSERT` three new concerts
 - `GET` all concerts

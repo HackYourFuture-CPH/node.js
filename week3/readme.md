@@ -1,12 +1,9 @@
 # Learning goals
 
 - [ ] Database interaction - No ORM!
-  - [ ] Connecting to mysql
-    - [ ] Using connection
+  - [ ] Connecting to mysql using Knex
     - [ ] Environment variables
-  - [ ] Executing queries
-    - [ ] Simple
-    - [ ] Placeholder values
+  - [ ] Executing queries using knex
 - [ ] API
   - [ ] REST
   - [ ] CRUD

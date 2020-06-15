@@ -44,7 +44,7 @@ All sensitive data like fx passwords and usernames, we dont want to add to git! 
 
 In the project there is a file called `.env.example` that has the correct structure. Copy this file and rename the copied file to `.env`. Now edit the credentials for your database.
 
-The environment variables are then used in node using `process.env.DB_HOST`, you can see that in the `src/serverdatabase.js` file. 
+The environment variables are then used in node using `process.env.DB_HOST`, you can see that in the `src/server/database.js` file. 
 
 ### Prerequisites
 - Postman
@@ -58,7 +58,7 @@ To run `npm run dev`
 
 The api can now be found on `http://localhost:3000/api/` an example is `http://localhost:3000/api/meals`
 
-If you go to `http://localhost:3000/` is will throw an error, dont mind this error! You will be working only on the api.
+If you go to `http://localhost:3000/` is will throw an error, dont mind this error! You will be working only on the api!
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 - [Mysql](https://www.npmjs.com/package/mysql) - Database

@@ -7,8 +7,6 @@ const mealsRouter = require("./api/meals");
 
 const port = process.env.PORT || 3000;
 
-require("./database/database");
-
 // For week4 no need to look into this!
 // Serve the built client html
 const buildPath = path.join(__dirname, "./../frontend");
