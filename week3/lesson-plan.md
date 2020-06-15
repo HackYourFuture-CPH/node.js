@@ -27,7 +27,7 @@ If you find anything that could be improved then please create a pull request! W
   - [Code inspiration](#phonebook-database)
 - API
   - REST
-  - CRUD (follow the structure found in [the homework template](./homework/src/server) )
+  - CRUD (follow the structure found in [the homework template](./homework-template/src/backend) )
     - Router verb `GET`, `POST`, `DELETE`, `PUT`
       - Especially focus on post with `app.use(express.urlencoded({ extended: true }));` and `app.use(express.json());`
   - [Code inspiration](#phonebook-api)
