@@ -74,28 +74,15 @@ app.use((req, res, next) => {
 -->
 ## Exercises
 
-### Portfolio
+### Movies exercise, the back-end version
 
-Start building your portfolio with these routes:
 
-| Route         | Description                                                    |
-| ------------- | -------------------------------------------------------------- |
-| `/`           | Add a title and sub title. Write a couple lines about yourself |
-| `/contact`    | Add social media links and your email                          |
-| `/educations` | Add a list of your educations                                  |
-| `/skills`     | Add a list of your skills                                      |
+Remember the movies dataset from Javascript 2? (see [this](https://github.com/HackYourFuture-CPH/JavaScript/blob/master/javascript2/week2/homework/movies.js) )
 
-Respond with html! Add some query parameters and parameters and print them out on the page. Here is an example:
+Let's create a few routes for common queries
 
-`/educations?is-university=true&attended-before=2015`
-
-or
-
-`/educations/copenhagen-university`
-<!--
-### Is chrome browser
-
-Implement a middleware function that adds a key on the `req` object that indicates if the user is using a chrome browser.
-
-Use the `User-Agent` header.
--->
+| `/`           | Return all titles unfiltered |
+| `/year`       | Return titles and years of all movies from the specified year  |
+| `?beginYear=<year1>&endYear=<year2>` | Returns titles and years of all movies with year between `beginYear` and `endYear`  |
+| `?beginYear=<year1>&endYear=<year2>&minRating=<minRating>` | Returns titles and years of all movies with year between `beginYear` and `endYear` that are also of rating `minRating` or better |
+Finally do some error handling for cases where `beginYear`, `endYear` or `minRating` are not specified. 
