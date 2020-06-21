@@ -64,7 +64,7 @@ CREATE TABLE `phonebook`.`contacts` (
   PRIMARY KEY (`id`));
 ```
 
-If you just want to use an online database, then put this in your `.env` file:
+If you just want to use an online database with the contact table and some users, then put this in your `.env` file:
 
 ```
 DB_HOST = eu-cdbr-west-03.cleardb.net
