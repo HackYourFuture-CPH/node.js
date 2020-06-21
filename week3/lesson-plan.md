@@ -64,6 +64,16 @@ CREATE TABLE `phonebook`.`contacts` (
   PRIMARY KEY (`id`));
 ```
 
+If you just want to use an online database, then put this in your `.env` file:
+
+```
+DB_HOST = eu-cdbr-west-03.cleardb.net
+DB_USER = b4ac8f514a0f20
+DB_PASSWORD = 19f1cf97
+DB_NAME = heroku_2bfb055813f7da0
+DB_PORT = 3306
+```
+
 ```js
 // import knex
 const knex = require("../database");
