@@ -42,7 +42,7 @@ Here are the steps to do that:
 1. Create a new repository on your github profile. 
 2. Clone that repository down locally. 
 3. Copy the code for the template from the this folder into the newly created repo. 
-4. Now copy last weeks `server` folder into the new repo in the `src` folder. You will now have a `server` folder and a `client` folder in the `src` folder.
+4. Now copy last weeks `backend` folder into the new repo in the `src` folder. You will now have a `backend` folder and a `client` folder in the `src` folder.
 5. Add, commit and push the changes to your github.
 6. In the `hyf-homework/node/week4` just add a text file with the link to the newly created repo.
 7. Thats it 🎉
@@ -55,7 +55,7 @@ All sensitive data like fx passwords and usernames, we dont want to add to git! 
 
 In the project there is a file called `.env.example` that has the correct structure. Copy this file and rename the copied file to `.env`. Now edit the credentials for your database.
 
-The environment variables are then used in node using `process.env.DB_HOST`, you can see that in the `src/serverdatabase.js` file. 
+The environment variables are then used in node using `process.env.DB_HOST`, you can see that in the `src/database.js` file. 
 
 ### Prerequisites
 - Postman

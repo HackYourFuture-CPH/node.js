@@ -64,13 +64,13 @@ CREATE TABLE `phonebook`.`contacts` (
   PRIMARY KEY (`id`));
 ```
 
-If you just want to use an online database with the contact table and some users, then put this in your `.env` file:
+Ensure you have database running locally (remember back to what we covered in the SQL lessons), and fill in the details of your local database in the `.env` file:
 
 ```
-DB_HOST = eu-cdbr-west-03.cleardb.net
-DB_USER = b4ac8f514a0f20
-DB_PASSWORD = 19f1cf97
-DB_NAME = heroku_2bfb055813f7da0
+DB_HOST = 127.0.0.1 # or localhost
+DB_USER = <your db user>
+DB_PASSWORD = <your db password> 
+DB_NAME = phonebook
 DB_PORT = 3306
 ```
 
