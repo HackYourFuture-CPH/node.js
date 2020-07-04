@@ -57,7 +57,7 @@ Copy the files from [the template](homework-template) into your `hyf-homework/no
 Here is how you set up week 4 homework:
  
 1. Copy the files from [week4 template](homework-template) into your `hyf-homework/node/week4` folder. You can do that by cloning the [nodejs repo](https://github.com/HackYourFuture-CPH/node.js.git) down locally and then copy the files from `nodejs/week4` into the `hyf-homework/node/week4` folder.
-2. Now copy last weeks `server` folder from `hyf-homework/node/week3/src` into the `hyf-homework/node/week4/src`. You will now have a `server` folder and a `frontend` folder in the `src` folder! This is very important! It should look like this ![Folder structure](./asset/../assets/folder-structure.jpg)
+2. Now copy last weeks `backend` folder from `hyf-homework/node/week3/src` into the `hyf-homework/node/week4/src`. You will now have a `backend` folder and a `frontend` folder in the `src` folder! This is very important! It should look like this ![Folder structure](./asset/../assets/folder-structure.jpg)
 3. Add, commit and push the changes to your github.
 4. Thats it 🎉
 
