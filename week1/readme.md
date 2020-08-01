@@ -39,7 +39,7 @@ Testing is an often used tool in software development to better ensure your code
 
 To help you get accustomed to what testing looks like, each week's homework includes a set of tests to move you along in the exercises. This provides structure for you to better understand what you need to complete and to help you be sure that you are correctly completing the tasks.
 
-If in doubt, from the week's `homework` directory from which you are completing the exercises, run (after running `npm install`:
+If in doubt, from the week's `homework` directory from which you are completing the exercises, run (after running `npm install`):
 
 `npm test`
 

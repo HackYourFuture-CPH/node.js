@@ -52,19 +52,19 @@ The first step is to install [express](https://expressjs.com/) which is a javasc
 
 Install `express` with the following command
 
-`npm install -s express`
+    npm install -s express
 
-`-s` will save `express` as a dependency
+Adding the `-s` will save `express` as a dependency.
 
 To make our developing lives easier, we will use `nodemon` to run our web server (express). `nodemon` will watch for file changes, and when a file is changed it will rerun our app. To install `nodemon` run
 
-`npm install --save-dev nodemon`
+    npm install --save-dev nodemon
 
 The `--save-dev` will save the `nodemon` as a developer dependency.
 
 And now to ensure all your packages are installed for good measure, run:
 
-`npm install`
+    npm install
 
 ### package.json
 
@@ -127,7 +127,7 @@ Add the following list of objects to their respective files:
 ]
 ```
 
-If you're feeling creative, add some more meals, reviews, and reservations.
+**Note:** Add some more at least one more meal, review, and reservation to the respective data files. You will need them for passing the tests.
 
 ### Tasks
 
@@ -135,7 +135,7 @@ To get a bit of an overview of your homework tasks, run:
 
 `npm test`
 
-If this command doesn't work, ensure all your dependencies (`npm install`) are installed correctly
+If this command doesn't work, ensure all your dependencies are installed correctly (try running `npm install` in the `week1/homework` directory).
 
 #### Change index response message
 
@@ -152,9 +152,9 @@ Inside the `app.js` file create the following routes using `express`:
 | `/large-meals`  | Respond with the json for all the `meals` (including it's reviews) that can fit lots of people                                                                                                                                                                                                                       |
 | `/meal`         | Respond with the json for a random meal (including it's reviews)                                                                                                                                                                                                                                                     |
 | `/reservations` | Respond with the json for all `reservations`                                                                                                                                                                                                                                                                         |
-| `/reservation`  | Respond with the json for a random reservation                                                                                                                                                                                                                                                                       |
+| `/reservation**  | Respond with the json for a random reservation                                                                                                                                                                                                                                                                       |
 
-_remember to `require` the meals and reservations jsons_
+**Remember:** Ensure you haved done a `require` on the meals and reservations json files_
 
 If you have made it this far, all the tests should be be passing.
 
@@ -189,7 +189,7 @@ The structure of the project now looks like this:
 |-- package.json
 ```
 
-Remember to continue running the tests (`npm test`) as you move the routes, as this will help you ensure that the routes are still available at the correct paths and are returning the data that is expected.
+**Remember:** Continue running the tests (`npm test`) as you move the routes, as this will help you ensure that the routes are still available at the correct paths and are returning the data that is expected.
 
 ![Meal sharing](assets/meal-sharing.gif)
 
