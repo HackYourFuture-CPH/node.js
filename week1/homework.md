@@ -93,7 +93,7 @@ All the javascript code, as it relates to the express webserver, will be added t
 
 ### Setting up the data
 
-In addition to the `meals.json` file inside the `data` directory, create two additional files inside the`data` folder under `src/backend` called:
+In addition to the `meals.json` file inside the `data` directory, create two additional files inside the `data` folder under `src/backend` called:
 
 - `reviews.json`
 - `reservations.json`

@@ -6,14 +6,5 @@
         "description" : "A nice night out eating delicious indian food",
         "createdAt" : "2019/12/7 14:34",
         "price" : 67
-    },
-    {
-        "id" : 2,
-        "title" : "Second",
-        "maxNumberOfGuests" : 5,
-        "description" : "A nice night out eating delicious indian food",
-        "createdAt" : "2019/12/7 14:34",
-        "price" : 67
     }
-
 ]

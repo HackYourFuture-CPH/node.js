@@ -5,7 +5,7 @@ const app = express();
 const meals = require("./data/meals");
 
 app.get("/", (req, res, next) => {
-    res.send("asd");
+  res.send("asd");
 });
 
 module.exports = app;

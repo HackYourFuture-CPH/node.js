@@ -2,7 +2,7 @@
   "name": "http-server",
   "version": "1.0.0",
   "description": "",
-  "main": "src/backend/index.js",
+  "main": "src/backend/server.js",
   "scripts": {
     "test": "jest --runInBand"
   },
