@@ -32,17 +32,23 @@ Lets continue building on our meal sharing website
 Using the same structure and data objects as last week:
 
 ```
--> src
----> backend
------> data
--------> meals.json
--------> reservations.json
--------> reviews.json
------> routes
--------> meals.js
--------> reservations.js
--------> reviews.js
------> index.js
+|-- src
+|   |-- backend
+|   |   |-- app.js
+|   |   |-- server.js
+|   |   |-- routes
+|   |   |   |-- meal.js
+|   |   |   |-- meals.js
+|   |   |   |-- reservation.js
+|   |   |   |-- reservations.js
+|   |   |-- data
+|   |   |   |-- meals.json
+|   |   |   |-- reviews.json
+|   |   |   |-- reservations.json
+|-- test 
+|   |-- parameters.spec.js
+|-- .gitignore
+|-- package.json
 ```
 
 We will start with only having these routes:
