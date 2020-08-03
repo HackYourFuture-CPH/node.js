@@ -11,7 +11,6 @@
   "devDependencies": {
     "jest": "^26.2.2",
     "nodemon": "^1.19.1",
-    "should": "^13.2.3",
     "superagent": "^5.3.1",
     "supertest": "^4.0.2"
   },
