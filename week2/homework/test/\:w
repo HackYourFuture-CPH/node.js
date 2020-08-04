@@ -34,8 +34,8 @@ describe("GET /meals?maxPrice", () => {
 describe("GET /meals?title", () => {
     test("returns meals with partial title", async () => {
         const title = "Indian food";
-        const queryTitle = "Indian%20food";
         const mealsWithMatchedTitle = meals.filter(meal => meal.title.includes(title));
+        const queryTitle = "Indian%20food";
         const response = await request(app).get(`/meals?title=${queryTitle}`);
         expect(response.statusCode).toBe(200);
         expect(Array.isArray(response.body)).toBeTruthy();
