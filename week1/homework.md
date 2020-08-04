@@ -48,61 +48,57 @@ Now add a `.gitignore` file with these two lines:
 
 `.gitignore` will make sure we don't commit all the files in the `node_modules` folder, which can get huge.
 
-We are going to be using `nodemon` to run our application. `nodemon` will watch for file changes, and when a file is changed it will rerun our app. To install `nodemon` run
+The first step is to install [express](https://expressjs.com/) which is a javascript web framework.
 
-`npm install --save-dev nodemon`
+Install `express` with the following command
 
-The `--save-dev` will save the `nodemon` as a developer dependency
+    npm install -s express
 
-Also install `express` with the following command
+Adding the `-s` will save `express` as a dependency.
 
-`npm install -s express`
+To make our developing lives easier, we will use `nodemon` to run our web server (express). `nodemon` will watch for file changes, and when a file is changed it will rerun our app. To install `nodemon` run
 
-`-s` will save `express` as a dependency
+    npm install --save-dev nodemon
+
+The `--save-dev` will save the `nodemon` as a developer dependency.
+
+And now to ensure all your packages are installed for good measure, run:
+
+    npm install
 
 ### package.json
 
 Inside the `package.json` file we can define scripts that can be run. There should already be a `test` script. In the same fashion, add two more scripts:
 
-1. `start` will run the command `node src/backend/index.js`. This we use when we want to start up the server.
-2. `dev` will run the command `nodemon src/backend/index.js`. This we use when we want to develop our application.
+1. `start` will run the command `node src/backend/server.js`. This we use when we want to start up the server.
+2. `dev` will run the command `nodemon src/backend/server.js`. This we use when we want to develop our application.
 
 to run the `dev` script, we run the command `npm run dev`
 
 ## Now we can start building
 
-Create a folder called `src`. That will contain the source files for our application. Inside the `src` folder create a `backend` folder. Inside this folder create an `index.js` file. To run the application run `npm run dev`.
+All the javascript code, as it relates to the express webserver, will be added to the directory `src`. To run the application run `npm run dev`. Without touching or adding anything, the organization of the project looks like this:
 
 ```
 |-- src
 |   |-- backend
-|   |   |-- index.js
+|   |   |-- app.js
+|   |   |-- server.js
+|   |   |-- data
+|   |   |   |-- meals.json
+|-- test 
 |-- .gitignore
 |-- package.json
 ```
 
 ### Setting up the data
 
-Create three files inside a `data` folder under `src/backend` called:
+In addition to the `meals.json` file inside the `data` directory, create two additional files inside the `data` folder under `src/backend` called:
 
-- `meals.json`
 - `reviews.json`
 - `reservations.json`
 
-`meals.json`
-
-```json
-[
-  {
-    "id": 1,
-    "title": "Indian food in the summer",
-    "maxNumberOfGuests": 5,
-    "description": "A nice night out eating delicious indian food",
-    "createdAt": "2019/12/7 14:34",
-    "price": 67
-  }
-]
-```
+Add the following list of objects to their respective files:
 
 `reviews.json`
 
@@ -131,11 +127,23 @@ Create three files inside a `data` folder under `src/backend` called:
 ]
 ```
 
-Add some more meals, reviews, and reservations.
+**Note:** Add least one more meal, review, and reservation to the respective data files. You will need them for passing the tests.
 
-### Setting up the routes
+### Tasks
 
-Inside the `index.js` file create the following routes using `express`
+To get a bit of an overview of your homework tasks, run:
+
+`npm test`
+
+If this command doesn't work, ensure all your dependencies are installed correctly (try running `npm install` in the `week1/homework` directory).
+
+#### Change index response message
+
+Your first task is to change the response message for the index path (`/` route). If you take a look in `app.js` file, you will see that the `/` route returns `asd`. Run `npm test` to see what the message should be, and make the change accordingly.
+
+#### Creating routes 
+
+Inside the `app.js` file create the following routes using `express`:
 
 | Route           | Description                                                                                                                                                                                                                                                                                                          |
 | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -144,13 +152,15 @@ Inside the `index.js` file create the following routes using `express`
 | `/large-meals`  | Respond with the json for all the `meals` (including it's reviews) that can fit lots of people                                                                                                                                                                                                                       |
 | `/meal`         | Respond with the json for a random meal (including it's reviews)                                                                                                                                                                                                                                                     |
 | `/reservations` | Respond with the json for all `reservations`                                                                                                                                                                                                                                                                         |
-| `/reservation`  | Respond with the json for a random reservation                                                                                                                                                                                                                                                                       |
+| `/reservation**  | Respond with the json for a random reservation                                                                                                                                                                                                                                                                       |
 
-_remember to `require` the meals and reservations json_
+**Remember:** Ensure you haved done a `require` on the meals and reservations json files_
 
-#### Modular routes
+If you have made it this far, all the tests should be be passing.
 
-Instead of writing the functionality for the routes inside `index.js`. Create a routes folder that contains `meals.js`, `meal.js`, etc. So that the routes can be created like this:
+#### Modularizing routes
+
+Now that you have created all the routes as mentioned above (and all the the tests are passing) it is time to take your routing skills a step further by modularizing your routes. Instead of writing the functionality for all the routes inside `app.js`, create a directory (folder) called `routes` folder that contains a file for each route (`meals.js`, `meal.js`, etc). So that the routes can be created like this:
 
 ```js
 const mealsRouter = require("./routes/meals.js");
@@ -160,10 +170,10 @@ app.get("/meals", mealsRouter);
 The structure of the project now looks like this:
 
 ```
-
 |-- src
 |   |-- backend
-|   |   |-- index.js
+|   |   |-- app.js
+|   |   |-- server.js
 |   |   |-- routes
 |   |   |   |-- meals.js
 |   |   |   |-- reservations.js
@@ -178,6 +188,8 @@ The structure of the project now looks like this:
 |-- .gitignore
 |-- package.json
 ```
+
+**Remember:** Continue running the tests (`npm test`) as you move the routes, as this will help you ensure that the routes are still available at the correct paths and are returning the data that is expected.
 
 ![Meal sharing](assets/meal-sharing.gif)
 

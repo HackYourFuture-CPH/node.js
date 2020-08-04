@@ -4,8 +4,8 @@ const app = express();
 // import data here
 const meals = require("./data/meals");
 
-app.get("/", (req, res, next) => {
-  res.send("asd");
+app.get("/", async (request, response) => {
+    response.send("asd");
 });
 
-app.listen(3000);
+module.exports = app;

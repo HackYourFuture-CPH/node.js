@@ -1,15 +1,16 @@
 # Learning goals
 
-- [ ] What happens when you open a webpage
+- [ ] What happens when you open a webpage?
 - [ ] [HTTP - What is the internet](#What-is-Hypertext-Transfer-Protocol-HTTP)
   - [ ] Client
   - [ ] HTTP server
 - [ ] [Introduction to node js](#What-is-Nodejs)
-  - [ ] What is node and why node (https://www.youtube.com/watch?v=pU9Q6oiQNd0)
-  - [ ] V8 vs the browser that runs js
+  - [ ] [What is node and why node?](https://www.youtube.com/watch?v=pU9Q6oiQNd0)
+  - [ ] V8 vs the browser that runs js?
   - [ ] What can you build with nodejs?
 - [ ] Simple webserver with node js
-  - [ ] Npm init
+  - [ ] npm init
+  - [ ] Tests
   - [ ] Modules
     - [ ] Creating and importing using `module.exports` and `require`
     - [ ] Npm modules
@@ -31,6 +32,18 @@
       - `node -v`
       - `npm -v`
       - In either case you should see the version of `node` or `npm` installed.
+      
+## Tests
+
+Testing is an often used tool in software development to better ensure your code does what you want it to. Booting up a server locally and doing manual testing works to some extent, but this is not manageable or scalable as an application grows.
+
+To help you get accustomed to what testing looks like, each week's homework includes a set of tests to move you along in the exercises. This provides structure for you to better understand what you need to complete and to help you be sure that you are correctly completing the tasks.
+
+If in doubt, from the week's `homework` directory from which you are completing the exercises, run (after running `npm install`):
+
+`npm test`
+
+This will give you an idea of the tasks you need to complete.
 
 ## What is backend?
 
