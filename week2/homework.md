@@ -72,7 +72,7 @@ Start by defining these routes and returning their results as described here:
 | `/reviews/{id}`      | Respond with the json for the review with the corresponding `id`      |
 | `/reviews`           | Respond with the json for all reviews                                 |
 
-A `review` consists of `content`, `numberOfStars` and `createdAt`.
+A `review` consists of `content`, `numberOfStars` and `createdAt`. The routes from week 1 do not include reviews, so ensure to add and write the code for these.
 
 ### /meals Parameters
 

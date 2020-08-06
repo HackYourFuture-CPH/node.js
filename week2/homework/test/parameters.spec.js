@@ -20,7 +20,6 @@ describe("GET /meals", () => {
     });
 });
 
-
 describe("GET /meals/:id", () => {
     test("responds with a single meal from with the correct id", async () => {
         const randomId = Math.floor(Math.random() * (meals.length - 1 + 1)) + 1;
