@@ -51,7 +51,17 @@ Using the same structure and data objects as last week:
 |-- package.json
 ```
 
-We will start with only having these routes:
+## Tasks
+
+After running `npm install`, in the homework directory where the `package.json` exists, run the following to get an idea of the specific code you need to write:
+
+    npm test
+    
+After studying the failing tests for a bit, continue to the next section.
+
+### Routes
+
+Start by defining these routes and returning their results as described here:
 
 | Route                | Description                                                           |
 | -------------------- | --------------------------------------------------------------------- |
@@ -64,30 +74,22 @@ We will start with only having these routes:
 
 A `review` consists of `content`, `numberOfStars` and `createdAt`.
 
-### /meals
+### /meals Parameters
 
-The `/meals` route should support some query parameters:
+Next, we want to ensure that our `/meals` route supports additional query parameters. Add the possibility for the following query parameters to the `/meals` route:
 
 | Parameter      | Description                                                                                                    | Data type | Example                          |
 | -------------- | -------------------------------------------------------------------------------------------------------------- | --------- | -------------------------------- |
 | `maxPrice`     | Get meals that has a price smaller than `maxPrice`                                                             | Number    | `/meals?maxPrice=90`             |
 | `title`        | Get meals that partially match a title. `Rød grød med` will match the meal with the title `Rød grød med fløde` | String    | `/meals?title=Indian%20platter`  |
 | `createdAfter` | Get meals that has been created after the date                                                                 | Date      | `/meals?createdAfter=2019-04-05` |
-| `limit`        | Only specific number of meals                                                                                  | Date      | `/meals?limit=4`                 |
+| `limit`        | Only specific number of meals                                                                                  | Number    | `/meals?limit=4`                 |
 
-Some extra things to think about:
+Some things to think about:
 
 - What if there is no meal with the requested id in `meals.json`?
 - What if the users writes a string as id? fx "/meals/lol"
 - What if the users writes a query parameter that is not supported?
-
-<!--
-### Work with middleware
-
-Lets create a middleware function that logs out the time, a request was received and the path. The log should look like this:
-
-`2019-11-07 11:41 request received for path: /meals/3`
--->
 
 ## Hand in Homework:
 
