@@ -62,7 +62,7 @@ Go to the `teacher-live-coding` folder, `npm install` and run using `nodemon ./s
 
 ### Building a simple http webserver
 
-Go to the `teacher-live-coding` folder, `npm install` and run using `nodemon ./src/backend/simple-webserver.js`. Try and implement this functionality from the bottom while explaining.
+Go to the `teacher-live-coding` folder, run using `nodemon ./src/backend/simple-webserver.js`. Try and implement this functionality from the bottom while explaining.
 
 ## Exercises
 
@@ -77,6 +77,8 @@ To get started use the node project [here](./exercise-template). That means clon
 then
 
 `nodemon ./src/backend/index.js`
+
+Now go to localhost:3000/
 
 ### Requirements
 
