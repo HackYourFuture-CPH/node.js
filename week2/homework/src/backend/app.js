@@ -5,7 +5,7 @@ const app = express();
 const meals = require("./data/meals");
 
 app.get("/", async (request, response) => {
-    response.send("asd");
+    response.send("Meal Sharing Web App");
 });
 
 module.exports = app;

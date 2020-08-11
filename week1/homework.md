@@ -127,7 +127,7 @@ Add the following list of objects to their respective files:
 ]
 ```
 
-**Note:** Add some more at least one more meal, review, and reservation to the respective data files. You will need them for passing the tests.
+**Note:** Add least one more meal, review, and reservation to the respective data files. You will need them for passing the tests.
 
 ### Tasks
 
