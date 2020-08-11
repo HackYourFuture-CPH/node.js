@@ -66,7 +66,21 @@ The following two routes have been created, get help by the students to create s
 
 #### Creating the database
 
-Create a `concerts` table in mysql. It should have these columns: `title`, `band`, `venue`, `createdDate`, `performanceDate` and `price`
+Create a `concerts` table in Mysql Workbench using the sql below
+
+```sql
+CREATE SCHEMA `concerts`;
+
+CREATE TABLE `concerts`.`concerts` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `title` VARCHAR(45) NULL,
+  `band` VARCHAR(45) NULL,
+  `venue` VARCHAR(45) NULL,
+  `created_date` DATETIME(45) NULL,
+  `performance_date` DATETIME(45) NULL,
+  `price` INT(45) NULL,
+  PRIMARY KEY (`id`));
+```
 
 #### Setting up the project
 
@@ -76,7 +90,7 @@ Use the template found [here](./exercise-template)
 
 Remember to copy the `.env.example` file, and rename the copied file to `.env`. In the `.env` file add the relevant host, database name, database user and pasword to your own local database. If you are unsure of these things then select your database in the Mysql Workbench. Now press `Database` -> `Manage Connections...`. Here you can see everything you need except the password. If you forgot that, reset it.  
 
-Now you can run `npm install` and then `npm run dev`
+Now you can `cd` into the project and run `npm install` and then `npm run dev`
 
 
 #### Routing
