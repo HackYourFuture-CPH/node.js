@@ -42,7 +42,7 @@ If you find anything that could be improved then please create a pull request! W
 - Go to the `teacher-live-coding` folder
 - Copy the `.env.example` and rename the copied file to `.env`
 - Run `npm install`
-- Start the application by running  `nodemon ./src/backend/phonebook-database-queries.js`.
+- Start the application by running  `nodemon ./src/backend/phonebook-database-queries.js`
 
 Try and implement this functionality from the bottom while explaining.
 
