@@ -111,10 +111,10 @@ Deploy your application [using Heroku](readme.md#deploying-to-heroku).
 
 Watch [this video](https://www.youtube.com/watch?v=feyBVDhFQuk) for a more detailed go-through of how to hand in homework!
 
-- Create a new branch called `node.js/week4`
-- Add all your changes to this branch in the `node.js/week4` folder.
+- Create a new branch called `nodejs/week4`
+- Add all your changes to this branch in the `nodejs/week4` folder.
 - Go through the [Homework checklist](#homework-checklist)
-- Create a pull request using the `node.js/week4` branch
+- Create a pull request using the `nodejs/week4` branch
 - Wait for mentor feedback
 - Implement feedback, `add`, `commit` and `push` the changes
 - Now you can merge the changes into `master`
