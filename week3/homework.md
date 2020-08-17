@@ -111,10 +111,10 @@ Use the query parameters in the `GET api/meals/`.
 
 Watch [this video](https://www.youtube.com/watch?v=feyBVDhFQuk) for a more detailed go-through of how to hand in homework!
 
-- Create a new branch called `node.js/week3`
-- Add all your changes to this branch in the `node.js/week3` folder.
+- Create a new branch called `nodejs/week3`
+- Add all your changes to this branch in the `nodejs/week3` folder.
 - Go through the [Homework checklist](#homework-checklist)
-- Create a pull request using the `node.js/week3` branch
+- Create a pull request using the `nodejs/week3` branch
 - Wait for mentor feedback
 - Implement feedback, `add`, `commit` and `push` the changes
 - Now you can merge the changes into `master`
