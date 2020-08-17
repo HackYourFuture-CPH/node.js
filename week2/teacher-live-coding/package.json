@@ -1,0 +1,21 @@
+{
+  "name": "week1-node",
+  "version": "1.0.0",
+  "description": "Week1 node",
+  "engines": {
+    "node": "8.11.1"
+  },
+  "scripts": {
+    "dev": "npm run server",
+    "start": "node ./src/backend/simple-webserver.js",
+    "server": "nodemon ./src/backend/simple-webserver.js"
+  },
+  "author": "Benjamin Hughes",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  }
+}

@@ -42,90 +42,47 @@ If you find anything that could be improved then please create a pull request! W
   - `npm init`
   - Modules
     - Homemade using `module.exports` and `require`
-    - [Code inspiration](#footer-as-module)
+    - [Live coding](#created-module)
     - NPM modules
       - npmjs.org
       - `npm install -s express`
       - node_modules
       - package.json
-  - .gitignore
+  - [.gitignore](./teacher-live-coding/.gitignore)
   - Nodemon
   - Play around with Express - Focus on usage!
-    - [Code inspiration](#building-a-simple-http-webserver)
+    - [Live coding](#building-a-simple-http-webserver)
     - [Exercise](#portfolio)
 
 ## Code inspiration
 
-### Footer as module
+### Created module
 
-footer.js
-
-```js
-const getFooter = footerContent => `
-    <footer>
-        <div>
-            ${footerContent}
-        </div>
-    </footer>
-`;
-
-module.exports = getFooter;
-```
-
-index.js
-
-```js
-const getFooter = require("./footer");
-```
+Go to the `teacher-live-coding` folder, `npm install` and run using `nodemon ./src/backend/created-module.js`. Try and implement this functionality from the bottom while explaining.
 
 ### Building a simple http webserver
 
-```js
-// explain express comes from node_modules that comes from writing npm install express -s
-// Take a look inside the folder!
-const express = require("express");
-const app = express();
-
-app.get("/", (request, response) => {
-  response.send(`
-    <body>
-        <h1>Main page</h1>
-        <h2>Shows main content</h2>
-    </body>
-  `);
-});
-
-app.get("/about", (request, response) => {
-  response.send(`
-    <body>
-        <h1>About</h1>
-        <p>This is an about page</p>
-    </body>
-  `);
-});
-
-app.get("/contact", (request, response) => {
-  response.send(`
-    <body>
-        <h1>Contact</h1>
-        <p>This is a contact page</p>
-        <form>
-            <label>name</label>
-            <input placeholder="Write your name">
-            <button>Contact me</button>
-        </form>
-    </body>
-  `);
-});
-
-app.listen(3000);
-```
+Go to the `teacher-live-coding` folder, run using `nodemon ./src/backend/simple-webserver.js`. Try and implement this functionality from the bottom while explaining.
 
 ## Exercises
 
 ### Portfolio
 
-Start building your portfolio with these routes:
+#### Setup
+
+To get started use the node project [here](./exercise-template). That means cloning the [node js repo](https://github.com/HackYourFuture-CPH/node.js), opening up a terminal, cd into the folder. Then you need to run these commands: 
+
+`npm install`
+
+then
+
+`nodemon ./src/backend/index.js`
+
+Now go to localhost:3000/
+
+### Requirements
+
+Using the same structure as [here](./exercise-template) start building your portfolio with these routes:
 
 | Route         | Description                                                    |
 | ------------- | -------------------------------------------------------------- |
@@ -140,7 +97,7 @@ Continuing on the last exercise. Lets add some functionality that shows the rele
 
 - Create a function that takes title as parameter
 - Calling the function returns the html for the `head` tag and the `title` tag with the title tag set as the parameter
-- Export the function using `module.exports`
+- Export the function using `module.exports` see [here](./teacher-live-coding/src/backend/created-module) for how to create a module
 - Import the function using `require`
 
 Here are the routes and their corresponding title
@@ -151,6 +108,8 @@ Here are the routes and their corresponding title
 | `/contact`    | Contact    |
 | `/educations` | Education  |
 | `/skills`     | Skills     |
+
+Now add this rendered html (with the head and title tag) to the different routes.
 
 #### Adding styling
 

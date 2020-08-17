@@ -23,8 +23,8 @@ If you find anything that could be improved then please create a pull request! W
     - Take a look at [this file](./homework-template/src/backend/database.js), dont go into too much detail. More this is how it is
     - Environment variables. Check [this repo](./homework-template/readme.md#environment-variables)
   - Executing queries
-    - [Code inspiration](#executing-queries), especially focus on the promise part
-  - [Code inspiration](#phonebook-database)
+    - `select`, `create`. You could let the students figure out how `delete` and `update` works
+  - [Code inspiration](#phonebook-database) especially focus on the promise and query part
 - API
   - REST
   - CRUD (follow the structure found in [the homework template](./homework-template/src/backend) )
@@ -37,68 +37,20 @@ If you find anything that could be improved then please create a pull request! W
 
 ## Code inspiration
 
-### Executing queries
-
-```js
-const knex = require("../database");
-
-router.get("/", async (request, response) => {
-  try {
-    const titles = await knex("meals").select("title");
-    console.log(titles);
-  } catch (error) {
-    throw error;
-  }
-});
-```
-
 ### Phonebook database
 
-Create a phonebook database with contacts:
+- Go to the `teacher-live-coding` folder
+- Copy the `.env.example` and rename the copied file to `.env`
+- Run `npm install`
+- Start the application by running  `nodemon ./src/backend/phonebook-database-queries.js`
 
-```sql
-CREATE TABLE `phonebook`.`contacts` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `name` VARCHAR(45) NULL,
-  `phonenumber` VARCHAR(45) NULL,
-  PRIMARY KEY (`id`));
-```
-
-If you just want to use an online database with the contact table and some users, then put this in your `.env` file:
-
-```
-DB_HOST = eu-cdbr-west-03.cleardb.net
-DB_USER = b4ac8f514a0f20
-DB_PASSWORD = 19f1cf97
-DB_NAME = heroku_2bfb055813f7da0
-DB_PORT = 3306
-```
-
-```js
-// import knex
-const knex = require("../database");
-
-// Select using knex
-try {
-  const contacts = await knex("contacts").select("*").where({ id: 1 });
-} catch (error) {
-  throw error;
-}
-
-
-// insert using knex
-const contact = {
-  name: "benjamin",
-  phonenumber: "12345678"
-};
-
-await knex("contacts").insert(contact);
-
-```
+Try and implement this functionality from the bottom while explaining.
 
 ### Phonebook api
 
-Create the following api
+Start the application by running  `nodemon ./src/backend/create-an-api.js`.
+
+The following two routes have been created, get help by the students to create some of the other routes.
 
 | Url                 | Verb   | Functionality               | Example              |
 | ------------------- | ------ | --------------------------- | -------------------- |
@@ -112,17 +64,34 @@ Create the following api
 
 ### Concerts api
 
+#### Creating the database
+
+Create a `concerts` table in Mysql Workbench using the sql below
+
+```sql
+CREATE SCHEMA `concerts`;
+
+CREATE TABLE `concerts`.`concerts` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `title` VARCHAR(45) NULL,
+  `band` VARCHAR(45) NULL,
+  `venue` VARCHAR(45) NULL,
+  `created_date` DATETIME(45) NULL,
+  `performance_date` DATETIME(45) NULL,
+  `price` INT(45) NULL,
+  PRIMARY KEY (`id`));
+```
+
+#### Setting up the project
+
 Lets create an api for concerts
 
-#### Connecting the database
+Use the template found [here](./exercise-template)
 
-Create a `concerts` table in mysql. It should have these columns: `title`, `band`, `venue`, `createdDate`, `performanceDate` and `price`
+Remember to copy the `.env.example` file, and rename the copied file to `.env`. In the `.env` file add the relevant host, database name, database user and pasword to your own local database. If you are unsure of these things then select your database in the Mysql Workbench. Now press `Database` -> `Manage Connections...`. Here you can see everything you need except the password. If you forgot that, reset it.  
 
-Using node and the `knex` lib:
+Now you can `cd` into the project and run `npm install` and then `npm run dev`
 
-- `INSERT` three new concerts
-- `GET` all concerts
-- `DELETE` a specific concert
 
 #### Routing
 

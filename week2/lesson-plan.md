@@ -23,21 +23,21 @@ If you find anything that could be improved then please create a pull request! W
   - Routing (focus on `get` requests)
     - `app.use`
     - `app.get`
+    - [Live coding](#app-get-vs-app-use)
     - Params `users/:id`
     - Query parameters `users?limit=5`
-    - [Exercise](#portfolio)
+    - [Live coding](#query-parameters-vs-parameters)
+    - [Exercise](#movies)
     - Route order
-      - [Code inspiration](#route-order)
+      - [Live coding](#route-order)
     - Logging and debugging
       - Focus on the students understanding **the order** in which things are executed
- <!---
   - Middleware
     - `next` method
     - Modifying `request` and `response`
     - https://fullstackopen.com/en/part3/node_js_and_express#express
-    - [Code inspiration](#middleware)
+    - [Live coding](#middleware)
     - [Exercise](#is-chrome-browser)
--->
 - Postman
   - Create collection and save queries
   - Sending get requests requests
@@ -46,43 +46,43 @@ If you find anything that could be improved then please create a pull request! W
 
 ## Code inspiration
 
+### app get vs app use
+
+Go to the `teacher-live-coding` folder, `npm install` and run using `nodemon ./src/backend/app-use-vs-app-get.js`. Try and implement this functionality from the bottom while explaining.
+
+### Query parameters vs parameters
+
+Run `nodemon ./src/backend/query-parameters-vs-parameters.js`. Try and implement this functionality from the bottom while explaining.
+
 ### Route order
 
-```js
-// First match is deciding
-app.get("/data", (req, res) => {
-  res.send({ data: 1 });
-});
+Run `nodemon ./src/backend/route-order.js`. Try and implement this functionality from the bottom while explaining.
 
-app.get("/data", (req, res) => {
-  res.send({ data: 2 });
-});
-```
-<!--
 ### Middleware
 
-```js
-app.use((req, res, next) => {
-  console.log(req.headers["accept-language"]);
-  const isFromDenmark = req.headers["accept-language"].includes("da");
-  console.log(isFromDenmark);
-  req.isFromDenmark = isFromDenmark;
+Run using `nodemon ./src/backend/middleware.js`. Try and implement this functionality from the bottom while explaining.
 
-  next();
-});
-```
--->
+
 ## Exercises
 
-### Movies exercise, the back-end version
+### Movies
+
+using the template found [here](./exercise-template/src/backend/index.js) implement the following site:
+
+Using [this movies array](https://raw.githubusercontent.com/HackYourFuture-CPH/JavaScript/master/javascript2/week2/homework/movies.js) create a movie site with the following routes:
 
 
-Remember the movies dataset from Javascript 2? (see [this](https://github.com/HackYourFuture-CPH/JavaScript/blob/master/javascript2/week2/homework/movies.js) )
+|Route|Requirement|
+|---|---|
+| `movies/` | Return all titles unfiltered |
+| `movies/year`       | Return titles and years of all movies from the specified year  |
+| `movies?beginYear=<year1>&endYear=<year2>` | Returns titles and years of all movies with year between `beginYear` and `endYear`  |
+| `movies?beginYear=<year1>&endYear=<year2>&minRating=<minRating>` | Returns titles and years of all movies with year between `beginYear` and `endYear` that are also of rating `minRating` or better |
 
-Let's create a few routes for common queries
+To fetch the movies, you need to install a fetch node js library. Google for fetch libraries and find one you like
 
-| `/`           | Return all titles unfiltered |
-| `/year`       | Return titles and years of all movies from the specified year  |
-| `?beginYear=<year1>&endYear=<year2>` | Returns titles and years of all movies with year between `beginYear` and `endYear`  |
-| `?beginYear=<year1>&endYear=<year2>&minRating=<minRating>` | Returns titles and years of all movies with year between `beginYear` and `endYear` that are also of rating `minRating` or better |
-Finally do some error handling for cases where `beginYear`, `endYear` or `minRating` are not specified. 
+Finally do some error handling for cases where `beginYear`, `endYear` or `minRating` are not specified
+
+### Is chrome browser middleware
+
+Create a middleware funtion that creates a key on the `request` object called `isChromeBrowser`. If the browser accessing the website is a chrome browser it should be assigned to `true`, otherwise `false`.

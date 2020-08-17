@@ -6,7 +6,7 @@
   - [ ] Clientside routing
 - [ ] Deploy to heroku
 
-![A test image](fullstack_cheatsheet.png)
+![Fullstack overview](./assets/fullstack-overview.png)
 # Relevant links
 
 - [Preparation](preparation.md)
