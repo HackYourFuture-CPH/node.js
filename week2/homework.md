@@ -95,10 +95,10 @@ Some things to think about:
 
 Watch [this video](https://www.youtube.com/watch?v=feyBVDhFQuk) for a more detailed go-through of how to hand in homework!
 
-- Create a new branch called `node.js/week2`
-- Add all your changes to this branch in the `node.js/week2` folder.
+- Create a new branch called `nodejs/week2`
+- Add all your changes to this branch in the `nodejs/week2` folder.
 - Go through the [Homework checklist](#homework-checklist)
-- Create a pull request using the `node.js/week2` branch
+- Create a pull request using the `nodejs/week2` branch
 - Wait for mentor feedback
 - Implement feedback, `add`, `commit` and `push` the changes
 - Now you can merge the changes into `master`
