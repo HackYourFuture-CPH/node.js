@@ -82,7 +82,7 @@ Now go to localhost:3000/
 
 ### Requirements
 
-Using the same structure as [here](./exercise-template) start building your portfolio with these routes:
+First, using the same structure as [here](./exercise-template), start building your portfolio with these routes:
 
 | Route         | Description                                                    |
 | ------------- | -------------------------------------------------------------- |
@@ -91,13 +91,17 @@ Using the same structure as [here](./exercise-template) start building your port
 | `/educations` | Add a list of your educations                                  |
 | `/skills`     | Add a list of your skills                                      |
 
+To get an understanding of the tasks to complete, run the test command:
+
+`npm test`
+
 #### Changing the title of the page
 
 Continuing on the last exercise. Lets add some functionality that shows the relevant title of a page using modules!
 
 - Create a function that takes title as parameter
 - Calling the function returns the html for the `head` tag and the `title` tag with the title tag set as the parameter
-- Export the function using `module.exports` see [here](./teacher-live-coding/src/backend/created-module) for how to create a module
+- Export the function using `module.exports` see [here](./teacher-live-coding/src/backend/created-module.js) for how to create a module
 - Import the function using `require`
 
 Here are the routes and their corresponding title
