@@ -20,6 +20,10 @@ app.get("/contact", (request, response) => {
   `);
 });
 
-app.listen(3000, function () {
+
+const server = app.listen(3000, function () {
   console.log(`> Ready on http://localhost:3000`);
 });
+
+// Export app for testing purposes
+module.exports = server;
