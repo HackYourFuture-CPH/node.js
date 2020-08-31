@@ -76,8 +76,8 @@ CREATE TABLE `concerts`.`concerts` (
   `title` VARCHAR(45) NULL,
   `band` VARCHAR(45) NULL,
   `venue` VARCHAR(45) NULL,
-  `created_date` DATETIME(45) NULL,
-  `performance_date` DATETIME(45) NULL,
+  `created_date` DATETIME(6) NULL,
+  `performance_date` DATETIME(6) NULL,
   `price` INT(45) NULL,
   PRIMARY KEY (`id`));
 ```
