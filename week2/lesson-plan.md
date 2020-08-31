@@ -74,10 +74,10 @@ Using [this movies array](https://raw.githubusercontent.com/HackYourFuture-CPH/J
 
 |Route|Requirement|
 |---|---|
-| `movies/` | Return all titles unfiltered |
-| `movies/year`       | Return titles and years of all movies from the specified year  |
-| `movies?beginYear=<year1>&endYear=<year2>` | Returns titles and years of all movies with year between `beginYear` and `endYear`  |
-| `movies?beginYear=<year1>&endYear=<year2>&minRating=<minRating>` | Returns titles and years of all movies with year between `beginYear` and `endYear` that are also of rating `minRating` or better |
+| `movies/` | Return all movies |
+| `movies/year`       | Return all movies from the specified year  |
+| `movies?beginYear=<year1>&endYear=<year2>` | Returns all movies with year between `beginYear` and `endYear`  |
+| `movies?beginYear=<year1>&endYear=<year2>&minRating=<minRating>` | Returns all movies with year between `beginYear` and `endYear` that are also of rating `minRating` or better |
 
 To fetch the movies, you need to install a fetch node js library. Google for fetch libraries and find one you like
 
