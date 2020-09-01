@@ -7,8 +7,8 @@
   },
   "scripts": {
     "dev": "npm run server",
-    "start": "node ./src/backend/simple-webserver.js",
-    "server": "nodemon ./src/backend/simple-webserver.js"
+    "start": "node ./src/backend/index.js",
+    "server": "nodemon ./src/backend/index.js"
   },
   "author": "Benjamin Hughes",
   "license": "MIT",
