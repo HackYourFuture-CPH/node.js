@@ -1,5 +1,25 @@
 # Homework
 
+## Get git ready to work on homework
+
+Using the `hyf-homework` repo. In the terminal run `git status`
+
+If there are changes that have not been committed, figure out what to do with those changes
+- Should they be committed to another branch?
+- Should they be committed to `master`?
+- Should they be discarded?
+
+When you have figured out what to do with the changes and fixed those. Write `git status` again. If it says `nothing to commit, working tree clean`. Then you are ready to create the branch for this weeks homework.
+
+### Creating the branch
+Using the `hyf-homework` repo write this command
+
+`git checkout -b nodejs/week1`
+
+This will create and checkout the branch so you are ready make commits to it
+
+[This video](https://www.youtube.com/watch?v=feyBVDhFQuk) can help
+
 ## So why this homework?
 
 Getting comfortable with creating a simple webserver will set us up for having a good basic understanding of what a webserver is and should do.
@@ -197,7 +217,7 @@ The structure of the project now looks like this:
 
 Watch [this video](https://www.youtube.com/watch?v=feyBVDhFQuk) for a more detailed go-through of how to hand in homework!
 
-- Create a new branch called `nodejs/week1`
+- Use the branch called `nodejs/week1`
 - Add all your changes to this branch in the `nodejs/week1` folder.
 - Go through the [Homework checklist](#homework-checklist)
 - Create a pull request using the `nodejs/week1` branch

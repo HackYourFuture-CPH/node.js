@@ -1,5 +1,25 @@
 # Homework
 
+### Get git ready to work on homework
+
+Using the `hyf-homework` repo. In the terminal run `git status`
+
+If there are changes that have not been committed, figure out what to do with those changes
+- Should they be committed to another branch?
+- Should they be committed to `master`?
+- Should they be discarded?
+
+When you have figured out what to do with the changes and fixed those. Write `git status` again. If it says `nothing to commit, working tree clean`. Then you are ready to create the branch for this weeks homework.
+
+#### Creating the branch
+Using the `hyf-homework` repo write this command
+
+`git checkout -b nodejs/week4`
+
+This will create and checkout the branch so you are ready make commits to it
+
+[This video](https://www.youtube.com/watch?v=feyBVDhFQuk) can help
+
 ## So why this homework?
 
 To make a site work like a real website we need to add styling to it and some client functionality using js. In this homework we will finish our meal sharing website so meals can be created and reservations made at the meals. In the end we will deploy the site to the web, so other people can also use it!
@@ -111,7 +131,7 @@ Deploy your application [using Heroku](readme.md#deploying-to-heroku).
 
 Watch [this video](https://www.youtube.com/watch?v=feyBVDhFQuk) for a more detailed go-through of how to hand in homework!
 
-- Create a new branch called `nodejs/week4`
+- Use the branch called `nodejs/week4`
 - Add all your changes to this branch in the `nodejs/week4` folder.
 - Go through the [Homework checklist](#homework-checklist)
 - Create a pull request using the `nodejs/week4` branch

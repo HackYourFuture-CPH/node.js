@@ -1,5 +1,25 @@
 # Homework
 
+## Get git ready to work on homework
+
+Using the `hyf-homework` repo. In the terminal run `git status`
+
+If there are changes that have not been committed, figure out what to do with those changes
+- Should they be committed to another branch?
+- Should they be committed to `master`?
+- Should they be discarded?
+
+When you have figured out what to do with the changes and fixed those. Write `git status` again. If it says `nothing to commit, working tree clean`. Then you are ready to create the branch for this weeks homework.
+
+### Creating the branch
+Using the `hyf-homework` repo write this command
+
+`git checkout -b nodejs/week3`
+
+This will create and checkout the branch so you are ready make commits to it
+
+[This video](https://www.youtube.com/watch?v=feyBVDhFQuk) can help
+
 ## So why this homework?
 
 Working with APIs is such a core way for the client to communicate with the server. Creating an API abstracts away lots of complexity and makes it easy to create users, get users, changing users etc.
@@ -111,7 +131,7 @@ Use the query parameters in the `GET api/meals/`.
 
 Watch [this video](https://www.youtube.com/watch?v=feyBVDhFQuk) for a more detailed go-through of how to hand in homework!
 
-- Create a new branch called `nodejs/week3`
+- Use the branch called `nodejs/week3`
 - Add all your changes to this branch in the `nodejs/week3` folder.
 - Go through the [Homework checklist](#homework-checklist)
 - Create a pull request using the `nodejs/week3` branch
