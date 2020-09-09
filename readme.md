@@ -16,7 +16,7 @@ Most of this course will focus on the backend part. Meaning building a webserver
 | 2.   | Express                                                   | [Preparation](week2/preparation.md) | [Homework](week2/homework.md) | [Lesson plan](week2/lesson-plan.md) |
 | 3.   | Database connection <br> API                              | [Preparation](week3/preparation.md) | [Homework](week3/homework.md) | [Lesson plan](week3/lesson-plan.md) |
 | 4.   | Fullstack application <br> Connecting frontend to backend | [Preparation](week4/preparation.md) | [Homework](week4/homework.md) | [Lesson plan](week4/lesson-plan.md) |
-| 5.   | Finishing last weeks homework                             | [Preparation](week4/preparation.md) | [Homework](week4/homework.md) | -                                   |
+| 5.   | Finishing last weeks homework                             | [Preparation](week4/preparation.md) | - | -                                   |
 
 Theses things you should study by yourself!
 
