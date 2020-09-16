@@ -103,7 +103,7 @@ Rendering the html will all be done client side. That means using `innerHTML` fx
 
 ### /meals/{id}
 
-The `/meals/{id}` route should have a form for making a reservation for that meal. The form should have `phonenumber`, `name` and `email`. When creating a new meal with a form, use the [`POST /api/reservations` route](../week3/homework.md#reservation)
+The `/meals/{id}` route should have a form for making a reservation for that meal. The form should have `phonenumber`, `name` and `email`. When creating a new reservation with a form, use the [`POST /api/reservations` route](../week3/homework.md#reservation)
 
 This form should only be shown if the meal does have available reservations!
 
