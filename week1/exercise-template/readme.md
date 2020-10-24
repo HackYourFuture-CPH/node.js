@@ -4,15 +4,15 @@
 
 #### Setup
 
-To get started use the node project [here](./exercise-template). That means cloning the [node js repo](https://github.com/HackYourFuture-CPH/node.js), opening up a terminal, cd into the folder. Then you need to run these commands: 
+To get started use the node project [here](./exercise-template). That means cloning the [node js repo](https://github.com/HackYourFuture-CPH/node.js), opening up a terminal, and cd'ing into the folder. Then you need to run these commands: 
 
 `npm install`
 
-then
+then:
 
-`nodemon ./src/backend/index.js`
+`npm run server`
 
-Now go to localhost:3000/
+Now go to [localhost:3000/](http://localhost:3000/).
 
 ### Requirements
 
