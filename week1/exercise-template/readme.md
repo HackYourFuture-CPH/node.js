@@ -1,69 +1,72 @@
-<p align="center">
-  <a href="" rel="noopener">
- <img width=200px height=200px src="https://www.hackyourfuture.dk/static/logo-dark.svg" alt="Project logo"></a>
-</p>
+## Exercises
 
-<h3 align="center">Meal sharing api</h3>
+### Portfolio
 
-<div align="center">
+#### Setup
 
-  [![Status](https://img.shields.io/badge/status-active-success.svg)]()
-  [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
+To get started use the node project [here](./exercise-template). That means cloning the [node js repo](https://github.com/HackYourFuture-CPH/node.js), opening up a terminal, cd into the folder. Then you need to run these commands: 
 
-</div>
+`npm install`
 
----
+then
 
-<p align="center"> Website api for sharing meals together. Invite your best friends or your family for dinner!
-    <br> 
-</p>
+`nodemon ./src/backend/index.js`
 
-## 📝 Table of Contents
-- [About](#about)
-- [Getting Started](#getting_started)
-- [Deployment](#deployment)
-- [Usage](#usage)
-- [Built Using](#built_using)
-- [TODO](../TODO.md)
-- [Contributing](../CONTRIBUTING.md)
-- [Authors](#authors)
-- [Acknowledgments](#acknowledgement)
+Now go to localhost:3000/
 
-## 🧐 About <a name = "about"></a>
-This project is an exercise for HackYourFuture students to learn the concepts of full stack development with a focus on the connection between:
+### Requirements
 
-Database <--> Webserver
+First, using the same structure as [here](./exercise-template), start building your portfolio with these routes:
 
-## 🏁 Getting Started <a name = "getting_started"></a>
-Check your `node/week3` folder in the `hyf-homework` repo on your computer. If there already is a `src` folder, `package.json` etc, then you can just start working in that folder!
+| Route         | Description                                                    |
+| ------------- | -------------------------------------------------------------- |
+| `/`           | Add a title and subtitle. Write a couple lines about yourself |
+| `/contact`    | Add social media links and your email                          |
+| `/educations` | Add a list of your educations                                  |
+| `/skills`     | Add a list of your skills                                      |
 
-If not: copy the code for the template from this folder into the `node/week3` folder in your `hyf-homework` repo on your computer. 
+To get an understanding of the tasks to complete, run the test command:
 
-### Environment variables
-All sensitive data like fx passwords and usernames, we dont want to add to git! This problem we solve by having environment variables. Environment variables are not committed to git and have a key value structure. 
+`npm test`
 
-In the project there is a file called `.env.example` that has the correct structure. Copy this file and rename the copied file to `.env`. Now edit the credentials for your database.
+#### Changing the title of the page
 
-The environment variables are then used in node using `process.env.DB_HOST`, you can see that in the `src/server/database.js` file. 
+Continuing on the last exercise. Lets add some functionality that shows the relevant title of a page using modules!
 
-### Prerequisites
-- Postman
-- MySQL Workbench
+- Create a function that takes title as parameter
+- Calling the function returns the html for the `head` tag and the `title` tag with the title tag set as the parameter
+- Export the function using `module.exports` see [here](./teacher-live-coding/src/backend/created-module.js) for how to create a module
+- Import the function using `require`
 
-### Installing
-To install run `npm install`
+Here are the routes and their corresponding title
 
-## 🎈 Usage <a name="usage"></a>
-To run `npm run dev`
+| Route         | Page title |
+| ------------- | ---------- |
+| `/`           | Home       |
+| `/contact`    | Contact    |
+| `/educations` | Education  |
+| `/skills`     | Skills     |
 
-The api can now be found on `http://localhost:3000/api/` an example is `http://localhost:3000/api/meals`
+Now add this rendered html (with the head and title tag) to the different routes.
 
-If you go to `http://localhost:3000/` is will throw an error, dont mind this error! You will be working only on the api!
+#### Adding styling
 
-## ⛏️ Built Using <a name = "built_using"></a>
-- [Mysql](https://www.npmjs.com/package/mysql) - Database
-- [Express](https://expressjs.com/) - Server Framework
-- [NodeJs](https://nodejs.org/en/) - Server Environment
+Lets add some styling to our page. We will do it with inlining styles for now. Which should be avoided normally, but for now it is okay.
 
-## ✍️ Authors <a name = "authors"></a>
-- [@benna100](https://github.com/benna100) - Idea & Initial work
+Change the previous header function to add some inline styling in the head tag.
+
+Try and see if you can create a module with only the css as a string.
+
+#### Adding a projects route
+
+| Route       | Description                     |
+| ----------- | ------------------------------- |
+| `/projects` | Renders a list of your projects |
+
+| Route       | Page title |
+| ----------- | ---------- |
+| `/projects` | projects   |
+
+A project should have: `title`, `codeUrl`, `previewUrl` and `img`.
+
+Now when the the `projects` route is hit, respond with some rendered html of your projects!
