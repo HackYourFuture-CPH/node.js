@@ -5,6 +5,10 @@ afterEach(async () => {
     app.close();
 });
 
+afterAll(async () => {
+    app.close();
+});
+
 describe("GET /", () => {
     test("returns 'head' in response", async (done) => {
         const response = await request(app).get("/");

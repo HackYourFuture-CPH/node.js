@@ -16,18 +16,32 @@ Now go to [localhost:3000/](http://localhost:3000/).
 
 ### Requirements
 
-First, using the same structure as [here](./exercise-template), start building your portfolio with these routes:
+To get an understanding of the tasks to complete, run the test command:
+
+`npm test`
+
+If you read this output closely, you will see that all tests fail, because the correct result is not being met, because routes are missing and HTML is also missing.
+
+To get some tests passing, ensure your webserver has these routes:
+
+| Route         
+| -------------
+| `/`
+| `/contact`
+| `/educations`
+| `/skills`
+
+Now, running `npm test` should result in a few tests passing.
+
+Next, start adding information in the HTML of the specific routes to match these descriptions.
 
 | Route         | Description                                                    |
 | ------------- | -------------------------------------------------------------- |
-| `/`           | Add a title and subtitle. Write a couple lines about yourself |
+| `/`           | Add a title and subtitle. Write a couple lines about yourself  |
 | `/contact`    | Add social media links and your email                          |
 | `/educations` | Add a list of your educations                                  |
 | `/skills`     | Add a list of your skills                                      |
 
-To get an understanding of the tasks to complete, run the test command:
-
-`npm test`
 
 #### Changing the title of the page
 
@@ -44,7 +58,7 @@ Here are the routes and their corresponding title
 | ------------- | ---------- |
 | `/`           | Home       |
 | `/contact`    | Contact    |
-| `/educations` | Education  |
+| `/education`  | Education  |
 | `/skills`     | Skills     |
 
 Now add this rendered html (with the head and title tag) to the different routes.
@@ -65,7 +79,7 @@ Try and see if you can create a module with only the css as a string.
 
 | Route       | Page title |
 | ----------- | ---------- |
-| `/projects` | projects   |
+| `/projects` | Projects   |
 
 A project should have: `title`, `codeUrl`, `previewUrl` and `img`.
 
