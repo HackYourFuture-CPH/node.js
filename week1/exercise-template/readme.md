@@ -45,10 +45,16 @@ Next, start adding information in the HTML of the specific routes to match these
 
 #### Changing the title of the page
 
-Continuing on the last exercise. Lets add some functionality that shows the relevant title of a page using modules!
+Firstly try change the title of the Home page to say Home. https://www.w3schools.com/tags/tag_title.asp
+
+Now hopefully you know how to change the title of a page. 
+
+Continuing on the last exercise. Lets add some functionality that shows the relevant title of a page using modules! 
+
+So when navigating to `/` the title will be Home, when navigating to `/contact` the title will be contact and so on
 
 - Create a function that takes title as parameter
-- Calling the function returns the html for the `head` tag and the `title` tag with the title tag set as the parameter
+- Calling the function returns the html for the `head` tag and the `title` tag.
 - Export the function using `module.exports` see [here](./teacher-live-coding/src/backend/created-module.js) for how to create a module
 - Import the function using `require`
 
