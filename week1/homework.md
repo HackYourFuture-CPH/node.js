@@ -180,39 +180,6 @@ Inside the `app.js` file create the following routes using `express`:
 
 If you have made it this far, all the tests should be be passing.
 
-#### Modularizing routes
-
-Now that you have created all the routes as mentioned above (and all the the tests are passing) it is time to take your routing skills a step further by modularizing your routes. Instead of writing the functionality for all the routes inside `app.js`, create a directory (folder) called `routes` folder that contains a file for each route (`meals.js`, `meal.js`, etc). So that the routes can be created like this:
-
-```js
-const mealsRouter = require("./routes/meals.js");
-app.get("/meals", mealsRouter);
-```
-
-The structure of the project now looks like this:
-
-```
-|-- src
-|   |-- backend
-|   |   |-- app.js
-|   |   |-- server.js
-|   |   |-- routes
-|   |   |   |-- meals.js
-|   |   |   |-- reservations.js
-|   |   |   |-- cheap-meals.js
-|   |   |   |-- large-meals.js
-|   |   |   |-- meal.js
-|   |   |   |-- reservation.js
-|   |   |-- data
-|   |   |   |-- meals.json
-|   |   |   |-- reviews.json
-|   |   |   |-- reservations.json
-|-- .gitignore
-|-- package.json
-```
-
-**Remember:** Continue running the tests (`npm test`) as you move the routes, as this will help you ensure that the routes are still available at the correct paths and are returning the data that is expected.
-
 ![Meal sharing](assets/meal-sharing.gif)
 
 ## Hand in Homework:
