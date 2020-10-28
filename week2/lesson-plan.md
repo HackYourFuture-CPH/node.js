@@ -67,10 +67,9 @@ Run using `nodemon ./src/backend/middleware.js`. Try and implement this function
 
 ### Movies
 
-using the template found [here](./exercise-template) implement the following site:
+Using the template found [here](./exercise-template) implement the following site:
 
-Using [this movies array](https://raw.githubusercontent.com/HackYourFuture-CPH/JavaScript/master/javascript2/week2/homework/movies.js) create a movie site with the following routes:
-
+Check the [movies router file](./exercise-template/src/backend/movies-router.js). This is where you will be creating your routes. The `movies/` route has even been created for you (now you just need to return the movies)
 
 |Route|Requirement|
 |---|---|
@@ -78,8 +77,6 @@ Using [this movies array](https://raw.githubusercontent.com/HackYourFuture-CPH/J
 | `movies/year`       | Return all movies from the specified year  |
 | `movies?beginYear=<year1>&endYear=<year2>` | Returns all movies with year between `beginYear` and `endYear`  |
 | `movies?beginYear=<year1>&endYear=<year2>&minRating=<minRating>` | Returns all movies with year between `beginYear` and `endYear` that are also of rating `minRating` or better |
-
-To fetch the movies, you need to install a fetch node js library. Google for fetch libraries and find one you like
 
 Finally do some error handling for cases where `beginYear`, `endYear` or `minRating` are not specified
 
