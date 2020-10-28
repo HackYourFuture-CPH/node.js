@@ -5,6 +5,7 @@
 Using the `hyf-homework` repo. In the terminal run `git status`
 
 If there are changes that have not been committed, figure out what to do with those changes
+
 - Should they be committed to another branch?
 - Should they be committed to `master`?
 - Should they be discarded?
@@ -12,6 +13,7 @@ If there are changes that have not been committed, figure out what to do with th
 When you have figured out what to do with the changes and fixed those. Write `git status` again. If it says `nothing to commit, working tree clean`. Then you are ready to create the branch for this weeks homework.
 
 ### Creating the branch
+
 Using the `hyf-homework` repo write this command
 
 `git checkout master` - You are now on the `master` branch
@@ -108,7 +110,7 @@ All the javascript code, as it relates to the express webserver, will be added t
 |   |   |-- server.js
 |   |   |-- data
 |   |   |   |-- meals.json
-|-- test 
+|-- test
 |-- .gitignore
 |-- package.json
 ```
@@ -163,20 +165,20 @@ If this command doesn't work, ensure all your dependencies are installed correct
 
 Your first task is to change the response message for the index path (`/` route). If you take a look in `app.js` file, you will see that the `/` route returns `asd`. Run `npm test` to see what the message should be, and make the change accordingly.
 
-#### Creating routes 
+#### Creating routes
 
 Inside the `app.js` file create the following routes using `express`:
 
-| Route           | Description                                                                                                                                                                                                                                                                                                          |
-| --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `/meals`        | Respond with the json for all the `meals`. For each meal, if there are reviews matching it's meal ID, add these reviews to each meal in the form of an array. For meals that do not have any reviews, the "reviews" property will be an empty array. (watch the GIF below to understand how it should be structured) |
-| `/cheap-meals`  | Respond with the json for all the `meals` (including it's reviews) that are cheap (you define what a cheap meal is)                                                                                                                                                                                                  |
-| `/large-meals`  | Respond with the json for all the `meals` (including it's reviews) that can fit lots of people                                                                                                                                                                                                                       |
-| `/meal`         | Respond with the json for a random meal (including it's reviews)                                                                                                                                                                                                                                                     |
-| `/reservations` | Respond with the json for all `reservations`                                                                                                                                                                                                                                                                         |
-| `/reservation**  | Respond with the json for a random reservation                                                                                                                                                                                                                                                                       |
+| Route             | Description                                                                                                                                                                                                                                                                                                          |
+| ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `/meals`          | Respond with the json for all the `meals`. For each meal, if there are reviews matching it's meal ID, add these reviews to each meal in the form of an array. For meals that do not have any reviews, the "reviews" property will be an empty array. (watch the GIF below to understand how it should be structured) |
+| `/cheap-meals`    | Respond with the json for all the `meals` (including it's reviews) that are cheap (you define what a cheap meal is)                                                                                                                                                                                                  |
+| `/large-meals`    | Respond with the json for all the `meals` (including it's reviews) that can fit lots of people                                                                                                                                                                                                                       |
+| `/meal`           | Respond with the json for a random meal (including it's reviews)                                                                                                                                                                                                                                                     |
+| `/reservations`   | Respond with the json for all `reservations`                                                                                                                                                                                                                                                                         |
+| `/reservation\*\* | Respond with the json for a random reservation                                                                                                                                                                                                                                                                       |
 
-**Remember:** Ensure you haved done a `require` on the meals and reservations json files_
+**Remember:** Ensure you haved done a `require` on the meals and reservations json files\_
 
 If you have made it this far, all the tests should be be passing.
 
@@ -184,7 +186,7 @@ If you have made it this far, all the tests should be be passing.
 
 ## Hand in Homework:
 
-Watch [this video](https://www.youtube.com/watch?v=feyBVDhFQuk) for a more detailed go-through of how to hand in homework!
+Watch [this video](https://www.youtube.com/watch?v=XYlgh9hSWtw) for a more detailed go-through of how to hand in homework!
 
 - Use the branch called `nodejs/week1`
 - Add all your changes to this branch in the `nodejs/week1` folder.
@@ -205,12 +207,12 @@ Go over your homework one last time:
 - [ ] Do the variable, function and argument names you created follow the [Naming Conventions](https://github.com/HackYourFuture/fundamentals/blob/master/fundamentals/naming_conventions.md)?
 - [ ] Is your code well-formatted (see [Code Formatting](https://github.com/HackYourFuture/fundamentals/blob/master/fundamentals/naming_conventions.md))?
 
-
 ## Feedback giving time!
-Find a student to give feedback using this site: https://hyf-peer-review.herokuapp.com/. The feedback should be given after the homework has been handed in, preferably two days after. 
+
+Find a student to give feedback using this site: https://hyf-peer-review.herokuapp.com/. The feedback should be given after the homework has been handed in, preferably two days after.
 
 Give the review on the PR exactly how the mentors do it! To find the link for the PR ask the person you are reviewing :) You can see how to give feedback on a PR using github [here](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/commenting-on-a-pull-request)
 
-To help you get started with reviewing we have created [some ressources](https://github.com/HackYourFuture-CPH/curriculum/tree/master/review) about giving feedback. Find them 
+To help you get started with reviewing we have created [some ressources](https://github.com/HackYourFuture-CPH/curriculum/tree/master/review) about giving feedback. Find them
 
 Why is it important to give feedback? Because it will make you a [better](https://www.brightspot.com/blog/developer-life-5-reasons-why-the-code-review-process-is-critical-for-developers) [developer](https://www.sitepoint.com/the-importance-of-code-reviews/)

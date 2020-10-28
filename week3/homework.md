@@ -5,6 +5,7 @@
 Using the `hyf-homework` repo. In the terminal run `git status`
 
 If there are changes that have not been committed, figure out what to do with those changes
+
 - Should they be committed to another branch?
 - Should they be committed to `master`?
 - Should they be discarded?
@@ -12,6 +13,7 @@ If there are changes that have not been committed, figure out what to do with th
 When you have figured out what to do with the changes and fixed those. Write `git status` again. If it says `nothing to commit, working tree clean`. Then you are ready to create the branch for this weeks homework.
 
 ### Creating the branch
+
 Using the `hyf-homework` repo write this command
 
 `git checkout master` - You are now on the `master` branch
@@ -60,7 +62,6 @@ You can only do the post request through a form unsing html or using postman. Fo
 - Going to `/calculator/multiply` with the following key values: firstParam=1, secondParam=2. Should respond with 2.
 - Going to `/calculator/division` with the following key values: firstParam=1, secondParam=2. Should respond with 0.5.
 
-
 ## Lets build a real functioning site :)
 
 We will be building a meal sharing website over 2 weeks of homework. First we will be building the backend rest api. Then next week we will connect the frontend to the backend and deploy the website on Heroku.
@@ -73,7 +74,7 @@ To get started a template has been set up, so that you can focus on developing w
 
 Copy the files from [the template](homework-template) into your `hyf-homework/node/week3` folder. You can do that by cloning the [nodejs repo](https://github.com/HackYourFuture-CPH/node.js.git) down locally and then copy the files into the `hyf-homework/node/week3` folder.
 
-Read the [readme file](homework-template/readme.md) to get started with the project. 
+Read the [readme file](homework-template/readme.md) to get started with the project.
 
 There has already been set one route up for you already, so you can get a sense for the structure. Take a look at `src/backend/index.js` and understand what the different parts does!
 
@@ -131,7 +132,7 @@ Use the query parameters in the `GET api/meals/`.
 
 ## Hand in Homework:
 
-Watch [this video](https://www.youtube.com/watch?v=feyBVDhFQuk) for a more detailed go-through of how to hand in homework!
+Watch [this video](https://www.youtube.com/watch?v=XYlgh9hSWtw) for a more detailed go-through of how to hand in homework!
 
 - Use the branch called `nodejs/week3`
 - Add all your changes to this branch in the `nodejs/week3` folder.
@@ -153,10 +154,11 @@ Go over your homework one last time:
 - [ ] Is your code well-formatted (see [Code Formatting](https://github.com/HackYourFuture/fundamentals/blob/master/fundamentals/naming_conventions.md))?
 
 ## Feedback giving time!
-Find a student to give feedback using this site: https://hyf-peer-review.herokuapp.com/. The feedback should be given after the homework has been handed in, preferably two days after. 
+
+Find a student to give feedback using this site: https://hyf-peer-review.herokuapp.com/. The feedback should be given after the homework has been handed in, preferably two days after.
 
 Give the review on the PR exactly how the mentors do it! To find the link for the PR ask the person you are reviewing :) You can see how to give feedback on a PR using github [here](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/commenting-on-a-pull-request)
 
-To help you get started with reviewing we have created [some ressources](https://github.com/HackYourFuture-CPH/curriculum/tree/master/review) about giving feedback. Find them 
+To help you get started with reviewing we have created [some ressources](https://github.com/HackYourFuture-CPH/curriculum/tree/master/review) about giving feedback. Find them
 
 Why is it important to give feedback? Because it will make you a [better](https://www.brightspot.com/blog/developer-life-5-reasons-why-the-code-review-process-is-critical-for-developers) [developer](https://www.sitepoint.com/the-importance-of-code-reviews/)

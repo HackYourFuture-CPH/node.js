@@ -5,6 +5,7 @@
 Using the `hyf-homework` repo. In the terminal run `git status`
 
 If there are changes that have not been committed, figure out what to do with those changes
+
 - Should they be committed to another branch?
 - Should they be committed to `master`?
 - Should they be discarded?
@@ -12,6 +13,7 @@ If there are changes that have not been committed, figure out what to do with th
 When you have figured out what to do with the changes and fixed those. Write `git status` again. If it says `nothing to commit, working tree clean`. Then you are ready to create the branch for this weeks homework.
 
 #### Creating the branch
+
 Using the `hyf-homework` repo write this command
 
 `git checkout master` - You are now on the `master` branch
@@ -57,7 +59,10 @@ You could make it so just one of these rules should be true for it to be marked 
 This is how the spam detection should work:
 
 ```js
-const emailFromOldFriend = new Email("Hello old friend", "Long time no see, when should we hang out again??");
+const emailFromOldFriend = new Email(
+  "Hello old friend",
+  "Long time no see, when should we hang out again??"
+);
 
 const spamDetector = new SpamDetector();
 console.log(spamDetector.isSpam(emailFromOldFriend)); // false
@@ -74,10 +79,11 @@ Use the template (also called scaffold) found in the [hyf-homework-template repo
 In this project we will be doing all the routing and building of the html on the client side. The server side will be responsible for all data interaction through the api we created last week.
 
 ### 🏁 Getting Started <a name = "getting_started"></a>
+
 Copy the files from [the template](homework-template) into your `hyf-homework/node/week4` folder. You can do that by cloning the [nodejs repo](https://github.com/HackYourFuture-CPH/node.js.git) down locally and then copy the files into the `hyf-homework/node/week4` folder.
 
 Here is how you set up week 4 homework:
- 
+
 1. Copy the files from [week4 template](homework-template) into your `hyf-homework/node/week4` folder. You can do that by cloning the [nodejs repo](https://github.com/HackYourFuture-CPH/node.js.git) down locally and then copy the files from `nodejs/week4` into the `hyf-homework/node/week4` folder.
 2. Now copy last weeks `server` folder from `hyf-homework/node/week3/src` into the `hyf-homework/node/week4/src`. You will now have a `server` folder and a `frontend` folder in the `src` folder! This is very important! It should look like this ![Folder structure](./asset/../assets/folder-structure.jpg)
 3. Add, commit and push the changes to your github.
@@ -131,7 +137,7 @@ Deploy your application [using Heroku](readme.md#deploying-to-heroku).
 
 ## Hand in Homework:
 
-Watch [this video](https://www.youtube.com/watch?v=feyBVDhFQuk) for a more detailed go-through of how to hand in homework!
+Watch [this video](https://www.youtube.com/watch?v=XYlgh9hSWtw) for a more detailed go-through of how to hand in homework!
 
 - Use the branch called `nodejs/week4`
 - Add all your changes to this branch in the `nodejs/week4` folder.
@@ -153,10 +159,11 @@ Go over your homework one last time:
 - [ ] Is your code well-formatted (see [Code Formatting](https://github.com/HackYourFuture/fundamentals/blob/master/fundamentals/naming_conventions.md))?
 
 ## Feedback giving time!
-Find a student to give feedback using this site: https://hyf-peer-review.herokuapp.com/. The feedback should be given after the homework has been handed in, preferably two days after. 
+
+Find a student to give feedback using this site: https://hyf-peer-review.herokuapp.com/. The feedback should be given after the homework has been handed in, preferably two days after.
 
 Give the review on the PR exactly how the mentors do it! To find the link for the PR ask the person you are reviewing :) You can see how to give feedback on a PR using github [here](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/commenting-on-a-pull-request)
 
-To help you get started with reviewing we have created [some ressources](https://github.com/HackYourFuture-CPH/curriculum/tree/master/review) about giving feedback. Find them 
+To help you get started with reviewing we have created [some ressources](https://github.com/HackYourFuture-CPH/curriculum/tree/master/review) about giving feedback. Find them
 
 Why is it important to give feedback? Because it will make you a [better](https://www.brightspot.com/blog/developer-life-5-reasons-why-the-code-review-process-is-critical-for-developers) [developer](https://www.sitepoint.com/the-importance-of-code-reviews/)
