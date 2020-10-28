@@ -97,7 +97,7 @@ Start by defining these routes and returning their results as described here:
 | `/reviews/{id}`      | Respond with the json for the review with the corresponding `id` *       |
 | `/reviews`           | Respond with the json for all reviews *                                 |
 
-* To make the reservations and reviews routes working create a new reservations and reviews router, add the routers in the `app.js` file and add the `reservations.json` and `reviews.json` file. Follow how it was done for the meals router.
+\* To make the reservations and reviews routes working create a new reservations and reviews router, add the routers in the `app.js` file and add the `reservations.json` and `reviews.json` file. Follow how it was done for the meals router.
 
 ### /meals Parameters
 
