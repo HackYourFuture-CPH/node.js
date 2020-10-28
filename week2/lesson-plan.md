@@ -86,4 +86,6 @@ Finally do some error handling for cases where `beginYear`, `endYear` or `minRat
 
 Create a middleware funtion that creates a key on the `request` object called `isChromeBrowser`. If the browser accessing the website is a chrome browser it should be assigned to `true`, otherwise `false`.
 
-You can add this here [movies router file](./exercise-template/src/backend/app.js)
+You can add this middleware to the [app.js](./exercise-template/src/backend/app.js)
+
+Remember to test that the middleware works!
