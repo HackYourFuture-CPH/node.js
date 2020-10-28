@@ -88,17 +88,14 @@ If you ahve not already please add some meals, reviews and reservations to the j
 
 Start by defining these routes and returning their results as described here:
 
+To make the reservations and reviews routes working create a new reservations and reviews router, add the routers in the `app.js` file and add the `reservations.json` and `reviews.json` file. Follow how it was done for the meals router.
+
 | Route                | Description                                                           |
 | -------------------- | --------------------------------------------------------------------- |
 | `/meals/{id}`        | Respond with the json for the meal with the corresponding `id`        |
 | `/meals`             | Respond with the json for all the meals                               |
-
-Now you need to create a new reservations router, add the router in the `app.js` file and add the `reservations.json` file. Follow how it was done for the meals router.
-
 | `/reservations/{id}` | Respond with the json for the reservation with the corresponding `id` |
 | `/reservations`      | Respond with the json for all reservations                            |
-
-Now you need to create a new reviews router, add the router in the `app.js` file and add the `reviews.json` file
 | `/reviews/{id}`      | Respond with the json for the review with the corresponding `id`      |
 | `/reviews`           | Respond with the json for all reviews                                 |
 
