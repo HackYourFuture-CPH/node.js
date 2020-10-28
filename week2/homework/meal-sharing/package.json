@@ -1,0 +1,22 @@
+{
+  "name": "meal-sharing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/backend/server.js",
+  "scripts": {
+    "test": "jest --runInBand",
+    "start": "node ./src/backend/server.js",
+    "dev": "nodemon ./src/backend/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^26.2.2",
+    "nodemon": "^1.19.1",
+    "superagent": "^5.3.1",
+    "supertest": "^4.0.2"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
