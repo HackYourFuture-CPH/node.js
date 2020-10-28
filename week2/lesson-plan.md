@@ -67,7 +67,9 @@ Run using `nodemon ./src/backend/middleware.js`. Try and implement this function
 
 ### Movies
 
-Using the template found [here](./exercise-template) implement the following site:
+We will be making an api for getting movies 🎞📽🎥🎦🎬
+
+Using the template found [here](./exercise-template). Remember to clone it locally, open a terminal in the folder and run `npm install`. Now how can you start the server??
 
 Check the [movies router file](./exercise-template/src/backend/movies-router.js). This is where you will be creating your routes. The `movies/` route has even been created for you (now you just need to return the movies)
 
