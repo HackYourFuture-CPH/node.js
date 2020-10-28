@@ -53,18 +53,16 @@ Hints:
 
 Lets continue building on our meal sharing website
 
-Using the same structure and data objects as last week:
+Use this boilerplate: [movies router file](./homework/) for the homework. Remember to clone it locally and copy it into your `hyf-homework/nodejs/week2` folder
+
 
 ```
 |-- src
 |   |-- backend
 |   |   |-- app.js
 |   |   |-- server.js
-|   |   |-- routes
-|   |   |   |-- meal.js
-|   |   |   |-- meals.js
-|   |   |   |-- reservation.js
-|   |   |   |-- reservations.js
+|   |   |-- api
+|   |   |   |-- meals-router.js
 |   |   |-- data
 |   |   |   |-- meals.json
 |   |   |   |-- reviews.json
