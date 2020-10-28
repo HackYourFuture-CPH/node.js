@@ -67,7 +67,7 @@ Run using `nodemon ./src/backend/middleware.js`. Try and implement this function
 
 ### Movies
 
-using the template found [here](./exercise-template/src/backend/index.js) implement the following site:
+using the template found [here](./exercise-template) implement the following site:
 
 Using [this movies array](https://raw.githubusercontent.com/HackYourFuture-CPH/JavaScript/master/javascript2/week2/homework/movies.js) create a movie site with the following routes:
 
