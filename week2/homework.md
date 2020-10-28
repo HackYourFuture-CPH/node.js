@@ -30,13 +30,17 @@ Express is such a core library for NodeJs that can help us with many things when
 
 > Please help us improve and share your feedback! If you find better tutorials or links, please share them by opening a Pull Request.
 
+## Setting things up
+
+Copy the two projects from [here](./homework/) into your `hyf-homework/nodejs/week2` folder
+
 ## Warmup
+
+Use [this boilerplate](./homework/warmup) for the homework. 
 
 Lets use express routes to create a small calculator
 
-1. Create new empty folder called warmup. Open it in Visual Studio Code. Open the terminal.
-2. Initialize a new Npm project using `npm init`, install `express` library, create `index.js` to run new express server on port `3000`.
-3. Add 2 routes to your `index.js`:
+Add 2 routes to your `index.js`:
 
 - GET `/numbers/add?first=<number here>&second=<number here>`. In response send sum (first + second).
 - GET `/numbers/multiply/<first number here>/<second number here>`. in response send multiplication (first \* second).
@@ -53,8 +57,7 @@ Hints:
 
 Lets continue building on our meal sharing website
 
-Use this boilerplate: [movies router file](./homework/) for the homework. Remember to clone it locally and copy it into your `hyf-homework/nodejs/week2` folder
-
+Use [this boilerplate](./homework/meal-sharing) for the homework.
 
 ```
 |-- src
