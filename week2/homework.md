@@ -84,22 +84,20 @@ After studying the failing tests for a bit, continue to the next section.
 
 ### Routes
 
-If you ahve not already please add some meals, reviews and reservations to the json files in the data folder.
+If you have not already please add some meals, reviews and reservations to the json files in the data folder.
 
 Start by defining these routes and returning their results as described here:
-
-To make the reservations and reviews routes working create a new reservations and reviews router, add the routers in the `app.js` file and add the `reservations.json` and `reviews.json` file. Follow how it was done for the meals router.
 
 | Route                | Description                                                           |
 | -------------------- | --------------------------------------------------------------------- |
 | `/meals/{id}`        | Respond with the json for the meal with the corresponding `id`        |
 | `/meals`             | Respond with the json for all the meals                               |
-| `/reservations/{id}` | Respond with the json for the reservation with the corresponding `id` |
-| `/reservations`      | Respond with the json for all reservations                            |
-| `/reviews/{id}`      | Respond with the json for the review with the corresponding `id`      |
-| `/reviews`           | Respond with the json for all reviews                                 |
+| `/reservations/{id}` | Respond with the json for the reservation with the corresponding `id` * |
+| `/reservations`      | Respond with the json for all reservations *                            |
+| `/reviews/{id}`      | Respond with the json for the review with the corresponding `id` *       |
+| `/reviews`           | Respond with the json for all reviews *                                 |
 
-A `review` consists of `content`, `numberOfStars` and `createdAt`. 
+* To make the reservations and reviews routes working create a new reservations and reviews router, add the routers in the `app.js` file and add the `reservations.json` and `reviews.json` file. Follow how it was done for the meals router.
 
 ### /meals Parameters
 
