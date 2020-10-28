@@ -4,7 +4,9 @@
   "description": "",
   "main": "src/backend/server.js",
   "scripts": {
-    "test": "jest --runInBand"
+    "test": "jest --runInBand",
+    "start": "node ./src/backend/server.js",
+    "dev": "nodemon ./src/backend/server.js"
   },
   "author": "",
   "license": "ISC",

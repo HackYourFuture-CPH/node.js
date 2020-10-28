@@ -1,11 +1,9 @@
 const express = require("express");
 const app = express();
 
-// import data here
-const meals = require("./data/meals");
+const mealsRouter = require("./api/meals-router");
 
-app.get("/", async (request, response) => {
-    response.send("Meal Sharing Web App");
-});
+// app.use binds middleware to your application. You can give app.use a path and router. The mini router will take care of all requests with the path
+app.use("/api/meals", mealsRouter);
 
 module.exports = app;
