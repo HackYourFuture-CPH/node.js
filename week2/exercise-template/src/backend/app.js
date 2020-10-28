@@ -4,9 +4,9 @@ const express = require("express");
 const app = express();
 const moviesRouter = require("./movies-router");
 
-// app.use binds middleware to your application. You can give app.use a path and router. The mini router will take care of all requests with the path
-app.use("/movies", moviesRouter);
+// This is where you want to create your is chrome browser middleware (second exercise)
 
-app.listen(3000, function () {
-  console.log(`> Ready on http://localhost:3000`);
-});
+// app.use binds middleware to your application. You can give app.use a path and router. The mini router will take care of all requests with the path
+app.use("/api/movies", moviesRouter);
+
+module.exports = app;
