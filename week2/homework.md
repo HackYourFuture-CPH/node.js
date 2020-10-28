@@ -68,8 +68,6 @@ Use [this boilerplate](./homework/meal-sharing) for the homework. Remember to ru
 |   |   |   |-- meals-router.js
 |   |   |-- data
 |   |   |   |-- meals.json
-|   |   |   |-- reviews.json
-|   |   |   |-- reservations.json
 |-- test
 |   |-- parameters.spec.js
 |-- .gitignore
@@ -86,18 +84,25 @@ After studying the failing tests for a bit, continue to the next section.
 
 ### Routes
 
+If you ahve not already please add some meals, reviews and reservations to the json files in the data folder.
+
 Start by defining these routes and returning their results as described here:
 
 | Route                | Description                                                           |
 | -------------------- | --------------------------------------------------------------------- |
 | `/meals/{id}`        | Respond with the json for the meal with the corresponding `id`        |
 | `/meals`             | Respond with the json for all the meals                               |
+
+Now you need to create a new reservations router, add the router in the `app.js` file and add the `reservations.json` file. Follow how it was done for the meals router.
+
 | `/reservations/{id}` | Respond with the json for the reservation with the corresponding `id` |
 | `/reservations`      | Respond with the json for all reservations                            |
+
+Now you need to create a new reviews router, add the router in the `app.js` file and add the `reviews.json` file
 | `/reviews/{id}`      | Respond with the json for the review with the corresponding `id`      |
 | `/reviews`           | Respond with the json for all reviews                                 |
 
-A `review` consists of `content`, `numberOfStars` and `createdAt`. The routes from week 1 do not include reviews, so ensure to add and write the code for these.
+A `review` consists of `content`, `numberOfStars` and `createdAt`. 
 
 ### /meals Parameters
 
