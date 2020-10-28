@@ -2,7 +2,7 @@
 // Take a look inside the folder!
 const express = require("express");
 const app = express();
-const moviesRouter = require("./movies-router");
+const moviesRouter = require("./api/movies-router");
 
 // This is where you want to create your is chrome browser middleware (second exercise)
 
