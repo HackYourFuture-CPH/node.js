@@ -30,13 +30,17 @@ Express is such a core library for NodeJs that can help us with many things when
 
 > Please help us improve and share your feedback! If you find better tutorials or links, please share them by opening a Pull Request.
 
+## Setting things up
+
+Copy the two projects from [here](./homework/) into your `hyf-homework/nodejs/week2` folder
+
 ## Warmup
+
+Use [this boilerplate](./homework/warmup) for the homework. Remember to run `npm install` then `npm run dev` to start the server
 
 Lets use express routes to create a small calculator
 
-1. Create new empty folder called warmup. Open it in Visual Studio Code. Open the terminal.
-2. Initialize a new Npm project using `npm init`, install `express` library, create `index.js` to run new express server on port `3000`.
-3. Add 2 routes to your `index.js`:
+Add 2 routes to your `index.js`:
 
 - GET `/numbers/add?first=<number here>&second=<number here>`. In response send sum (first + second).
 - GET `/numbers/multiply/<first number here>/<second number here>`. in response send multiplication (first \* second).
@@ -53,8 +57,7 @@ Hints:
 
 Lets continue building on our meal sharing website
 
-Use this boilerplate: [movies router file](./homework/) for the homework. Remember to clone it locally and copy it into your `hyf-homework/nodejs/week2` folder
-
+Use [this boilerplate](./homework/meal-sharing) for the homework. Remember to run `npm install` then `npm run dev` to start the server
 
 ```
 |-- src
@@ -65,8 +68,6 @@ Use this boilerplate: [movies router file](./homework/) for the homework. Rememb
 |   |   |   |-- meals-router.js
 |   |   |-- data
 |   |   |   |-- meals.json
-|   |   |   |-- reviews.json
-|   |   |   |-- reservations.json
 |-- test
 |   |-- parameters.spec.js
 |-- .gitignore
@@ -83,18 +84,20 @@ After studying the failing tests for a bit, continue to the next section.
 
 ### Routes
 
+If you have not already please add some meals, reviews and reservations to the json files in the data folder.
+
 Start by defining these routes and returning their results as described here:
 
 | Route                | Description                                                           |
 | -------------------- | --------------------------------------------------------------------- |
 | `/meals/{id}`        | Respond with the json for the meal with the corresponding `id`        |
 | `/meals`             | Respond with the json for all the meals                               |
-| `/reservations/{id}` | Respond with the json for the reservation with the corresponding `id` |
-| `/reservations`      | Respond with the json for all reservations                            |
-| `/reviews/{id}`      | Respond with the json for the review with the corresponding `id`      |
-| `/reviews`           | Respond with the json for all reviews                                 |
+| `/reservations/{id}` | Respond with the json for the reservation with the corresponding `id` * |
+| `/reservations`      | Respond with the json for all reservations *                            |
+| `/reviews/{id}`      | Respond with the json for the review with the corresponding `id` *       |
+| `/reviews`           | Respond with the json for all reviews *                                 |
 
-A `review` consists of `content`, `numberOfStars` and `createdAt`. The routes from week 1 do not include reviews, so ensure to add and write the code for these.
+\* To make the reservations and reviews routes working create a new reservations and reviews router, add the routers in the `app.js` file and add the `reservations.json` and `reviews.json` file. Follow how it was done for the meals router.
 
 ### /meals Parameters
 
