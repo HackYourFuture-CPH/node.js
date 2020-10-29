@@ -65,8 +65,6 @@ circle.getDiameter(); // 20
 
 ## Meal sharing website
 
-To start the server
-
 In this homework we will be continuing the meal sharing project started in the database class. In this homework we will be working with `meals`, `reviews`, and `reservations`.
 
 ## Lets start building
