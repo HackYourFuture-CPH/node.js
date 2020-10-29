@@ -1,69 +1,28 @@
-<p align="center">
-  <a href="" rel="noopener">
- <img width=200px height=200px src="https://www.hackyourfuture.dk/static/logo-dark.svg" alt="Project logo"></a>
-</p>
+# Exercises
 
-<h3 align="center">Meal sharing api</h3>
+### Movies
 
-<div align="center">
+We will be making an api for getting movies 🎞📽🎥🎦🎬
 
-  [![Status](https://img.shields.io/badge/status-active-success.svg)]()
-  [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
+Using the template found [here](./exercise-template). Remember to clone it locally, open a terminal in the folder and run `npm install`. Now how can you start the server??
 
-</div>
+Try and begin by getting an overview of the project. What file is called when the server is started. What routes is that setting up and so on
 
----
+Check the [movies router file](./exercise-template/src/backend/api/movies-router.js). This is where you will be creating your routes. The `movies/` route has even been created for you (now you just need to return the movies)
 
-<p align="center"> Website api for sharing meals together. Invite your best friends or your family for dinner!
-    <br> 
-</p>
+|Route|Requirement|
+|---|---|
+| `movies/` | Return all movies |
+| `movies/year`       | Return all movies from the specified year  |
+| `movies?beginYear=<year1>&endYear=<year2>` | Returns all movies with year between `beginYear` and `endYear`  |
+| `movies?beginYear=<year1>&endYear=<year2>&minRating=<minRating>` | Returns all movies with year between `beginYear` and `endYear` that are also of rating `minRating` or better |
 
-## 📝 Table of Contents
-- [About](#about)
-- [Getting Started](#getting_started)
-- [Deployment](#deployment)
-- [Usage](#usage)
-- [Built Using](#built_using)
-- [TODO](../TODO.md)
-- [Contributing](../CONTRIBUTING.md)
-- [Authors](#authors)
-- [Acknowledgments](#acknowledgement)
+Finally do some error handling for cases where `beginYear`, `endYear` or `minRating` are not specified
 
-## 🧐 About <a name = "about"></a>
-This project is an exercise for HackYourFuture students to learn the concepts of full stack development with a focus on the connection between:
+### Is chrome browser middleware
 
-Database <--> Webserver
+Create a middleware function that creates a key on the `request` object called `isChromeBrowser`. If the browser accessing the website is a chrome browser it should be assigned to `true`, otherwise `false`.
 
-## 🏁 Getting Started <a name = "getting_started"></a>
-Check your `node/week3` folder in the `hyf-homework` repo on your computer. If there already is a `src` folder, `package.json` etc, then you can just start working in that folder!
+You can add this middleware to the [app.js](./exercise-template/src/backend/app.js)
 
-If not: copy the code for the template from this folder into the `node/week3` folder in your `hyf-homework` repo on your computer. 
-
-### Environment variables
-All sensitive data like fx passwords and usernames, we dont want to add to git! This problem we solve by having environment variables. Environment variables are not committed to git and have a key value structure. 
-
-In the project there is a file called `.env.example` that has the correct structure. Copy this file and rename the copied file to `.env`. Now edit the credentials for your database.
-
-The environment variables are then used in node using `process.env.DB_HOST`, you can see that in the `src/server/database.js` file. 
-
-### Prerequisites
-- Postman
-- MySQL Workbench
-
-### Installing
-To install run `npm install`
-
-## 🎈 Usage <a name="usage"></a>
-To run `npm run dev`
-
-The api can now be found on `http://localhost:3000/api/` an example is `http://localhost:3000/api/meals`
-
-If you go to `http://localhost:3000/` is will throw an error, dont mind this error! You will be working only on the api!
-
-## ⛏️ Built Using <a name = "built_using"></a>
-- [Mysql](https://www.npmjs.com/package/mysql) - Database
-- [Express](https://expressjs.com/) - Server Framework
-- [NodeJs](https://nodejs.org/en/) - Server Environment
-
-## ✍️ Authors <a name = "authors"></a>
-- [@benna100](https://github.com/benna100) - Idea & Initial work
+Remember to test that the middleware works!
