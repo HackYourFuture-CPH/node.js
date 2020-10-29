@@ -30,9 +30,17 @@ Getting comfortable with creating a simple webserver will set us up for having a
 
 > Please help us improve and share your feedback! If you find better tutorials or links, please share them by opening a Pull Request.
 
+## Setting up the homework
+
+Clone down the [node js repo](https://github.com/HackYourFuture-CPH/node.js) locally. Copy the contents of the `nodejs/week1/homework` into your `hyf-homework/nodejs/week1` folder
+
 ## Warmup
 
-Create a warmup.js file where you will write the code for circle calculator. Run it using [node](readme.md#installing-node).
+In the [warmup.js file](./homework/warmup.js) add the following functionality.
+
+To run the warmup file, first install the project dependencies with `npm install`. Make sure you are in the `hyf-homework/nodejs/week1/homework` folder!
+
+Now you can run: `nodemon warmup.js`
 
 ### Circle calculator
 
@@ -57,51 +65,13 @@ circle.getDiameter(); // 20
 
 ## Meal sharing website
 
-In this homework we will be continuing the meal sharing project started in the database class. In this homework we will be working with `meals`, `reviews`, and `reservations` for the meals.
+To start the server
 
-## Let's setup the project
+In this homework we will be continuing the meal sharing project started in the database class. In this homework we will be working with `meals`, `reviews`, and `reservations`.
 
-With node [installed](readme.md#installing-node) initiate a new project by running `npm init`. This will create a `package.json` file.
+## Lets start building
 
-Now add a `.gitignore` file with these two lines:
-
-```
-.DS_Store
-/node_modules
-```
-
-`.gitignore` will make sure we don't commit all the files in the `node_modules` folder, which can get huge.
-
-The first step is to install [express](https://expressjs.com/) which is a javascript web framework.
-
-Install `express` with the following command
-
-    npm install -s express
-
-Adding the `-s` will save `express` as a dependency.
-
-To make our developing lives easier, we will use `nodemon` to run our web server (express). `nodemon` will watch for file changes, and when a file is changed it will rerun our app. To install `nodemon` run
-
-    npm install --save-dev nodemon
-
-The `--save-dev` will save the `nodemon` as a developer dependency.
-
-And now to ensure all your packages are installed for good measure, run:
-
-    npm install
-
-### package.json
-
-Inside the `package.json` file we can define scripts that can be run. There should already be a `test` script. In the same fashion, add two more scripts:
-
-1. `start` will run the command `node src/backend/server.js`. This we use when we want to start up the server.
-2. `dev` will run the command `nodemon src/backend/server.js`. This we use when we want to develop our application.
-
-to run the `dev` script, we run the command `npm run dev`
-
-## Now we can start building
-
-All the javascript code, as it relates to the express webserver, will be added to the directory `src`. To run the application run `npm run dev`. Without touching or adding anything, the organization of the project looks like this:
+To start the webserver run `npm run dev`. Without touching or adding anything, the organization of the project looks like this:
 
 ```
 |-- src
@@ -110,48 +80,15 @@ All the javascript code, as it relates to the express webserver, will be added t
 |   |   |-- server.js
 |   |   |-- data
 |   |   |   |-- meals.json
+|   |   |   |-- reservations.json
+|   |   |   |-- reviews.json
 |-- test
+|   |-- routes.spec.js
 |-- .gitignore
 |-- package.json
 ```
 
-### Setting up the data
-
-In addition to the `meals.json` file inside the `data` directory, create two additional files inside the `data` folder under `src/backend` called:
-
-- `reviews.json`
-- `reservations.json`
-
-Add the following list of objects to their respective files:
-
-`reviews.json`
-
-```json
-[
-  {
-    "id": 1,
-    "numberOfStars": 3,
-    "content": "Best meal ever",
-    "mealId": 1,
-    "createdAt": 12345
-  }
-]
-```
-
-`reservations.json`
-
-```json
-[
-  {
-    "id": 1,
-    "name": "Benjamin Hughes",
-    "email": "benjamin@hughes.dk",
-    "mealId": 1
-  }
-]
-```
-
-**Note:** Add least one more meal, review, and reservation to the respective data files. You will need them for passing the tests.
+**Note:** Add at least one more meal, review, and reservation to the respective data files.
 
 ### Tasks
 
@@ -159,7 +96,9 @@ To get a bit of an overview of your homework tasks, run:
 
 `npm test`
 
-If this command doesn't work, ensure all your dependencies are installed correctly (try running `npm install` in the `week1/homework` directory).
+If this command doesn't work, ensure all your dependencies are installed correctly (try running `npm install` in the `hyf-homework/nodejs/week1/homework` directory).
+
+\*\* Remember when testing your application to have the webserver running!
 
 #### Change index response message
 
