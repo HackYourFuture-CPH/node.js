@@ -28,7 +28,7 @@ CREATE TABLE `concerts`.`concerts` (
 
 Lets create an api for concerts
 
-Use the template found [here](./exercise-template)
+Use this template
 
 Remember to copy the `.env.example` file, and rename the copied file to `.env`. In the `.env` file add the relevant host, database name, database user and pasword to your own local database. If you are unsure of these things then select your database in the Mysql Workbench. Now press `Database` -> `Manage Connections...`. Here you can see everything you need except the password. If you forgot that, reset it.  
 
