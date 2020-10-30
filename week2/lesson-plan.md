@@ -86,7 +86,7 @@ Finally do some error handling for cases where `beginYear`, `endYear` or `minRat
 
 ### Is chrome browser middleware
 
-Create a middleware funtion that creates a key on the `request` object called `isChromeBrowser`. If the browser accessing the website is a chrome browser it should be assigned to `true`, otherwise `false`.
+Create a middleware function that creates a key on the `request` object called `isChromeBrowser`. If the browser accessing the website is a chrome browser it should be assigned to `true`, otherwise `false`.
 
 You can add this middleware to the [app.js](./exercise-template/src/backend/app.js)
 

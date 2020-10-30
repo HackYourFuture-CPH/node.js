@@ -2,7 +2,6 @@
 // Take a look inside the folder!
 const express = require("express");
 const app = express();
-const miniRouter = require("./mini-router");
 
 app.use((req, res, next) => {
   console.log(req.headers["accept-language"]);
