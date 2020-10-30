@@ -36,8 +36,6 @@ We will build on knowledge from the following HYF (sub)modules. If we feel we ha
 - Using `require` to include modules
 - Using `express` to make a RESTful API
 - Using `mysql` to connect the API to the backend
-- Connecting the frontend to the backend API
-- Frontend routing
 - Postman
 
 ## Why Node.js?
