@@ -32,6 +32,10 @@ Working with APIs is such a core way for the client to communicate with the serv
 
 ## Warmup
 
+Copy the warmup project from [here](./homework/warmup) into your `hyf-homework/nodejs/week3` folder
+
+Remember to run `npm install` then `npm run dev` to start the server
+
 ### Calculator
 
 Let's again create a calculator. This time the calculator will support 4 features:
@@ -64,23 +68,31 @@ You can only do the post request through a form unsing html or using postman. Fo
 
 ## Lets build a real functioning site :)
 
-We will be building a meal sharing website over 2 weeks of homework. First we will be building the backend rest api. Then next week we will connect the frontend to the backend and deploy the website on Heroku.
+To visualize what we will be building, take a look at: https://www.eatwith.com/
 
-To visualize what we will be building, take a look at: https://www.mealsharing.com/
+You will be building your own version of this site.
 
-### Getting started with the api
+### Getting started with the repo
 
-To get started a template has been set up, so that you can focus on developing what matters 💪💻
+This meal sharing website is a perfect showcase for future employeers, so really show off your skills 💪. Because of this the project will not live in the `hyf-homework` but as a seperate repo on your profile.
 
-Copy the files from [the template](homework-template) into your `hyf-homework/node/week3` folder. You can do that by cloning the [nodejs repo](https://github.com/HackYourFuture-CPH/node.js.git) down locally and then copy the files into the `hyf-homework/node/week3` folder.
+To get started we have created a template, so that you can focus on developing what matters 💪💻
 
-Read the [readme file](homework-template/readme.md) to get started with the project.
+Go to https://github.com/HackYourFuture-CPH/meal-sharing-template/generate and give the new repo the name `meal-sharing`. Click `Create repository from template`. You should now have a meal-sharing repo here: `https://github.com/YOUR_GITHUB_USER_NAME/meal-sharing` like `https://github.com/benna100/meal-sharing`. Clone that repo down locally.
 
-There has already been set one route up for you already, so you can get a sense for the structure. Take a look at `src/backend/index.js` and understand what the different parts does!
+#### Where to create your code
 
-For the `POST` request remember the postman seetings you used in the calculator warmup homework
+Now for us mentors to easily give feedback on your code create all functionality in a PR just like we do normally with homework, so:
 
-### Its api time
+`git checkout -b nodejs/week3` <- in the meal-sharing repo you have cloned down!
+
+Now you can make your code in the `nodejs/week3` branch and when you are done create a PR with the `nodejs/week3` branch.
+
+If this is confusing please reach out!!
+
+### Its coding time
+
+Please read the [readme file](https://github.com/HackYourFuture-CPH/meal-sharing-template/blob/master/readme.md) first to setup the project.
 
 Create the following rest endpoints:
 
