@@ -1,69 +1,61 @@
-<p align="center">
-  <a href="" rel="noopener">
- <img width=200px height=200px src="https://www.hackyourfuture.dk/static/logo-dark.svg" alt="Project logo"></a>
-</p>
+# concerts api
 
-<h3 align="center">Meal sharing api</h3>
-
-<div align="center">
-
-  [![Status](https://img.shields.io/badge/status-active-success.svg)]()
-  [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
-
-</div>
-
----
-
-<p align="center"> Website api for sharing meals together. Invite your best friends or your family for dinner!
-    <br> 
-</p>
-
-## 📝 Table of Contents
-- [About](#about)
-- [Getting Started](#getting_started)
-- [Deployment](#deployment)
-- [Usage](#usage)
-- [Built Using](#built_using)
-- [TODO](../TODO.md)
-- [Contributing](../CONTRIBUTING.md)
-- [Authors](#authors)
-- [Acknowledgments](#acknowledgement)
-
-## 🧐 About <a name = "about"></a>
-This project is an exercise for HackYourFuture students to learn the concepts of full stack development with a focus on the connection between:
-
-Database <--> Webserver
-
-## 🏁 Getting Started <a name = "getting_started"></a>
-Check your `node/week3` folder in the `hyf-homework` repo on your computer. If there already is a `src` folder, `package.json` etc, then you can just start working in that folder!
-
-If not: copy the code for the template from this folder into the `node/week3` folder in your `hyf-homework` repo on your computer. 
-
-### Environment variables
-All sensitive data like fx passwords and usernames, we dont want to add to git! This problem we solve by having environment variables. Environment variables are not committed to git and have a key value structure. 
-
-In the project there is a file called `.env.example` that has the correct structure. Copy this file and rename the copied file to `.env`. Now edit the credentials for your database.
-
-The environment variables are then used in node using `process.env.DB_HOST`, you can see that in the `src/server/database.js` file. 
-
-### Prerequisites
-- Postman
-- MySQL Workbench
-
-### Installing
+## Installing
 To install run `npm install`
 
 ## 🎈 Usage <a name="usage"></a>
 To run `npm run dev`
 
-The api can now be found on `http://localhost:3000/api/` an example is `http://localhost:3000/api/meals`
+#### Creating the database
 
-If you go to `http://localhost:3000/` is will throw an error, dont mind this error! You will be working only on the api!
+Create a `concerts` table in Mysql Workbench using the sql below
 
-## ⛏️ Built Using <a name = "built_using"></a>
-- [Mysql](https://www.npmjs.com/package/mysql) - Database
-- [Express](https://expressjs.com/) - Server Framework
-- [NodeJs](https://nodejs.org/en/) - Server Environment
+```sql
+CREATE SCHEMA `concerts`;
 
-## ✍️ Authors <a name = "authors"></a>
-- [@benna100](https://github.com/benna100) - Idea & Initial work
+CREATE TABLE `concerts`.`concerts` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `title` VARCHAR(45) NULL,
+  `band` VARCHAR(45) NULL,
+  `venue` VARCHAR(45) NULL,
+  `created_date` DATETIME(6) NULL,
+  `performance_date` DATETIME(6) NULL,
+  `price` INT(45) NULL,
+  PRIMARY KEY (`id`));
+```
+
+#### Setting up the project
+
+Lets create an api for concerts
+
+Use the template found [here](./exercise-template)
+
+Remember to copy the `.env.example` file, and rename the copied file to `.env`. In the `.env` file add the relevant host, database name, database user and pasword to your own local database. If you are unsure of these things then select your database in the Mysql Workbench. Now press `Database` -> `Manage Connections...`. Here you can see everything you need except the password. If you forgot that, reset it.  
+
+Now you can `cd` into the project and run `npm install` and then `npm run dev`
+
+
+#### Routing
+
+Create the following routes
+
+| Url                 | Verb   | Functionality               | Example              |
+| ------------------- | ------ | --------------------------- | -------------------- |
+| `api/concerts/`     | GET    | Returns all concerts        | `GET api/concerts/`  |
+| `api/concerts/`     | POST   | Adds a new concert          | `POST api/concerts/` |
+| `api/concerts/{id}` | GET    | Returns concert by `id`     | `GET api/concerts/2` |
+| `api/concerts/{id}` | PUT    | Updates the concert by `id` | `PUT api/concerts/2` |
+| `api/concerts/{id}` | DELETE | Deletes the concert by `id` | `DELETE concerts/2`  |
+
+#### Query parameters
+
+| Parameter      | Description                                                                                                       | Data type | Example                                |
+| -------------- | ----------------------------------------------------------------------------------------------------------------- | --------- | -------------------------------------- |
+| `maxPrice`     | Get concerts that has a price smaller than `maxPrice`                                                             | Number    | `/concerts?maxPrice=160`               |
+| `title`        | Get concerts that partially match a title. `Metallic` will match the concert with the title `Metallica in Parken` | String    | `api/concerts?title=metallic`          |
+| `createdAfter` | Get concerts that has been created after the date                                                                 | Date      | `api/concerts?createdAfter=2019-04-05` |
+| `band`         | Get concerts with a specific band                                                                                 | String    | `api/concerts?band=metallica`          |
+
+#### Use the api using postman
+
+Using post man insert some concerts, get some concerts using query parameters, delete some concerts and update some concerts
