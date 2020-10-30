@@ -4,9 +4,9 @@
 
 This 5 week HYF Module is about creating a fullstack application in Node.JS. What does fullstack exactly mean? It means we will be creating and connecting both the backend api and the frontend html, css and javascript.
 
-Most of this course will focus on the backend part. Meaning building a webserver that has an api connected to a database. In the last couple of weeks we will then connect the backend api to the frontend javascript. Hopefully giving you an overview of the connection between these parts:
+Most of this course will focus on the backend part. Meaning building a webserver that has an api connected to a database. 
 
-`Database <--> Webserver <--> Frontend`
+`Database <--> Webserver`
 
 ## Planning
 
