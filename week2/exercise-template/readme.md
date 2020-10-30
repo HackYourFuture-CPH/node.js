@@ -4,11 +4,11 @@
 
 We will be making an api for getting movies 🎞📽🎥🎦🎬
 
-Using the template found [here](./exercise-template). Remember to clone it locally, open a terminal in the folder and run `npm install`. Now how can you start the server??
+Using this template you are in [here](./). Remember to clone it locally, open a terminal in the folder and run `npm install`. Now how can you start the server??
 
 Try and begin by getting an overview of the project. What file is called when the server is started. What routes is that setting up and so on
 
-Check the [movies router file](./exercise-template/src/backend/api/movies-router.js). This is where you will be creating your routes. The `movies/` route has even been created for you (now you just need to return the movies)
+Check the [movies router file](./src/backend/api/movies-router.js). This is where you will be creating your routes. The `movies/` route has even been created for you (now you just need to return the movies)
 
 |Route|Requirement|
 |---|---|
