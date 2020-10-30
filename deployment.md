@@ -49,3 +49,7 @@ BUT the database has no tables! Connect to the ClearDB database using Mysql Work
 We should now have connected the database (with the newly inserted tables) to our application. Try and go to the app's webpage and see if it works.
 
 If there is an error, use this command: `heroku logs --tail --app app-name` - substitute `app-name` with the actual app name. TO install it go [here](https://devcenter.heroku.com/articles/heroku-cli)
+
+## Add link to the website
+
+Remember to add the link to the deployed website in the readme.md file (of the `meal-sharing` repo) where it says: `Link to deployed website: `
