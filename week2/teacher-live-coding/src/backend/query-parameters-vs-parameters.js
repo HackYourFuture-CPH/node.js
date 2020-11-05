@@ -7,12 +7,12 @@ const app = express();
 // http://localhost:3000/query-parameters?hej=23,%20sd-p
 app.get("/query-parameters", (req, res) => {
   console.log(req.query);
-  res.send({ data: req.query });
+  res.send(`The place you want to go is: ${req.query.placeiwannago}`);
 });
 
 // parameters
 // http://localhost:3000/parameters/apple-eater
-app.get("/parameters/:username", (req, res) => {
+app.get("/maps/place/:placename", (req, res) => {
   console.log(req.params);
   res.send({ data: req.params });
 });
