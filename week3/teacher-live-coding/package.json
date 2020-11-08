@@ -7,8 +7,8 @@
   },
   "scripts": {
     "dev": "npm run server",
-    "start": "node ./src/backend/index.js",
-    "server": "nodemon ./src/backend/index.js"
+    "start": "node ./src/backend/create-an-api.js",
+    "server": "nodemon ./src/backend/create-an-api.js"
   },
   "author": "Benjamin Hughes",
   "license": "MIT",
