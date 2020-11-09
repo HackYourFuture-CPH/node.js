@@ -50,6 +50,21 @@ If you find anything that could be improved then please create a pull request! W
 
 Try and implement this functionality from the bottom while explaining.
 
+### DB Query
+
+```sql
+CREATE SCHEMA `contacts`;
+
+CREATE TABLE `contacts`.`contacts` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `title` VARCHAR(45) NULL,
+  `name` VARCHAR(45) NULL,
+  `email` VARCHAR(45) NULL,
+  `phonenumber` VARCHAR(45) NULL,
+  `created_date` DATETIME(6) NULL,
+  PRIMARY KEY (`id`));
+```
+
 ### Phonebook api
 
 Start the application by running  `nodemon ./src/backend/create-an-api.js`.
