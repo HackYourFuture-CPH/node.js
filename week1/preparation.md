@@ -10,3 +10,9 @@ Try to formulate an answer to the question:
 - What is the server and what is the client?
 - What is http?
 - What is Node.js?
+
+## Flipped classroom videos
+- [What happens when you open a webpage - Class 1](https://youtu.be/wdj2LrpKSdg)
+- [What is node js and how to use it - Class 1](https://youtu.be/gTa5R1PHIiY)
+- [Node js project structure - Class1](https://youtu.be/CUY20f-KBxE)
+- [Creating a simple Express webserver in Node js and creating your own modules - Class 1](https://youtu.be/R-dl4-VnZYA)
