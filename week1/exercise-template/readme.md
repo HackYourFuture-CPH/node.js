@@ -4,7 +4,12 @@
 
 #### Setup
 
-To get started use this node project on your computer: clone the [node js repo](https://github.com/HackYourFuture-CPH/node.js), open up a terminal, and cd into the folder. Then you need to run these commands: 
+To get started use this node project on your computer: 
+- Clone the [node js repo](https://github.com/HackYourFuture-CPH/node.js)
+- Open up a terminal
+- `cd` into the folder. 
+
+Then you need to run these commands: 
 
 `npm install`
 
