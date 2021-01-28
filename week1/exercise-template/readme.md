@@ -7,7 +7,7 @@
 To get started use this node project on your computer: 
 - Clone the [node js repo](https://github.com/HackYourFuture-CPH/node.js)
 - Open up a terminal
-- `cd` into the folder. 
+- `cd` into `nodej.js/week1/exercise-template`
 
 Then you need to run these commands: 
 
