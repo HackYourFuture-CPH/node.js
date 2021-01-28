@@ -94,4 +94,4 @@ Try and see if you can create a module with only the css as a string.
 
 A project should have: `title`, `codeUrl`, `previewUrl` and `img`.
 
-Now when the the `projects` route is hit, respond with some rendered html of your projects!
+Now when the the `projects` endpoint is hit, respond with some rendered html of your projects!
