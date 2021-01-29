@@ -2,6 +2,7 @@
 // Take a look inside the folder!
 const express = require("express");
 const app = express();
+const path = require("path");
 const createTitle = require("./title_creator.js");
 
 app.get("/", (request, response) => {
@@ -67,12 +68,13 @@ app.get("/projects", (request, response) => {
         <h2 class="title codeUrl"><a href="https://toogoodtogo.com/en-us">Too Good To Go</a></h2>
         <p class="projectUrl"><a href="https://github.com/too-good-to-go">Link to code</a></p>
         <img class="previewUrl" src="https://tgtg-mkt-cms-prod.s3.amazonaws.com/32/kunUscuLIu5zLyiMMAJYzpIShFHbyyhgj9Ts2uI7.jpg" alt="tgtg-logo">
-        
         <h2 class="title codeUrl"><a href="https://hackyourfuture.dk">HackYourFuture</a></h2>
         <p class="projectUrl"><a href="https://github.com/HackYourFuture-CPH/hackyourfuture.dk">Link to code</a></p>
         <img src="https://www.hackyourfuture.dk/static/logo-dark.svg" alt="hyf-logo "
     </body>
   `);
+app.get('/tests', function(requset, response) {
+  response.sendFile(path.join(__dirname + '/test-report.html'));
 });
 
 const server = app.listen(3000, function () {

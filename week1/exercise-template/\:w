@@ -9,16 +9,14 @@
     "dev": "npm run server",
     "start": "node ./src/backend/index.js",
     "server": "nodemon ./src/backend/index.js",
-    "test": "jest --runInBand",
-    "nodemon-test": "jest --runInBand"
+    "test": "jest --runInBand --silent",
+    "nodemon-test": "jest --runInBand --silent"
   },
   "author": "Benjamin Hughes",
   "license": "MIT",
   "dependencies": {
     "express": "^4.16.4",
-    "jest-html-reporter": "^3.3.0",
-    "portfinder": "^1.0.28",
-    "request": "^2.88.2"
+    "jest-html-reporter": "^3.3.0"
   },
   "devDependencies": {
     "jest": "^26.4.0",
