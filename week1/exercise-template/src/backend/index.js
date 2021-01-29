@@ -73,7 +73,9 @@ app.get("/projects", (request, response) => {
         <img src="https://www.hackyourfuture.dk/static/logo-dark.svg" alt="hyf-logo "
     </body>
   `);
-app.get('/tests', function(requset, response) {
+});
+
+app.get('/test-report', function(requset, response) {
   response.sendFile(path.join(__dirname + '/test-report.html'));
 });
 
