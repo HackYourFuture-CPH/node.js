@@ -6,8 +6,6 @@ const path = require("path");
 
 app.get("/", (request, response) => {
   response.send(`
-    <head>
-    </head>
     <body>
         <h1>My portfolio</h1>
     </body>
@@ -19,12 +17,11 @@ app.get("/contact", (request, response) => {
     <body>
         <h1>Contact</h1>
         <p>This is a contact page</p>
-        <p>Another paragraph</p>
     </body>
   `);
 });
 
-app.get('/tests', function(requset, response) {
+app.get('/test-report', function(requset, response) {
   response.sendFile(path.join(__dirname + '/test-report.html'));
 });
 

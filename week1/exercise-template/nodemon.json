@@ -1,5 +1,5 @@
 {
     "events": {
-        "restart": "npm test"
+        "restart": "npm run nodemon-test"
     }
 }
