@@ -1,10 +1,10 @@
 const portfinder = require('portfinder');
 const request = require('supertest');
 const superagent = require('superagent');
+const app = require('../src/backend/index');
 
 // Check if server is running. If server is running, run the tests on the running server
 // If no server is running, run tests on 'app' using supertest
-let app;
 let realServerRunning;
 portfinder.basePort = 3000;
 portfinder.highestPort = 3000;
@@ -13,23 +13,28 @@ portfinder.getPort(function (err, port) {
         // Port 3000 is not available--we assume a server is running
         console.log('Port 3000 is NOT available, assuming a server is already running');
         realServerRunning = true;
+        console.log(`realServerRunning: ${realServerRunning}`);
     } else {
         console.log('Port 3000 is available, assuming a server is NOT already running');
         realServerRunning = false;
-        app = require('../src/backend/index');
+        console.log(`realServerRunning: ${realServerRunning}`);
+    }
+});
+
+beforeEach(async () => {
+    if (realServerRunning) {
+        app.close();
     }
 });
 
 afterEach(async () => {
-    try {
+    if (!realServerRunning) {
         app.close();
-    } catch (err) {
     }
 });
 afterAll(async () => {
-    try {
+    if (!realServerRunning) {
         app.close();
-    } catch (err) {
     }
 });
 
