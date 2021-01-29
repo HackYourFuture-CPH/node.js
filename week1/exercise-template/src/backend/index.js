@@ -16,8 +16,6 @@ app.get("/", (request, response) => {
 
 app.get("/contact", (request, response) => {
   response.send(`
-    <head>
-    </head>
     <body>
         <h1>Contact</h1>
         <p>This is a contact page</p>
@@ -35,4 +33,4 @@ const server = app.listen(3000, function () {
 });
 
 // Export app for testing purposes
-module.exports = server;
+module.exports = app;
