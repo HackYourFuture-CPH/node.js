@@ -2,6 +2,10 @@
 
 ### Portfolio
 
+This week exercises are about creating a web server that sends specific information about your education and background at corresponding endpoints. The information that these endpoints will be serving will primarily be HTML and CSS this week, but that is rarely the purpose of a web server.
+
+In the following weeks, you will be practicing sending back specific information based on the client's request and saving/deleting data based on client requests. Exciting!
+
 #### Setup
 
 To get started use this node project on your computer: 
@@ -36,7 +40,7 @@ To get some tests passing, ensure your webserver has these routes:
 | `/educations`
 | `/skills`
 
-Now, running `npm test` should result in a few tests passing.
+After creating those routes, take a look at the [test report endpoint](http://localhost:3000/test-report) again, and notice that there are now tests passing.
 
 Next, start adding information in the HTML of the specific routes to match these descriptions.
 
@@ -50,17 +54,17 @@ Next, start adding information in the HTML of the specific routes to match these
 
 #### Changing the title of the page
 
-Firstly try change the title of the Home page to say Home. https://www.w3schools.com/tags/tag_title.asp
+First, try changing the title of the Home page to say Home. https://www.w3schools.com/tags/tag_title.asp
 
-Now hopefully you know how to change the title of a page. 
+Hopefully you can recall how to change the title of a page from the HTML/CSS module.
 
-Continuing on the last exercise. Lets add some functionality that shows the relevant title of a page using modules! 
+Continuing on the last exercise. Lets add some functionality that shows the relevant title of a page using modules! We want to create a helper function that, provided the title of the page, returns the necessary HTML with the page title included.
 
-So when navigating to `/` the title will be Home, when navigating to `/contact` the title will be contact and so on
+Thus, when navigating to `/` the title will be Home, when navigating to `/contact` the title will be contact and so on. To complete this task, do the following:
 
 - Create a function that takes title as parameter
 - Calling the function returns the html for the `head` tag and the `title` tag.
-- Export the function using `module.exports` see [here](./teacher-live-coding/src/backend/created-module.js) for how to create a module
+- Export the function using `module.exports` see [here](https://youtu.be/R-dl4-VnZYA?t=615) for how to create a module
 - Import the function using `require`
 
 Here are the routes and their corresponding title
