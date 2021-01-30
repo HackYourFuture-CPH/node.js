@@ -21,11 +21,11 @@ Now go to [localhost:3000/](http://localhost:3000/).
 
 ### Requirements
 
-To get an understanding of the tasks to complete, run the test command:
+To get an overview of the tasks to complete, run your server, and navigate to the test report endpoint:
 
-`npm test`
+[localhost:3000/test-report](http://localhost:3000/test-report)
 
-If you read this output closely, you will see that all tests fail, because the correct result is not being met, because routes are missing and HTML is also missing.
+The test report is "synced" with nodemon, so this means that whenever you save code changes, you can navigate to/refresh the test-report endpoint, and your code will be tested in real time!
 
 To get some tests passing, ensure your webserver has these routes:
 

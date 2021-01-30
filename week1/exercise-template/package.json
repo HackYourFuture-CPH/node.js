@@ -9,7 +9,7 @@
     "dev": "npm run server",
     "start": "node ./src/backend/index.js",
     "server": "nodemon ./src/backend/index.js",
-    "test": "jest --runInBand"
+    "nodemon-test": "jest --runInBand"
   },
   "author": "Benjamin Hughes",
   "license": "MIT",
@@ -20,6 +20,6 @@
     "jest": "^26.4.0",
     "nodemon": "^1.12.1",
     "superagent": "^6.0.0",
-    "supertest": "^4.0.2"
+    "jest-html-reporter": "^3.3.0"
   }
 }
