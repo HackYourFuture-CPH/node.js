@@ -111,13 +111,13 @@ Inside the `app.js` file create the following routes using `express`:
 | `/large-meals`    | Respond with the json for all the `meals` (including it's reviews) that can fit lots of people                                                                                                                                                                                                                       |
 | `/meal`           | Respond with the json for a random meal (including it's reviews)                                                                                                                                                                                                                                                     |
 | `/reservations`   | Respond with the json for all `reservations`                                                                                                                                                                                                                                                                         |
-| `/reservation\*\* | Respond with the json for a random reservation                                                                                                                                                                                                                                                                       |
+| `/reservation` | Respond with the json for a random reservation                                                                                                                                                                                                                                                                       |
 
 **Remember:** Ensure you haved done a `require` on the meals and reservations json files\_
 
 If you have made it this far, all the tests should be be passing.
 
-![Meal sharing](assets/meal-sharing.gif)
+![Meal sharing](https://github.com/HackYourFuture-CPH/node.js/blob/master/week1/assets/meal-sharing.gif)
 
 ## Hand in Homework:
 
