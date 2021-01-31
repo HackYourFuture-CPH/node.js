@@ -5,6 +5,7 @@ const app = express();
 const createTitle = require("./title_creator.js");
 const renderProjectsList = require("./project_creator.js");
 const addCSS = require("./css_creator.js");
+const path = require("path");
 
 const projects = [
   {
@@ -148,9 +149,13 @@ app.get("/projects", (request, response) => {
   `);
 });
 
+app.get("/test-report", function (requset, response) {
+  response.sendFile(path.join(__dirname + "/test-report.html"));
+});
+
 const server = app.listen(3000, function () {
   console.log(`> Ready on http://localhost:3000`);
 });
 
 // Export app for testing purposes
-module.exports = server;
+module.exports = app;

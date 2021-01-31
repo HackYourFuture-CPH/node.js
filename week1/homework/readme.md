@@ -36,7 +36,7 @@ Clone down the [node js repo](https://github.com/HackYourFuture-CPH/node.js) loc
 
 ## Warmup
 
-In the [warmup.js file](./homework/warmup.js) add the following functionality.
+In the [warmup.js file](https://github.com/HackYourFuture-CPH/node.js/blob/master/week1/homework/warmup.js) add the following functionality.
 
 To run the warmup file, first install the project dependencies with `npm install`. Make sure you are in the `hyf-homework/nodejs/week1/homework` folder!
 
@@ -95,8 +95,6 @@ To get a bit of an overview of your homework tasks, run:
 `npm test`
 
 If this command doesn't work, ensure all your dependencies are installed correctly (try running `npm install` in the `hyf-homework/nodejs/week1/homework` directory).
-
-\*\* Remember when testing your application to have the webserver running!
 
 #### Change index response message
 
