@@ -12,10 +12,10 @@ Check the [movies router file](./src/backend/api/movies-router.js). This is wher
 
 |Route|Requirement|
 |---|---|
-| `movies/` | Return all movies |
-| `movies/year`       | Return all movies from the specified year  |
-| `movies?beginYear=<year1>&endYear=<year2>` | Returns all movies with year between `beginYear` and `endYear`  |
-| `movies?beginYear=<year1>&endYear=<year2>&minRating=<minRating>` | Returns all movies with year between `beginYear` and `endYear` that are also of rating `minRating` or better |
+| `/api/movies/` | Return all movies |
+| `/api/movies/<year>` | Return all movies from the specified year  |
+| `/api/movies?beginYear=<year1>&endYear=<year2>` | Returns all movies with year between `beginYear` and `endYear`  |
+| `/api/movies?beginYear=<year1>&endYear=<year2>&minRating=<minRating>` | Returns all movies with year between `beginYear` and `endYear` that are also of rating `minRating` or better |
 
 Finally do some error handling for cases where `beginYear`, `endYear` or `minRating` are not specified
 
