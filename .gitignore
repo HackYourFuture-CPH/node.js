@@ -2,4 +2,8 @@
 node_modules
 
 package-lock.json
+
+# Testing outputs
 test-report.html
+output.json
+results.json

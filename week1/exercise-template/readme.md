@@ -37,7 +37,7 @@ To get some tests passing, ensure your webserver has these routes:
 | -------------
 | `/`
 | `/contact`
-| `/educations`
+| `/education`
 | `/skills`
 
 After creating those routes, take a look at the [test report endpoint](http://localhost:3000/test-report) again, and notice that there are now tests passing.
@@ -48,7 +48,7 @@ Next, start adding information in the HTML of the specific routes to match these
 | ------------- | -------------------------------------------------------------- |
 | `/`           | Add a title and subtitle. Write a couple lines about yourself  |
 | `/contact`    | Add social media links and your email                          |
-| `/educations` | Add a list of your educations                                  |
+| `/education` | Add a list of your education                                  |
 | `/skills`     | Add a list of your skills                                      |
 
 
