@@ -8,7 +8,29 @@ Using this template you are in [here](./). Remember to clone it locally, open a 
 
 Try and begin by getting an overview of the project. What file is called when the server is started. What routes is that setting up and so on
 
-Check the [movies router file](./src/backend/api/movies-router.js). This is where you will be creating your routes. The `movies/` route has even been created for you (now you just need to return the movies)
+Check the [movies router file](./src/backend/api/movies-router.js). This is where you will be creating your routes. The `movies/` route has even been created for you (now you just need to return the movies). Pass back all the values from the endpoints in a JSON object with a key of `data` and then the information to be passed back. An example would be like:
+
+```json
+{
+    "data": [
+        {"title": "'71","year": 2014,"rating": 7.2,"votes": 41702,"running_times": 5940}
+    ]
+}
+```
+
+If returning a single item, do not return the information in an array, but an object instead:
+
+```json
+{
+    "data": {
+        "title": "'71",
+        "year": 2014,
+        "rating": 7.2,
+        "votes": 41702,
+        "running_times": 5940
+    }
+}
+```
 
 |Route|Requirement|
 |---|---|

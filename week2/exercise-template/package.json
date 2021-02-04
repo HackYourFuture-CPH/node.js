@@ -6,10 +6,11 @@
     "node": "8.11.1"
   },
   "scripts": {
-    "test": "jest --runInBand --json --outputFile=./test/results.json ; ./test/report-test-results.sh",
+    "test": "jest --runInBand",
     "dev": "npm run server",
     "start": "node ./src/backend/server.js",
-    "server": "nodemon ./src/backend/server.js"
+    "server": "nodemon ./src/backend/server.js",
+    "report-test": "jest --runInBand --json --outputFile=./test/results.json ; ./test/report-test-results.sh"
   },
   "author": "Benjamin Hughes",
   "license": "MIT",
