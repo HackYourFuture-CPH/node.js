@@ -4,15 +4,13 @@ const router = express.Router();
 const movies = require("../data/movies.json");
 
 router.get("/", async (request, response) => {
-    let beginYear = parseInt(request.query.beginYear) > 0 ?
-        parseInt(request.query.beginYear) :
-        0;
-    let endYear = parseInt(request.query.endYear) < Number.POSITIVE_INFINITY ?
-        parseInt(request.query.endYear) :
-        Number.POSITIVE_INFINITY;
-    let minRating = parseInt(request.query.minRating) > 0 ?
-        parseInt(request.query.minRating) :
-        0;
+    let beginYear = parseInt(request.query.beginYear);
+    let endYear = parseInt(request.query.endYear);
+    let minRating = parseInt(request.query.minRating);
+
+    beginYear = beginYear > 0 ? beginYear : 0;
+    endYear = endYear < Number.POSITIVE_INFINITY ? endYear : Number.POSITIVE_INFINITY;
+    minRating = minRating > 0 ? minRating : 0;
 
     let validMovies = movies.filter(
         movie => movie.year >= beginYear &&
