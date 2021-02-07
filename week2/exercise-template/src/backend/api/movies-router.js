@@ -20,10 +20,12 @@ router.get("/", async (request, response) => {
     response.send({ data: validMovies });
 });
 
-router.get("/:year", async (request, response) => {
-    response.send({ data: movies.filter(
-        movie => movie.year === parseInt(request.params.year))
-    });
+router.get("/:id", async (request, response) => {
+    const moviesWithId = movies.filter(
+        movie => movie.id === parseInt(request.params.id)
+    );
+    const movieWithId = moviesWithId[0] ? moviesWithId[0] : {};
+    response.send({ data: movieWithId });
 });
 
 module.exports = router;
