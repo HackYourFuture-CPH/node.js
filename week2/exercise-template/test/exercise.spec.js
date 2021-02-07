@@ -37,8 +37,13 @@ describe("GET /api/movies/<id>", () => {
     });
 });
 
+<<<<<<< HEAD
 describe("GET /api/movies/<id>", () => {
     test("returns empty object when no matching IDs", async () => {
+=======
+describe("GET /api/movies/<year>", () => {
+    test("returns empty list when no matching IDs", async () => {
+>>>>>>> a705c0e (Add tests for middleware, add IDs to movies, ask to use ID for request params)
         const nonMatchingId = 512351;
         const response = await request(app)
             .get(`/api/movies/${nonMatchingId}`)
@@ -50,7 +55,15 @@ describe("GET /api/movies/<id>", () => {
 });
 
 describe("GET /api/movies/<year>", () => {
+<<<<<<< HEAD
     test("returns empty list when wrong type as ID provided", async () => {
+=======
+<<<<<<< HEAD
+    test("returns empty list when wrong type as ID provided", async () => {
+=======
+    test("returns empty list when wrong type as year provided", async () => {
+>>>>>>> 4fbb521 (Add tests for middleware, add IDs to movies, ask to use ID for request params)
+>>>>>>> a705c0e (Add tests for middleware, add IDs to movies, ask to use ID for request params)
         const response = await request(app)
             .get("/api/movies/not-a-number")
             .set('user-agent', 'for-testing');
@@ -122,6 +135,8 @@ describe("GET /api/movies?minRating=7", () => {
         const response = await request(app)
             .get(`/api/movies?minRating=${minRating}`)
             .set('user-agent', 'for-testing');
+<<<<<<< HEAD
+=======
 
         expect(response.statusCode).toBe(200);
         expect(Array.isArray(response.body.data)).toBeTruthy();
@@ -135,6 +150,7 @@ describe("GET /api/movies?minRating=5.3", () => {
         const response = await request(app)
             .get(`/api/movies?minRating=${minRating}`)
             .set('user-agent', 'for-testing');
+>>>>>>> a705c0e (Add tests for middleware, add IDs to movies, ask to use ID for request params)
 
         expect(response.statusCode).toBe(200);
         expect(Array.isArray(response.body.data)).toBeTruthy();
@@ -142,6 +158,22 @@ describe("GET /api/movies?minRating=5.3", () => {
     });
 });
 
+<<<<<<< HEAD
+describe("GET /api/movies?minRating=5.3", () => {
+    test("minRating handles floats correctly", async () => {
+        let minRating = 5.3;
+        const response = await request(app)
+            .get(`/api/movies?minRating=${minRating}`)
+            .set('user-agent', 'for-testing');
+
+        expect(response.statusCode).toBe(200);
+        expect(Array.isArray(response.body.data)).toBeTruthy();
+        expect(response.body.data).toMatchObject(movies.slice(0, 2));
+    });
+});
+
+=======
+>>>>>>> a705c0e (Add tests for middleware, add IDs to movies, ask to use ID for request params)
 describe("GET /middleware-test", () => {
     test("correctly adds isChromeBrowser to request", async () => {
         const response = await request(app)
