@@ -35,7 +35,7 @@ If returning a single item, do not return the information in an array, but an ob
 |Route|Requirement|
 |---|---|
 | `/api/movies/` | Return all movies |
-| `/api/movies/<year>` | Return all movies from the specified year  |
+| `/api/movies/<id>` | Return a single movie with that matching ID  |
 | `/api/movies?beginYear=<year1>&endYear=<year2>` | Returns all movies with year between `beginYear` and `endYear`  |
 | `/api/movies?beginYear=<year1>&endYear=<year2>&minRating=<minRating>` | Returns all movies with year between `beginYear` and `endYear` that are also of rating `minRating` or better |
 
