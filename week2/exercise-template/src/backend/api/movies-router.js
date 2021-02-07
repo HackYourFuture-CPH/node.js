@@ -6,7 +6,7 @@ const movies = require("../data/movies.json");
 router.get("/", async (request, response) => {
     let beginYear = parseInt(request.query.beginYear);
     let endYear = parseInt(request.query.endYear);
-    let minRating = parseInt(request.query.minRating);
+    let minRating = parseFloat(request.query.minRating);
 
     beginYear = beginYear > 0 ? beginYear : 0;
     endYear = endYear < Number.POSITIVE_INFINITY ? endYear : Number.POSITIVE_INFINITY;
