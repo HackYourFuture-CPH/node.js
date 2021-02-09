@@ -17,6 +17,7 @@
   "dependencies": {
     "@types/xml": "^1.0.3",
     "app-root-path": "^2.1.0",
+    "assert": "^2.0.0",
     "body-parser": "^1.18.3",
     "cookie-parser": "~1.4.3",
     "cors": "^2.8.4",
