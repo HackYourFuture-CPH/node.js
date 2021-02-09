@@ -90,25 +90,25 @@ Start by defining these routes and returning their results as described here:
 
 | Route                | Description                                                           |
 | -------------------- | --------------------------------------------------------------------- |
-| `/meals/{id}`        | Respond with the json for the meal with the corresponding `id`        |
-| `/meals`             | Respond with the json for all the meals                               |
-| `/reservations/{id}` | Respond with the json for the reservation with the corresponding `id` * |
-| `/reservations`      | Respond with the json for all reservations *                            |
-| `/reviews/{id}`      | Respond with the json for the review with the corresponding `id` *       |
-| `/reviews`           | Respond with the json for all reviews *                                 |
+| `/api/meals/{id}`        | Respond with the json for the meal with the corresponding `id`        |
+| `/api/meals`             | Respond with the json for all the meals                               |
+| `/api/reservations/{id}` | Respond with the json for the reservation with the corresponding `id` * |
+| `/api/reservations`      | Respond with the json for all reservations *                            |
+| `/api/reviews/{id}`      | Respond with the json for the review with the corresponding `id` *       |
+| `/api/reviews`           | Respond with the json for all reviews *                                 |
 
 \* To make the reservations and reviews routes working create a new reservations and reviews router, add the routers in the `app.js` file and add the `reservations.json` and `reviews.json` file. Follow how it was done for the meals router.
 
 ### /meals Parameters
 
-Next, we want to ensure that our `/meals` route supports additional query parameters. Add the possibility for the following query parameters to the `/meals` route:
+Next, we want to ensure that our `/meals` route supports additional query parameters. Add the possibility for the following query parameters to the `/api/meals` route:
 
 | Parameter      | Description                                                                                                    | Data type | Example                          |
 | -------------- | -------------------------------------------------------------------------------------------------------------- | --------- | -------------------------------- |
-| `maxPrice`     | Get meals that has a price smaller than `maxPrice`                                                             | Number    | `/meals?maxPrice=90`             |
-| `title`        | Get meals that partially match a title. `Rød grød med` will match the meal with the title `Rød grød med fløde` | String    | `/meals?title=Indian%20platter`  |
-| `createdAfter` | Get meals that has been created after the date                                                                 | Date      | `/meals?createdAfter=2019-04-05` |
-| `limit`        | Only specific number of meals                                                                                  | Number    | `/meals?limit=4`                 |
+| `maxPrice`     | Get meals that has a price smaller than `maxPrice`                                                             | Number    | `/api/meals?maxPrice=90`             |
+| `title`        | Get meals that partially match a title. `Rød grød med` will match the meal with the title `Rød grød med fløde` | String    | `/api/meals?title=Indian%20platter`  |
+| `createdAfter` | Get meals that has been created after the date                                                                 | Date      | `/api/meals?createdAfter=2019-04-05` |
+| `limit`        | Only specific number of meals                                                                                  | Number    | `/api/meals?limit=4`                 |
 
 Some things to think about:
 
