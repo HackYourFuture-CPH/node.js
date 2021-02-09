@@ -16,9 +16,6 @@ module.exports = {
     test: {
         client: 'sqlite3',
         connection: ':memory:',
-        // connection: {
-        //   filename: path.join(__dirname, './test/concerts.db3')
-        // },
         seeds: {
           directory: path.join(__dirname, './test/seeds')
         },

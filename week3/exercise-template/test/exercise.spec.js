@@ -25,3 +25,16 @@ describe("GET /api/concerts", () => {
         expect(Array.isArray(response.body)).toBeTruthy();
     });
 });
+
+describe("GET /api/concerts/<id>", () => {
+    test("returns the concert at ID specified in params", async () => {
+        const concertId = 2;
+        const expectedConcert = testConcerts.filter(concert => concert.id === concertId);
+
+        const response = await request(app).get(`/api/concerts/${concertId}`);
+        
+        expect(response.statusCode).toBe(200);
+        expect(response.body).toMatchObject(expectedConcert);
+        expect(Array.isArray(response.body)).toBeFalsy();
+    });
+});
