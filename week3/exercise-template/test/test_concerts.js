@@ -24,7 +24,7 @@ const concerts = [
         title: 'Phish at Woodstock',
         band: 'Phish',
         venue: 'Woodstock',
-        performance_date: 1968,
+        performance_date: '1965-02-12 19:43:07',
         created_date: '1965-02-12 19:43:07',
         price: 600,
     },
