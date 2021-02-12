@@ -18,8 +18,8 @@ CREATE TABLE `concerts`.`concerts` (
   `title` VARCHAR(255) NULL,
   `band` VARCHAR(255) NULL,
   `venue` VARCHAR(255) NULL,
-  `created_date` DATETIME(6) NULL,
-  `performance_date` DATETIME(6) NULL,
+  `created_date` DATETIME DEFAULT CURRENT_TIMESTAMP,
+  `performance_date` DATETIME NULL,
   `price` INT(45) NULL,
   PRIMARY KEY (`id`));
 ```

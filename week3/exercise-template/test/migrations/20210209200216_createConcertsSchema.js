@@ -4,11 +4,11 @@ exports.up = async function(knex, Promise) {
             .increments('id')
             .notNullable()
             .primary;
-        table.string('title');
-        table.string('band');
-        table.string('venue');
-        table.integer('price');
-        table.datetime('performance_date');
+        table.string('title').notNullable();
+        table.string('band').notNullable();
+        table.string('venue').notNullable();
+        table.integer('price').notNullable();
+        table.datetime('performance_date').notNullable();
         table.datetime('created_date').defaultTo(knex.fn.now());
     });
 };
