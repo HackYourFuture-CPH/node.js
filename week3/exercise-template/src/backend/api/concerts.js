@@ -6,6 +6,7 @@ const getConcert = require("../modules/getConcert");
 router.get("/", async (request, response) => {
   // can think of '1e500' as infinity in MySQL
   const maxPrice = parseInt(request.query.maxPrice) || '1e500';
+  // the const varName = "this" || "that" is conditional assignment
   const title = request.query.title || '';
   const band = request.query.band ||  '';
   let createdAfter = new Date(request.query.createdAfter);
