@@ -68,7 +68,7 @@ router.put("/:id", async (request, response) => {
   try {
     await knex("concerts")
       .where({ id: parseInt(request.params.id) })
-      .update(request.body, ['id', Object.keys(request.body)].flat())
+      .update(request.body);
     return response.status(201).json(await getConcert(parseInt(request.params.id)));
   } catch(err) {
     if (err) {
