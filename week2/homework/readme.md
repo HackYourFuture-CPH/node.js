@@ -36,7 +36,7 @@ Copy the two projects from [here](./homework/) into your `hyf-homework/nodejs/we
 
 ## Warmup
 
-Use [this boilerplate](./homework/warmup) for the homework. Remember to run `npm install` then `npm run dev` to start the server
+Use [this boilerplate](./warmup) for the homework. Remember to run `npm install` then `npm run dev` to start the server
 
 Lets use express routes to create a small calculator
 
@@ -57,7 +57,7 @@ Hints:
 
 Lets continue building on our meal sharing website
 
-Use [this boilerplate](./homework/meal-sharing) for the homework. Remember to run `npm install` then `npm run dev` to start the server
+Use [this boilerplate](./meal-sharing) for the homework. Remember to run `npm install` then `npm run dev` to start the server
 
 ```
 |-- src
