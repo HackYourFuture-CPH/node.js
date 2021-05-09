@@ -1,6 +1,6 @@
 # Learning goals
 
-- [ ] Database interaction - No ORM!
+- [ ] Database interaction
   - [ ] Connecting to mysql using Knex
     - [ ] Environment variables
   - [ ] Executing queries using knex
