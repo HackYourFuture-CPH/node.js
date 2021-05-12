@@ -42,7 +42,7 @@ We will build on knowledge from the following HYF (sub)modules. If we feel we ha
 
 For almost any web application, it is essential to have a backend. The backend is a place where we, the developers, can store our data, communicate with users and let the users communicate with us, do smart things like calculations, data processing etc.
 
-There are many languages for this. We might've heard of Java, C, C++, Go, Python, Ruby, PHP and the [list goes on](https://blog.newrelic.com/2016/08/18/popular-programming-languages-2016-go/).
+There are many languages for this. We might've heard of Java, C, C++, Go, Python, Ruby, PHP and many more.
 
 There are two reasons why we at HYF choose Node.JS over others:
 
