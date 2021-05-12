@@ -36,7 +36,7 @@ You are about to start the Node JS homework. You will find the homework in the f
 If you dont have the homework folders on your machine please clone the homework repo from here [node js homework](https://github.com/HackYourFuture-CPH/hyf-homework)
 
 Make sure that you have the three weeks node homework folder on your machine.
-See this repo [node js repo](https://github.com/HackYourFuture-homework/node.js)
+See this repo [node js repo](https://github.com/HackYourFuture-CPH/hyf-homework-template/tree/master/nodejs)
 
 Clone down the [node js repo](https://github.com/HackYourFuture-CPH/node.js) locally. Copy the contents of the `nodejs/week1/homework` into your `hyf-homework/nodejs/week1` folder
 
