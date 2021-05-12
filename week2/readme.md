@@ -12,7 +12,7 @@ Reproduce a log hitting errors and understanding flow.
 ## Relevant links
 
 - [Preparation](preparation.md)
-- [Homework](homework.md)
+- [Homework](homework/readme.md)
 - [Lesson plan](lesson-plan.md)
 
 ## Express.js

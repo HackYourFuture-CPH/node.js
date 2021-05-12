@@ -18,7 +18,7 @@ If you find anything that could be improved then please create a pull request! W
 
 ---
 
-- Database interaction - No ORM!
+- Database interaction
   - Connecting to mysql using knex
     - Take a look at [this file](./homework-template/src/backend/database.js), dont go into too much detail. More this is how it is
     - Environment variables. Check [this repo](./homework-template/readme.md#environment-variables)
