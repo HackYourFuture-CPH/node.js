@@ -32,7 +32,7 @@ Express is such a core library for NodeJs that can help us with many things when
 
 ## Setting things up
 
-Copy the two projects from [here](./homework/) into your `hyf-homework/nodejs/week2` folder
+Copy the two projects from [here](./) into your `hyf-homework/nodejs/week2` folder
 
 ## Warmup
 
