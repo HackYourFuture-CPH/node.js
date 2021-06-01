@@ -121,3 +121,5 @@ Create the following routes
 #### Use the api using postman
 
 Using post man insert some concerts, get some concerts using query parameters, delete some concerts and update some concerts
+
+Thank you very much for teaching NodeJS. Please don't hesitate to give feedback by clicking [here](https://forms.gle/sAuVhsTmJ1qSmjgJ6) (teachers and teacher assistants). For homework reviewers, please access the survey [here](https://forms.gle/nVbX9ShusF2a5Aa87). 
