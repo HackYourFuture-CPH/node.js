@@ -92,7 +92,7 @@ If this is confusing please reach out!!
 
 ### Its coding time
 
-Please read the [readme file](https://github.com/HackYourFuture-CPH/meal-sharing-template/blob/master/readme.md) first to setup the project.
+Please read the [readme file](https://github.com/HackYourFuture-CPH/meal-sharing-template/blob/master/README.md) first to setup the project.
 
 Create the following rest endpoints:
 
