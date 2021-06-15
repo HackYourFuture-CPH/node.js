@@ -106,7 +106,7 @@ Create the following rest endpoints:
 | `api/meals/{id}` | PUT    | Updates the meal by `id` | `PUT api/meals/2` |
 | `api/meals/{id}` | DELETE | Deletes the meal by `id` | `DELETE meals/2`  |
 
-##### `GET api/meals/` query parameters
+##### `GET api/meals/` query parameters and you should make sure that you can combine them - see example limit+maxPrice	
 
 | Parameter               | Description                                                                                                    | Data type | Example                                                         |
 | ----------------------- | -------------------------------------------------------------------------------------------------------------- | --------- | --------------------------------------------------------------- |
@@ -115,6 +115,7 @@ Create the following rest endpoints:
 | `title`                 | Get meals that partially match a title. `Rød grød med` will match the meal with the title `Rød grød med fløde` | String    | `api/meals?title=Indian%20platter` (`%20` is a space character) |
 | `createdAfter`          | Get meals that has been created after the date                                                                 | Date      | `api/meals?createdAfter=2019-04-05`                             |
 | `limit`                 | Only specific number of meals                                                                                  | Number    | `api/meals?limit=4`                                             |
+| `limit+maxPrice`                 | Only specific number of meals with a specific max price                                                                                 | Number    | `api/meals?limit=4&maxPrice=90`                                             |
 
 #### Reservation
 
