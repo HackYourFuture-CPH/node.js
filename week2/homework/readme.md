@@ -113,7 +113,7 @@ Next, we want to ensure that our `/meals` route supports additional query parame
 Some things to think about:
 
 - What if there is no meal with the requested id in `meals.json`?
-- What if the users writes a string as id? fx "/meals/lol"
+- What if the users writes a string as id? fx "/api/meals/lol"
 - What if the users writes a query parameter that is not supported?
 
 ## Hand in Homework:
