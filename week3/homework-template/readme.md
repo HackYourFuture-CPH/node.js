@@ -104,7 +104,7 @@ Create the following rest endpoints:
 | `api/meals/`     | POST   | Adds a new meal          | `POST api/meals/` |
 | `api/meals/{id}` | GET    | Returns meal by `id`     | `GET api/meals/2` |
 | `api/meals/{id}` | PUT    | Updates the meal by `id` | `PUT api/meals/2` |
-| `api/meals/{id}` | DELETE | Deletes the meal by `id` | `DELETE meals/2`  |
+| `api/meals/{id}` | DELETE | Deletes the meal by `id` | `DELETE api/meals/2`  |
 
 ##### `GET api/meals/` query parameters and you should make sure that you can combine them - see example limit+maxPrice	
 
