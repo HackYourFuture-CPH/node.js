@@ -18,7 +18,7 @@ Using the `hyf-homework` repo write this command
 
 `git checkout master` - You are now on the `master` branch
 
-`git checkout -b nodejs/week3`
+`git checkout -b nodejs-week3`
 
 This will create and checkout the branch so you are ready make commits to it
 
@@ -84,9 +84,9 @@ Go to https://github.com/HackYourFuture-CPH/meal-sharing-template/generate and g
 
 Now for us mentors to easily give feedback on your code create all functionality in a PR just like we do normally with homework, so:
 
-`git checkout -b nodejs/week3` <- in the meal-sharing repo you have cloned down!
+`git checkout -b nodejs-week3` <- in the meal-sharing repo you have cloned down!
 
-Now you can make your code in the `nodejs/week3` branch and when you are done create a PR with the `nodejs/week3` branch.
+Now you can make your code in the `nodejs-week3` branch and when you are done create a PR with the `nodejs-week3` branch.
 
 If this is confusing please reach out!!
 
@@ -147,10 +147,10 @@ Use the query parameters in the `GET api/meals/`.
 
 Watch [this video](https://www.youtube.com/watch?v=XYlgh9hSWtw) for a more detailed go-through of how to hand in homework!
 
-- Use the branch called `nodejs/week3`
+- Use the branch called `nodejs-week3`
 - Add all your changes to this branch in the `nodejs/week3` folder.
 - Go through the [Homework checklist](#homework-checklist)
-- Create a pull request using the `nodejs/week3` branch
+- Create a pull request using the `nodejs-week3` branch
 - Wait for mentor feedback
 - Implement feedback, `add`, `commit` and `push` the changes
 - Now you can merge the changes into `master`
