@@ -18,7 +18,7 @@ Using the `hyf-homework` repo write this command
 
 `git checkout master` - You are now on the `master` branch
 
-`git checkout -b nodejs/week2`
+`git checkout -b nodejs-week2`
 
 This will create and checkout the branch so you are ready make commits to it
 
@@ -120,7 +120,7 @@ Some things to think about:
 
 Watch [this video](https://www.youtube.com/watch?v=XYlgh9hSWtw) for a more detailed go-through of how to hand in homework!
 
-- Use the branch called `nodejs/week2`
+- Use the branch called `nodejs-week2`
 - Add all your changes to this branch in the `nodejs/week2` folder.
 - Go through the [Homework checklist](#homework-checklist)
 - Create a pull request using the `nodejs/week2` branch
