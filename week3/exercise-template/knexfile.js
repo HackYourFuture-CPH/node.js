@@ -12,6 +12,9 @@ module.exports = {
             database: process.env.DB_NAME,
         },
         pool: { min: 0, max: 7 },
+        // Prints SQL in command prompt. Don't run this in production as it might
+        // slow the server down significantly.
+        debug: true,
     },
     test: {
         client: 'sqlite3',
