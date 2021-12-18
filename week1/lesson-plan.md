@@ -56,7 +56,7 @@ If you find anything that could be improved then please create a pull request! W
 
 ## Flipped classroom videos
 
-[Flipped classroom videos](https://github.com/HackYourFuture-CPH/node.js/blob/master/week1/preparation.md#flipped-classroom-videos)
+[Flipped classroom videos](https://github.com/HackYourFuture-CPH/node.js/blob/main/week1/preparation.md#flipped-classroom-videos)
 
 ## Code inspiration
 

@@ -14,13 +14,13 @@ Create a heroku user by going to heroku.com
 
 ## Setup automatic deployment
 
-Lets set our new app so that everytime we push code to master, that code is deployed to our website.
+Lets set our new app so that everytime we push code to main, that code is deployed to our website.
 
 - Choose Github for deployment method
 
 ![step 3](assets/deploy-step-3.PNG)
 
-- Choose the `master` branch on your `meal-sharing` repo and click `Enable Automatic Deploys`
+- Choose the `main` branch on your `meal-sharing` repo and click `Enable Automatic Deploys`
 
 ![step 4](assets/deploy-step-4.PNG)
 
