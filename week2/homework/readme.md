@@ -123,7 +123,7 @@ Watch [this video](https://www.youtube.com/watch?v=XYlgh9hSWtw) for a more detai
 - Use the branch called `nodejs-week2`
 - Add all your changes to this branch in the `nodejs/week2` folder.
 - Go through the [Homework checklist](#homework-checklist)
-- Create a pull request using the `nodej-/week2` branch
+- Create a pull request using the `nodejs/week2` branch and give your PR the same name  `nodejs-week2`. 
 - Wait for mentor feedback
 - Implement feedback, `add`, `commit` and `push` the changes
 - Now you can merge the changes into `master`
