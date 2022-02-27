@@ -82,7 +82,10 @@ describe("GET /reservation", () => {
     }
     const response = await request(app).get("/reservation");
     expect(response.statusCode).toBe(200);
-    expect(typeof response.body).toBe("object");
     expect(Array.isArray(response.body)).toBeFalsy();
+    expect(typeof response.body).toBe("object");
+    expect(response.body).toEqual(
+      expect.objectContaining({ id: expect.any(Number) })
+    );
   });
 });
