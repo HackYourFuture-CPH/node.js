@@ -45,13 +45,13 @@ Create the following routes
 | `api/concerts/`     | POST   | Adds a new concert          | `POST api/concerts/` |
 | `api/concerts/{id}` | GET    | Returns concert by `id`     | `GET api/concerts/2` |
 | `api/concerts/{id}` | PUT    | Updates the concert by `id` | `PUT api/concerts/2` |
-| `api/concerts/{id}` | DELETE | Deletes the concert by `id` | `DELETE concerts/2`  |
+| `api/concerts/{id}` | DELETE | Deletes the concert by `id` | `DELETE api/concerts/2`  |
 
 #### Query parameters
 
 | Parameter      | Description                                                                                                       | Data type | Example                                |
 | -------------- | ----------------------------------------------------------------------------------------------------------------- | --------- | -------------------------------------- |
-| `maxPrice`     | Get concerts that has a price smaller than `maxPrice`                                                             | Number    | `/concerts?maxPrice=160`               |
+| `maxPrice`     | Get concerts that has a price smaller than `maxPrice`                                                             | Number    | `api/concerts?maxPrice=160`               |
 | `title`        | Get concerts that partially match a title. `Metallic` will match the concert with the title `Metallica in Parken` | String    | `api/concerts?title=metallic`          |
 | `createdAfter` | Get concerts that has been created after the date                                                                 | Date      | `api/concerts?createdAfter=2019-04-05` |
 | `band`         | Get concerts with a specific band                                                                                 | String    | `api/concerts?band=metallica`          |
