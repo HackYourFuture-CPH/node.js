@@ -51,8 +51,8 @@ If you find anything that could be improved then please create a pull request! W
   - [.gitignore](./teacher-live-coding/.gitignore)
   - Nodemon
   - Play around with Express - Focus on usage!
-    - [Live coding](#building-a-simple-http-webserver)
-    - [Exercise](#portfolio)
+    - [Live coding](https://github.com/HackYourFuture-CPH/node.js/tree/main/week1/teacher-live-coding)
+    - [Exercise](https://github.com/HackYourFuture-CPH/node.js/tree/main/week1/exercise-template)
 
 ## Flipped classroom videos
 
