@@ -35,9 +35,9 @@ Theses things you should study by yourself!
 
 We will build on knowledge from the following HYF (sub)modules. If we feel we have gaps we should review the curriculum ourselves or ask a teacher to help.
 
-- [JavaScript](https://github.com/HackYourFuture/JavaScript)
-- [Git](https://github.com/HackYourFuture/Git)
-- [Bash/CommandLineInterface](https://github.com/HackYourFuture/CommandLine)
+- [JavaScript](https://github.com/HackYourFuture-CPH/JavaScript)
+- [Git](https://github.com/HackYourFuture-CPH/git)
+- [CommandLine](https://github.com/HackYourFuture-CPH/CommandLine)
 
 ## What will we learn?
 
