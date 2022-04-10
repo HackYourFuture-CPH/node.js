@@ -59,8 +59,8 @@ In web development the term backend can be boiled down to 3 components:
 - An `application`: software that communicates between the server, database and frontend. It contains code that allows it to interact with and manipulate the server, database and other type of software services.
 
 For more information, read:
-[Basics of backend development](https://www.upwork.com/hiring/development/a-beginners-guide-to-back-end-development/)
-[Getting started with backend development](https://codeburst.io/getting-started-with-backend-development-bfd8299e22e8)
+- [Basics of backend development](https://www.upwork.com/hiring/development/a-beginners-guide-to-back-end-development/)
+- [Getting started with backend development](https://codeburst.io/getting-started-with-backend-development-bfd8299e22e8)
 
 When people refer to backend programming, they usually refer to **writing the application** part of the backend: the software that interacts with a server and database, and moves data from one computer to the next. The application consists of code that will be read by a database and/or server, so that they know what to do with the incoming input.
 
