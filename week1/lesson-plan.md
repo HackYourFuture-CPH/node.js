@@ -54,6 +54,30 @@ If you find anything that could be improved then please create a pull request! W
     - [Live coding](https://github.com/HackYourFuture-CPH/node.js/tree/main/week1/teacher-live-coding)
     - [Exercise](https://github.com/HackYourFuture-CPH/node.js/tree/main/week1/exercise-template)
 
+## Warmup exercises 
+
+### Create your hello world server 
+* Create a file called server.js
+* Create a server in this file.
+* Listen on port 3000.
+* When the user calls "/" return the text "hello world"
+
+### Create a random meal picker 
+* Create a file called server.js
+* Create a server in this file.
+* Listen on port 3000.
+* Create a new file “meals.js” and export an array of meals.
+* When the user calls “/meal” return a random meal from the array of the predefined meals.
+
+Expected call: `GET localhost:3000/meal`
+Commands to use:
+```js
+npm init
+npm install express - -save
+module.exports = [] or module.exports.meals = []
+```
+
+
 ## Flipped classroom videos
 
 [Flipped classroom videos](https://github.com/HackYourFuture-CPH/node.js/blob/main/week1/preparation.md#flipped-classroom-videos)
