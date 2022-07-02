@@ -1,6 +1,20 @@
 version: 2
 updates:
   - package-ecosystem: "npm"
-    directory: "/"
+    directory: "/week1"
     schedule:
-      interval: "daily"
+      interval: "weekly"
+    labels:
+      - "dependencies"
+  - package-ecosystem: "npm"
+    directory: "/week2"
+    schedule:
+      interval: "weekly"
+    labels:
+      - "dependencies"
+  - package-ecosystem: "npm"
+    directory: "/week3"
+    schedule:
+      interval: "weekly"
+    labels:
+      - "dependencies"
