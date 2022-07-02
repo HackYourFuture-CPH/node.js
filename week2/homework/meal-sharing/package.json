@@ -12,7 +12,7 @@
   "license": "ISC",
   "devDependencies": {
     "jest": "^28.1.2",
-    "nodemon": "^1.19.1",
+    "nodemon": "^2.0.18",
     "superagent": "^5.3.1",
     "supertest": "^4.0.2"
   },
