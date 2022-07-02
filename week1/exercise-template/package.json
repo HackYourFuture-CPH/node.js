@@ -20,6 +20,6 @@
     "jest": "^26.4.0",
     "jest-html-reporter": "^3.3.0",
     "nodemon": "^1.12.1",
-    "superagent": "^6.0.0"
+    "superagent": "^8.0.0"
   }
 }
