@@ -1,19 +1,55 @@
 version: 2
 updates:
   - package-ecosystem: "npm"
-    directory: "/week1"
+    directory: "/week1/exercise-template"
     schedule:
       interval: "weekly"
     labels:
       - "dependencies"
   - package-ecosystem: "npm"
-    directory: "/week2"
+    directory: "/week1/homework"
     schedule:
       interval: "weekly"
     labels:
       - "dependencies"
   - package-ecosystem: "npm"
-    directory: "/week3"
+    directory: "/week1/teacher-live-coding"
+    schedule:
+      interval: "weekly"
+    labels:
+      - "dependencies"
+  - package-ecosystem: "npm"
+    directory: "/week2/exercise-template"
+    schedule:
+      interval: "weekly"
+    labels:
+      - "dependencies"
+  - package-ecosystem: "npm"
+    directory: "/week2/homework"
+    schedule:
+      interval: "weekly"
+    labels:
+      - "dependencies"
+  - package-ecosystem: "npm"
+    directory: "/week2/teacher-live-coding"
+    schedule:
+      interval: "weekly"
+    labels:
+      - "dependencies"
+  - package-ecosystem: "npm"
+    directory: "/week3/exercise-template"
+    schedule:
+      interval: "weekly"
+    labels:
+      - "dependencies"
+  - package-ecosystem: "npm"
+    directory: "/week3/homework/warmup"
+    schedule:
+      interval: "weekly"
+    labels:
+      - "dependencies"
+  - package-ecosystem: "npm"
+    directory: "/week3/teacher-live-coding"
     schedule:
       interval: "weekly"
     labels:
