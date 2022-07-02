@@ -25,7 +25,13 @@ updates:
     labels:
       - "dependencies"
   - package-ecosystem: "npm"
-    directory: "/week2/homework"
+    directory: "/week2/homework/meal-sharing"
+    schedule:
+      interval: "weekly"
+    labels:
+      - "dependencies"
+  - package-ecosystem: "npm"
+    directory: "/week2/homework/warmup"
     schedule:
       interval: "weekly"
     labels:
