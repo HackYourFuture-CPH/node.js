@@ -31,7 +31,7 @@
     "mysql2": "^2.1.0",
     "path": "^0.12.7",
     "serve-favicon": "2.4.5",
-    "sqlite3": "5.0.0"
+    "sqlite3": "5.0.11"
   },
   "devDependencies": {
     "jest": "^28.1.2",
