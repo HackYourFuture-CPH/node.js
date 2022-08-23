@@ -27,19 +27,6 @@ In the first week of the module we will focus on a general introduction starting
 - [Homework](homework/readme.md)
 - [Lesson plan](lesson-plan.md)
 
-      
-## Tests
-
-Testing is an often used tool in software development to better ensure your code does what you want it to. Booting up a server locally and doing manual testing works to some extent, but this is not manageable or scalable as an application grows.
-
-To help you get accustomed to what testing looks like, each week's homework includes a set of tests to move you along in the exercises. This provides structure for you to better understand what you need to complete and to help you be sure that you are correctly completing the tasks.
-
-If in doubt, from the week's `homework` directory from which you are completing the exercises, run (after running `npm install`):
-
-`npm test`
-
-This will give you an idea of the tasks you need to complete.
-
 ## What is backend?
 
 In software development, we separate the user experience and utility (the `frontend`) from the code that actually makes it work (the `backend`). The real world contains many examples of this division: take for example an [ATM](../images/atm.jpg). What you can interact with it (press a button or insert a card), you are dealing with the `user interface`; which is the end result of frontend code. However, everything that's needed to make it work like that is found within the device: this is the hardware and software needed to make it work the way it does.
