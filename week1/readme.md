@@ -27,14 +27,6 @@ In the first week of the module we will focus on a general introduction starting
 - [Homework](homework/readme.md)
 - [Lesson plan](lesson-plan.md)
 
-## Installing node
-
-1. Setup `node` on your computer (skip to step 2 to check):
-   1. Download from: https://nodejs.org/en/download/
-   2. Check if node is installed in your system by running the sollowing commands in Command Promt/PowerShell/Git Bash:
-      - `node -v`
-      - `npm -v`
-      - In either case you should see the version of `node` or `npm` installed.
       
 ## Tests
 
