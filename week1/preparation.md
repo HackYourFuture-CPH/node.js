@@ -1,5 +1,16 @@
 # Preparation
 
+## Installing node
+
+1. Setup `node` on your computer (skip to step 2 to check):
+   1. Download from: https://nodejs.org/en/download/
+   2. Check if node is installed in your system by running the sollowing commands in Command Promt/PowerShell/Git Bash:
+      - `node -v`
+      - `npm -v`
+      - In either case you should see the version of `node` or `npm` installed.
+      
+ ## Understanding the basics of NodeJS
+
 - Client server model: https://www.youtube.com/watch?v=L5BlpPU_muY (6 min)
 - HTTP and HTML: https://www.youtube.com/watch?v=1K64fWX5z4U (7 min)
 - Video about node: https://www.youtube.com/watch?v=pU9Q6oiQNd0 (13 min)
