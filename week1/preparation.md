@@ -23,7 +23,26 @@ Try to formulate an answer to the question:
 - What is Node.js?
 
 ## Flipped classroom videos
+
+### Teacher Live Coding Videos - https://github.com/HackYourFuture-CPH/teacher-live-coding
 - [What happens when you open a webpage - Class 1](https://youtu.be/wdj2LrpKSdg)
 - [What is node js and how to use it - Class 1](https://youtu.be/gTa5R1PHIiY)
 - [Node js project structure - Class1](https://youtu.be/CUY20f-KBxE)
 - [Creating a simple Express webserver in Node js and creating your own modules - Class 1](https://youtu.be/R-dl4-VnZYA)
+
+## Extras
+
+### Tests
+
+Testing is an often used tool in software development to better ensure your code does what you want it to. Booting up a server locally and doing manual testing works to some extent, but this is not manageable or scalable as an application grows.
+
+To help you get accustomed to what testing looks like, each week's homework includes a set of tests to move you along in the exercises. This provides structure for you to better understand what you need to complete and to help you be sure that you are correctly completing the tasks.
+
+If in doubt, from the week's `homework` directory from which you are completing the exercises, run (after running `npm install`):
+
+`npm test`
+
+This will give you an idea of the tasks you need to complete.
+
+
+
