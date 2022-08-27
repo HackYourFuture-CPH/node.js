@@ -14,6 +14,8 @@ Remember to add the code you wrote in the class to the relevant class branch's c
 
 To find examples of what teachers have taught before go to the class branches in the classwork folder, Fx [class 07](https://github.com/HackYourFuture-CPH/JavaScript/tree/class07/JavaScript1/Week1/classwork)
 
+Repository for the in-class exercises templates: https://github.com/HackYourFuture-CPH/Nodejs-exercise-template
+
 If you find anything that could be improved then please create a pull request! We welcome changes, so please get involved if you have any ideas!!!
 
 ---
@@ -60,8 +62,7 @@ In the first week of the module we will focus on a general introduction starting
   - [ ] Express - Simple `GET` requests, focus on usage
      -  Play around with Express - Focus on usage!
         - [Live coding](https://github.com/HackYourFuture-CPH/teacher-live-coding/)
-        - [Exercise](https://github.com/HackYourFuture-CPH/Nodejs-exercise-template)
-
+        - [Exercise](https://github.com/HackYourFuture-CPH/Nodejs-exercise-template/tree/main/week1)
 ## What is backend?
 
 In software development, we separate the user experience and utility (the `frontend`) from the code that actually makes it work (the `backend`). The real world contains many examples of this division: take for example an [ATM](../images/atm.jpg). What you can interact with it (press a button or insert a card), you are dealing with the `user interface`; which is the end result of frontend code. However, everything that's needed to make it work like that is found within the device: this is the hardware and software needed to make it work the way it does.
@@ -154,3 +155,11 @@ Go to the `teacher-live-coding` [project repository](https://github.com/HackYour
 ### Building a simple http webserver
 
 Go to the `teacher-live-coding` [project repository](https://github.com/HackYourFuture-CPH/teacher-live-coding), run using `nodemon ./src/backend/simple-webserver.js`. Try and implement this functionality from the bottom while explaining.
+
+
+# Exercises
+
+The template for in-class exercises is in this repository: https://github.com/HackYourFuture-CPH/Nodejs-exercise-template.
+
+Every student should have it cloned locally and setup according to the instructions in the repository. 
+See https://github.com/HackYourFuture-CPH/Nodejs-exercise-template/tree/main/week1 for the instructions and requirements.

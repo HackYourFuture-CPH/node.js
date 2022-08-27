@@ -30,9 +30,46 @@ Try to formulate an answer to the question:
 - [Node js project structure - Class1](https://youtu.be/CUY20f-KBxE)
 - [Creating a simple Express webserver in Node js and creating your own modules - Class 1](https://youtu.be/R-dl4-VnZYA)
 
+## Get ready for in-class exercises!
+Clone the repository that holds the exercises templates for the whole module: https://github.com/HackYourFuture-CPH/Nodejs-exercise-template.git
+
+See week1 `readme.md` and follow the instructions to setup the server. 
+<br>
+<hr>
+
 ## Extras
 
-### Tests
+### **Good resources for learning node**
+[8 hours intro to NodeJS](https://www.youtube.com/watch?v=Oe421EPjeBE)
+### **The REPL**
+There are many ways to interact with Node. We can start the environment up in a REPL, we can start it up with a file, we can start it inside a docker container.
+After installing NodeJS on your machine, you will have access to the environment by typing ````node```` in the terminal. This will drop you into the node REPL (Read Evaluate Print Loop).
+````
+Welcome to Node.js v15.14.0
+Type “.help” for more information.
+>
+````
+In here you will have access to the javascript language. There are limitations, which depends on the version number of Node. The further it progresses in time, the more features will be included.
+
+
+### **Feeding the REPL files**
+You can also feed node files to evaluate and this is where node becomes such a powerful tool for any developer, especially frontend developers.
+
+### **Creating an NPM project with a script that starts the application**
+http://ajmalsiddiqui.me/blog/introduction-to-npm-scripts/
+
+### **As a Webserver**
+- Can serve HTTP responses to HTTP requests.
+- Is most often used together with the REST principle.
+- The REST principle is an architecture for organising resources.
+
+### **Security and authentication**
+In many cases we don’t want the web server to just serve information, some of this might be privilege to a user. It can be the responsibility of the web server to also check that the requests it receives has the right authentication required.
+
+### **Database interaction**
+The web server rarely has any information or data build into it. It relies on external system build specifically for that purpose and acts as a proxy between the database and the requester. (However node is a general purpose programming language, so it can indeed also be used to write a database system (https://dzone.com/articles/building-a-database-written-in-nodejs-from-the-gro).
+
+### **Tests**
 
 Testing is an often used tool in software development to better ensure your code does what you want it to. Booting up a server locally and doing manual testing works to some extent, but this is not manageable or scalable as an application grows.
 
@@ -43,6 +80,3 @@ If in doubt, from the week's `homework` directory from which you are completing 
 `npm test`
 
 This will give you an idea of the tasks you need to complete.
-
-
-

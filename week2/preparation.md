@@ -10,3 +10,8 @@
 - [Nodejs express query parameters and params - Class 2](https://youtu.be/_H-bP10Fmaw)
 - [Nodejs express middleware - Class 2](https://youtu.be/ZcwmyYGzBnk)
 - [Working with Postman - Class 2](https://youtu.be/zNeOUJPxw2s)
+
+## Get ready for in-class exercises!
+Clone, if you have not already, the repository that holds the exercises templates for the whole module: https://github.com/HackYourFuture-CPH/Nodejs-exercise-template.git
+
+See week2 `readme.md` and follow the instructions to setup the server. 
