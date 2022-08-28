@@ -57,7 +57,7 @@ In the first week of the module we will focus on a general introduction starting
       - `npm install -s express`
       - node_modules
       - package.json
-    - [.gitignore](https://github.com/HackYourFuture-CPH/teacher-live-coding/.gitignore)
+    - [.gitignore](https://github.com/HackYourFuture-CPH/teacher-live-coding/blob/main/.gitignore)
   - [ ] Nodemon
   - [ ] Express - Simple `GET` requests, focus on usage
      -  Play around with Express - Focus on usage!
