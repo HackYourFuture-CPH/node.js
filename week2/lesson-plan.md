@@ -54,7 +54,7 @@ If you find anything that could be improved then please create a pull request! W
 
 ### app get vs app use
 
-Go to the `teacher-live-coding` folder, `npm install` and run using `nodemon ./src/backend/app-use-vs-app-get.js`. Try and implement this functionality from the bottom while explaining.
+Go to the `teacher-live-coding` [repo](https://github.com/HackYourFuture-CPH/teacher-live-coding), run `npm install` and run using `nodemon ./src/backend/app-use-vs-app-get.js`. Try and implement this functionality from the bottom while explaining.
 
 ### Query parameters vs parameters
 

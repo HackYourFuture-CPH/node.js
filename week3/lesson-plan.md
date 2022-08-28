@@ -45,7 +45,7 @@ If you find anything that could be improved then please create a pull request! W
 
 ### Phonebook database
 
-- Go to the `teacher-live-coding` folder
+- Go to the `teacher-live-coding` [repo](https://github.com/HackYourFuture-CPH/teacher-live-coding), to the relevant folder
 - Copy the `.env.example` and rename the copied file to `.env`
 - Run `npm install`
 - Start the application by running  `nodemon ./src/backend/phonebook-database-queries.js`
