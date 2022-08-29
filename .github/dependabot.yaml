@@ -7,12 +7,6 @@ updates:
     labels:
       - "dependencies"
   - package-ecosystem: "npm"
-    directory: "/week1/teacher-live-coding"
-    schedule:
-      interval: "weekly"
-    labels:
-      - "dependencies"
-  - package-ecosystem: "npm"
     directory: "/week2/homework/meal-sharing"
     schedule:
       interval: "weekly"
@@ -25,19 +19,7 @@ updates:
     labels:
       - "dependencies"
   - package-ecosystem: "npm"
-    directory: "/week2/teacher-live-coding"
-    schedule:
-      interval: "weekly"
-    labels:
-      - "dependencies"
-  - package-ecosystem: "npm"
     directory: "/week3/homework/warmup"
-    schedule:
-      interval: "weekly"
-    labels:
-      - "dependencies"
-  - package-ecosystem: "npm"
-    directory: "/week3/teacher-live-coding"
     schedule:
       interval: "weekly"
     labels:
