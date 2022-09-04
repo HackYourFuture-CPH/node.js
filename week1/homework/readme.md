@@ -1,8 +1,8 @@
 # Week 1 homework
 
-This homework will result in `2 pull requests`:
-* A pull request for the `Warmup` exercise - in your hyf-homework repository
-* A pull requet for the `Meal-sharing endpoints` exercise - in your meal-haring repository
+This homework will result in 2 pull requests:
+* A pull request for the **Warmup** - in your regular hyf-homework repository
+* A pull request for the **Meal-sharing endpoints** - in the new meal-sharing repository
 
 ### **Meal-sharing repository**
 
@@ -20,7 +20,7 @@ For us mentors to easily give feedback on your code, create all functionality in
 
 ## **Warmup**
 
-In your hyf-homework repository, week1 directory, create a file named `avg.js` which will calculate the average of the numbers provided as command line arguments.
+In your hyf-homework repository, `nodejs/week1` directory, create a file named `avg.js` which will calculate the average of the numbers provided as command line arguments.
 
 But what are command line arguments? The arguments you provide to a command line program. Here's an example of how we would invoke `avg.js` with 3 numbers:
 
@@ -39,7 +39,7 @@ Optional improvements and considerations:
 
 ## **Meal sharing endpoints**
 
-You will begin working in the meal-sharing repository for this homework and continue throughout the whole node.js module. Each week you will build upon the endpoints, resulting with a backend setup for you future Meal-sharing website. 
+You will begin working in the meal-sharing repository for this homework and continue throughout the whole Node.js module. Each week you will build upon the endpoints, resulting in the backend setup for you future meal sharing website. 
 
 ### **Setup**
 
