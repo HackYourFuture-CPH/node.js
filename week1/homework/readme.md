@@ -7,7 +7,7 @@ This homework will result in 2 pull requests:
 ### **Meal-sharing repository**
 
 Go to [the meal-sharing-template repo](https://github.com/HackYourFuture-CPH/meal-sharing-template/generate) and create your own personal repo with the name `meal-sharing`. <br/>
-You should now have a meal-sharing repo here: `https://github.com/YOUR_GITHUB_USER_NAME/meal-sharing` like `https://github.com/benna100/meal-sharing`. Clone that repo down locally.
+You should now have a meal-sharing repository here: `https://github.com/YOUR_GITHUB_USER_NAME/meal-sharing` like `https://github.com/benna100/meal-sharing`. Clone that repository down locally.
 
 #### Branch
 
@@ -39,7 +39,7 @@ Optional improvements and considerations:
 
 ## **Meal sharing endpoints**
 
-You will begin working in the meal-sharing repository for this homework and continue throughout the whole Node.js module. Each week you will build upon the endpoints, resulting in the backend setup for you future meal sharing website. 
+You will begin working in the meal-sharing repository for this homework and continue throughout the whole Node.js module. Each week you will build upon the endpoints, resulting in the backend setup for your future meal sharing website. 
 
 ### **Setup**
 
@@ -50,9 +50,9 @@ The meal-sharing-template [README](https://github.com/HackYourFuture-CPH/meal-sh
 
 #### **Database**
 
-In the Database module we worked on the meal sharing database. The diagram for that database can be found [here](https://dbdiagram.io/d/5f0460690425da461f045a29).
+In the Database module, we worked on the meal sharing database. The diagram for that database can be found [here](https://dbdiagram.io/d/5f0460690425da461f045a29).
 
-In this homework we will **reuse the same database** schema and build a web server with the following routes.
+In this homework, we will **reuse the same database** schema and build a web server with the following routes.
 
 #### **Getting started**
 
@@ -77,7 +77,7 @@ app.get("/my-route", (req, res) => { res.send("Hi friend") });
 
 All the specified routes should respond with JSON with the available columns from the meal table.
 
-**Multiple meals:** `/new-meals`, `/past-meals` and `/all-meals` are expected to respond with a collection of meals, meaning an array of objects.
+**Multiple meals:** `/future-meals`, `/past-meals` and `/all-meals` are expected to respond with a collection of meals, meaning an array of objects.
 
 **Single meal:** The other 2 routes, `/first-meal` and `/last-meal`, are expected to respond with a single meal, meaning an object.
 
@@ -87,7 +87,7 @@ The other routes should in that case just return an empty array.
 
 #### **Knex**
 
-Our usage of Knex will get more advanced over the coming weeks but for now we will focus on the simplified `knex.raw` function that can execute a raw SQL query. Example:
+Our usage of Knex will get more advanced over the coming weeks but for now, we will focus on the simplified `knex.raw` function that can execute a raw SQL query. Example:
 
 ```js
 knex.raw("SELECT VERSION()").then(() => {
