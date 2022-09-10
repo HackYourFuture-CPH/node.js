@@ -10,7 +10,112 @@ In both repositories, create a `nodejs-week2` branch from `main` to work on the 
 
 ## **Warmup**
 
-(...)
+For the warmup you're going to build a search engine. The search engine will have 3 routes:
+- `GET /search`
+- `POST /search`
+- `GET /documents/:id`
+
+The purpose of the search engine is to search and find documents from a file called `documents.json`. Example contents:
+
+```
+[
+    {
+        "id": 1,
+        "name": "Used Apple Airpods",
+        "price": "50",
+        "description": "Battery life is not great"
+    },
+    {
+        "id": 2,
+        "type": "doc",
+        "value": "hello world"
+    }
+]
+```
+
+### Setup
+
+Go to `nodejs/week2` in your `hyf-homework` repo:
+
+    $ npm init -y
+    $ npm i express
+    $ npm i --save-dev nodemon
+    $ npm set-script dev "nodemon app.js"
+
+Create `app.js` and as a starting point you can use the following:
+
+```js
+const express = require('express')
+const app = express()
+const port = process.env.PORT || 3000
+
+// Support parsing JSON requests
+app.use(express.json())
+
+app.get('/', (req, res) => {
+  res.send('This is a search engine')
+})
+
+app.listen(port, () => {
+  console.log(`Listening on port ${port}`)
+})
+```
+
+You also need to create a `documents.json` file.
+
+### `GET /search`
+
+This endpoint will accept a query parameter called `q`, short for _query_. A bit confusing to have a query parameter called q(uery) but hang in there 💪
+
+- If `q` is not provided, the endpoint should return all documents.
+- If `q` is provided, the endpoint should return the documents with some field that matches the value of `q`.
+
+Example response if we call `GET /search?q=hello`:
+```
+[
+    {
+        "id": 2,
+        "type": "doc",
+        "value": "hello world"
+    }
+]
+```
+
+### `GET /documents/:id`
+
+This endpoint is simple: find the document matching the `id` parameter. If there is no such document, respond with a 404 Not Found.
+You can assume that the document IDs are unique so there's no need to handle duplicates.
+
+### `POST /search`
+
+This endpoint is sort of like `GET /search`.
+
+It also accepts a query parameter called `q` and it should behave just like `GET /search`.
+But it also accepts a field called `fields` in the JSON request body. `fields` is an object where it will be possible to filter by specific fields.
+
+Example request:
+```
+POST /search
+{
+    "fields": {
+        "price": "50"
+    }
+}
+```
+
+Response to the example request:
+```
+[
+    {
+        "id": 1,
+        "name": "Used Apple Airpods",
+        "price": "50",
+        "description": "Battery life is not great"
+    }
+]
+```
+
+If both `q` (query parameter) and `fields` (in body) are provided, we should respond with status 400 Bad Request and explain that both can't be provided.
 
 <br/>
 
