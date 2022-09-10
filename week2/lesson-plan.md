@@ -71,7 +71,6 @@ Run using `nodemon ./src/backend/middleware.js`. Try and implement this function
 
 # Exercises
 
-The template for in-class exercises is in this repository: https://github.com/HackYourFuture-CPH/Nodejs-exercise-template.
-
-Every student should have it cloned locally and setup according to the instructions in the repository. 
-See https://github.com/HackYourFuture-CPH/Nodejs-exercise-template/tree/main/week2 for the instructions and requirements.
+1. [Server](./exercises/01-server.md): Setup project
+1. [DB schema](./exercises/02-schema.md): Setup MySQL database schema
+1. [API](./exercises/03-api.md): Snippets API exercises
