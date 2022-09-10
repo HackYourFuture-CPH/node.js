@@ -38,7 +38,7 @@ The database we have used so far is the local one running in Mysql Workbench. No
 ### Adding environment variables
 
 - Go to `Settings`. Click `Reveal Config Vars`. It will have the format of: `mysql://{user}:{pass}@{host}/{database}`
-- Exactly like the `.env` file add the same environment variables. The `DB_PORT` should be 3306, and the 'API_PATH' should be '/api'.
+- Exactly like the `.env` file add the same environment variables. The `DB_PORT` should be 3306, and the `API_PATH` should be '/api'.
 
 ![step 6](assets/deploy-step-6.PNG)
 
