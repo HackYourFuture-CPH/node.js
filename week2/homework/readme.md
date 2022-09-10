@@ -12,8 +12,8 @@ In both repositories, create a `nodejs-week2` branch from `main` to work on the 
 
 For the warmup you're going to build a search engine. The search engine will have 3 routes:
 - `GET /search`
-- `POST /search`
 - `GET /documents/:id`
+- `POST /search`
 
 The purpose of the search engine is to search and find documents from a file called `documents.json`. Example contents:
 
@@ -42,7 +42,11 @@ Go to `nodejs/week2` in your `hyf-homework` repo:
     $ npm i --save-dev nodemon
     $ npm set-script dev "nodemon app.js"
 
-Create `app.js` and as a starting point you can use the following:
+You should also ensure that the `node_modules/` folder is ignored by Git:
+
+    $ echo node_modules/ >> .gitignore
+
+Create `app.js` and as a starting point you can use the following code:
 
 ```js
 const express = require('express')
@@ -83,7 +87,7 @@ Example response if we call `GET /search?q=hello`:
 
 ### `GET /documents/:id`
 
-This endpoint is simple: find the document matching the `id` parameter. If there is no such document, respond with a 404 Not Found.
+This endpoint is simple: find and respond with the document matching the `id` parameter. If there is no such document, respond with a 404 Not Found.
 You can assume that the document IDs are unique so there's no need to handle duplicates.
 
 ### `POST /search`
@@ -126,9 +130,18 @@ You will continue working in the meal-sharing repository for this homework. This
 
 ### **Routes**
 
+In last week's homework you were supposed to add routes in `src/backend/app.js`. You can just leave them there as they are.
+
+For this week's homework, we will add two categories of routes: meals and reservations.
+
+- The routes for meals will go into `src/backend/api/meals.js`, which should already exist in your repo, and
+- the reservation routes will live in `src/backend/api/reservations.js`, a new file you need to create.
+
+This means that we will end up having 2 Routers: a meals router and a reservations router. You can read more about Express Routers [here](http://expressjs.com/en/4x/api.html#router).
+
 #### **Meals**
 
-| Route            | Operation   | Description         |
+| Route            | HTTP method   | Description         |
 | ---------------- | ------ | ------------------------ |
 | `/api/meals`     | GET     | Returns all meals |
 | `/api/meals`     | POST   | Adds a new meal to the database |
@@ -140,7 +153,7 @@ You will continue working in the meal-sharing repository for this homework. This
 
 Now that you have built the basic set of endpoints for **meals**, you can get some more practice and expand your app backend by creating the same for **reservations**:
 
-| Route            | Operation   | Description         |
+| Route            | HTTP method   | Description         |
 | ---------------- | ------ | ------------------------ |
 | `/api/reservations`     | GET    | Returns all reservations  |
 | `/api/reservations`         | POST   | Adds a new reservation to the database |
@@ -162,7 +175,7 @@ Think about what special HTTP status code would be appropriate for that scenario
 
 You are free to decide on the response for a successful `POST`, `PUT` and `DELETE` request. Some ideas:
 - Respond with an acknowledgement message: `{ "message": "Deleted meal" }`
-- Respond with data from the row itself like with `GET` (only for `PUT`)
+- Respond with data from the row itself like with `GET`
 
 And lastly, if the `POST` request is successful, the response status code should be 201 Created, as that would indicate something was _created_.
 
