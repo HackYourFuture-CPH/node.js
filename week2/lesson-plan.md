@@ -74,3 +74,6 @@ Run using `nodemon ./src/backend/middleware.js`. Try and implement this function
 1. [Server](./exercises/01-server.md): Setup project
 1. [DB schema](./exercises/02-schema.md): Setup MySQL database schema
 1. [API](./exercises/03-api.md): Snippets API exercises
+    - [POST endpoint](./exercises/04-post-endpoint.md)
+    - [GET endpoints](./exercises/05-get-endpoints.md)
+    - [Authentication](./exercises/06-auth.md)

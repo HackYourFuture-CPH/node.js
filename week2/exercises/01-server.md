@@ -1,9 +1,5 @@
 # Server
 
-This week we will work with 2 tables:
-- A `users` table similar to week 1 but now with an added `token` column.
-- A `snippets` table containing (code) snippets that belong to a user.
-
 Create a new, separate folder somewhere on your machine:
 
     $ mkdir nodejs-week2
