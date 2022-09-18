@@ -20,7 +20,7 @@ Most of this course will focus on the backend part. Meaning building a webserver
 | ---- | --------------------------------------------------------- | ----------------------------------- | ----------------------------- | ----------------------------------- |
 | 1.   | HTTP <br> Introduction to node js <br> Simple webserver   | [Preparation](week1/preparation.md) | [Homework](week1/homework/readme.md) | [Lesson plan](week1/lesson-plan.md) |
 | 2.   | Express                                                   | [Preparation](week2/preparation.md) | [Homework](week2/homework/readme.md) | [Lesson plan](week2/lesson-plan.md) |
-| 3.   | Database connection <br> API                              | [Preparation](week3/preparation.md) | [Homework](week3/homework-template/readme.md) | [Lesson plan](week3/lesson-plan.md) |
+| 3.   | Database connection <br> API                              | [Preparation](week3/preparation.md) | [Homework](week3/homework/readme.md) | [Lesson plan](week3/lesson-plan.md) |
 
 ## Pre-requisites
 
@@ -38,5 +38,3 @@ We will build on knowledge from the following HYF (sub)modules. If we feel we ha
 - Using `express` to make a RESTful API
 - Using `mysql` to connect the API to the backend
 - Postman
-
-
