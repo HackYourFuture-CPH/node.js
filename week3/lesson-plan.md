@@ -22,14 +22,12 @@ If you find anything that could be improved then please create a pull request! W
 
 - Database interaction
   - Connecting to mysql using knex
-    - Take a look at [this file](./homework-template/src/backend/database.js), dont go into too much detail. More this is how it is
-    - Environment variables. Check [this repo](./homework-template/readme.md#environment-variables)
   - Executing queries
     - `select`, `create`. You could let the students figure out how `delete` and `update` works
   - [Code inspiration](#phonebook-database) especially focus on the promise and query part
 - API
   - REST
-  - CRUD (follow the structure found in [the homework template](./homework-template/src/backend) )
+  - CRUD
     - Router verb `GET`, `POST`, `DELETE`, `PUT`
       - Especially focus on post with `app.use(express.urlencoded({ extended: true }));` and `app.use(express.json());`
   - [Code inspiration](#phonebook-api)
@@ -71,9 +69,9 @@ The following two routes have been created, get help by the students to create s
 
 The template for in-class exercises is in this repository: https://github.com/HackYourFuture-CPH/Nodejs-exercise-template.
 
-Every student should have it cloned locally and setup according to the instructions in the repository. 
+Every student should have it cloned locally and setup according to the instructions in the repository.
 See https://github.com/HackYourFuture-CPH/Nodejs-exercise-template/tree/main/week3 for the instructions and requirements.
 
 
 
-Thank you very much for teaching NodeJS. Please don't hesitate to give feedback by clicking [here](https://forms.gle/sAuVhsTmJ1qSmjgJ6) (teachers and teacher assistants). For homework reviewers, please access the survey [here](https://forms.gle/nVbX9ShusF2a5Aa87). 
+Thank you very much for teaching NodeJS. Please don't hesitate to give feedback by clicking [here](https://forms.gle/sAuVhsTmJ1qSmjgJ6) (teachers and teacher assistants). For homework reviewers, please access the survey [here](https://forms.gle/nVbX9ShusF2a5Aa87).
