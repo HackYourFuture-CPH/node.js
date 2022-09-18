@@ -140,7 +140,7 @@ After having demonstrated the SQL injection vulnerability, the goal is then to f
 
 ## **Meal sharing endpoints**
 
-You will continue working in the meal-sharing repository for this task. 
+You will continue working in the meal-sharing repository for this task.
 <br/>You should have the basic [CRUD](https://www.freecodecamp.org/news/crud-operations-explained/) endpoints for **meals** and **reservations** as the result of last week's homework. This week, you will add **query parameters**, that will allow you to **sort** and **filter** the information retrieved from the database.
 
 
@@ -151,7 +151,7 @@ You will continue working in the meal-sharing repository for this task.
 Work with your `GET api/meals` route to add the query parameters. <br/>Make sure that the query parameters can be combined, f.x. <nobr>`?limit=4&maxPrice=90`.<nobr/>
 
 | Parameter     | <nobr>Data type<nobr/>| Description           | Example |
-| ---------------- | ---------------- | ------------------------------------------------ | ---------------- | 
+| ---------------- | ---------------- | ------------------------------------------------ | ---------------- |
 |`maxPrice`             |Number     |Returns all meals that are cheaper than `maxPrice`.| <nobr>`api/meals?maxPrice=90`<nobr/>|
 |`availableReservations`|Boolean    |Returns all meals that still have available spots left. *|<nobr>`api/meals?availableReservations=true`<nobr/>|
 |`title`                |String     | Returns all meals that partially match the given title. `Rød grød` will match the meal with the title `Rød grød med fløde`. | <nobr>`api/meals?title=Indian%20platter`<nobr/>|
@@ -163,12 +163,12 @@ Work with your `GET api/meals` route to add the query parameters. <br/>Make sure
 
 <br/>
 
-\* `availableReservations` requires you to work with several database tables at once. Try practicing the right query in MySQL Workbench first (you might have it from Database week3 homework) and once you have it working, build it with `knex`. 
+\* `availableReservations` requires you to work with several database tables at once. Try practicing the right query in MySQL Workbench first (you might have it from Database week3 homework) and once you have it working, build it with `knex`.
 
 
 <br/>
 
-#### **Reviews** 
+#### **Reviews**
 
 By now, you have the basic set of endpoints for **meals** and **reservations** and even a collection of query parameters for **meals**. To practice a bit more and finalize the basic backend functionality, create the set of routes for **reviews**:
 
