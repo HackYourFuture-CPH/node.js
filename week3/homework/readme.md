@@ -186,3 +186,37 @@ By now, you have the basic set of endpoints for **meals** and **reservations** a
 #### **Knex**
 
 Remember to check out the [Knex cheatsheet](https://devhints.io/knex)!
+
+## Hand in Homework:
+
+Watch [this video](https://www.youtube.com/watch?v=JcT4wmK1VcA) for a more detailed go-through of how to hand in homework!
+
+- Use the branch called `nodejs-week3`
+- Add all your changes to this branch in the `nodejs-week3` folder.
+- Go through the [Homework checklist](#homework-checklist)
+- Create a pull request using the `nodejs-week3` branch and give your PR the same name `nodejs-week3`.
+- Wait for mentor feedback
+- Implement feedback, `add`, `commit` and `push` the changes
+- Now you can merge the changes into `main`
+- When merged you can **share the github link** to your classes slack channel if you are **proud of what you did** 💪
+- Now celebrate 🎉🎉🎉
+
+## Homework checklist
+
+Go over your homework one last time:
+
+- [ ] Does every file run without errors and with the correct results?
+- [ ] Have you used `const` and `let` and avoided `var`?
+- [ ] Do the variable, function and argument names you created follow the [Naming Conventions](https://github.com/HackYourFuture/fundamentals/blob/main/fundamentals/naming_conventions.md)?
+- [ ] Is your code well-formatted (see [Code Formatting](https://github.com/HackYourFuture/fundamentals/blob/main/fundamentals/code_formatting.md))?
+
+## Feedback giving time!
+
+Find a student to give feedback using this site: https://hyf-peer-review.herokuapp.com/. The feedback should be given after the homework has been handed in, preferably two days after.
+
+Give the review on the PR exactly how the mentors do it! To find the link for the PR ask the person you are reviewing :) You can see how to give feedback on a PR using github [here](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/commenting-on-a-pull-request)
+
+To help you get started with reviewing we have created [some ressources](https://github.com/HackYourFuture-CPH/curriculum/tree/main/review) about giving feedback. Find them
+
+Why is it important to give feedback? Because it will make you a [better](https://www.brightspot.com/blog/developer-life-5-reasons-why-the-code-review-process-is-critical-for-developers) [developer](https://www.sitepoint.com/the-importance-of-code-reviews/)
+
