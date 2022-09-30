@@ -152,20 +152,22 @@ You will continue working in the meal-sharing repository for this task.
 
 Work with your `GET api/meals` route to add the query parameters. <br/>Make sure that the query parameters can be combined, f.x. <nobr>`?limit=4&maxPrice=90`.<nobr/>
 
-| Parameter               | <nobr>Data type<nobr/> | Description                                                                                                                    | Example                                               |
-| ----------------------- | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------- |
-| `maxPrice`              | Number                 | Returns all meals that are cheaper than `maxPrice`.                                                                            | <nobr>`api/meals?maxPrice=90`<nobr/>                  |
-| `availableReservations` | Boolean                | Returns all meals that still have available spots left, if `true`. If `false`, return meals that have no available spots left.[^1] | <nobr>`api/meals?availableReservations=true`<nobr/>   |
-| `title`                 | String                 | Returns all meals that partially match the given title. `Rød grød` will match the meal with the title `Rød grød med fløde`.    | <nobr>`api/meals?title=Indian%20platter`<nobr/>       |
-| `dateAfter`             | Date                   | Returns all meals where the date for `when` is after the given date.                                                           | `api/meals?dateAfter=2022-10-01`                      |
-| `dateBefore`            | Date                   | Returns all meals where the date for `when` is before the given date.                                                          | `api/meals?dateBefore=2022-08-08`                     |
-| `limit`                 | Number                 | Returns the given number of meals.                                                                                             | `api/meals?limit=7`                                   |
-| `sort_key`              | String                 | Returns all meals sorted by the given key. Allows `when`, `max_reservations` and `price` as keys. Default sorting order = asc. | `api/meals?sort_key=price`                            |
-| `sort_dir`              | String                 | Returns all meals sorted in the given direction. Only works combined with the `sort_key` and allows `asc` or `desc`.           | <nobr>`api/meals?sort_key=price&sort_dir=desc`<nobr/> |
+| Parameter               | <nobr>Data type<nobr/> | Description                                                                                                                             | Example                                             |
+| ----------------------- | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------- |
+| `maxPrice`              | Number                 | Returns all meals that are cheaper than `maxPrice`.                                                                                     | <nobr>`api/meals?maxPrice=90`<nobr/>                |
+| `availableReservations` | Boolean                | Returns all meals that still have available spots left, if `true`. If `false`, return meals that have no available spots left.[^1]      | <nobr>`api/meals?availableReservations=true`<nobr/> |
+| `title`                 | String                 | Returns all meals that partially match the given title. `Rød grød` will match the meal with the title `Rød grød med fløde`.             | <nobr>`api/meals?title=Indian%20platter`<nobr/>     |
+| `dateAfter`             | Date                   | Returns all meals where the date for `when` is after the given date.                                                                    | `api/meals?dateAfter=2022-10-01`                    |
+| `dateBefore`            | Date                   | Returns all meals where the date for `when` is before the given date.                                                                   | `api/meals?dateBefore=2022-08-08`                   |
+| `limit`                 | Number                 | Returns the given number of meals.                                                                                                      | `api/meals?limit=7`                                 |
+| `sortKey`[^2]           | String                 | Returns all meals sorted by the given key. Allows `when`, `max_reservations` and `price` as keys. Default sorting order is asc(ending). | `api/meals?sortKey=price`                           |
+| `sortDir`[^3]           | String                 | Returns all meals sorted in the given direction. Only works combined with the `sortKey` and allows `asc` or `desc`.                     | <nobr>`api/meals?sortKey=price&sortDir=desc`<nobr/> |
 
 <br/>
 
 [^1]: `availableReservations` requires you to work with several database tables at once. Try practicing the right query in MySQL Workbench first (you might have it from Database week3 homework) and once you have it working, build it with `knex`.
+[^2]: This used to be `sort_key` in a previous version of the homework text.
+[^3]: This used to be `sort_dir` in a previous version of the homework text.
 
 <br/>
 
