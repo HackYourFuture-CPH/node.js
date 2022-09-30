@@ -155,7 +155,7 @@ Work with your `GET api/meals` route to add the query parameters. <br/>Make sure
 | Parameter               | <nobr>Data type<nobr/> | Description                                                                                                                    | Example                                               |
 | ----------------------- | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------- |
 | `maxPrice`              | Number                 | Returns all meals that are cheaper than `maxPrice`.                                                                            | <nobr>`api/meals?maxPrice=90`<nobr/>                  |
-| `availableReservations` | Boolean                | Returns all meals that still have available spots left. \*                                                                     | <nobr>`api/meals?availableReservations=true`<nobr/>   |
+| `availableReservations` | Boolean                | Returns all meals that still have available spots left, if `true`. If `false`, return meals that have no available spots left.[^1] | <nobr>`api/meals?availableReservations=true`<nobr/>   |
 | `title`                 | String                 | Returns all meals that partially match the given title. `Rød grød` will match the meal with the title `Rød grød med fløde`.    | <nobr>`api/meals?title=Indian%20platter`<nobr/>       |
 | `dateAfter`             | Date                   | Returns all meals where the date for `when` is after the given date.                                                           | `api/meals?dateAfter=2022-10-01`                      |
 | `dateBefore`            | Date                   | Returns all meals where the date for `when` is before the given date.                                                          | `api/meals?dateBefore=2022-08-08`                     |
@@ -165,7 +165,7 @@ Work with your `GET api/meals` route to add the query parameters. <br/>Make sure
 
 <br/>
 
-\* `availableReservations` requires you to work with several database tables at once. Try practicing the right query in MySQL Workbench first (you might have it from Database week3 homework) and once you have it working, build it with `knex`.
+[^1]: `availableReservations` requires you to work with several database tables at once. Try practicing the right query in MySQL Workbench first (you might have it from Database week3 homework) and once you have it working, build it with `knex`.
 
 <br/>
 
