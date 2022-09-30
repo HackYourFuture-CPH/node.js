@@ -163,8 +163,6 @@ Work with your `GET api/meals` route to add the query parameters. <br/>Make sure
 | `sortKey`[^2]           | String                 | Returns all meals sorted by the given key. Allows `when`, `max_reservations` and `price` as keys. Default sorting order is asc(ending). | `api/meals?sortKey=price`                           |
 | `sortDir`[^3]           | String                 | Returns all meals sorted in the given direction. Only works combined with the `sortKey` and allows `asc` or `desc`.                     | <nobr>`api/meals?sortKey=price&sortDir=desc`<nobr/> |
 
-<br/>
-
 [^1]: `availableReservations` requires you to work with several database tables at once. Try practicing the right query in MySQL Workbench first (you might have it from Database week3 homework) and once you have it working, build it with `knex`.
 [^2]: This used to be `sort_key` in a previous version of the homework text.
 [^3]: This used to be `sort_dir` in a previous version of the homework text.
