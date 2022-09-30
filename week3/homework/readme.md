@@ -188,7 +188,7 @@ By now, you have the basic set of endpoints for **meals** and **reservations** a
 
 You should try to avoid using `knex.raw` and instead use the different `knex` functions, for example:
 
-- `.select`, `.from`, `.where`
+- `.select`, `.from`, `.where`, `join`, `leftJoin`
 - `.insert`
 - `.update`
 - `.del` (for deletion)
