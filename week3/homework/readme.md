@@ -186,4 +186,11 @@ By now, you have the basic set of endpoints for **meals** and **reservations** a
 
 #### **Knex**
 
-Remember to check out the [Knex cheatsheet](https://devhints.io/knex)!
+You should try to avoid using `knex.raw` and instead use the different `knex` functions, for example:
+
+- `.select`, `.from`, `.where`
+- `.insert`
+- `.update`
+- `.del` (for deletion)
+
+Check out the [Knex cheatsheet](https://devhints.io/knex)!
