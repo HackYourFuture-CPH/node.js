@@ -1,8 +1,9 @@
 # Week 1 homework
 
 This homework will result in 2 pull requests:
-* A pull request for the **Warmup** - in your regular hyf-homework repository
-* A pull request for the **Meal-sharing endpoints** - in the new meal-sharing repository
+
+- A pull request for the **Warmup** - in your regular hyf-homework repository
+- A pull request for the **Meal-sharing endpoints** - in the new meal-sharing repository
 
 ### **Meal-sharing repository**
 
@@ -32,6 +33,7 @@ $ node avg.js 13 7 4
 Hint: [read](https://nodejs.org/en/knowledge/command-line/how-to-parse-command-line-arguments/) to see how we can deal with command line arguments.
 
 Optional improvements and considerations:
+
 - What should happen if the provided arguments are not numbers (`node avg.js 1 two hello 4`)?
 - What about if no arguments are provided (`node avg.js`)?
 
@@ -39,11 +41,12 @@ Optional improvements and considerations:
 
 ## **Meal sharing endpoints**
 
-You will begin working in the meal-sharing repository for this homework and continue throughout the whole Node.js module. Each week you will build upon the endpoints, resulting in the backend setup for your future meal sharing website. 
+You will begin working in the meal-sharing repository for this homework and continue throughout the whole Node.js module. Each week you will build upon the endpoints, resulting in the backend setup for your future meal sharing website.
 
 ### **Setup**
 
 The meal-sharing-template [README](https://github.com/HackYourFuture-CPH/meal-sharing-template#readme) has further instructions on how to set up and run this locally but the key steps are summarized here:
+
 - Run `npm install` to install all the needed NPM packages.
 - Create `.env` by copying the existing `.env.example` file. Update `DB_USER`, `DB_PASSWORD`, etc. so the server can successfully establish the connection to the database.
 - Run `npm run server` to start the server.
@@ -59,19 +62,20 @@ In this homework, we will **reuse the same database** schema and build a web ser
 The routes you need to implement as part of this homework should go into `/src/backend/app.js` after the line where it says `router.use("/meals", mealsRouter);`. There you can go ahead and define the desired routes like you normally would:
 
 ```js
-app.get("/my-route", (req, res) => { res.send("Hi friend") });
+app.get("/my-route", (req, res) => {
+  res.send("Hi friend");
+});
 ```
-
 
 ### **Routes**
 
-| Route | Description |
-| - | - |
+| Route           | Description                                                            |
+| --------------- | ---------------------------------------------------------------------- |
 | `/future-meals` | Respond with all meals in the future (relative to the `when` datetime) |
-| `/past-meals` | Respond with all meals in the past (relative to the `when` datetime) |
-| `/all-meals` | Respond with _all_ meals sorted by ID |
-| `/first-meal` | Respond with the first meal (meaning with the minimum `id`) |
-| `/last-meal` | Respond with the last meal (meaning with the maximum `id`) |
+| `/past-meals`   | Respond with all meals in the past (relative to the `when` datetime)   |
+| `/all-meals`    | Respond with _all_ meals sorted by ID                                  |
+| `/first-meal`   | Respond with the first meal (meaning with the minimum `id`)            |
+| `/last-meal`    | Respond with the last meal (meaning with the maximum `id`)             |
 
 ### **Responses**
 
@@ -83,7 +87,6 @@ All the specified routes should respond with JSON with the available columns fro
 
 **What if there are no meals?:** `/first-meal` and `/last-meal` should in that case return a 404 response with an explanation that there are no meals.
 The other routes should in that case just return an empty array.
-
 
 #### **Knex**
 
@@ -98,3 +101,10 @@ knex.raw("SELECT VERSION()").then(() => {
 Note: `SELECT VERSION()` is a valid MySQL query but you would probably do something like this `SELECT * FROM some_table`.
 
 Also, `knex.raw` returns a Promise so you can also use the `async/await` syntax.
+
+<br/>
+
+## Hand in homework
+
+Need to brush up on the homework hand-in process?<br/>
+Check [this resource](https://github.com/HackYourFuture-CPH/Git/blob/main/homework_hand_in.md) to remember how to hand in the homework correctly!

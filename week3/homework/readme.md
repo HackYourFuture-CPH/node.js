@@ -90,44 +90,44 @@ const knex = require("knex")({
     database: process.env.DB_NAME || "hyf_node_week3_warmup",
     multipleStatements: true,
   },
-})
+});
 
-const express = require("express")
-const app = express()
-const port = process.env.PORT || 3000
+const express = require("express");
+const app = express();
+const port = process.env.PORT || 3000;
 
-app.use(express.json())
+app.use(express.json());
 
-const apiRouter = express.Router()
-app.use("/api", apiRouter)
+const apiRouter = express.Router();
+app.use("/api", apiRouter);
 
-const contactsAPIRouter = express.Router()
-apiRouter.use("/contacts", contactsAPIRouter)
+const contactsAPIRouter = express.Router();
+apiRouter.use("/contacts", contactsAPIRouter);
 
 contactsAPIRouter.get("/", async (req, res) => {
-  let query = knex.select("*").from("contacts")
+  let query = knex.select("*").from("contacts");
 
   if ("sort" in req.query) {
-    const orderBy = req.query.sort.toString()
+    const orderBy = req.query.sort.toString();
     if (orderBy.length > 0) {
-      query = query.orderByRaw(orderBy)
+      query = query.orderByRaw(orderBy);
     }
   }
 
-  console.log("SQL", query.toSQL().sql)
+  console.log("SQL", query.toSQL().sql);
 
   try {
-    const data = await query
-    res.json({ data })
+    const data = await query;
+    res.json({ data });
   } catch (e) {
-    console.error(e)
-    res.status(500).json({ error: "Internal server error" })
+    console.error(e);
+    res.status(500).json({ error: "Internal server error" });
   }
-})
+});
 
 app.listen(port, () => {
-  console.log(`Listening on port ${port}`)
-})
+  console.log(`Listening on port ${port}`);
+});
 ```
 
 As mentioned above, the `sort` query parameter has been introduced with a SQL injection vulnerability.
@@ -194,3 +194,16 @@ You should try to avoid using `knex.raw` and instead use the different `knex` fu
 - `.del` (for deletion)
 
 Check out the [Knex cheatsheet](https://devhints.io/knex)!
+
+<br/>
+
+## Hand in homework
+
+Need to brush up on the homework hand-in process?<br/>
+Check [this resource](https://github.com/HackYourFuture-CPH/Git/blob/main/homework_hand_in.md) to remember how to hand in the homework correctly!
+
+<br/>
+
+## Feedback
+
+And finally, please take two minutes to answer the survey [here](https://forms.gle/YG5KCnSCPhb8dJAL9) to give feedback to the staff and mentors.
