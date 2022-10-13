@@ -1,8 +1,9 @@
 # Week 2 homework
 
 This homework, just like the previous week, will result in 2 pull requests:
-* A pull request for the **Warmup** - in your regular hyf-homework repository
-* A pull request for the additional **Meal-sharing endpoints** - in the meal-sharing repository
+
+- A pull request for the **Warmup** - in your regular hyf-homework repository
+- A pull request for the additional **Meal-sharing endpoints** - in the meal-sharing repository
 
 In both repositories, create a `nodejs-week2` branch from `main` to work on the homework (`git checkout -b nodejs-week2` )
 
@@ -11,6 +12,7 @@ In both repositories, create a `nodejs-week2` branch from `main` to work on the 
 ## **Warmup**
 
 For the warmup you're going to build a search engine. The search engine will have 3 routes:
+
 - `GET /search`
 - `GET /documents/:id`
 - `POST /search`
@@ -49,20 +51,20 @@ You should also ensure that the `node_modules/` folder is ignored by Git:
 Create `app.js` and as a starting point you can use the following code:
 
 ```js
-const express = require('express')
-const app = express()
-const port = process.env.PORT || 3000
+const express = require("express");
+const app = express();
+const port = process.env.PORT || 3000;
 
 // Support parsing JSON requests
-app.use(express.json())
+app.use(express.json());
 
-app.get('/', (req, res) => {
-  res.send('This is a search engine')
-})
+app.get("/", (req, res) => {
+  res.send("This is a search engine");
+});
 
 app.listen(port, () => {
-  console.log(`Listening on port ${port}`)
-})
+  console.log(`Listening on port ${port}`);
+});
 ```
 
 You also need to create a `documents.json` file.
@@ -75,6 +77,7 @@ This endpoint will accept a query parameter called `q`, short for _query_. A bit
 - If `q` is provided, the endpoint should return the documents with some field that matches the value of `q`.
 
 Example response if we call `GET /search?q=hello`:
+
 ```
 [
     {
@@ -98,6 +101,7 @@ It also accepts a query parameter called `q` and it should behave just like `GET
 But it also accepts a field called `fields` in the JSON request body. `fields` is an object where it will be possible to filter by specific fields.
 
 Example request:
+
 ```
 POST /search
 {
@@ -108,6 +112,7 @@ POST /search
 ```
 
 Response to the example request:
+
 ```
 [
     {
@@ -127,7 +132,6 @@ If both `q` (query parameter) and `fields` (in body) are provided, we should res
 
 You will continue working in the meal-sharing repository for this homework. This week you will build more endpoints, developing some [CRUD](https://www.freecodecamp.org/news/crud-operations-explained/) operations for your future meal sharing website backend functionality.
 
-
 ### **Routes**
 
 In last week's homework you were supposed to add routes in `src/backend/app.js`. You can just leave them there as they are.
@@ -141,26 +145,25 @@ This means that we will end up having 2 Routers: a meals router and a reservatio
 
 #### **Meals**
 
-| Route            | HTTP method   | Description         |
-| ---------------- | ------ | ------------------------ |
-| `/api/meals`     | GET     | Returns all meals |
-| `/api/meals`     | POST   | Adds a new meal to the database |
-| `/api/meals/:id` | GET    | Returns the meal by `id` |
-| `/api/meals/:id` | PUT    | Updates the meal by `id` |
-| `/api/meals/:id` | DELETE | Deletes the meal by `id` |
+| Route            | HTTP method | Description                     |
+| ---------------- | ----------- | ------------------------------- |
+| `/api/meals`     | GET         | Returns all meals               |
+| `/api/meals`     | POST        | Adds a new meal to the database |
+| `/api/meals/:id` | GET         | Returns the meal by `id`        |
+| `/api/meals/:id` | PUT         | Updates the meal by `id`        |
+| `/api/meals/:id` | DELETE      | Deletes the meal by `id`        |
 
 #### **Reservations**
 
 Now that you have built the basic set of endpoints for **meals**, you can get some more practice and expand your app backend by creating the same for **reservations**:
 
-| Route            | HTTP method   | Description         |
-| ---------------- | ------ | ------------------------ |
-| `/api/reservations`     | GET    | Returns all reservations  |
-| `/api/reservations`         | POST   | Adds a new reservation to the database |
-| `/api/reservations/:id` | GET    | Returns a reservation by `id` |
-| `/api/reservations/:id` | PUT    | Updates the reservation by `id` |
-| `/api/reservations/:id` | DELETE | Deletes the reservation by `id` |
-
+| Route                   | HTTP method | Description                            |
+| ----------------------- | ----------- | -------------------------------------- |
+| `/api/reservations`     | GET         | Returns all reservations               |
+| `/api/reservations`     | POST        | Adds a new reservation to the database |
+| `/api/reservations/:id` | GET         | Returns a reservation by `id`          |
+| `/api/reservations/:id` | PUT         | Updates the reservation by `id`        |
+| `/api/reservations/:id` | DELETE      | Deletes the reservation by `id`        |
 
 ##### **Requests**
 
@@ -174,6 +177,7 @@ The `GET`, `PUT` and `DELETE` routes that include an `/:id` in the path should m
 Think about what special HTTP status code would be appropriate for that scenario.
 
 You are free to decide on the response for a successful `POST`, `PUT` and `DELETE` request. Some ideas:
+
 - Respond with an acknowledgement message: `{ "message": "Deleted meal" }`
 - Respond with data from the row itself like with `GET`
 
@@ -191,3 +195,10 @@ Your usage of Knex should be getting a bit more advanced now. You will move from
 - `.del` (for deletion)
 
 Check out the [Knex cheatsheet](https://devhints.io/knex)!
+
+<br/>
+
+## Hand in homework
+
+Need to brush up on the homework hand-in process?<br/>
+Check [this resource](https://github.com/HackYourFuture-CPH/Git/blob/main/homework_hand_in.md) to remember how to hand in the homework correctly!
