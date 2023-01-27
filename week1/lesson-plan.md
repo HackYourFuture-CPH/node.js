@@ -14,14 +14,12 @@ Remember to add the code you wrote in the class to the relevant class branch's c
 
 To find examples of what teachers have taught before go to the class branches in the classwork folder, Fx [class 07](https://github.com/HackYourFuture-CPH/JavaScript/tree/class07/JavaScript1/Week1/classwork)
 
-Repository for the in-class exercises templates: https://github.com/HackYourFuture-CPH/Nodejs-exercise-template
-
 If you find anything that could be improved then please create a pull request! We welcome changes, so please get involved if you have any ideas!!!
 
 ---
 
-
 # Introduction
+
 In the first week of the module we will focus on a general introduction starting from what happens when you open a webpage in the browser, an introduction to the underlying protocol HTTP (the roads of the internet) as well as an introduction to what can be build with node.
 
 # Learning goals
@@ -36,9 +34,9 @@ In the first week of the module we will focus on a general introduction starting
     - Sends request
     - Receives response
   - [ ] HTTP server
-     - Listen for requests
-     - Responds with data     
-   - https://websniffer.cc/
+    - Listen for requests
+    - Responds with data
+  - https://websniffer.cc/
 - [ ] [Introduction to node js](#What-is-Nodejs)
   - [ ] [What is node and why node?](https://www.youtube.com/watch?v=pU9Q6oiQNd0)
   - [ ] V8 vs the browser that runs js?
@@ -59,10 +57,8 @@ In the first week of the module we will focus on a general introduction starting
       - package.json
     - [.gitignore](https://github.com/HackYourFuture-CPH/teacher-live-coding/blob/main/.gitignore)
   - [ ] Nodemon
-  - [ ] Express - Simple `GET` requests, focus on usage
-     -  Play around with Express - Focus on usage!
-        - [Live coding](https://github.com/HackYourFuture-CPH/teacher-live-coding/)
-        - [Exercise](https://github.com/HackYourFuture-CPH/Nodejs-exercise-template/tree/main/week1)
+  - [ ] Express - Simple `GET` requests
+
 ## What is backend?
 
 In software development, we separate the user experience and utility (the `frontend`) from the code that actually makes it work (the `backend`). The real world contains many examples of this division: take for example an [ATM](../images/atm.jpg). What you can interact with it (press a button or insert a card), you are dealing with the `user interface`; which is the end result of frontend code. However, everything that's needed to make it work like that is found within the device: this is the hardware and software needed to make it work the way it does.
@@ -74,6 +70,7 @@ In web development the term backend can be boiled down to 3 components:
 - An `application`: software that communicates between the server, database and frontend. It contains code that allows it to interact with and manipulate the server, database and other type of software services.
 
 For more information, read:
+
 - [Basics of backend development](https://www.upwork.com/hiring/development/a-beginners-guide-to-back-end-development/)
 - [Getting started with backend development](https://codeburst.io/getting-started-with-backend-development-bfd8299e22e8)
 
@@ -141,7 +138,6 @@ Look into the following resources to increase your understanding:
 
 - [@NoerGitKat](https://www.github.com/NoerGitKat)
 
-
 ## Flipped classroom videos
 
 [Flipped classroom videos](https://github.com/HackYourFuture-CPH/node.js/blob/main/week1/preparation.md#flipped-classroom-videos)
@@ -150,12 +146,11 @@ Look into the following resources to increase your understanding:
 
 ### Created module
 
-Go to the `teacher-live-coding` [project repository](https://github.com/HackYourFuture-CPH/teacher-live-coding), `npm install` and run using `nodemon ./src/backend/created-module.js`. Try and implement this functionality from the bottom while explaining. 
+Go to the `teacher-live-coding` [project repository](https://github.com/HackYourFuture-CPH/teacher-live-coding), `npm install` and run using `nodemon ./src/backend/created-module.js`. Try and implement this functionality from the bottom while explaining.
 
 ### Building a simple http webserver
 
 Go to the `teacher-live-coding` [project repository](https://github.com/HackYourFuture-CPH/teacher-live-coding), run using `nodemon ./src/backend/simple-webserver.js`. Try and implement this functionality from the bottom while explaining.
-
 
 # Exercises
 

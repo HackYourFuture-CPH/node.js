@@ -14,8 +14,6 @@ Remember to add the code you wrote in the class to the relevant class branch's c
 
 To find examples of what teachers have taught before go to the class branches in the classwork folder, Fx [class 07](https://github.com/HackYourFuture-CPH/JavaScript/tree/class07/JavaScript1/Week1/classwork)
 
-Repository for the in-class exercises templates: https://github.com/HackYourFuture-CPH/Nodejs-exercise-template
-
 If you find anything that could be improved then please create a pull request! We welcome changes, so please get involved if you have any ideas!!!
 
 ---
@@ -68,12 +66,11 @@ Run `nodemon ./src/backend/route-order.js`. Try and implement this functionality
 
 Run using `nodemon ./src/backend/middleware.js`. Try and implement this functionality from the bottom while explaining.
 
-
 # Exercises
 
 1. [Server](./exercises/01-server.md): Setup project
 1. [DB schema](./exercises/02-schema.md): Setup MySQL database schema
 1. [API](./exercises/03-api.md): Snippets API exercises
-    - [POST endpoint](./exercises/04-post-endpoint.md)
-    - [GET endpoints](./exercises/05-get-endpoints.md)
-    - [Authentication](./exercises/06-auth.md)
+   - [POST endpoint](./exercises/04-post-endpoint.md)
+   - [GET endpoints](./exercises/05-get-endpoints.md)
+   - [Authentication](./exercises/06-auth.md)
