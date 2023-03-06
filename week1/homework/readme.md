@@ -30,7 +30,7 @@ $ node avg.js 13 7 4
 8
 ```
 
-Hint: [read](https://nodejs.org/en/knowledge/command-line/how-to-parse-command-line-arguments/) to see how we can deal with command line arguments.
+Hint: [read](https://tecadmin.net/how-to-parse-command-line-arguments-in-nodejs/) to see how we can deal with command line arguments.
 
 Optional improvements and considerations:
 
