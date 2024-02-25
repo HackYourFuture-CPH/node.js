@@ -8,7 +8,7 @@ The most basic express webserver looks like the following
 ````
 // We require the express package after having installed it 
 // via “npm i express”
-const express = require('express')
+import express from 'express'
 
 // We create an express instance and bind it to our app const
 const app = express()

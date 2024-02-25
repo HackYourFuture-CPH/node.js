@@ -12,7 +12,7 @@ That will look something like this:
 ```js
 // Contents of api/snippets.js
 
-const express = require("express")
+import express from 'express'
 const router = express.Router()
 
 // GET /api/snippets
@@ -23,14 +23,16 @@ router.get("/", async (request, response) => {
 // TODO: POST /api/snippets
 // TODO: GET /api/snippets/:id
 
-module.exports = router
+export default router
 ```
 
 We will also have the database connection in a separate file:
 ```js
 // Contents of database.js
 
-const knex = require("knex")({
+import knex from 'knex'
+
+const knexInstance = knex({
   client: "mysql2",
   connection: {
     host: process.env.DB_HOST || "127.0.0.1",
@@ -41,7 +43,7 @@ const knex = require("knex")({
   },
 })
 
-module.exports = knex
+export default knexInstance
 ```
 
 At this point verify that your project structure looks like this:

@@ -33,6 +33,8 @@ Go to `nodejs/week3` in your `hyf-homework` repo:
     $ npm i --save-dev nodemon
     $ npm set-script dev "nodemon app.js"
 
+Make sure you have `"type": "module"` in your `package.json`.
+
 You should also ensure that the `node_modules/` folder is ignored by Git:
 
     $ echo node_modules/ >> .gitignore
@@ -80,7 +82,8 @@ insert into contacts (id, first_name, last_name, email, phone) values (25, 'Tabo
 Create `app.js`:
 
 ```js
-const knex = require("knex")({
+import knex from 'knex'
+const knexInstance = knex({
   client: "mysql2",
   connection: {
     host: process.env.DB_HOST || "127.0.0.1",
@@ -92,7 +95,7 @@ const knex = require("knex")({
   },
 });
 
-const express = require("express");
+import express from 'express'
 const app = express();
 const port = process.env.PORT || 3000;
 

@@ -13,7 +13,8 @@ In `app.js` we can now establish the database connection.
 Add the following to the top of `app.js`:
 
 ```js
-const knex = require('knex')({
+import knex from 'knex'
+const knexInstance = knex({
   client: 'mysql2',
   connection: {
     host: '127.0.0.1',
@@ -35,7 +36,7 @@ Let's extend the `/info` route to also respond with the MySQL version: `{ "nodeV
 
 ```js
 app.get('/info', async (req, res) => {
-  const [rows] = await knex.raw('SELECT VERSION()')
+  const [rows] = await knexInstance.raw('SELECT VERSION()')
 
   res.json({
     nodeVersion: process.version,

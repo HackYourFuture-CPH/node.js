@@ -14,10 +14,12 @@ Initialize and install:
     $ npm init -y
     $ npm install express mysql2 knex
 
+Make sure you have `"type": "module"` in your `package.json`.
+
 Create a file named `app.js` and use the following as a starting point for this exercise:
 
 ```js
-const express = require("express")
+import express from 'express'
 const app = express()
 const port = process.env.PORT || 3000
 
