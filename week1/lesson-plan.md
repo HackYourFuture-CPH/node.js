@@ -48,7 +48,7 @@ In the first week of the module we will focus on a general introduction starting
   - [ ] npm init
   - [ ] Tests
   - [ ] Modules
-    - [ ] Creating and importing using `module.exports` and `require`
+    - [ ] Creating and importing using `export` and `import` in modern ES6 syntax
     - [ ] [Live coding](#created-module)
     - [ ] Npm modules
       - npmjs.org

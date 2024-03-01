@@ -35,7 +35,7 @@ We will build on knowledge from the following HYF (sub)modules. If we feel we ha
 
 - What is Node.js?
 - Using Node Package Manager (NPM)
-- Using `require` to include modules
+- Using `import` to include modules
 - Using `express` to make a RESTful API
 - Using `mysql` to connect the API to the backend
 - Postman

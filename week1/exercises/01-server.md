@@ -15,6 +15,7 @@ Initialize and install:
     $ npm install express
 
 Make sure you see a `package.json`.
+Make sure you have `"type": "module"` in your `package.json`.
 Do you see `express` somewhere in `package.json`?
 Also make sure you see the `node_modules` folder.
 
@@ -23,7 +24,7 @@ Also make sure you see the `node_modules` folder.
 Create a file called `app.js`:
 
 ```js
-const express = require('express')
+import express from 'express'
 const app = express()
 const port = 3000
 

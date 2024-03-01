@@ -7,9 +7,10 @@ Let's start with a simplified version of the `POST /api/snippets` route. First w
 ```js
 // Contents of api/snippets.js
 
-const express = require("express")
+import express from 'express'
+import knexInstance from '../database.js'
+
 const router = express.Router()
-const knex = require("../database")
 
 // GET /api/snippets
 router.get("/", async (request, response) => {
@@ -23,7 +24,7 @@ router.post("/", async (request, response) => {
 
 // TODO: GET /api/snippets/:id
 
-module.exports = router
+export default router
 ```
 
 ---
@@ -45,7 +46,7 @@ But first, for Express to handle JSON requests, we need to add `app.use(express.
 ```js
 // Contents of app.js
 
-const express = require("express")
+import express from 'express'
 const app = express()
 const port = process.env.PORT || 3000
 
@@ -64,7 +65,8 @@ One remaining thing in the setup is to actually use the router we're exporting f
 Inside `app.js`, below `app.use(express.json())`, add the following:
 
 ```js
-app.use("/api/snippets", require("./api/snippets"))
+import snippetsRouter from "./api/snippets.js";
+app.use("/api/snippets", snippetsRouter)
 ```
 
 ---

@@ -44,6 +44,8 @@ Go to `nodejs/week2` in your `hyf-homework` repo:
     $ npm i --save-dev nodemon
     $ npm set-script dev "nodemon app.js"
 
+Make sure you have `"type": "module"` in your `package.json`.
+
 You should also ensure that the `node_modules/` folder is ignored by Git:
 
     $ echo node_modules/ >> .gitignore
@@ -51,7 +53,7 @@ You should also ensure that the `node_modules/` folder is ignored by Git:
 Create `app.js` and as a starting point you can use the following code:
 
 ```js
-const express = require("express");
+import express from 'express'
 const app = express();
 const port = process.env.PORT || 3000;
 
