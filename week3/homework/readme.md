@@ -108,7 +108,7 @@ const contactsAPIRouter = express.Router();
 apiRouter.use("/contacts", contactsAPIRouter);
 
 contactsAPIRouter.get("/", async (req, res) => {
-  let query = knex.select("*").from("contacts");
+  let query = knexInstance.select("*").from("contacts");
 
   if ("sort" in req.query) {
     const orderBy = req.query.sort.toString();
@@ -140,7 +140,7 @@ You can for instance demonstrate this with a screen recording and include it in 
 
 After having demonstrated the SQL injection vulnerability, the goal is then to fix the issue by updating `app.js`.
 
-**Hint:** the `multipleStatements: true` part in the Knex configuration indicates how you can use the vulnerability. The Knex configuration should not be changed though, the SQL injection should be fixed by making changes in the `/api/contacts` route.
+**Hint:** the `multipleStatements: true` part in the  configuration indicates how you can use the vulnerability. The  configuration should not be changed though, the SQL injection should be fixed by making changes in the `/api/contacts` route.
 
 <br/>
 
