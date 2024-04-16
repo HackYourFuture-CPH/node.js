@@ -3,7 +3,7 @@
 Once again, you will deliver 2 pull requests:
 
 - A pull request for the **Warmup** - in your regular hyf-homework repository
-- A pull request for the additional **Meal-sharing endpoints** - in the meal-sharing repository
+- A pull request for the additional **meal sharing endpoints** - in the meal-sharing repository
 
 In both repositories, create a `nodejs-week3` branch from `main` to work on the homework (`git checkout -b nodejs-week3` ).
 
@@ -146,14 +146,16 @@ After having demonstrated the SQL injection vulnerability, the goal is then to f
 
 ## **Meal sharing endpoints**
 
-You will continue working in the meal-sharing repository for this task.
-<br/>You should have the basic [CRUD](https://www.freecodecamp.org/news/crud-operations-explained/) endpoints for **meals** and **reservations** as the result of last week's homework. This week, you will add **query parameters**, that will allow you to **sort** and **filter** the information retrieved from the database.
+You will continue working in the meal-sharing repository for this task.  
+
+You should have the basic [CRUD](https://www.freecodecamp.org/news/crud-operations-explained/) endpoints for **meals** and **reservations** as the result of last week's homework. This week, you will add **query parameters**, that will allow you to **sort** and **filter** the information retrieved from the database.
 
 ### **Routes**
 
 #### **Meals**
 
-Work with your `GET api/meals` route to add the query parameters. <br/>Make sure that the query parameters can be combined, f.x. <nobr>`?limit=4&maxPrice=90`.<nobr/>
+Work with your `GET api/meals` route to add the query parameters.  
+Make sure that the query parameters can be combined, f.x. <nobr>`?limit=4&maxPrice=90`.<nobr/>
 
 | Parameter               | <nobr>Data type<nobr/> | Description                                                                                                                             | Example                                             |
 | ----------------------- | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------- |
@@ -170,8 +172,6 @@ Work with your `GET api/meals` route to add the query parameters. <br/>Make sure
 [^2]: This used to be `sort_key` in a previous version of the homework text.
 [^3]: This used to be `sort_dir` in a previous version of the homework text.
 
-<br/>
-
 #### **Reviews**
 
 By now, you have the basic set of endpoints for **meals** and **reservations** and even a collection of query parameters for **meals**. To practice a bit more and finalize the basic backend functionality, create the set of routes for **reviews**:
@@ -185,8 +185,6 @@ By now, you have the basic set of endpoints for **meals** and **reservations** a
 | `/api/reviews/:id`            | PUT         | Updates the review by `id`.              |
 | `/api/reviews/:id`            | DELETE      | Deletes the review by `id`.              |
 
-<br/>
-
 #### **Knex**
 
 You should try to avoid using `knex.raw` and instead use the different `knex` functions, for example:
@@ -197,8 +195,6 @@ You should try to avoid using `knex.raw` and instead use the different `knex` fu
 - `.del` (for deletion)
 
 Check out the [Knex cheatsheet](https://devhints.io/knex)!
-
-<br/>
 
 ## Hand in homework
 
