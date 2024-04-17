@@ -3,12 +3,18 @@
 This homework will result in 2 pull requests:
 
 - A pull request for the **Warmup** - in your regular hyf-homework repository
-- A pull request for the **Meal-sharing endpoints** - in the new meal-sharing repository
+- A pull request for the **meal sharing endpoints** - in a newly created meal-sharing repository
 
-### **Meal-sharing repository**
+### **meal-sharing repository**
 
-Go to [the meal-sharing-template repo](https://github.com/HackYourFuture-CPH/meal-sharing-template/generate) and create your own personal repo with the name `meal-sharing`. <br/>
-You should now have a meal-sharing repository here: `https://github.com/YOUR_GITHUB_USER_NAME/meal-sharing` like `https://github.com/benna100/meal-sharing`. Clone that repository down locally.
+Go to the [HYF project template repository](https://github.com/HackYourFuture-CPH/hyf-project-template) and click the "Use this template" button, then the "Create a new repository" option.  
+
+In the field `Repository name` fill in "meal-sharing", and mark the repository as "Public" before clicking "Create repository".  
+
+You should now have a new repository based on this template that you can clone to your local machine using:
+```
+git clone git@github.com:YOUR_GITHUB_USER_NAME/meal-sharing.git
+```
 
 #### Branch
 
@@ -41,25 +47,23 @@ Optional improvements and considerations:
 
 ## **Meal sharing endpoints**
 
-You will begin working in the meal-sharing repository for this homework and continue throughout the whole Node.js module. Each week you will build upon the endpoints, resulting in the backend setup for your future meal sharing website.
+You will begin working in the meal-sharing repository for this homework and continue throughout the whole Node.js module.  
+Each week you will extend the endpoints, resulting in the backend setup for your future meal sharing website.
 
 ### **Setup**
 
-The meal-sharing-template [README](https://github.com/HackYourFuture-CPH/meal-sharing-template#readme) has further instructions on how to set up and run this locally but the key steps are summarized here:
-
-- Run `npm install` to install all the needed NPM packages.
-- Create `.env` by copying the existing `.env.example` file. Update `DB_USER`, `DB_PASSWORD`, etc. so the server can successfully establish the connection to the database.
-- Run `npm run server` to start the server.
+Please follow the instructions in the [README.md](https://github.com/HackYourFuture-CPH/hyf-project-template/blob/main/README.md) in your meal-sharing repository to get your environment ready. You can ignore the "Deploying" section for now, you will come back to that in a few weeks.
 
 #### **Database**
 
 In the Database module, we worked on the meal sharing database. The diagram for that database can be found [here](https://dbdiagram.io/d/5f0460690425da461f045a29).
 
-In this homework, we will **reuse the same database** schema and build a web server with the following routes.
+In this homework, we will **reuse the same database** schema and build an API server with the below routes.
 
 #### **Getting started**
 
-The routes you need to implement as part of this homework should go into `/src/backend/app.js` after the line where it says `router.use("/meals", mealsRouter);`. There you can go ahead and define the desired routes like you normally would:
+The routes you need to implement as part of this homework should go into `/api/src/index.js`. 
+You can go ahead and define the desired routes like you normally would using the `app` variable:
 
 ```js
 app.get("/my-route", (req, res) => {
@@ -93,16 +97,9 @@ The other routes should in that case just return an empty array.
 Our usage of Knex will get more advanced over the coming weeks but for now, we will focus on the simplified `knex.raw` function that can execute a raw SQL query. Example:
 
 ```js
-knex.raw("SELECT VERSION()").then(() => {
-  console.log(`connection to db successful!`);
-});
+const meals = await knex.raw("SELECT * FROM Meal");
+console.log(meals);
 ```
-
-Note: `SELECT VERSION()` is a valid MySQL query but you would probably do something like this `SELECT * FROM some_table`.
-
-Also, `knex.raw` returns a Promise so you can also use the `async/await` syntax.
-
-<br/>
 
 ## Hand in homework
 

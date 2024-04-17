@@ -3,7 +3,7 @@
 This homework, just like the previous week, will result in 2 pull requests:
 
 - A pull request for the **Warmup** - in your regular hyf-homework repository
-- A pull request for the additional **Meal-sharing endpoints** - in the meal-sharing repository
+- A pull request for the additional **Meal sharing endpoints** - in the meal-sharing repository
 
 In both repositories, create a `nodejs-week2` branch from `main` to work on the homework (`git checkout -b nodejs-week2` )
 
@@ -136,14 +136,17 @@ You will continue working in the meal-sharing repository for this homework. This
 
 ### **Routes**
 
-In last week's homework you were supposed to add routes in `src/backend/app.js`. You can just leave them there as they are.
+In last week's homework you were supposed to add routes in `/api/src/index.js`. You can just leave them there as they are.
 
 For this week's homework, we will add two categories of routes: meals and reservations.
 
-- The routes for meals will go into `src/backend/api/meals.js`, which should already exist in your repo, and
-- the reservation routes will live in `src/backend/api/reservations.js`, a new file you need to create.
+- The routes for meals will go into `/api/src/routers/meals.js`
+- the reservation routes will live in `/api/src/routers/reservations.js`
 
-This means that we will end up having 2 Routers: a meals router and a reservations router. You can read more about Express Routers [here](http://expressjs.com/en/4x/api.html#router).
+This means that we will end up having 2 Routers: a meals router and a reservations router.  
+You can read more about Express Routers [here](http://expressjs.com/en/4x/api.html#router).
+
+You can reference the file `/api/src/routers/nested.js` for an example, and see how it is used in `/api/src/index.js`.
 
 #### **Meals**
 
@@ -176,7 +179,7 @@ All the `POST` or `PUT` endpoints will require a request body - the information 
 All the specified `GET` routes should respond with JSON with the available columns from the associated tables.
 
 The `GET`, `PUT` and `DELETE` routes that include an `/:id` in the path should make sure to handle the case when the row with that ID does not exist.
-Think about what special HTTP status code would be appropriate for that scenario.
+> Think about what special HTTP status code would be appropriate for that scenario.
 
 You are free to decide on the response for a successful `POST`, `PUT` and `DELETE` request. Some ideas:
 
@@ -184,8 +187,6 @@ You are free to decide on the response for a successful `POST`, `PUT` and `DELET
 - Respond with data from the row itself like with `GET`
 
 And lastly, if the `POST` request is successful, the response status code should be 201 Created, as that would indicate something was _created_.
-
-<br/>
 
 #### **Knex**
 
@@ -198,9 +199,7 @@ Your usage of Knex should be getting a bit more advanced now. You will move from
 
 Check out the [Knex cheatsheet](https://devhints.io/knex)!
 
-<br/>
-
 ## Hand in homework
 
-Need to brush up on the homework hand-in process?<br/>
+Need to brush up on the homework hand-in process?  
 Check [this resource](https://github.com/HackYourFuture-CPH/Git/blob/main/homework-submission.md) to remember how to hand in the homework correctly!
