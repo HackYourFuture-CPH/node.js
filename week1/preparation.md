@@ -66,15 +66,15 @@ http://ajmalsiddiqui.me/blog/introduction-to-npm-scripts/
 
 ### **Security and authentication**
 
-In many cases we don’t want the web server to just serve information to anyone, some of it might be privileged i.e. should only be available to a specific user. It is the responsibility of the web server to check that the requests it receives have the right authentication required e.g. so user A can only get information about their own account, not other users.
+In many cases we don’t want the web server to just serve information, some of this might be privilege to a user. It can be the responsibility of the web server to also check that the requests it receives has the right authentication required.
 
 ### **Database interaction**
 
-The web server rarely has any information or data built into it. It relies on external systems built specifically for that purpose and acts as a proxy between the database and the requester. (However, node is a general purpose programming language, so it can indeed also be used to write a database system e.g. https://dzone.com/articles/building-a-database-written-in-nodejs-from-the-gro).
+The web server rarely has any information or data build into it. It relies on external system build specifically for that purpose and acts as a proxy between the database and the requester. (However node is a general purpose programming language, so it can indeed also be used to write a database system (https://dzone.com/articles/building-a-database-written-in-nodejs-from-the-gro).
 
 ### **Tests**
 
-Testing is an often used technique in software development to better ensure your code does what you expect it to. Booting up a server locally and doing manual testing works to some extent, but this is not manageable or scalable as an application grows in complexity.
+Testing is an often used tool in software development to better ensure your code does what you want it to. Booting up a server locally and doing manual testing works to some extent, but this is not manageable or scalable as an application grows.
 
 To help you get accustomed to what testing looks like, each week's homework includes a set of tests to move you along in the exercises. This provides structure for you to better understand what you need to complete and to help you be sure that you are correctly completing the tasks.
 
