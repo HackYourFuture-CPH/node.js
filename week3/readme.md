@@ -34,4 +34,4 @@ For more research, check the following resource:
 
 - [What is REST: a simple explanation for beginners](https://medium.com/extend/what-is-rest-a-simple-explanation-for-beginners-part-1-introduction-b4a072f8740f)
 
-- [@NoerGitKat](https://www.github.com/NoerGitKat)
+- [@NoerGitKat (lots of web app clones/examples to learn from)](https://www.github.com/NoerGitKat)

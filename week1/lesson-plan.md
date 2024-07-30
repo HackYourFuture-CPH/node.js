@@ -136,7 +136,7 @@ Look into the following resources to increase your understanding:
 - [The Http and the Web: Http explained](https://www.youtube.com/watch?v=eesqK59rhGA)
 - [Basics concepts of web applications](https://www.youtube.com/watch?v=RsQ1tFLwldY)
 
-- [@NoerGitKat](https://www.github.com/NoerGitKat)
+- [@NoerGitKat (lots of web app clones/examples to learn from)](https://www.github.com/NoerGitKat)
 
 ## Flipped classroom videos
 
