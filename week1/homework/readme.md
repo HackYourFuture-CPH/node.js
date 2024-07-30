@@ -29,7 +29,7 @@ For us mentors to easily give feedback on your code, create all functionality in
 
 In your hyf-homework repository, `nodejs/week1` directory, create a file named `avg.js` which will calculate the average of the numbers provided as command line arguments.
 
-But what are command line arguments? The arguments you provide to a command line program. Here's an example of how we would invoke `avg.js` with 3 numbers:
+But what are command line arguments? They are simple parameters that we can pass to command line programs, which can be either values or files. Here's an example of how we would invoke `avg.js` with 3 numbers:
 
 ```
 $ node avg.js 13 7 4

@@ -3,7 +3,7 @@ This is the second week of the NodeJS module, where we will focus on Express, wh
 
 When writing an Express application we are registering routes on HTTP keywords (GET,POST,PUT, DELETE) and handler functions for those routes.
 
-The most basic express webserver looks like the following
+The most basic express webserver looks like the following:
 
 ````
 // We require the express package after having installed it 
@@ -31,17 +31,17 @@ app.get('/',function (req, res) {
 app.listen(3000)
 ````
 
-If run the script, node will start up and run the code ending with app.listen(3000), app.listen will tell Node to bind and listen for connections on the specified host and port.
+If we run this script, node will start up and run the code ending with app.listen(3000). This tells Node to bind and listen for connections on this specified host and port.
 
-If there is no specified host, Node will bind to localhost and the Node application will be available on http://localhost:3000/
+If there is no specified host, Node will bind to localhost and the Node application will be available on http://localhost:3000/.
 
-If you open that URL in the browser you will see “hello world” without any styling in your browser.
+If you open that URL in the browser you will see “hello world” (without any styling).
 
 ## Extensibility
 This is a very basic example of an express application. There many parameters to tweak and cases to take into consideration.
-On off the first thing we’d like to do in a typical Express application is not return strings or HTML, but instead use JSON as the transport encoding format. Meaning we accept JSON in requests and we can respond with JSON formatted data.
+One of the first things we’d like to do in a typical Express application is to not return strings or HTML, but instead use JSON as the transport encoding format. Meaning we accept JSON in requests and we can respond with JSON formatted data.
 
-There are a few good extensions or middleware that is easy to plug into express and allows us to tweak and change some of the parts of the webserver. Some of these middleware extensions are body-parser, compression, cors, errorhandler (find the list here; http://expressjs.com/en/resources/middleware.html)
+There are a few good extensions or middleware that is easy to plug into express and allows us to tweak and change some of the parts of the webserver. Some of these middleware extensions include body-parser, compression, cors, errorhandler - find the full list here: http://expressjs.com/en/resources/middleware.html.
 
 ## More resources
 The best way to learn Express is to use it to build small simple applications and read the documentation. 
@@ -65,7 +65,7 @@ Reproduce a log hitting errors and understanding flow.
 
 ## Express.js
 
-In Node.js it's possible to make a HTTP server, using the native `http` module. However, this is rarely used in practice. Instead, we'll use [Express.js](https://expressjs.com/en/4x/api.html), a backend framework that can do what the `http` module does and much more (in a simpler, faster and more readable way).
+In Node.js it's possible to make a HTTP server using the native `http` module. However, this is rarely used in practice. Instead, we'll use [Express.js](https://expressjs.com/en/4x/api.html), a backend framework that can do what the `http` module does and much more (in a simpler, faster and more readable way).
 
 Practically speaking, what can we do with a web server like `http` or `Express`? All the magic that makes the frontend work:
 
