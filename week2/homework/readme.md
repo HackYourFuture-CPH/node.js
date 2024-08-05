@@ -136,14 +136,14 @@ You will continue working in the meal-sharing repository for this homework. This
 
 ### **Routes**
 
-In last week's homework you were supposed to add routes in `/api/src/index.js`. You can just leave them there as they are.
+In last week's homework you added routes in `/api/src/index.js`. You can just leave them there as they are.
 
 For this week's homework, we will add two categories of routes: meals and reservations.
 
 - The routes for meals will go into `/api/src/routers/meals.js`
-- the reservation routes will live in `/api/src/routers/reservations.js`
+- The reservation routes will live in `/api/src/routers/reservations.js`
 
-This means that we will end up having 2 Routers: a meals router and a reservations router.  
+This means that we will end up having two Routers: a meals router and a reservations router.  
 You can read more about Express Routers [here](http://expressjs.com/en/4x/api.html#router).
 
 You can reference the file `/api/src/routers/nested.js` for an example, and see how it is used in `/api/src/index.js`.
