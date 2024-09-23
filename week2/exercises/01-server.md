@@ -12,9 +12,9 @@ You can also reuse some other folder. Main thing to watch out for is that the fo
 Initialize and install:
 
     $ npm init -y
+    $ npm pkg set type="module"
     $ npm install express mysql2 knex
-
-Make sure you have `"type": "module"` in your `package.json`.
+    $ echo node_modules/ >> .gitignore
 
 Create a file named `app.js` and use the following as a starting point for this exercise:
 
@@ -35,7 +35,7 @@ app.listen(port, () => {
 ---
 
     $ npm install --save-dev nodemon
-    $ npm set-script dev "nodemon app.js"
+    $ npm pkg set scripts.dev="nodemon app.js"
     $ npm run dev
 
 Go to http://localhost:3000 in your browser to verify that the server started.

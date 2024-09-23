@@ -40,13 +40,12 @@ The purpose of the search engine is to search and find documents from a file cal
 Go to `nodejs/week2` in your `hyf-homework` repo:
 
     $ npm init -y
+    $ npm pkg set type="module"
     $ npm i express
     $ npm i --save-dev nodemon
-    $ npm set-script dev "nodemon app.js"
+    $ npm pkg set scripts.dev="nodemon app.js"
 
-Make sure you have `"type": "module"` in your `package.json`.
-
-You should also ensure that the `node_modules/` folder is ignored by Git:
+You should ensure that the `node_modules/` folder is ignored by Git:
 
     $ echo node_modules/ >> .gitignore
 

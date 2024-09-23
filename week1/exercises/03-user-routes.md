@@ -16,7 +16,7 @@ Also, it is recommended to add a script to `package.json`, like so:
 
 There is a command to do that:
 
-    $ npm set-script dev "nodemon app.js"
+    $ npm pkg set scripts.dev="nodemon app.js"
 
 Now you can run
 
