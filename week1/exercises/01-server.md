@@ -12,12 +12,15 @@ You can also reuse some other folder. Main thing to watch out for is that the fo
 Initialize and install:
 
     $ npm init -y
+    $ npm pkg set type="module"
     $ npm install express
+    $ echo node_modules/ >> .gitignore
 
 Make sure you see a `package.json`.
 Make sure you have `"type": "module"` in your `package.json`.
 Do you see `express` somewhere in `package.json`?
-Also make sure you see the `node_modules` folder.
+Make sure you see the `node_modules` folder.
+Also make sure that the `node_modules/` folder is ignored by Git.
 
 ---
 
